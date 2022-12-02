@@ -5660,6 +5660,13 @@ export const enum NodeCheckFlags {
     InCheckIdentifier                        = 1 << 24,
 }
 
+/**@internal*/
+export interface SerializedTypeNodeData extends TypeNode {
+    truncating?: boolean;
+    addedLength: number;
+    trackedSymbols: readonly [symbol: Symbol, enclosingDeclaration: Node | undefined, meaning: SymbolFlags][] | undefined;
+}
+
 /** @internal */
 export interface NodeLinks {
     flags: NodeCheckFlags;              // Set of flags specific to Node
@@ -5687,7 +5694,7 @@ export interface NodeLinks {
     isExhaustive?: boolean | 0;         // Is node an exhaustive switch statement (0 indicates in-process resolution)
     skipDirectInference?: true;         // Flag set by the API `getContextualType` call on a node when `Completions` is passed to force the checker to skip making inferences to a node's type
     declarationRequiresScopeChange?: boolean; // Set by `useOuterVariableScopeInParameter` in checker when downlevel emit would change the name resolution scope inside of a parameter.
-    serializedTypes?: Map<string, TypeNode & {truncating?: boolean, addedLength: number}>; // Collection of types serialized at this location
+    serializedTypes?: Map<string, SerializedTypeNodeData>; // Collection of types serialized at this location
 }
 
 export const enum TypeFlags {

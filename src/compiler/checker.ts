@@ -338,8 +338,8 @@ import {
     hasAccessorModifier,
     hasAmbientModifier,
     hasContextSensitiveParameters,
-    HasDecorators,
     hasDecorators,
+    HasDecorators,
     hasDynamicName,
     hasEffectiveModifier,
     hasEffectiveModifiers,
@@ -348,8 +348,8 @@ import {
     hasExtension,
     HasIllegalDecorators,
     HasIllegalModifiers,
-    HasInitializer,
     hasInitializer,
+    HasInitializer,
     hasJSDocNodes,
     hasJSDocParameterTags,
     hasJsonModuleEmitEnabled,
@@ -873,6 +873,7 @@ import {
     SatisfiesExpression,
     ScriptKind,
     ScriptTarget,
+    SerializedTypeNodeData,
     SetAccessorDeclaration,
     setCommentRange,
     setEmitFlags,
@@ -6554,6 +6555,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
                 }
                 const cachedResult = links?.serializedTypes?.get(key);
                 if (cachedResult) {
+                    if (context.tracker.trackSymbol) cachedResult.trackedSymbols?.forEach(([symbol, enclosingDeclaration, meaning]) => context.tracker.trackSymbol!(symbol, enclosingDeclaration, meaning));
                     if (cachedResult.truncating) {
                         context.truncating = true;
                     }
@@ -6570,15 +6572,22 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
                     context.symbolDepth!.set(id, depth + 1);
                 }
                 context.visitedTypes.add(typeId);
+                const existingTracked = context.tracker.trackSymbol?.bind(context.tracker);
+                let trackedSymbols: [symbol: Symbol, enclosingDeclaration: Node | undefined, meaning: SymbolFlags][] | undefined;
+                context.tracker.trackSymbol = existingTracked ? (symbol, enclosingDeclaration, meaning) => {
+                    (trackedSymbols ??= []).push([symbol, enclosingDeclaration, meaning]);
+                    return existingTracked?.(symbol, enclosingDeclaration, meaning);
+                } : existingTracked;
                 const startLength = context.approximateLength;
-                const result = transform(type);
+                const result = transform(type) as unknown as SerializedTypeNodeData;
                 const addedLength = context.approximateLength - startLength;
                 if (!context.reportedDiagnostic && !context.encounteredError) {
                     if (context.truncating) {
-                        (result as any).truncating = true;
+                        result.truncating = true;
                     }
-                    (result as any).addedLength = addedLength;
-                    links?.serializedTypes?.set(key, result as TypeNode as TypeNode & {truncating?: boolean, addedLength: number});
+                    result.addedLength = addedLength;
+                    if (trackedSymbols) result.trackedSymbols = trackedSymbols;
+                    links?.serializedTypes?.set(key, result);
                 }
                 context.visitedTypes.delete(typeId);
                 if (id) {
