@@ -8,6 +8,52 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/constructorFindAllReferences4.ts ===
+      // export class [|C|] {
+      //     protected constructor() { }
+      //     public foo() { }
+      // }
+      // 
+      // new C().foo();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/constructorFindAllReferences4.ts ===
+        // [|export class C {
+        //     protected constructor() { }
+        //     public foo() { }
+        // }|]
+        // 
+        // new C().foo();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/constructorFindAllReferences4.ts ===
+      // export class C {
+      //     protected [|constructor|]() { }
+      //     public foo() { }
+      // }
+      // 
+      // new C().foo();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/constructorFindAllReferences4.ts ===
+        // export class C {
+        //     [|protected constructor() { }|]
+        //     public foo() { }
+        // }
+        // 
+        // new C().foo();
+      === 1 ===
+      // === /tests/cases/fourslash/constructorFindAllReferences4.ts ===
+      // export class C {
+      //     protected constructor() { }
+      //     public foo() { }
+      // }
+      // 
+      // new [|C|]().foo();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

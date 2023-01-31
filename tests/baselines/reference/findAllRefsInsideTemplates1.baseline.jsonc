@@ -4,6 +4,36 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var [|x|] = 10;
+      // var y = `${ x } ${ x }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+        // [|var x = 10;|]
+        // var y = `${ x } ${ x }`
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var [|x|] = 10;
+      // var y = `${ x } ${ x }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+        // [|var x = 10;|]
+        // var y = `${ x } ${ x }`
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var x = 10;
+      // var y = `${ [|x|] } ${ x }`
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var x = 10;
+      // var y = `${ x } ${ [|x|] }`
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -84,6 +114,36 @@
 // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
 // var /*FIND ALL REFS*/[|x|] = 10;
 // var y = `${ [|x|] } ${ [|x|] }`
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var [|x|] = 10;
+      // var y = `${ x } ${ x }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+        // [|var x = 10;|]
+        // var y = `${ x } ${ x }`
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var [|x|] = 10;
+      // var y = `${ x } ${ x }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+        // [|var x = 10;|]
+        // var y = `${ x } ${ x }`
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var x = 10;
+      // var y = `${ [|x|] } ${ x }`
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var x = 10;
+      // var y = `${ x } ${ [|x|] }`
+  }
+]
 
 [
   {
@@ -170,6 +230,36 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var [|x|] = 10;
+      // var y = `${ x } ${ x }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+        // [|var x = 10;|]
+        // var y = `${ x } ${ x }`
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var [|x|] = 10;
+      // var y = `${ x } ${ x }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+        // [|var x = 10;|]
+        // var y = `${ x } ${ x }`
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var x = 10;
+      // var y = `${ [|x|] } ${ x }`
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var x = 10;
+      // var y = `${ x } ${ [|x|] }`
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -247,6 +337,36 @@
 // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
 // var [|x|] = 10;
 // var y = `${ [|x|] } ${ /*FIND ALL REFS*/[|x|] }`
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var [|x|] = 10;
+      // var y = `${ x } ${ x }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+        // [|var x = 10;|]
+        // var y = `${ x } ${ x }`
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var [|x|] = 10;
+      // var y = `${ x } ${ x }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+        // [|var x = 10;|]
+        // var y = `${ x } ${ x }`
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var x = 10;
+      // var y = `${ [|x|] } ${ x }`
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates1.ts ===
+      // var x = 10;
+      // var y = `${ x } ${ [|x|] }`
+  }
+]
 
 [
   {

@@ -9,6 +9,39 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // export {};
+      // declare global {
+      //     function [|f|](): void;
+      // }
+      === ContextSpan ===
+        // === /a.ts ===
+        // export {};
+        // declare global {
+        //     [|function f(): void;|]
+        // }
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export {};
+      // declare global {
+      //     function [|f|](): void;
+      // }
+      === ContextSpan ===
+        // === /a.ts ===
+        // export {};
+        // declare global {
+        //     [|function f(): void;|]
+        // }
+      === 1 ===
+      // === /b.ts ===
+      // [|f|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -96,6 +129,39 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // export {};
+      // declare global {
+      //     function [|f|](): void;
+      // }
+      === ContextSpan ===
+        // === /a.ts ===
+        // export {};
+        // declare global {
+        //     [|function f(): void;|]
+        // }
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export {};
+      // declare global {
+      //     function [|f|](): void;
+      // }
+      === ContextSpan ===
+        // === /a.ts ===
+        // export {};
+        // declare global {
+        //     [|function f(): void;|]
+        // }
+      === 1 ===
+      // === /b.ts ===
+      // [|f|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -180,6 +246,39 @@
 // declare global {
 //     function [|f|](): void;
 // }
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // export {};
+      // declare global {
+      //     function [|f|](): void;
+      // }
+      === ContextSpan ===
+        // === /a.ts ===
+        // export {};
+        // declare global {
+        //     [|function f(): void;|]
+        // }
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export {};
+      // declare global {
+      //     function [|f|](): void;
+      // }
+      === ContextSpan ===
+        // === /a.ts ===
+        // export {};
+        // declare global {
+        //     [|function f(): void;|]
+        // }
+      === 1 ===
+      // === /b.ts ===
+      // [|f|]();
+  }
+]
 
 [
   {

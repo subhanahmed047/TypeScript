@@ -14,6 +14,68 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+      // class C extends D {
+      //     [|prop0|]: string;
+      //     prop1: number;
+      // }
+      // 
+      // class D extends C {
+      //     prop0: string;
+      // }
+      // 
+      // var d: D;
+      // d.prop0;
+      // d.prop1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+        // class C extends D {
+        //     [|prop0: string;|]
+        //     prop1: number;
+        // }
+        // 
+        // class D extends C {
+        //     prop0: string;
+        // }
+        // 
+        // var d: D;
+        // d.prop0;
+        // d.prop1;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+      // class C extends D {
+      //     [|prop0|]: string;
+      //     prop1: number;
+      // }
+      // 
+      // class D extends C {
+      //     prop0: string;
+      // }
+      // 
+      // var d: D;
+      // d.prop0;
+      // d.prop1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+        // class C extends D {
+        //     [|prop0: string;|]
+        //     prop1: number;
+        // }
+        // 
+        // class D extends C {
+        //     prop0: string;
+        // }
+        // 
+        // var d: D;
+        // d.prop0;
+        // d.prop1;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -105,6 +167,68 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+      // class C extends D {
+      //     prop0: string;
+      //     [|prop1|]: number;
+      // }
+      // 
+      // class D extends C {
+      //     prop0: string;
+      // }
+      // 
+      // var d: D;
+      // d.prop0;
+      // d.prop1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+        // class C extends D {
+        //     prop0: string;
+        //     [|prop1: number;|]
+        // }
+        // 
+        // class D extends C {
+        //     prop0: string;
+        // }
+        // 
+        // var d: D;
+        // d.prop0;
+        // d.prop1;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+      // class C extends D {
+      //     prop0: string;
+      //     [|prop1|]: number;
+      // }
+      // 
+      // class D extends C {
+      //     prop0: string;
+      // }
+      // 
+      // var d: D;
+      // d.prop0;
+      // d.prop1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+        // class C extends D {
+        //     prop0: string;
+        //     [|prop1: number;|]
+        // }
+        // 
+        // class D extends C {
+        //     prop0: string;
+        // }
+        // 
+        // var d: D;
+        // d.prop0;
+        // d.prop1;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -193,6 +317,82 @@
 // var d: D;
 // d.[|prop0|];
 // d.prop1;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+      // class C extends D {
+      //     prop0: string;
+      //     prop1: number;
+      // }
+      // 
+      // class D extends C {
+      //     [|prop0|]: string;
+      // }
+      // 
+      // var d: D;
+      // d.prop0;
+      // d.prop1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+        // class C extends D {
+        //     prop0: string;
+        //     prop1: number;
+        // }
+        // 
+        // class D extends C {
+        //     [|prop0: string;|]
+        // }
+        // 
+        // var d: D;
+        // d.prop0;
+        // d.prop1;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+      // class C extends D {
+      //     prop0: string;
+      //     prop1: number;
+      // }
+      // 
+      // class D extends C {
+      //     [|prop0|]: string;
+      // }
+      // 
+      // var d: D;
+      // d.prop0;
+      // d.prop1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+        // class C extends D {
+        //     prop0: string;
+        //     prop1: number;
+        // }
+        // 
+        // class D extends C {
+        //     [|prop0: string;|]
+        // }
+        // 
+        // var d: D;
+        // d.prop0;
+        // d.prop1;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+      // class C extends D {
+      //     prop0: string;
+      //     prop1: number;
+      // }
+      // 
+      // class D extends C {
+      //     prop0: string;
+      // }
+      // 
+      // var d: D;
+      // d.[|prop0|];
+      // d.prop1;
+  }
+]
 
 [
   {
@@ -296,6 +496,82 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+      // class C extends D {
+      //     prop0: string;
+      //     prop1: number;
+      // }
+      // 
+      // class D extends C {
+      //     [|prop0|]: string;
+      // }
+      // 
+      // var d: D;
+      // d.prop0;
+      // d.prop1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+        // class C extends D {
+        //     prop0: string;
+        //     prop1: number;
+        // }
+        // 
+        // class D extends C {
+        //     [|prop0: string;|]
+        // }
+        // 
+        // var d: D;
+        // d.prop0;
+        // d.prop1;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+      // class C extends D {
+      //     prop0: string;
+      //     prop1: number;
+      // }
+      // 
+      // class D extends C {
+      //     [|prop0|]: string;
+      // }
+      // 
+      // var d: D;
+      // d.prop0;
+      // d.prop1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+        // class C extends D {
+        //     prop0: string;
+        //     prop1: number;
+        // }
+        // 
+        // class D extends C {
+        //     [|prop0: string;|]
+        // }
+        // 
+        // var d: D;
+        // d.prop0;
+        // d.prop1;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+      // class C extends D {
+      //     prop0: string;
+      //     prop1: number;
+      // }
+      // 
+      // class D extends C {
+      //     prop0: string;
+      // }
+      // 
+      // var d: D;
+      // d.[|prop0|];
+      // d.prop1;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -377,5 +653,19 @@
     ]
   }
 ]
+
+// === /tests/cases/fourslash/findAllRefsInheritedProperties5.ts ===
+// class C extends D {
+//     prop0: string;
+//     prop1: number;
+// }
+// 
+// class D extends C {
+//     prop0: string;
+// }
+// 
+// var d: D;
+// d.prop0;
+// d./*FIND ALL REFS*/prop1;
 
 undefined

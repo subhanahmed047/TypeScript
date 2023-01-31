@@ -7,6 +7,7 @@ import * as vpath from "./_namespaces/vpath";
 import * as Utils from "./_namespaces/Utils";
 
 import ArrayOrSingle = FourSlashInterface.ArrayOrSingle;
+import BaselineCommand = FourSlashInterface.BaselineCommand;
 
 export const enum FourSlashTestType {
     Native,
@@ -793,6 +794,13 @@ export class TestState {
                 const text = this.renderMarkers(markers);
                 this.raiseError(`${testName} failed for definition ${markerName || expectedFileName} (${i}): expected ${expectedFileName} at ${expectedPosition}, got ${definition.fileName} at ${definition.textSpan.start}\n\n${text}\n`);
             }
+            if (definition.contextSpan) {
+                this.raiseError(
+                    `${testName} failed for definition context span ${markerName || expectedFileName} (${i}): The actual definition contextSpan was an \`${JSON.stringify(definition.contextSpan)}\` result. Use:\n\n` +
+                    `    verify.baselineCommands for ${startMarker === undefined ? "startMarker" : `"${startMarker}"`}\n\n` +
+                    `if this is expected.`
+                );
+            }
             if (definition.unverified && (typeof endMarkerOrFileResult === "string" || !endMarkerOrFileResult.unverified)) {
                 const isFileResult = typeof endMarkerOrFileResult !== "string" && !!endMarkerOrFileResult.file;
                 this.raiseError(
@@ -841,6 +849,50 @@ export class TestState {
         function bold(text: string) {
             return useTerminalBoldSequence ? `\x1b[1;4m${text}\x1b[0;31m` : text;
         }
+    }
+
+    private baselineGoToDefs(refType: string, markerNames: readonly string[], getDefs: () => readonly ts.DefinitionInfo[] | ts.DefinitionInfoAndBoundSpan | readonly ts.ImplementationLocation[] | undefined) {
+        return markerNames.map(markerName => {
+            this.goToMarker(markerName);
+            const defs = getDefs();
+            return this.baselineReferencesWorker<ReturnType<typeof getDefs>, ts.DefinitionInfo | ts.ImplementationLocation>(
+                refType,
+                markerName,
+                defs,
+                defs => defs ? ts.isArray(defs) ? defs : defs.definitions : undefined,
+                defs => !defs ?
+                    "" :
+                    ts.isArray(defs) ?
+                        this.readableDocumentSpanArray(defs, "") + "\n\n" :
+                        "{\n" +
+                        (defs.definitions ?
+                            "  === Definitions ===\n" + this.readableDocumentSpanArray(defs.definitions, "    ") :
+                            "") +
+                        "  === TextSpan ===\n" +
+                        this.readableDocumentSpan({ fileName: this.getMarkerByName(markerName).fileName, textSpan: defs.textSpan }, "    ") +
+                        "}\n\n",
+            );
+        }).join("\n\n");
+    }
+
+    public verifyBaselineGoToDefinition(markerNames: string[]) {
+        this.verifyBaselineCommands({ type: "goToDefinition", markerNames });
+    }
+
+    public verifyBaselineGetDefinitionAtPosition(markerNames: string[]) {
+        this.verifyBaselineCommands({ type: "getDefinitionAtPosition", markerNames });
+    }
+
+    public verifyBaselineGoToSourceDefinition(markerNames: string[]) {
+        this.verifyBaselineCommands({ type: "goToSourceDefinition", markerNames });
+    }
+
+    public verifyBaselineGoToType(markerNames: string[]) {
+        this.verifyBaselineCommands({ type: "goToType", markerNames });
+    }
+
+    public verifyBaselineGoToImplementation(markerNames: string[]) {
+        this.verifyBaselineCommands({ type: "goToImplementation", markerNames });
     }
 
     public verifyGetEmitOutputForCurrentFile(expected: string): void {
@@ -1160,55 +1212,173 @@ export class TestState {
         }
     }
 
-    public verifyBaselineFindAllReferences(...markerNames: string[]) {
-        ts.Debug.assert(markerNames.length > 0, "Must pass at least one marker name to `verifyBaselineFindAllReferences()`");
-        this.verifyBaselineFindAllReferencesWorker("", markerNames);
+    private readableSpan(fileName: string, { start, length }: ts.TextSpan, leadingSpaces: string) {
+        const content = this.getFileContent(fileName);
+        const end = start + length;
+        const newContent = `=== ${fileName} ===\n` +
+            content.slice(0, start) +
+            `[|` +
+            content.slice(start, end) +
+            `|]` +
+            content.slice(end);
+        return newContent.split(/\r?\n/).map(l => leadingSpaces + "// " + l).join("\n") + "\n";
     }
 
-    // Used when a single test needs to produce multiple baselines
-    public verifyBaselineFindAllReferencesMulti(seq: number, ...markerNames: string[]) {
-        ts.Debug.assert(markerNames.length > 0, "Must pass at least one marker name to `baselineFindAllReferences()`");
-        this.verifyBaselineFindAllReferencesWorker(`.${seq}`, markerNames);
+    private readableDocumentSpan(span: ts.DocumentSpan, leadingSpaces: string) {
+        const readableTextSpan = this.readableSpan(span.fileName, span.textSpan, leadingSpaces);
+        return !span.contextSpan ?
+            readableTextSpan :
+            readableTextSpan + leadingSpaces + "=== ContextSpan ===\n" + this.readableSpan(span.fileName, span.contextSpan, leadingSpaces + "  ");
     }
 
-    private verifyBaselineFindAllReferencesWorker(suffix: string, markerNames: string[]) {
-        const baseline = markerNames.map(markerName => {
-            this.goToMarker(markerName);
-            const marker = this.getMarkerByName(markerName);
-            const references = this.languageService.findReferences(marker.fileName, marker.position);
-            const refsByFile = references
-                ? ts.group(ts.sort(ts.flatMap(references, r => r.references), (a, b) => a.textSpan.start - b.textSpan.start), ref => ref.fileName)
-                : ts.emptyArray;
-
-            // Write input files
-            const baselineContent = this.getBaselineContentForGroupedReferences(refsByFile, markerName);
-
-            // Write response JSON
-            return baselineContent + JSON.stringify(references, undefined, 2);
-        }).join("\n\n");
-        Harness.Baseline.runBaseline(this.getBaselineFileNameForContainingTestFile(`${suffix}.baseline.jsonc`), baseline);
+    private readableDocumentSpanArray(spans: readonly ts.DocumentSpan[], leadingSpaces: string) {
+        return spans.map((span, index) =>
+            leadingSpaces +
+            `=== ${index} ===\n` +
+            this.readableDocumentSpan(span, leadingSpaces)).join("");
     }
 
-    public verifyBaselineGetFileReferences(fileName: string) {
-        const references = this.languageService.getFileReferences(fileName);
-        const refsByFile = references
-            ? ts.group(ts.sort(references, (a, b) => a.textSpan.start - b.textSpan.start), ref => ref.fileName)
-            : ts.emptyArray;
-
-        // Write input files
-        let baselineContent = this.getBaselineContentForGroupedReferences(refsByFile);
-
-        // Write response JSON
-        baselineContent += JSON.stringify(references, undefined, 2);
+    public verifyBaselineCommands(...commands: BaselineCommand[]) {
+        let baselineContent = "";
+        for (const command of commands) {
+            if (commands.length !== 1) baselineContent += `=== ${command.type} ===\n`;
+            switch (command.type) {
+                case "findAllReferences":
+                    baselineContent += this.baselineFindAllReferencesWorker(command.markerNames);
+                    break;
+                case "getFileReferences":
+                    baselineContent += this.baselineGetFileReferences(command.fileName);
+                    break;
+                case "findRenameLocations":
+                    baselineContent += this.baselineRenameWorker(command.marker, command.options);
+                    break;
+                case "goToDefinition":
+                    baselineContent += this.baselineGoToDefs(
+                        "/*GOTO DEF*/",
+                        command.markerNames,
+                        () => this.getGoToDefinitionAndBoundSpan()
+                    );
+                    break;
+                case "getDefinitionAtPosition":
+                    baselineContent += this.baselineGoToDefs(
+                        "/*GOTO DEF POS*/",
+                        command.markerNames,
+                        () => this.getGoToDefinition()
+                    );
+                    break;
+                case "goToSourceDefinition":
+                    baselineContent += this.baselineGoToDefs(
+                        "/*GOTO SOURCE DEF",
+                        command.markerNames,
+                        () => (this.languageService as ts.server.SessionClient).getSourceDefinitionAndBoundSpan(this.activeFile.fileName, this.currentCaretPosition)
+                    );
+                    break;
+                case "goToType":
+                    baselineContent += this.baselineGoToDefs(
+                        "/*GOTO TYPE",
+                        command.markerNames,
+                        () => this.languageService.getTypeDefinitionAtPosition(this.activeFile.fileName, this.currentCaretPosition)
+                    );
+                    break;
+                case "goToImplementation":
+                    baselineContent += this.baselineGoToDefs(
+                        "/*GOTO IMPL",
+                        command.markerNames,
+                        () => this.languageService.getImplementationAtPosition(this.activeFile.fileName, this.currentCaretPosition)
+                    );
+                    break;
+                case "customWork":
+                    baselineContent += command.work() || "";
+                    break;
+                default:
+                    ts.Debug.assertNever(command);
+            }
+            if (commands.length !== 1) baselineContent += `\n\n`;
+        }
         Harness.Baseline.runBaseline(this.getBaselineFileNameForContainingTestFile(".baseline.jsonc"), baselineContent);
     }
 
-    private getBaselineContentForGroupedReferences(refsByFile: readonly (readonly ts.ReferenceEntry[])[], markerName?: string) {
+    public verifyBaselineFindAllReferences(markerNames: string[]) {
+        ts.Debug.assert(markerNames.length > 0, "Must pass at least one marker name to `verifyBaselineFindAllReferences()`");
+        this.verifyBaselineCommands({ type: "findAllReferences", markerNames });
+    }
+
+    private baselineFindAllReferencesWorker(markerNames: string[]) {
+        return markerNames.map(markerName => {
+            this.goToMarker(markerName);
+            const marker = this.getMarkerByName(markerName);
+            const references = this.languageService.findReferences(marker.fileName, marker.position);
+            return this.baselineReferencesWorker(
+                "/*FIND ALL REFS*/",
+                markerName,
+                references,
+                references => ts.flatMap(references, r => r.references),
+                references => references ?
+                    "[\n" +
+                    references.map(r => `  {\n    === Definition ===\n` +
+                        this.readableDocumentSpan(r.definition, "      ") +
+                        `    === References ===\n` +
+                        this.readableDocumentSpanArray(r.references, "      ") +
+                        "  }"
+                    ).join(",\n") +
+                    "\n]\n\n" :
+                    "",
+            );
+        }).join("\n\n");
+    }
+
+    public verifyBaselineGetFileReferences(fileName: string) {
+        this.verifyBaselineCommands({ type: "getFileReferences", fileName });
+    }
+
+    private baselineGetFileReferences(fileName: string) {
+        const references = this.languageService.getFileReferences(fileName);
+        return this.baselineReferencesWorker(
+            "/*FIND ALL REFS*/",
+            /*markerName*/ undefined,
+            references,
+            ts.identity,
+            references => this.readableDocumentSpanArray(references, "") + "\n\n",
+        );
+    }
+
+    private baselineReferencesWorker<R, T extends ts.DocumentSpan>(
+        refType: string,
+        markerName: string | undefined,
+        result: R,
+        getDocumentSpanArray: (result: R) => readonly T[] | undefined,
+        getReadableResult: (result: R) => string,
+    ): string {
+        const spans = getDocumentSpanArray(result);
+        const spansByFile = spans
+            ? ts.group(ts.sort(spans, (a, b) => a.textSpan.start - b.textSpan.start), span => span.fileName)
+            : ts.emptyArray;
+        // Write input files
+        const baselineContent = this.getBaselineContentForGroupedReferences(refType, spansByFile, markerName);
+        const readableReferences = getReadableResult(result);
+        // Write response JSON
+        return baselineContent + readableReferences + JSON.stringify(result, undefined, 2);
+    }
+
+    private getBaselineContentForGroupedReferences<T extends ts.DocumentSpan>(
+        refType: string,
+        refsByFile: readonly (readonly T[])[],
+        markerName: string | undefined,
+    ) {
         const marker = markerName !== undefined ? this.getMarkerByName(markerName) : undefined;
+        let foundMarker = false;
         let baselineContent = "";
         for (const group of refsByFile) {
             baselineContent += getBaselineContentForFile(group[0].fileName, this.getFileContent(group[0].fileName));
             baselineContent += "\n\n";
+        }
+        if (!foundMarker && marker?.fileName) {
+            const content = this.getFileContent(marker.fileName);
+            const newContent = `=== ${marker.fileName} ===\n` +
+                content.slice(0, marker.position) +
+                refType +
+                content.slice(marker.position);
+            baselineContent += newContent.split(/\r?\n/).map(l => "// " + l).join("\n") + "\n\n";
         }
         return baselineContent;
 
@@ -1219,22 +1389,25 @@ export class TestState {
                 const end = textSpan.start + textSpan.length;
                 if (fileName === marker?.fileName && pos <= marker.position && marker.position < textSpan.start) {
                     newContent += content.slice(pos, marker.position);
-                    newContent += "/*FIND ALL REFS*/";
+                    newContent += refType;
                     pos = marker.position;
+                    foundMarker = true;
                 }
                 newContent += content.slice(pos, textSpan.start);
                 pos = textSpan.start;
                 // It's easier to read if the /*FIND ALL REFS*/ comment is outside the range markers, which makes
                 // this code a bit more verbose than it would be if I were less picky about the baseline format.
                 if (fileName === marker?.fileName && marker.position === textSpan.start) {
-                    newContent += "/*FIND ALL REFS*/";
+                    newContent += refType;
                     newContent += "[|";
+                    foundMarker = true;
                 }
                 else if (fileName === marker?.fileName && ts.textSpanContainsPosition(textSpan, marker.position)) {
                     newContent += "[|";
                     newContent += content.slice(pos, marker.position);
-                    newContent += "/*FIND ALL REFS*/";
+                    newContent += refType;
                     pos = marker.position;
+                    foundMarker = true;
                 }
                 else {
                     newContent += "[|";
@@ -1245,8 +1418,9 @@ export class TestState {
             }
             if (marker?.fileName === fileName && marker.position >= pos) {
                 newContent += content.slice(pos, marker.position);
-                newContent += "/*FIND ALL REFS*/";
+                newContent += refType;
                 pos = marker.position;
+                foundMarker = true;
             }
             newContent += content.slice(pos);
             return newContent.split(/\r?\n/).map(l => "// " + l).join("\n");
@@ -1509,6 +1683,10 @@ export class TestState {
     }
 
     public baselineRename(marker: string, options: FourSlashInterface.RenameOptions) {
+        this.verifyBaselineCommands({ type: "findRenameLocations", marker, options });
+    }
+
+    private baselineRenameWorker(marker: string, options: FourSlashInterface.RenameOptions) {
         const { fileName, position } = this.getMarkerByName(marker);
         const locations = this.languageService.findRenameLocations(
             fileName,
@@ -1534,9 +1712,11 @@ export class TestState {
                     baselineFileContent.slice(textSpan.start + textSpan.length);
             }
             return `/*====== ${fileName} ======*/\n\n${baselineFileContent}`;
-        }).join("\n\n") + "\n";
+        }).join("\n\n") + "\n\n";
 
-        Harness.Baseline.runBaseline(this.getBaselineFileNameForContainingTestFile(), baselineContent);
+        const readableLocations = this.readableDocumentSpanArray(locations, "") + "\n\n";
+
+        return baselineContent + readableLocations + JSON.stringify(locations, undefined, 2);
     }
 
     public verifyQuickInfoExists(negative: boolean) {
@@ -3507,6 +3687,10 @@ export class TestState {
             return this.raiseError("verifyOccurrencesAtPositionListContains failed - found 0 references, expected at least one.");
         }
 
+        if (ts.some(occurrences, o => !!o.contextSpan)) {
+            this.raiseError(`Result has contextSpan, use baselineCommands instead`);
+        }
+
         for (const occurrence of occurrences) {
             if (occurrence && occurrence.fileName === fileName && occurrence.textSpan.start === start && ts.textSpanEnd(occurrence.textSpan) === end) {
                 if (typeof isWriteAccess !== "undefined" && occurrence.isWriteAccess !== isWriteAccess) {
@@ -3586,10 +3770,12 @@ export class TestState {
     private verifyDocumentHighlights(expectedRanges: Range[], fileNames: readonly string[] = [this.activeFile.fileName]) {
         fileNames = ts.map(fileNames, ts.normalizePath);
         const documentHighlights = this.getDocumentHighlightsAtCurrentPosition(fileNames) || [];
-
         for (const dh of documentHighlights) {
             if (fileNames.indexOf(dh.fileName) === -1) {
                 this.raiseError(`verifyDocumentHighlights failed - got highlights in unexpected file name ${dh.fileName}`);
+            }
+            if (ts.some(dh.highlightSpans, d => !!d.contextSpan)) {
+                this.raiseError(`Result has contextSpan, use baselineCommands instead`);
             }
         }
 

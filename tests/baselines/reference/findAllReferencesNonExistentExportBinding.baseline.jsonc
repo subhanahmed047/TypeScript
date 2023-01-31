@@ -6,6 +6,39 @@
 
 [
   {
+    === Definition ===
+      // === /bar.ts ===
+      // import { [|Foo|] } from "./foo";
+      === ContextSpan ===
+        // === /bar.ts ===
+        // [|import { Foo } from "./foo";|]
+    === References ===
+      === 0 ===
+      // === /bar.ts ===
+      // import { [|Foo|] } from "./foo";
+      === ContextSpan ===
+        // === /bar.ts ===
+        // [|import { Foo } from "./foo";|]
+  },
+  {
+    === Definition ===
+      // === /foo.ts ===
+      // export { [|Foo|] }
+      === ContextSpan ===
+        // === /foo.ts ===
+        // [|export { Foo }|]
+    === References ===
+      === 0 ===
+      // === /foo.ts ===
+      // export { [|Foo|] }
+      === ContextSpan ===
+        // === /foo.ts ===
+        // [|export { Foo }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

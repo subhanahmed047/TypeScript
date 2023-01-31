@@ -10,6 +10,25 @@
 
 [
   {
+    === Definition ===
+      // === /import.ts ===
+      // import "[|./script|]";
+    === References ===
+      === 0 ===
+      // === /import.ts ===
+      // import [|"./script"|];
+      === 1 ===
+      // === /require.js ===
+      // require([|"./script"|]);
+      // console.log("./script");
+      === 2 ===
+      // === /tripleSlash.ts ===
+      // /// <reference path="[|script.ts|]" />
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -68,6 +87,26 @@
 
 [
   {
+    === Definition ===
+      // === /require.js ===
+      // require("[|./script|]");
+      // console.log("./script");
+    === References ===
+      === 0 ===
+      // === /import.ts ===
+      // import [|"./script"|];
+      === 1 ===
+      // === /require.js ===
+      // require([|"./script"|]);
+      // console.log("./script");
+      === 2 ===
+      // === /tripleSlash.ts ===
+      // /// <reference path="[|script.ts|]" />
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -120,6 +159,31 @@
 
 // === /stringLiteral.ts ===
 // console.log("[|./script|]");
+
+[
+  {
+    === Definition ===
+      // === /require.js ===
+      // require("./script");
+      // console.log("[|./script|]");
+    === References ===
+      === 0 ===
+      // === /require.js ===
+      // require("[|./script|]");
+      // console.log("./script");
+      === ContextSpan ===
+        // === /require.js ===
+        // [|require("./script");|]
+        // console.log("./script");
+      === 1 ===
+      // === /require.js ===
+      // require("./script");
+      // console.log("[|./script|]");
+      === 2 ===
+      // === /stringLiteral.ts ===
+      // console.log("[|./script|]");
+  }
+]
 
 [
   {

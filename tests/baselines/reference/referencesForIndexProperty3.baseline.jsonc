@@ -11,6 +11,78 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+      // interface Object {
+      //     [|toMyString|]();
+      // }
+      // 
+      // var y: Object;
+      // y.toMyString();
+      // 
+      // var x = {};
+      // x["toMyString"]();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+        // interface Object {
+        //     [|toMyString();|]
+        // }
+        // 
+        // var y: Object;
+        // y.toMyString();
+        // 
+        // var x = {};
+        // x["toMyString"]();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+      // interface Object {
+      //     [|toMyString|]();
+      // }
+      // 
+      // var y: Object;
+      // y.toMyString();
+      // 
+      // var x = {};
+      // x["toMyString"]();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+        // interface Object {
+        //     [|toMyString();|]
+        // }
+        // 
+        // var y: Object;
+        // y.toMyString();
+        // 
+        // var x = {};
+        // x["toMyString"]();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+      // interface Object {
+      //     toMyString();
+      // }
+      // 
+      // var y: Object;
+      // y.[|toMyString|]();
+      // 
+      // var x = {};
+      // x["toMyString"]();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+      // interface Object {
+      //     toMyString();
+      // }
+      // 
+      // var y: Object;
+      // y.toMyString();
+      // 
+      // var x = {};
+      // x["[|toMyString|]"]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -125,6 +197,78 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+      // interface Object {
+      //     [|toMyString|]();
+      // }
+      // 
+      // var y: Object;
+      // y.toMyString();
+      // 
+      // var x = {};
+      // x["toMyString"]();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+        // interface Object {
+        //     [|toMyString();|]
+        // }
+        // 
+        // var y: Object;
+        // y.toMyString();
+        // 
+        // var x = {};
+        // x["toMyString"]();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+      // interface Object {
+      //     [|toMyString|]();
+      // }
+      // 
+      // var y: Object;
+      // y.toMyString();
+      // 
+      // var x = {};
+      // x["toMyString"]();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+        // interface Object {
+        //     [|toMyString();|]
+        // }
+        // 
+        // var y: Object;
+        // y.toMyString();
+        // 
+        // var x = {};
+        // x["toMyString"]();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+      // interface Object {
+      //     toMyString();
+      // }
+      // 
+      // var y: Object;
+      // y.[|toMyString|]();
+      // 
+      // var x = {};
+      // x["toMyString"]();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+      // interface Object {
+      //     toMyString();
+      // }
+      // 
+      // var y: Object;
+      // y.toMyString();
+      // 
+      // var x = {};
+      // x["[|toMyString|]"]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -233,6 +377,78 @@
 // 
 // var x = {};
 // x["/*FIND ALL REFS*/[|toMyString|]"]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+      // interface Object {
+      //     [|toMyString|]();
+      // }
+      // 
+      // var y: Object;
+      // y.toMyString();
+      // 
+      // var x = {};
+      // x["toMyString"]();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+        // interface Object {
+        //     [|toMyString();|]
+        // }
+        // 
+        // var y: Object;
+        // y.toMyString();
+        // 
+        // var x = {};
+        // x["toMyString"]();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+      // interface Object {
+      //     [|toMyString|]();
+      // }
+      // 
+      // var y: Object;
+      // y.toMyString();
+      // 
+      // var x = {};
+      // x["toMyString"]();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+        // interface Object {
+        //     [|toMyString();|]
+        // }
+        // 
+        // var y: Object;
+        // y.toMyString();
+        // 
+        // var x = {};
+        // x["toMyString"]();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+      // interface Object {
+      //     toMyString();
+      // }
+      // 
+      // var y: Object;
+      // y.[|toMyString|]();
+      // 
+      // var x = {};
+      // x["toMyString"]();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty3.ts ===
+      // interface Object {
+      //     toMyString();
+      // }
+      // 
+      // var y: Object;
+      // y.toMyString();
+      // 
+      // var x = {};
+      // x["[|toMyString|]"]();
+  }
+]
 
 [
   {

@@ -9,6 +9,66 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get [|x|]() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     [|get x() { return 0; }|]
+        // 
+        //     set y(a: number) {}
+        // }
+        // const { x, y } = new Test();
+        // x; y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get [|x|]() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     [|get x() { return 0; }|]
+        // 
+        //     set y(a: number) {}
+        // }
+        // const { x, y } = new Test();
+        // x; y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { [|x|], y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     set y(a: number) {}
+        // }
+        // [|const { x, y } = new Test();|]
+        // x; y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -105,6 +165,96 @@
 // }
 // const { /*FIND ALL REFS*/[|x|], y } = new Test();
 // [|x|]; y;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get [|x|]() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     [|get x() { return 0; }|]
+        // 
+        //     set y(a: number) {}
+        // }
+        // const { x, y } = new Test();
+        // x; y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get [|x|]() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     [|get x() { return 0; }|]
+        // 
+        //     set y(a: number) {}
+        // }
+        // const { x, y } = new Test();
+        // x; y;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { [|x|], y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     set y(a: number) {}
+        // }
+        // [|const { x, y } = new Test();|]
+        // x; y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { [|x|], y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     set y(a: number) {}
+        // }
+        // [|const { x, y } = new Test();|]
+        // x; y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, y } = new Test();
+      // [|x|]; y;
+  }
+]
 
 [
   {
@@ -261,6 +411,57 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { [|x|], y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     set y(a: number) {}
+        // }
+        // [|const { x, y } = new Test();|]
+        // x; y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { [|x|], y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     set y(a: number) {}
+        // }
+        // [|const { x, y } = new Test();|]
+        // x; y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, y } = new Test();
+      // [|x|]; y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -335,6 +536,66 @@
 // }
 // const { x, [|y|] } = new Test();
 // x; y;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set [|y|](a: number) {}
+      // }
+      // const { x, y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     [|set y(a: number) {}|]
+        // }
+        // const { x, y } = new Test();
+        // x; y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set [|y|](a: number) {}
+      // }
+      // const { x, y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     [|set y(a: number) {}|]
+        // }
+        // const { x, y } = new Test();
+        // x; y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, [|y|] } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     set y(a: number) {}
+        // }
+        // [|const { x, y } = new Test();|]
+        // x; y;
+  }
+]
 
 [
   {
@@ -434,6 +695,96 @@
 // }
 // const { x, /*FIND ALL REFS*/[|y|] } = new Test();
 // x; [|y|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set [|y|](a: number) {}
+      // }
+      // const { x, y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     [|set y(a: number) {}|]
+        // }
+        // const { x, y } = new Test();
+        // x; y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set [|y|](a: number) {}
+      // }
+      // const { x, y } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     [|set y(a: number) {}|]
+        // }
+        // const { x, y } = new Test();
+        // x; y;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, [|y|] } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     set y(a: number) {}
+        // }
+        // [|const { x, y } = new Test();|]
+        // x; y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, [|y|] } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     set y(a: number) {}
+        // }
+        // [|const { x, y } = new Test();|]
+        // x; y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, y } = new Test();
+      // x; [|y|];
+  }
+]
 
 [
   {
@@ -587,6 +938,57 @@
 // }
 // const { x, [|y|] } = new Test();
 // x; /*FIND ALL REFS*/[|y|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, [|y|] } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     set y(a: number) {}
+        // }
+        // [|const { x, y } = new Test();|]
+        // x; y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, [|y|] } = new Test();
+      // x; y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+        // class Test {
+        //     get x() { return 0; }
+        // 
+        //     set y(a: number) {}
+        // }
+        // [|const { x, y } = new Test();|]
+        // x; y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGetter.ts ===
+      // class Test {
+      //     get x() { return 0; }
+      // 
+      //     set y(a: number) {}
+      // }
+      // const { x, y } = new Test();
+      // x; [|y|];
+  }
+]
 
 [
   {

@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionSingleReference.ts ===
+      // function [|f|]() {}
+      // f();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionSingleReference.ts ===
+        // [|function f() {}|]
+        // f();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionSingleReference.ts ===
+      // function [|f|]() {}
+      // f();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionSingleReference.ts ===
+        // [|function f() {}|]
+        // f();
+      === 1 ===
+      // === /tests/cases/fourslash/isDefinitionSingleReference.ts ===
+      // function f() {}
+      // [|f|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -83,6 +109,32 @@
 // === /tests/cases/fourslash/isDefinitionSingleReference.ts ===
 // function [|f|]() {}
 // /*FIND ALL REFS*/[|f|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionSingleReference.ts ===
+      // function [|f|]() {}
+      // f();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionSingleReference.ts ===
+        // [|function f() {}|]
+        // f();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionSingleReference.ts ===
+      // function [|f|]() {}
+      // f();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionSingleReference.ts ===
+        // [|function f() {}|]
+        // f();
+      === 1 ===
+      // === /tests/cases/fourslash/isDefinitionSingleReference.ts ===
+      // function f() {}
+      // [|f|]();
+  }
+]
 
 [
   {

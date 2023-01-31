@@ -8,6 +8,79 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected [|protectedParam|]: number) {
+      //         let localProtected = protectedParam;
+      //         this.protectedParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+        // class Foo {
+        //     constructor([|protected protectedParam: number|]) {
+        //         let localProtected = protectedParam;
+        //         this.protectedParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected [|protectedParam|]: number) {
+      //         let localProtected = protectedParam;
+      //         this.protectedParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+        // class Foo {
+        //     constructor([|protected protectedParam: number|]) {
+        //         let localProtected = protectedParam;
+        //         this.protectedParam += 10;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected protectedParam: number) {
+      //         let localProtected = protectedParam;
+      //         this.[|protectedParam|] += 10;
+      //     }
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected [|protectedParam|]: number) {
+      //         let localProtected = protectedParam;
+      //         this.protectedParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+        // class Foo {
+        //     constructor([|protected protectedParam: number|]) {
+        //         let localProtected = protectedParam;
+        //         this.protectedParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected protectedParam: number) {
+      //         let localProtected = [|protectedParam|];
+      //         this.protectedParam += 10;
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -164,6 +237,79 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected [|protectedParam|]: number) {
+      //         let localProtected = protectedParam;
+      //         this.protectedParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+        // class Foo {
+        //     constructor([|protected protectedParam: number|]) {
+        //         let localProtected = protectedParam;
+        //         this.protectedParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected [|protectedParam|]: number) {
+      //         let localProtected = protectedParam;
+      //         this.protectedParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+        // class Foo {
+        //     constructor([|protected protectedParam: number|]) {
+        //         let localProtected = protectedParam;
+        //         this.protectedParam += 10;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected protectedParam: number) {
+      //         let localProtected = protectedParam;
+      //         this.[|protectedParam|] += 10;
+      //     }
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected [|protectedParam|]: number) {
+      //         let localProtected = protectedParam;
+      //         this.protectedParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+        // class Foo {
+        //     constructor([|protected protectedParam: number|]) {
+        //         let localProtected = protectedParam;
+        //         this.protectedParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected protectedParam: number) {
+      //         let localProtected = [|protectedParam|];
+      //         this.protectedParam += 10;
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -314,6 +460,79 @@
 //         this./*FIND ALL REFS*/[|protectedParam|] += 10;
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected [|protectedParam|]: number) {
+      //         let localProtected = protectedParam;
+      //         this.protectedParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+        // class Foo {
+        //     constructor([|protected protectedParam: number|]) {
+        //         let localProtected = protectedParam;
+        //         this.protectedParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected [|protectedParam|]: number) {
+      //         let localProtected = protectedParam;
+      //         this.protectedParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+        // class Foo {
+        //     constructor([|protected protectedParam: number|]) {
+        //         let localProtected = protectedParam;
+        //         this.protectedParam += 10;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected protectedParam: number) {
+      //         let localProtected = protectedParam;
+      //         this.[|protectedParam|] += 10;
+      //     }
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected [|protectedParam|]: number) {
+      //         let localProtected = protectedParam;
+      //         this.protectedParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+        // class Foo {
+        //     constructor([|protected protectedParam: number|]) {
+        //         let localProtected = protectedParam;
+        //         this.protectedParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration3.ts ===
+      // class Foo {
+      //     constructor(protected protectedParam: number) {
+      //         let localProtected = [|protectedParam|];
+      //         this.protectedParam += 10;
+      //     }
+      // }
+  }
+]
 
 [
   {

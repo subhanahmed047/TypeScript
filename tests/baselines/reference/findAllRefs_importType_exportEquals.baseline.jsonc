@@ -11,6 +11,62 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // namespace T {
+        //     export type U = string;
+        // }
+        // export = T;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // namespace T {
+        //     export type U = string;
+        // }
+        // export = T;
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = [|T|];
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // namespace T {
+        //     export type U = string;
+        // }
+        // [|export = T;|]
+      === 2 ===
+      // === /b.ts ===
+      // const x: import("[|./a|]") = 0;
+      // const y: import("./a").U = "";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|const x: import("./a") = 0;|]
+        // const y: import("./a").U = "";
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -125,6 +181,54 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // namespace T {
+        //     export type U = string;
+        // }
+        // export = T;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace [|T|] {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // [|namespace T {
+        //     export type U = string;
+        // }|]
+        // export = T;
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = [|T|];
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // namespace T {
+        //     export type U = string;
+        // }
+        // [|export = T;|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -195,6 +299,76 @@
 // === /b.ts ===
 // const x: import("[|./a|]") = 0;
 // const y: import("./a").U = "";
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // namespace T {
+        //     export type U = string;
+        // }
+        // export = T;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // namespace T {
+        //     export type U = string;
+        // }
+        // export = T;
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace [|T|] {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // [|namespace T {
+        //     export type U = string;
+        // }|]
+        // export = T;
+      === 2 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = [|T|];
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // namespace T {
+        //     export type U = string;
+        // }
+        // [|export = T;|]
+      === 3 ===
+      // === /b.ts ===
+      // const x: import("[|./a|]") = 0;
+      // const y: import("./a").U = "";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|const x: import("./a") = 0;|]
+        // const y: import("./a").U = "";
+  }
+]
 
 [
   {
@@ -322,6 +496,108 @@
 // === /b.ts ===
 // const x: import("/*FIND ALL REFS*/[|./a|]") = 0;
 // const y: import("[|./a|]").U = "";
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // [|type T = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // const x: import("./a") = 0;
+      // const y: import("[|./a|]").U = "";
+      === ContextSpan ===
+        // === /b.ts ===
+        // const x: import("./a") = 0;
+        // [|const y: import("./a").U = "";|]
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // [|export|] = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // namespace T {
+        //     export type U = string;
+        // }
+        // [|export = T;|]
+  },
+  {
+    === Definition ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // namespace T {
+        //     export type U = string;
+        // }
+        // export = T;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // namespace T {
+        //     export type U = string;
+        // }
+        // export = T;
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace [|T|] {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // [|namespace T {
+        //     export type U = string;
+        // }|]
+        // export = T;
+      === 2 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = [|T|];
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // namespace T {
+        //     export type U = string;
+        // }
+        // [|export = T;|]
+      === 3 ===
+      // === /b.ts ===
+      // const x: import("[|./a|]") = 0;
+      // const y: import("./a").U = "";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|const x: import("./a") = 0;|]
+        // const y: import("./a").U = "";
+  }
+]
 
 [
   {
@@ -505,6 +781,108 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // [|type T = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // const x: import("./a") = 0;
+      // const y: import("[|./a|]").U = "";
+      === ContextSpan ===
+        // === /b.ts ===
+        // const x: import("./a") = 0;
+        // [|const y: import("./a").U = "";|]
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // [|export|] = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // namespace T {
+        //     export type U = string;
+        // }
+        // [|export = T;|]
+  },
+  {
+    === Definition ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // namespace T {
+        //     export type U = string;
+        // }
+        // export = T;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // namespace T {
+        //     export type U = string;
+        // }
+        // export = T;
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace [|T|] {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // [|namespace T {
+        //     export type U = string;
+        // }|]
+        // export = T;
+      === 2 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = [|T|];
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // namespace T {
+        //     export type U = string;
+        // }
+        // [|export = T;|]
+      === 3 ===
+      // === /b.ts ===
+      // const x: import("[|./a|]") = 0;
+      // const y: import("./a").U = "";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|const x: import("./a") = 0;|]
+        // const y: import("./a").U = "";
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -682,6 +1060,76 @@
 // === /b.ts ===
 // const x: import("[|./a|]") = 0;
 // const y: import("./a").U = "";
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // namespace T {
+        //     export type U = string;
+        // }
+        // export = T;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // namespace T {
+        //     export type U = string;
+        // }
+        // export = T;
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace [|T|] {
+      //     export type U = string;
+      // }
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // [|namespace T {
+        //     export type U = string;
+        // }|]
+        // export = T;
+      === 2 ===
+      // === /a.ts ===
+      // type T = number;
+      // namespace T {
+      //     export type U = string;
+      // }
+      // export = [|T|];
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // namespace T {
+        //     export type U = string;
+        // }
+        // [|export = T;|]
+      === 3 ===
+      // === /b.ts ===
+      // const x: import("[|./a|]") = 0;
+      // const y: import("./a").U = "";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|const x: import("./a") = 0;|]
+        // const y: import("./a").U = "";
+  }
+]
 
 [
   {

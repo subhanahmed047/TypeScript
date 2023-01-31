@@ -1,9 +1,50 @@
+// === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+// let o = { /*FIND ALL REFS*/["foo"]: 12 };
+// let y = o.foo;
+// let z = o['foo'];
+
 undefined
 
 // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
 // let o = { ["/*FIND ALL REFS*/[|foo|]"]: 12 };
 // let y = o.[|foo|];
 // let z = o['[|foo|]'];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+      // let o = { ["[|foo|]"]: 12 };
+      // let y = o.foo;
+      // let z = o['foo'];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+        // let o = { [|["foo"]: 12|] };
+        // let y = o.foo;
+        // let z = o['foo'];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+      // let o = { ["[|foo|]"]: 12 };
+      // let y = o.foo;
+      // let z = o['foo'];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+        // let o = { [|["foo"]: 12|] };
+        // let y = o.foo;
+        // let z = o['foo'];
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+      // let o = { ["foo"]: 12 };
+      // let y = o.[|foo|];
+      // let z = o['foo'];
+      === 2 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+      // let o = { ["foo"]: 12 };
+      // let y = o.foo;
+      // let z = o['[|foo|]'];
+  }
+]
 
 [
   {
@@ -99,6 +140,42 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+      // let o = { ["[|foo|]"]: 12 };
+      // let y = o.foo;
+      // let z = o['foo'];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+        // let o = { [|["foo"]: 12|] };
+        // let y = o.foo;
+        // let z = o['foo'];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+      // let o = { ["[|foo|]"]: 12 };
+      // let y = o.foo;
+      // let z = o['foo'];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+        // let o = { [|["foo"]: 12|] };
+        // let y = o.foo;
+        // let z = o['foo'];
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+      // let o = { ["foo"]: 12 };
+      // let y = o.[|foo|];
+      // let z = o['foo'];
+      === 2 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+      // let o = { ["foo"]: 12 };
+      // let y = o.foo;
+      // let z = o['[|foo|]'];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -185,6 +262,42 @@ undefined
 // let o = { ["[|foo|]"]: 12 };
 // let y = o.[|foo|];
 // let z = o['/*FIND ALL REFS*/[|foo|]'];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+      // let o = { ["[|foo|]"]: 12 };
+      // let y = o.foo;
+      // let z = o['foo'];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+        // let o = { [|["foo"]: 12|] };
+        // let y = o.foo;
+        // let z = o['foo'];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+      // let o = { ["[|foo|]"]: 12 };
+      // let y = o.foo;
+      // let z = o['foo'];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+        // let o = { [|["foo"]: 12|] };
+        // let y = o.foo;
+        // let z = o['foo'];
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+      // let o = { ["foo"]: 12 };
+      // let y = o.[|foo|];
+      // let z = o['foo'];
+      === 2 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfComputedProperty.ts ===
+      // let o = { ["foo"]: 12 };
+      // let y = o.foo;
+      // let z = o['[|foo|]'];
+  }
+]
 
 [
   {

@@ -5,6 +5,42 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames5.ts ===
+      // var x = { "[|someProperty|]": 0 }
+      // x["someProperty"] = 3;
+      // x.someProperty = 5;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames5.ts ===
+        // var x = { [|"someProperty": 0|] }
+        // x["someProperty"] = 3;
+        // x.someProperty = 5;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames5.ts ===
+      // var x = { "[|someProperty|]": 0 }
+      // x["someProperty"] = 3;
+      // x.someProperty = 5;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames5.ts ===
+        // var x = { [|"someProperty": 0|] }
+        // x["someProperty"] = 3;
+        // x.someProperty = 5;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames5.ts ===
+      // var x = { "someProperty": 0 }
+      // x["[|someProperty|]"] = 3;
+      // x.someProperty = 5;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames5.ts ===
+      // var x = { "someProperty": 0 }
+      // x["someProperty"] = 3;
+      // x.[|someProperty|] = 5;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -94,6 +130,42 @@
 // var x = { "[|someProperty|]": 0 }
 // x["/*FIND ALL REFS*/[|someProperty|]"] = 3;
 // x.[|someProperty|] = 5;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames5.ts ===
+      // var x = { "[|someProperty|]": 0 }
+      // x["someProperty"] = 3;
+      // x.someProperty = 5;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames5.ts ===
+        // var x = { [|"someProperty": 0|] }
+        // x["someProperty"] = 3;
+        // x.someProperty = 5;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames5.ts ===
+      // var x = { "[|someProperty|]": 0 }
+      // x["someProperty"] = 3;
+      // x.someProperty = 5;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames5.ts ===
+        // var x = { [|"someProperty": 0|] }
+        // x["someProperty"] = 3;
+        // x.someProperty = 5;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames5.ts ===
+      // var x = { "someProperty": 0 }
+      // x["[|someProperty|]"] = 3;
+      // x.someProperty = 5;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames5.ts ===
+      // var x = { "someProperty": 0 }
+      // x["someProperty"] = 3;
+      // x.[|someProperty|] = 5;
+  }
+]
 
 [
   {

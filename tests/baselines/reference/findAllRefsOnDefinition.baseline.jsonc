@@ -23,6 +23,83 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsOnDefinition-import.ts ===
+      // export class Test{
+      // 
+      //     constructor(){
+      // 
+      //     }
+      // 
+      //     public [|start|](){
+      //         return this;
+      //     }
+      // 
+      //     public stop(){
+      //         return this;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOnDefinition-import.ts ===
+        // export class Test{
+        // 
+        //     constructor(){
+        // 
+        //     }
+        // 
+        //     [|public start(){
+        //         return this;
+        //     }|]
+        // 
+        //     public stop(){
+        //         return this;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsOnDefinition-import.ts ===
+      // export class Test{
+      // 
+      //     constructor(){
+      // 
+      //     }
+      // 
+      //     public [|start|](){
+      //         return this;
+      //     }
+      // 
+      //     public stop(){
+      //         return this;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOnDefinition-import.ts ===
+        // export class Test{
+        // 
+        //     constructor(){
+        // 
+        //     }
+        // 
+        //     [|public start(){
+        //         return this;
+        //     }|]
+        // 
+        //     public stop(){
+        //         return this;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsOnDefinition.ts ===
+      // import Second = require("./findAllRefsOnDefinition-import");
+      // 
+      // var second = new Second.Test()
+      // second.[|start|]();
+      // second.stop();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -140,6 +217,83 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsOnDefinition-import.ts ===
+      // export class Test{
+      // 
+      //     constructor(){
+      // 
+      //     }
+      // 
+      //     public [|start|](){
+      //         return this;
+      //     }
+      // 
+      //     public stop(){
+      //         return this;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOnDefinition-import.ts ===
+        // export class Test{
+        // 
+        //     constructor(){
+        // 
+        //     }
+        // 
+        //     [|public start(){
+        //         return this;
+        //     }|]
+        // 
+        //     public stop(){
+        //         return this;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsOnDefinition-import.ts ===
+      // export class Test{
+      // 
+      //     constructor(){
+      // 
+      //     }
+      // 
+      //     public [|start|](){
+      //         return this;
+      //     }
+      // 
+      //     public stop(){
+      //         return this;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOnDefinition-import.ts ===
+        // export class Test{
+        // 
+        //     constructor(){
+        // 
+        //     }
+        // 
+        //     [|public start(){
+        //         return this;
+        //     }|]
+        // 
+        //     public stop(){
+        //         return this;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsOnDefinition.ts ===
+      // import Second = require("./findAllRefsOnDefinition-import");
+      // 
+      // var second = new Second.Test()
+      // second.[|start|]();
+      // second.stop();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -254,6 +408,83 @@
 // var second = new Second.Test()
 // second./*FIND ALL REFS*/[|start|]();
 // second.stop();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsOnDefinition-import.ts ===
+      // export class Test{
+      // 
+      //     constructor(){
+      // 
+      //     }
+      // 
+      //     public [|start|](){
+      //         return this;
+      //     }
+      // 
+      //     public stop(){
+      //         return this;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOnDefinition-import.ts ===
+        // export class Test{
+        // 
+        //     constructor(){
+        // 
+        //     }
+        // 
+        //     [|public start(){
+        //         return this;
+        //     }|]
+        // 
+        //     public stop(){
+        //         return this;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsOnDefinition-import.ts ===
+      // export class Test{
+      // 
+      //     constructor(){
+      // 
+      //     }
+      // 
+      //     public [|start|](){
+      //         return this;
+      //     }
+      // 
+      //     public stop(){
+      //         return this;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOnDefinition-import.ts ===
+        // export class Test{
+        // 
+        //     constructor(){
+        // 
+        //     }
+        // 
+        //     [|public start(){
+        //         return this;
+        //     }|]
+        // 
+        //     public stop(){
+        //         return this;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsOnDefinition.ts ===
+      // import Second = require("./findAllRefsOnDefinition-import");
+      // 
+      // var second = new Second.Test()
+      // second.[|start|]();
+      // second.stop();
+  }
+]
 
 [
   {

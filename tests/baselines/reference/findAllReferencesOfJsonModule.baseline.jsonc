@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /foo.ts ===
+      // import [|settings|] from "./settings.json";
+      // settings;
+      === ContextSpan ===
+        // === /foo.ts ===
+        // [|import settings from "./settings.json";|]
+        // settings;
+    === References ===
+      === 0 ===
+      // === /foo.ts ===
+      // import [|settings|] from "./settings.json";
+      // settings;
+      === ContextSpan ===
+        // === /foo.ts ===
+        // [|import settings from "./settings.json";|]
+        // settings;
+      === 1 ===
+      // === /foo.ts ===
+      // import settings from "./settings.json";
+      // [|settings|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -66,6 +92,32 @@
 
 [
   {
+    === Definition ===
+      // === /foo.ts ===
+      // import [|settings|] from "./settings.json";
+      // settings;
+      === ContextSpan ===
+        // === /foo.ts ===
+        // [|import settings from "./settings.json";|]
+        // settings;
+    === References ===
+      === 0 ===
+      // === /foo.ts ===
+      // import [|settings|] from "./settings.json";
+      // settings;
+      === ContextSpan ===
+        // === /foo.ts ===
+        // [|import settings from "./settings.json";|]
+        // settings;
+      === 1 ===
+      // === /foo.ts ===
+      // import settings from "./settings.json";
+      // [|settings|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -125,6 +177,32 @@
 // === /foo.ts ===
 // import [|settings|] from "./settings.json";
 // /*FIND ALL REFS*/[|settings|];
+
+[
+  {
+    === Definition ===
+      // === /foo.ts ===
+      // import [|settings|] from "./settings.json";
+      // settings;
+      === ContextSpan ===
+        // === /foo.ts ===
+        // [|import settings from "./settings.json";|]
+        // settings;
+    === References ===
+      === 0 ===
+      // === /foo.ts ===
+      // import [|settings|] from "./settings.json";
+      // settings;
+      === ContextSpan ===
+        // === /foo.ts ===
+        // [|import settings from "./settings.json";|]
+        // settings;
+      === 1 ===
+      // === /foo.ts ===
+      // import settings from "./settings.json";
+      // [|settings|];
+  }
+]
 
 [
   {

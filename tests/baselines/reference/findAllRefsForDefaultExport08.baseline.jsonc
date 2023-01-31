@@ -11,6 +11,56 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport08.ts ===
+      // export default class [|DefaultExportedClass|] {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new DefaultExportedClass;
+      // 
+      // namespace DefaultExportedClass {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport08.ts ===
+        // [|export default class DefaultExportedClass {
+        // }|]
+        // 
+        // var x: DefaultExportedClass;
+        // 
+        // var y = new DefaultExportedClass;
+        // 
+        // namespace DefaultExportedClass {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport08.ts ===
+      // export default class DefaultExportedClass {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new DefaultExportedClass;
+      // 
+      // namespace [|DefaultExportedClass|] {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport08.ts ===
+        // export default class DefaultExportedClass {
+        // }
+        // 
+        // var x: DefaultExportedClass;
+        // 
+        // var y = new DefaultExportedClass;
+        // 
+        // [|namespace DefaultExportedClass {
+        // }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

@@ -9,6 +9,60 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // export = class [|A|] {
+      //     m() { A; }
+      // };
+      === ContextSpan ===
+        // === /a.ts ===
+        // export = [|class A {
+        //     m() { A; }
+        // }|];
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export = class [|A|] {
+      //     m() { A; }
+      // };
+      === ContextSpan ===
+        // === /a.ts ===
+        // export = [|class A {
+        //     m() { A; }
+        // }|];
+      === 1 ===
+      // === /a.ts ===
+      // export = class A {
+      //     m() { [|A|]; }
+      // };
+  },
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import A = require("./a");|]
+        // A;
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import A = require("./a");|]
+        // A;
+      === 1 ===
+      // === /b.ts ===
+      // import A = require("./a");
+      // [|A|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -207,6 +261,60 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // export = class [|A|] {
+      //     m() { A; }
+      // };
+      === ContextSpan ===
+        // === /a.ts ===
+        // export = [|class A {
+        //     m() { A; }
+        // }|];
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export = class [|A|] {
+      //     m() { A; }
+      // };
+      === ContextSpan ===
+        // === /a.ts ===
+        // export = [|class A {
+        //     m() { A; }
+        // }|];
+      === 1 ===
+      // === /a.ts ===
+      // export = class A {
+      //     m() { [|A|]; }
+      // };
+  },
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import A = require("./a");|]
+        // A;
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import A = require("./a");|]
+        // A;
+      === 1 ===
+      // === /b.ts ===
+      // import A = require("./a");
+      // [|A|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -398,6 +506,60 @@
 // export = class [|A|] {
 //     m() { [|A|]; }
 // };
+
+[
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import A = require("./a");|]
+        // A;
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import A = require("./a");|]
+        // A;
+      === 1 ===
+      // === /b.ts ===
+      // import A = require("./a");
+      // [|A|];
+  },
+  {
+    === Definition ===
+      // === /a.ts ===
+      // export = class [|A|] {
+      //     m() { A; }
+      // };
+      === ContextSpan ===
+        // === /a.ts ===
+        // export = [|class A {
+        //     m() { A; }
+        // }|];
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export = class [|A|] {
+      //     m() { A; }
+      // };
+      === ContextSpan ===
+        // === /a.ts ===
+        // export = [|class A {
+        //     m() { A; }
+        // }|];
+      === 1 ===
+      // === /a.ts ===
+      // export = class A {
+      //     m() { [|A|]; }
+      // };
+  }
+]
 
 [
   {
@@ -596,6 +758,60 @@
 // export = class [|A|] {
 //     m() { [|A|]; }
 // };
+
+[
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import A = require("./a");|]
+        // A;
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import A = require("./a");|]
+        // A;
+      === 1 ===
+      // === /b.ts ===
+      // import A = require("./a");
+      // [|A|];
+  },
+  {
+    === Definition ===
+      // === /a.ts ===
+      // export = class [|A|] {
+      //     m() { A; }
+      // };
+      === ContextSpan ===
+        // === /a.ts ===
+        // export = [|class A {
+        //     m() { A; }
+        // }|];
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export = class [|A|] {
+      //     m() { A; }
+      // };
+      === ContextSpan ===
+        // === /a.ts ===
+        // export = [|class A {
+        //     m() { A; }
+        // }|];
+      === 1 ===
+      // === /a.ts ===
+      // export = class A {
+      //     m() { [|A|]; }
+      // };
+  }
+]
 
 [
   {

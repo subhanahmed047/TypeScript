@@ -8,6 +8,38 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // declare module "[|foo|]" {
+      //     var f: number;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|declare module "foo" {
+        //     var f: number;
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // declare module "[|foo|]" {
+      //     var f: number;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|declare module "foo" {
+        //     var f: number;
+        // }|]
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // import f = require("[|foo|]");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+        // [|import f = require("foo");|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -78,6 +110,38 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // declare module "[|foo|]" {
+      //     var f: number;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|declare module "foo" {
+        //     var f: number;
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // declare module "[|foo|]" {
+      //     var f: number;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|declare module "foo" {
+        //     var f: number;
+        // }|]
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // import f = require("[|foo|]");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+        // [|import f = require("foo");|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -140,6 +204,24 @@
 
 // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
 // /*FIND ALL REFS*/import [|f|] = require("foo");
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // import [|f|] = require("foo");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+        // [|import f = require("foo");|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // import [|f|] = require("foo");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+        // [|import f = require("foo");|]
+  }
+]
 
 [
   {
@@ -257,6 +339,38 @@
 
 // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
 // import f = require("/*FIND ALL REFS*/[|foo|]");
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // declare module "[|foo|]" {
+      //     var f: number;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|declare module "foo" {
+        //     var f: number;
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // declare module "[|foo|]" {
+      //     var f: number;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|declare module "foo" {
+        //     var f: number;
+        // }|]
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // import f = require("[|foo|]");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+        // [|import f = require("foo");|]
+  }
+]
 
 [
   {

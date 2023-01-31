@@ -1,4 +1,14 @@
+// === /tests/cases/fourslash/referencesForIllegalAssignment.ts ===
+// f/*FIND ALL REFS*/oo = foo;
+// var bar = function () { };
+// bar = bar + 1;
+
 undefined
+
+// === /tests/cases/fourslash/referencesForIllegalAssignment.ts ===
+// foo = fo/*FIND ALL REFS*/o;
+// var bar = function () { };
+// bar = bar + 1;
 
 undefined
 
@@ -6,6 +16,42 @@ undefined
 // foo = foo;
 // var /*FIND ALL REFS*/[|bar|] = function () { };
 // [|bar|] = [|bar|] + 1;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForIllegalAssignment.ts ===
+      // foo = foo;
+      // var [|bar|] = function () { };
+      // bar = bar + 1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIllegalAssignment.ts ===
+        // foo = foo;
+        // [|var bar = function () { };|]
+        // bar = bar + 1;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForIllegalAssignment.ts ===
+      // foo = foo;
+      // var [|bar|] = function () { };
+      // bar = bar + 1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIllegalAssignment.ts ===
+        // foo = foo;
+        // [|var bar = function () { };|]
+        // bar = bar + 1;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForIllegalAssignment.ts ===
+      // foo = foo;
+      // var bar = function () { };
+      // [|bar|] = bar + 1;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForIllegalAssignment.ts ===
+      // foo = foo;
+      // var bar = function () { };
+      // bar = [|bar|] + 1;
+  }
+]
 
 [
   {

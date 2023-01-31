@@ -16,6 +16,220 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new [|C|]();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void [|C|];
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof [|C|];
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete [|C|].x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield [|C|];
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await [|C|];
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in [|C|];
+      // undefined instanceof C;
+      // undefined as C;
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof [|C|];
+      // undefined as C;
+      === 9 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as [|C|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -149,6 +363,220 @@
 // "x" in [|C|];
 // undefined instanceof [|C|];
 // undefined as [|C|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new [|C|]();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void [|C|];
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof [|C|];
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete [|C|].x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield [|C|];
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await [|C|];
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in [|C|];
+      // undefined instanceof C;
+      // undefined as C;
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof [|C|];
+      // undefined as C;
+      === 9 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as [|C|];
+  }
+]
 
 [
   {
@@ -288,6 +716,220 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new [|C|]();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void [|C|];
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof [|C|];
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete [|C|].x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield [|C|];
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await [|C|];
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in [|C|];
+      // undefined instanceof C;
+      // undefined as C;
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof [|C|];
+      // undefined as C;
+      === 9 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as [|C|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -421,6 +1063,220 @@
 // "x" in [|C|];
 // undefined instanceof [|C|];
 // undefined as [|C|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new [|C|]();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void [|C|];
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof [|C|];
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete [|C|].x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield [|C|];
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await [|C|];
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in [|C|];
+      // undefined instanceof C;
+      // undefined as C;
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof [|C|];
+      // undefined as C;
+      === 9 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as [|C|];
+  }
+]
 
 [
   {
@@ -560,6 +1416,220 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new [|C|]();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void [|C|];
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof [|C|];
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete [|C|].x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield [|C|];
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await [|C|];
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in [|C|];
+      // undefined instanceof C;
+      // undefined as C;
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof [|C|];
+      // undefined as C;
+      === 9 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as [|C|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -693,6 +1763,220 @@
 // "x" /*FIND ALL REFS*/in [|C|];
 // undefined instanceof [|C|];
 // undefined as [|C|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new [|C|]();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void [|C|];
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof [|C|];
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete [|C|].x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield [|C|];
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await [|C|];
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in [|C|];
+      // undefined instanceof C;
+      // undefined as C;
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof [|C|];
+      // undefined as C;
+      === 9 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as [|C|];
+  }
+]
 
 [
   {
@@ -832,6 +2116,220 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new [|C|]();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void [|C|];
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof [|C|];
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete [|C|].x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield [|C|];
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await [|C|];
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in [|C|];
+      // undefined instanceof C;
+      // undefined as C;
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof [|C|];
+      // undefined as C;
+      === 9 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as [|C|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -968,6 +2466,220 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class [|C|] {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // [|class C {
+        //     static x = 1;
+        // }|]
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new [|C|]();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void [|C|];
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof [|C|];
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete [|C|].x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield [|C|];
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await [|C|];
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in [|C|];
+      // undefined instanceof C;
+      // undefined as C;
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof [|C|];
+      // undefined as C;
+      === 9 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as [|C|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1101,6 +2813,92 @@
 // "x" in C;
 // undefined instanceof C;
 // undefined as C;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static [|x|] = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // class C {
+        //     [|static x = 1;|]
+        // }
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static [|x|] = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.x;
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+        // class C {
+        //     [|static x = 1;|]
+        // }
+        // new C();
+        // void C;
+        // typeof C;
+        // delete C.x;
+        // async function* f() {
+        //     yield C;
+        //     await C;
+        // }
+        // "x" in C;
+        // undefined instanceof C;
+        // undefined as C;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForExpressionKeywords.ts ===
+      // class C {
+      //     static x = 1;
+      // }
+      // new C();
+      // void C;
+      // typeof C;
+      // delete C.[|x|];
+      // async function* f() {
+      //     yield C;
+      //     await C;
+      // }
+      // "x" in C;
+      // undefined instanceof C;
+      // undefined as C;
+  }
+]
 
 [
   {

@@ -4,6 +4,51 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+      // const { [|x|], y } = { x: 1, y: 2 };
+      // const z = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+        // [|const { x, y } = { x: 1, y: 2 };|]
+        // const z = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+      // const { [|x|], y } = { x: 1, y: 2 };
+      // const z = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+        // [|const { x, y } = { x: 1, y: 2 };|]
+        // const z = x;
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+      // const { x, y } = { x: 1, y: 2 };
+      // const z = [|x|];
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+      // const { x, y } = { [|x|]: 1, y: 2 };
+      // const z = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+        // const { x, y } = { [|x: 1|], y: 2 };
+        // const z = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+      // const { x, y } = { [|x|]: 1, y: 2 };
+      // const z = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+        // const { x, y } = { [|x: 1|], y: 2 };
+        // const z = x;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -144,6 +189,36 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+      // const { x, y } = { [|x|]: 1, y: 2 };
+      // const z = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+        // const { x, y } = { [|x: 1|], y: 2 };
+        // const z = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+      // const { [|x|], y } = { x: 1, y: 2 };
+      // const z = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+        // [|const { x, y } = { x: 1, y: 2 };|]
+        // const z = x;
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+      // const { x, y } = { [|x|]: 1, y: 2 };
+      // const z = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+        // const { x, y } = { [|x: 1|], y: 2 };
+        // const z = x;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -227,6 +302,32 @@
 // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
 // const { [|x|], y } = { x: 1, y: 2 };
 // const z = /*FIND ALL REFS*/[|x|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+      // const { [|x|], y } = { x: 1, y: 2 };
+      // const z = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+        // [|const { x, y } = { x: 1, y: 2 };|]
+        // const z = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+      // const { [|x|], y } = { x: 1, y: 2 };
+      // const z = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+        // [|const { x, y } = { x: 1, y: 2 };|]
+        // const z = x;
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfBindingPattern.ts ===
+      // const { x, y } = { x: 1, y: 2 };
+      // const z = [|x|];
+  }
+]
 
 [
   {

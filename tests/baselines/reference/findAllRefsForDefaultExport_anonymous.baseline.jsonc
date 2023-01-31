@@ -6,6 +6,36 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // [|export default 1;|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export [|default|] 1;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export default 1;|]
+  },
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import [|a|] from "./a";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import a from "./a";|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import [|a|] from "./a";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import a from "./a";|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

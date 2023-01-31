@@ -7,6 +7,28 @@
 
 [
   {
+    === Definition ===
+      // === /leafModule.ts ===
+      // export const [|hello|] = () => 'Hello';
+      === ContextSpan ===
+        // === /leafModule.ts ===
+        // [|export const hello = () => 'Hello';|]
+    === References ===
+      === 0 ===
+      // === /leafModule.ts ===
+      // export const [|hello|] = () => 'Hello';
+      === ContextSpan ===
+        // === /leafModule.ts ===
+        // [|export const hello = () => 'Hello';|]
+      === 1 ===
+      // === /importing.ts ===
+      // import { Leaf } from './exporting';
+      // Leaf.[|hello|]()
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -104,6 +126,28 @@
 
 [
   {
+    === Definition ===
+      // === /leafModule.ts ===
+      // export const [|hello|] = () => 'Hello';
+      === ContextSpan ===
+        // === /leafModule.ts ===
+        // [|export const hello = () => 'Hello';|]
+    === References ===
+      === 0 ===
+      // === /leafModule.ts ===
+      // export const [|hello|] = () => 'Hello';
+      === ContextSpan ===
+        // === /leafModule.ts ===
+        // [|export const hello = () => 'Hello';|]
+      === 1 ===
+      // === /importing.ts ===
+      // import { Leaf } from './exporting';
+      // Leaf.[|hello|]()
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -196,6 +240,47 @@
 
 // === /exporting.ts ===
 // export * as /*FIND ALL REFS*/[|Leaf|] from './leafModule';
+
+[
+  {
+    === Definition ===
+      // === /exporting.ts ===
+      // export * as [|Leaf|] from './leafModule';
+      === ContextSpan ===
+        // === /exporting.ts ===
+        // [|export * as Leaf from './leafModule';|]
+    === References ===
+      === 0 ===
+      // === /exporting.ts ===
+      // export * as [|Leaf|] from './leafModule';
+      === ContextSpan ===
+        // === /exporting.ts ===
+        // [|export * as Leaf from './leafModule';|]
+  },
+  {
+    === Definition ===
+      // === /importing.ts ===
+      // import { [|Leaf|] } from './exporting';
+      // Leaf.hello()
+      === ContextSpan ===
+        // === /importing.ts ===
+        // [|import { Leaf } from './exporting';|]
+        // Leaf.hello()
+    === References ===
+      === 0 ===
+      // === /importing.ts ===
+      // import { [|Leaf|] } from './exporting';
+      // Leaf.hello()
+      === ContextSpan ===
+        // === /importing.ts ===
+        // [|import { Leaf } from './exporting';|]
+        // Leaf.hello()
+      === 1 ===
+      // === /importing.ts ===
+      // import { Leaf } from './exporting';
+      // [|Leaf|].hello()
+  }
+]
 
 [
   {
@@ -310,6 +395,47 @@
 
 [
   {
+    === Definition ===
+      // === /importing.ts ===
+      // import { [|Leaf|] } from './exporting';
+      // Leaf.hello()
+      === ContextSpan ===
+        // === /importing.ts ===
+        // [|import { Leaf } from './exporting';|]
+        // Leaf.hello()
+    === References ===
+      === 0 ===
+      // === /importing.ts ===
+      // import { [|Leaf|] } from './exporting';
+      // Leaf.hello()
+      === ContextSpan ===
+        // === /importing.ts ===
+        // [|import { Leaf } from './exporting';|]
+        // Leaf.hello()
+      === 1 ===
+      // === /importing.ts ===
+      // import { Leaf } from './exporting';
+      // [|Leaf|].hello()
+  },
+  {
+    === Definition ===
+      // === /exporting.ts ===
+      // export * as [|Leaf|] from './leafModule';
+      === ContextSpan ===
+        // === /exporting.ts ===
+        // [|export * as Leaf from './leafModule';|]
+    === References ===
+      === 0 ===
+      // === /exporting.ts ===
+      // export * as [|Leaf|] from './leafModule';
+      === ContextSpan ===
+        // === /exporting.ts ===
+        // [|export * as Leaf from './leafModule';|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -418,6 +544,47 @@
 
 // === /exporting.ts ===
 // export * as [|Leaf|] from './leafModule';
+
+[
+  {
+    === Definition ===
+      // === /importing.ts ===
+      // import { [|Leaf|] } from './exporting';
+      // Leaf.hello()
+      === ContextSpan ===
+        // === /importing.ts ===
+        // [|import { Leaf } from './exporting';|]
+        // Leaf.hello()
+    === References ===
+      === 0 ===
+      // === /importing.ts ===
+      // import { [|Leaf|] } from './exporting';
+      // Leaf.hello()
+      === ContextSpan ===
+        // === /importing.ts ===
+        // [|import { Leaf } from './exporting';|]
+        // Leaf.hello()
+      === 1 ===
+      // === /importing.ts ===
+      // import { Leaf } from './exporting';
+      // [|Leaf|].hello()
+  },
+  {
+    === Definition ===
+      // === /exporting.ts ===
+      // export * as [|Leaf|] from './leafModule';
+      === ContextSpan ===
+        // === /exporting.ts ===
+        // [|export * as Leaf from './leafModule';|]
+    === References ===
+      === 0 ===
+      // === /exporting.ts ===
+      // export * as [|Leaf|] from './leafModule';
+      === ContextSpan ===
+        // === /exporting.ts ===
+        // [|export * as Leaf from './leafModule';|]
+  }
+]
 
 [
   {

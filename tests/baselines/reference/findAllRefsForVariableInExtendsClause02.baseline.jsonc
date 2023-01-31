@@ -7,6 +7,47 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+      // interface [|Base|] { }
+      // namespace n {
+      //     var Base = class { };
+      //     interface I extends Base { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+        // [|interface Base { }|]
+        // namespace n {
+        //     var Base = class { };
+        //     interface I extends Base { }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+      // interface [|Base|] { }
+      // namespace n {
+      //     var Base = class { };
+      //     interface I extends Base { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+        // [|interface Base { }|]
+        // namespace n {
+        //     var Base = class { };
+        //     interface I extends Base { }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+      // interface Base { }
+      // namespace n {
+      //     var Base = class { };
+      //     interface I extends [|Base|] { }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -72,6 +113,47 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+      // interface [|Base|] { }
+      // namespace n {
+      //     var Base = class { };
+      //     interface I extends Base { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+        // [|interface Base { }|]
+        // namespace n {
+        //     var Base = class { };
+        //     interface I extends Base { }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+      // interface [|Base|] { }
+      // namespace n {
+      //     var Base = class { };
+      //     interface I extends Base { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+        // [|interface Base { }|]
+        // namespace n {
+        //     var Base = class { };
+        //     interface I extends Base { }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+      // interface Base { }
+      // namespace n {
+      //     var Base = class { };
+      //     interface I extends [|Base|] { }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -134,6 +216,47 @@
 //     var Base = class { };
 //     interface I extends /*FIND ALL REFS*/[|Base|] { }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+      // interface [|Base|] { }
+      // namespace n {
+      //     var Base = class { };
+      //     interface I extends Base { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+        // [|interface Base { }|]
+        // namespace n {
+        //     var Base = class { };
+        //     interface I extends Base { }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+      // interface [|Base|] { }
+      // namespace n {
+      //     var Base = class { };
+      //     interface I extends Base { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+        // [|interface Base { }|]
+        // namespace n {
+        //     var Base = class { };
+        //     interface I extends Base { }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause02.ts ===
+      // interface Base { }
+      // namespace n {
+      //     var Base = class { };
+      //     interface I extends [|Base|] { }
+      // }
+  }
+]
 
 [
   {

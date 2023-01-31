@@ -10,6 +10,76 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export class [|Class|] {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export class Class {}|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export class [|Class|] {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export class Class {}|]
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|Class|] as C2 } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+      === 2 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // export { [|Class|] as C3 } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|export { Class as C3 } from "./a";|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as [|C2|] } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as [|C2|] } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as C2 } from "./a";
+      // var c = new [|C2|]();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/c.ts ===
+      // export { Class as [|C3|] } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|export { Class as C3 } from "./a";|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // export { Class as [|C3|] } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|export { Class as C3 } from "./a";|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -260,6 +330,76 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export class [|Class|] {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export class Class {}|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export class [|Class|] {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export class Class {}|]
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|Class|] as C2 } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+      === 2 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // export { [|Class|] as C3 } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|export { Class as C3 } from "./a";|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as [|C2|] } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as [|C2|] } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as C2 } from "./a";
+      // var c = new [|C2|]();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/c.ts ===
+      // export { Class as [|C3|] } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|export { Class as C3 } from "./a";|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // export { Class as [|C3|] } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|export { Class as C3 } from "./a";|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -504,6 +644,76 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export class [|Class|] {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export class Class {}|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export class [|Class|] {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export class Class {}|]
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|Class|] as C2 } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+      === 2 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // export { [|Class|] as C3 } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|export { Class as C3 } from "./a";|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as [|C2|] } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as [|C2|] } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as C2 } from "./a";
+      // var c = new [|C2|]();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/c.ts ===
+      // export { Class as [|C3|] } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|export { Class as C3 } from "./a";|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // export { Class as [|C3|] } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|export { Class as C3 } from "./a";|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -742,6 +952,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as [|C2|] } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as [|C2|] } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as C2 } from "./a";
+      // var c = new [|C2|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -836,6 +1072,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as [|C2|] } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as [|C2|] } from "./a";
+      // var c = new C2();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { Class as C2 } from "./a";|]
+        // var c = new C2();
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { Class as C2 } from "./a";
+      // var c = new [|C2|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -924,6 +1186,24 @@
 
 // === /tests/cases/fourslash/c.ts ===
 // export { Class as /*FIND ALL REFS*/[|C3|] } from "./a";
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/c.ts ===
+      // export { Class as [|C3|] } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|export { Class as C3 } from "./a";|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // export { Class as [|C3|] } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|export { Class as C3 } from "./a";|]
+  }
+]
 
 [
   {

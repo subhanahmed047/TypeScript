@@ -1,0 +1,65 @@
+/*====== /tests/cases/fourslash/jsdocLink_rename1.ts ======*/
+
+interface [|RENAME|] {}
+/**
+ * {@link RENAME()} is ok
+ */
+declare const a: RENAME
+
+=== 0 ===
+// === /tests/cases/fourslash/jsdocLink_rename1.ts ===
+// interface [|A|] {}
+// /**
+//  * {@link A()} is ok
+//  */
+// declare const a: A
+=== ContextSpan ===
+  // === /tests/cases/fourslash/jsdocLink_rename1.ts ===
+  // [|interface A {}|]
+  // /**
+  //  * {@link A()} is ok
+  //  */
+  // declare const a: A
+=== 1 ===
+// === /tests/cases/fourslash/jsdocLink_rename1.ts ===
+// interface A {}
+// /**
+//  * {@link [|A|]()} is ok
+//  */
+// declare const a: A
+=== 2 ===
+// === /tests/cases/fourslash/jsdocLink_rename1.ts ===
+// interface A {}
+// /**
+//  * {@link A()} is ok
+//  */
+// declare const a: [|A|]
+
+
+[
+  {
+    "textSpan": {
+      "start": 10,
+      "length": 1
+    },
+    "fileName": "/tests/cases/fourslash/jsdocLink_rename1.ts",
+    "contextSpan": {
+      "start": 0,
+      "length": 14
+    }
+  },
+  {
+    "textSpan": {
+      "start": 29,
+      "length": 1
+    },
+    "fileName": "/tests/cases/fourslash/jsdocLink_rename1.ts"
+  },
+  {
+    "textSpan": {
+      "start": 61,
+      "length": 1
+    },
+    "fileName": "/tests/cases/fourslash/jsdocLink_rename1.ts"
+  }
+]

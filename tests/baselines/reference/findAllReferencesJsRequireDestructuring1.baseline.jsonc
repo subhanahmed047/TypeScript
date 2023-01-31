@@ -6,6 +6,30 @@
 
 [
   {
+    === Definition ===
+      // === /X.js ===
+      // module.exports = { [|x|]: 1 };
+      === ContextSpan ===
+        // === /X.js ===
+        // module.exports = { [|x: 1|] };
+    === References ===
+      === 0 ===
+      // === /X.js ===
+      // module.exports = { [|x|]: 1 };
+      === ContextSpan ===
+        // === /X.js ===
+        // module.exports = { [|x: 1|] };
+      === 1 ===
+      // === /Y.js ===
+      // const { [|x|]: { y } } = require("./X");
+      === ContextSpan ===
+        // === /Y.js ===
+        // [|const { x: { y } } = require("./X");|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

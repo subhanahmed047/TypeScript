@@ -28,6 +28,180 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         [|m|]() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+        // namespace NPR {
+        //     export class Consider {
+        //         This = class {
+        //             show() { }
+        //         }
+        //         [|m() { }|]
+        //     }
+        //     /**
+        //      * {@linkcode Consider.prototype.m}
+        //      * {@linkplain Consider#m}
+        //      * {@linkcode Consider#This#show}
+        //      * {@linkplain Consider.This.show}
+        //      * {@linkcode NPR.Consider#This#show}
+        //      * {@linkplain NPR.Consider.This#show}
+        //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //      * {@linkcode NPR.Consider.This.show}
+        //      */
+        //     export function ref() { }
+        // }
+        // /**
+        //  * {@linkplain NPR.Consider#This#show hello hello}
+        //  * {@linkplain NPR.Consider.This#show}
+        //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //  * {@linkcode NPR.Consider.This.show}
+        //  */
+        // export function outerref() { }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         [|m|]() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+        // namespace NPR {
+        //     export class Consider {
+        //         This = class {
+        //             show() { }
+        //         }
+        //         [|m() { }|]
+        //     }
+        //     /**
+        //      * {@linkcode Consider.prototype.m}
+        //      * {@linkplain Consider#m}
+        //      * {@linkcode Consider#This#show}
+        //      * {@linkplain Consider.This.show}
+        //      * {@linkcode NPR.Consider#This#show}
+        //      * {@linkplain NPR.Consider.This#show}
+        //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //      * {@linkcode NPR.Consider.This.show}
+        //      */
+        //     export function ref() { }
+        // }
+        // /**
+        //  * {@linkplain NPR.Consider#This#show hello hello}
+        //  * {@linkplain NPR.Consider.This#show}
+        //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //  * {@linkcode NPR.Consider.This.show}
+        //  */
+        // export function outerref() { }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.[|m|]}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#[|m|]}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -164,6 +338,348 @@
 //  * {@linkcode NPR.Consider.This.[|show|]}
 //  */
 // export function outerref() { }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             [|show|]() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+        // namespace NPR {
+        //     export class Consider {
+        //         This = class {
+        //             [|show() { }|]
+        //         }
+        //         m() { }
+        //     }
+        //     /**
+        //      * {@linkcode Consider.prototype.m}
+        //      * {@linkplain Consider#m}
+        //      * {@linkcode Consider#This#show}
+        //      * {@linkplain Consider.This.show}
+        //      * {@linkcode NPR.Consider#This#show}
+        //      * {@linkplain NPR.Consider.This#show}
+        //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //      * {@linkcode NPR.Consider.This.show}
+        //      */
+        //     export function ref() { }
+        // }
+        // /**
+        //  * {@linkplain NPR.Consider#This#show hello hello}
+        //  * {@linkplain NPR.Consider.This#show}
+        //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //  * {@linkcode NPR.Consider.This.show}
+        //  */
+        // export function outerref() { }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             [|show|]() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+        // namespace NPR {
+        //     export class Consider {
+        //         This = class {
+        //             [|show() { }|]
+        //         }
+        //         m() { }
+        //     }
+        //     /**
+        //      * {@linkcode Consider.prototype.m}
+        //      * {@linkplain Consider#m}
+        //      * {@linkcode Consider#This#show}
+        //      * {@linkplain Consider.This.show}
+        //      * {@linkcode NPR.Consider#This#show}
+        //      * {@linkplain NPR.Consider.This#show}
+        //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //      * {@linkcode NPR.Consider.This.show}
+        //      */
+        //     export function ref() { }
+        // }
+        // /**
+        //  * {@linkplain NPR.Consider#This#show hello hello}
+        //  * {@linkplain NPR.Consider.This#show}
+        //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //  * {@linkcode NPR.Consider.This.show}
+        //  */
+        // export function outerref() { }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#[|show|]}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.[|show|]}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#[|show|]}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#[|show|]}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 5 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.[|show|]}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 6 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#[|show|] hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 7 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#[|show|]}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 8 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.[|show|]}
+      //  */
+      // export function outerref() { }
+  }
+]
 
 [
   {
@@ -349,6 +865,404 @@
 //  * {@linkcode NPR.Consider.[|This|].show}
 //  */
 // export function outerref() { }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         [|This|] = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+        // namespace NPR {
+        //     export class Consider {
+        //         [|This = class {
+        //             show() { }
+        //         }|]
+        //         m() { }
+        //     }
+        //     /**
+        //      * {@linkcode Consider.prototype.m}
+        //      * {@linkplain Consider#m}
+        //      * {@linkcode Consider#This#show}
+        //      * {@linkplain Consider.This.show}
+        //      * {@linkcode NPR.Consider#This#show}
+        //      * {@linkplain NPR.Consider.This#show}
+        //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //      * {@linkcode NPR.Consider.This.show}
+        //      */
+        //     export function ref() { }
+        // }
+        // /**
+        //  * {@linkplain NPR.Consider#This#show hello hello}
+        //  * {@linkplain NPR.Consider.This#show}
+        //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //  * {@linkcode NPR.Consider.This.show}
+        //  */
+        // export function outerref() { }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         [|This|] = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+        // namespace NPR {
+        //     export class Consider {
+        //         [|This = class {
+        //             show() { }
+        //         }|]
+        //         m() { }
+        //     }
+        //     /**
+        //      * {@linkcode Consider.prototype.m}
+        //      * {@linkplain Consider#m}
+        //      * {@linkcode Consider#This#show}
+        //      * {@linkplain Consider.This.show}
+        //      * {@linkcode NPR.Consider#This#show}
+        //      * {@linkplain NPR.Consider.This#show}
+        //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //      * {@linkcode NPR.Consider.This.show}
+        //      */
+        //     export function ref() { }
+        // }
+        // /**
+        //  * {@linkplain NPR.Consider#This#show hello hello}
+        //  * {@linkplain NPR.Consider.This#show}
+        //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //  * {@linkcode NPR.Consider.This.show}
+        //  */
+        // export function outerref() { }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#[|This|]#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.[|This|].show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#[|This|]#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.[|This|]#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 5 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#[|This|].show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 6 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.[|This|].show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 7 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#[|This|]#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 8 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.[|This|]#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 9 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#[|This|].show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 10 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.[|This|].show}
+      //  */
+      // export function outerref() { }
+  }
+]
 
 [
   {
@@ -563,6 +1477,460 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class [|Consider|] {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+        // namespace NPR {
+        //     [|export class Consider {
+        //         This = class {
+        //             show() { }
+        //         }
+        //         m() { }
+        //     }|]
+        //     /**
+        //      * {@linkcode Consider.prototype.m}
+        //      * {@linkplain Consider#m}
+        //      * {@linkcode Consider#This#show}
+        //      * {@linkplain Consider.This.show}
+        //      * {@linkcode NPR.Consider#This#show}
+        //      * {@linkplain NPR.Consider.This#show}
+        //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //      * {@linkcode NPR.Consider.This.show}
+        //      */
+        //     export function ref() { }
+        // }
+        // /**
+        //  * {@linkplain NPR.Consider#This#show hello hello}
+        //  * {@linkplain NPR.Consider.This#show}
+        //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //  * {@linkcode NPR.Consider.This.show}
+        //  */
+        // export function outerref() { }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class [|Consider|] {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+        // namespace NPR {
+        //     [|export class Consider {
+        //         This = class {
+        //             show() { }
+        //         }
+        //         m() { }
+        //     }|]
+        //     /**
+        //      * {@linkcode Consider.prototype.m}
+        //      * {@linkplain Consider#m}
+        //      * {@linkcode Consider#This#show}
+        //      * {@linkplain Consider.This.show}
+        //      * {@linkcode NPR.Consider#This#show}
+        //      * {@linkplain NPR.Consider.This#show}
+        //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //      * {@linkcode NPR.Consider.This.show}
+        //      */
+        //     export function ref() { }
+        // }
+        // /**
+        //  * {@linkplain NPR.Consider#This#show hello hello}
+        //  * {@linkplain NPR.Consider.This#show}
+        //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //  * {@linkcode NPR.Consider.This.show}
+        //  */
+        // export function outerref() { }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode [|Consider|].prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain [|Consider|]#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode [|Consider|]#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain [|Consider|].This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 5 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.[|Consider|]#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 6 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.[|Consider|].This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 7 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.[|Consider|]#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 8 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.[|Consider|].This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 9 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.[|Consider|]#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 10 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.[|Consider|].This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 11 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.[|Consider|]#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 12 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.[|Consider|].This.show}
+      //  */
+      // export function outerref() { }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -753,6 +2121,348 @@
 //  * {@linkcode [|NPR|].Consider.This.show}
 //  */
 // export function outerref() { }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace [|NPR|] {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+        // [|namespace NPR {
+        //     export class Consider {
+        //         This = class {
+        //             show() { }
+        //         }
+        //         m() { }
+        //     }
+        //     /**
+        //      * {@linkcode Consider.prototype.m}
+        //      * {@linkplain Consider#m}
+        //      * {@linkcode Consider#This#show}
+        //      * {@linkplain Consider.This.show}
+        //      * {@linkcode NPR.Consider#This#show}
+        //      * {@linkplain NPR.Consider.This#show}
+        //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //      * {@linkcode NPR.Consider.This.show}
+        //      */
+        //     export function ref() { }
+        // }|]
+        // /**
+        //  * {@linkplain NPR.Consider#This#show hello hello}
+        //  * {@linkplain NPR.Consider.This#show}
+        //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //  * {@linkcode NPR.Consider.This.show}
+        //  */
+        // export function outerref() { }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace [|NPR|] {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+        // [|namespace NPR {
+        //     export class Consider {
+        //         This = class {
+        //             show() { }
+        //         }
+        //         m() { }
+        //     }
+        //     /**
+        //      * {@linkcode Consider.prototype.m}
+        //      * {@linkplain Consider#m}
+        //      * {@linkcode Consider#This#show}
+        //      * {@linkplain Consider.This.show}
+        //      * {@linkcode NPR.Consider#This#show}
+        //      * {@linkplain NPR.Consider.This#show}
+        //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //      * {@linkcode NPR.Consider.This.show}
+        //      */
+        //     export function ref() { }
+        // }|]
+        // /**
+        //  * {@linkplain NPR.Consider#This#show hello hello}
+        //  * {@linkplain NPR.Consider.This#show}
+        //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+        //  * {@linkcode NPR.Consider.This.show}
+        //  */
+        // export function outerref() { }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode [|NPR|].Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain [|NPR|].Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode [|NPR|].Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode [|NPR|].Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 5 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain [|NPR|].Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 6 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain [|NPR|].Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 7 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode [|NPR|].Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode NPR.Consider.This.show}
+      //  */
+      // export function outerref() { }
+      === 8 ===
+      // === /tests/cases/fourslash/findAllReferencesLinkTag3.ts ===
+      // namespace NPR {
+      //     export class Consider {
+      //         This = class {
+      //             show() { }
+      //         }
+      //         m() { }
+      //     }
+      //     /**
+      //      * {@linkcode Consider.prototype.m}
+      //      * {@linkplain Consider#m}
+      //      * {@linkcode Consider#This#show}
+      //      * {@linkplain Consider.This.show}
+      //      * {@linkcode NPR.Consider#This#show}
+      //      * {@linkplain NPR.Consider.This#show}
+      //      * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //      * {@linkcode NPR.Consider.This.show}
+      //      */
+      //     export function ref() { }
+      // }
+      // /**
+      //  * {@linkplain NPR.Consider#This#show hello hello}
+      //  * {@linkplain NPR.Consider.This#show}
+      //  * {@linkcode NPR.Consider#This.show} # doesn't parse trailing .
+      //  * {@linkcode [|NPR|].Consider.This.show}
+      //  */
+      // export function outerref() { }
+  }
+]
 
 [
   {

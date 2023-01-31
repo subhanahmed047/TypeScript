@@ -21,6 +21,96 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class [|C1|] extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // [|class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }|]
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class [|C1|] extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // [|class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }|]
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -88,6 +178,138 @@
 // interface Implemented3 {}
 // class C2 implements Implemented2, Implemented3 {}
 // interface I2 extends Implemented2, Implemented3 {}
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class [|Base|] {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // [|class Base {}|]
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class [|Base|] {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // [|class Base {}|]
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends [|Base|] implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends [|Base|] { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
 
 [
   {
@@ -176,6 +398,117 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface [|Implemented1|] {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // [|interface Implemented1 {}|]
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface [|Implemented1|] {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // [|interface Implemented1 {}|]
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements [|Implemented1|] {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -230,6 +563,27 @@
   }
 ]
 
+// === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+// class Base {}
+// interface Implemented1 {}
+// class C1 extends Base implements Implemented1 {
+//     get e() { return 1; }
+//     set e(v) {}
+// }
+// interface I1 extends Base { }
+// type T = { }
+// enum E { }
+// namespace N { }
+// module M { }
+// function fn() {}
+// var x;
+// let y;
+// const z = 1;
+// interface Implemented2 {}
+// interface Implemented3 {}
+// class C2 /*FIND ALL REFS*/implements Implemented2, Implemented3 {}
+// interface I2 extends Implemented2, Implemented3 {}
+
 undefined
 
 // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
@@ -252,6 +606,138 @@ undefined
 // interface Implemented3 {}
 // class C2 implements Implemented2, Implemented3 {}
 // interface I2 extends Implemented2, Implemented3 {}
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get [|e|]() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     [|get e() { return 1; }|]
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get [|e|]() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     [|get e() { return 1; }|]
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set [|e|](v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     [|set e(v) {}|]
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
 
 [
   {
@@ -366,6 +852,138 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get [|e|]() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     [|get e() { return 1; }|]
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get [|e|]() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     [|get e() { return 1; }|]
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set [|e|](v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     [|set e(v) {}|]
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -477,6 +1095,96 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface [|I1|] extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // [|interface I1 extends Base { }|]
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface [|I1|] extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // [|interface I1 extends Base { }|]
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -547,6 +1255,138 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class [|Base|] {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // [|class Base {}|]
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class [|Base|] {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // [|class Base {}|]
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends [|Base|] implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends [|Base|] { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -609,6 +1449,27 @@ undefined
   }
 ]
 
+// === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+// class Base {}
+// interface Implemented1 {}
+// class C1 extends Base implements Implemented1 {
+//     get e() { return 1; }
+//     set e(v) {}
+// }
+// interface I1 extends Base { }
+// type T = { }
+// enum E { }
+// namespace N { }
+// module M { }
+// function fn() {}
+// var x;
+// let y;
+// const z = 1;
+// interface Implemented2 {}
+// interface Implemented3 {}
+// class C2 implements Implemented2, Implemented3 {}
+// interface I2 /*FIND ALL REFS*/extends Implemented2, Implemented3 {}
+
 undefined
 
 // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
@@ -631,6 +1492,96 @@ undefined
 // interface Implemented3 {}
 // class C2 implements Implemented2, Implemented3 {}
 // interface I2 extends Implemented2, Implemented3 {}
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type [|T|] = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // [|type T = { }|]
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type [|T|] = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // [|type T = { }|]
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
 
 [
   {
@@ -724,6 +1675,96 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum [|E|] { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // [|enum E { }|]
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum [|E|] { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // [|enum E { }|]
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -791,6 +1832,96 @@ undefined
 // interface Implemented3 {}
 // class C2 implements Implemented2, Implemented3 {}
 // interface I2 extends Implemented2, Implemented3 {}
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace [|N|] { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // [|namespace N { }|]
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace [|N|] { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // [|namespace N { }|]
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
 
 [
   {
@@ -864,6 +1995,96 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module [|M|] { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // [|module M { }|]
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module [|M|] { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // [|module M { }|]
+        // function fn() {}
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -931,6 +2152,96 @@ undefined
 // interface Implemented3 {}
 // class C2 implements Implemented2, Implemented3 {}
 // interface I2 extends Implemented2, Implemented3 {}
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function [|fn|]() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // [|function fn() {}|]
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function [|fn|]() {}
+      // var x;
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // [|function fn() {}|]
+        // var x;
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
 
 [
   {
@@ -1024,6 +2335,96 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var [|x|];
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // [|var x;|]
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var [|x|];
+      // let y;
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // [|var x;|]
+        // let y;
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1106,6 +2507,96 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let [|y|];
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // [|let y;|]
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let [|y|];
+      // const z = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // [|let y;|]
+        // const z = 1;
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1185,6 +2676,96 @@ undefined
 // interface Implemented3 {}
 // class C2 implements Implemented2, Implemented3 {}
 // interface I2 extends Implemented2, Implemented3 {}
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const [|z|] = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // [|const z = 1;|]
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+      // class Base {}
+      // interface Implemented1 {}
+      // class C1 extends Base implements Implemented1 {
+      //     get e() { return 1; }
+      //     set e(v) {}
+      // }
+      // interface I1 extends Base { }
+      // type T = { }
+      // enum E { }
+      // namespace N { }
+      // module M { }
+      // function fn() {}
+      // var x;
+      // let y;
+      // const [|z|] = 1;
+      // interface Implemented2 {}
+      // interface Implemented3 {}
+      // class C2 implements Implemented2, Implemented3 {}
+      // interface I2 extends Implemented2, Implemented3 {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForDeclarationKeywords.ts ===
+        // class Base {}
+        // interface Implemented1 {}
+        // class C1 extends Base implements Implemented1 {
+        //     get e() { return 1; }
+        //     set e(v) {}
+        // }
+        // interface I1 extends Base { }
+        // type T = { }
+        // enum E { }
+        // namespace N { }
+        // module M { }
+        // function fn() {}
+        // var x;
+        // let y;
+        // [|const z = 1;|]
+        // interface Implemented2 {}
+        // interface Implemented3 {}
+        // class C2 implements Implemented2, Implemented3 {}
+        // interface I2 extends Implemented2, Implemented3 {}
+  }
+]
 
 [
   {

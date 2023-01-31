@@ -12,6 +12,36 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/declaration.ts ===
+      // var container = { [|42|]: 1 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/declaration.ts ===
+        // var container = { [|42: 1|] };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/declaration.ts ===
+      // var container = { [|42|]: 1 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/declaration.ts ===
+        // var container = { [|42: 1|] };
+      === 1 ===
+      // === /tests/cases/fourslash/expression.ts ===
+      // function blah() { return (container[[|42|]]) === 2;  };
+      === 2 ===
+      // === /tests/cases/fourslash/stringIndexer.ts ===
+      // function blah2() { container["[|42|]"] };
+      === 3 ===
+      // === /tests/cases/fourslash/redeclaration.ts ===
+      // container = { "[|42|]" : 18 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/redeclaration.ts ===
+        // container = { [|"42" : 18|] };
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

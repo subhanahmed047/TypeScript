@@ -8,6 +8,52 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+      // class Foo {
+      //     "[|blah|]"() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.blah;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+        // class Foo {
+        //     [|"blah"() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.blah;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+      // class Foo {
+      //     "[|blah|]"() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.blah;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+        // class Foo {
+        //     [|"blah"() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.blah;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+      // class Foo {
+      //     "blah"() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.[|blah|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -114,6 +160,52 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+      // class Foo {
+      //     "[|blah|]"() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.blah;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+        // class Foo {
+        //     [|"blah"() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.blah;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+      // class Foo {
+      //     "[|blah|]"() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.blah;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+        // class Foo {
+        //     [|"blah"() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.blah;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+      // class Foo {
+      //     "blah"() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.[|blah|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -217,6 +309,52 @@
 // 
 // var x: Foo;
 // x./*FIND ALL REFS*/[|blah|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+      // class Foo {
+      //     "[|blah|]"() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.blah;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+        // class Foo {
+        //     [|"blah"() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.blah;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+      // class Foo {
+      //     "[|blah|]"() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.blah;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+        // class Foo {
+        //     [|"blah"() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.blah;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames2.ts ===
+      // class Foo {
+      //     "blah"() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.[|blah|];
+  }
+]
 
 [
   {

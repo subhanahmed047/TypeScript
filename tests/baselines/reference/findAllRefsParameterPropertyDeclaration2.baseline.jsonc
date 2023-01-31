@@ -8,6 +8,79 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public [|publicParam|]: number) {
+      //         let localPublic = publicParam;
+      //         this.publicParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+        // class Foo {
+        //     constructor([|public publicParam: number|]) {
+        //         let localPublic = publicParam;
+        //         this.publicParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public [|publicParam|]: number) {
+      //         let localPublic = publicParam;
+      //         this.publicParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+        // class Foo {
+        //     constructor([|public publicParam: number|]) {
+        //         let localPublic = publicParam;
+        //         this.publicParam += 10;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public publicParam: number) {
+      //         let localPublic = publicParam;
+      //         this.[|publicParam|] += 10;
+      //     }
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public [|publicParam|]: number) {
+      //         let localPublic = publicParam;
+      //         this.publicParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+        // class Foo {
+        //     constructor([|public publicParam: number|]) {
+        //         let localPublic = publicParam;
+        //         this.publicParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public publicParam: number) {
+      //         let localPublic = [|publicParam|];
+      //         this.publicParam += 10;
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -164,6 +237,79 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public [|publicParam|]: number) {
+      //         let localPublic = publicParam;
+      //         this.publicParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+        // class Foo {
+        //     constructor([|public publicParam: number|]) {
+        //         let localPublic = publicParam;
+        //         this.publicParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public [|publicParam|]: number) {
+      //         let localPublic = publicParam;
+      //         this.publicParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+        // class Foo {
+        //     constructor([|public publicParam: number|]) {
+        //         let localPublic = publicParam;
+        //         this.publicParam += 10;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public publicParam: number) {
+      //         let localPublic = publicParam;
+      //         this.[|publicParam|] += 10;
+      //     }
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public [|publicParam|]: number) {
+      //         let localPublic = publicParam;
+      //         this.publicParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+        // class Foo {
+        //     constructor([|public publicParam: number|]) {
+        //         let localPublic = publicParam;
+        //         this.publicParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public publicParam: number) {
+      //         let localPublic = [|publicParam|];
+      //         this.publicParam += 10;
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -314,6 +460,79 @@
 //         this./*FIND ALL REFS*/[|publicParam|] += 10;
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public [|publicParam|]: number) {
+      //         let localPublic = publicParam;
+      //         this.publicParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+        // class Foo {
+        //     constructor([|public publicParam: number|]) {
+        //         let localPublic = publicParam;
+        //         this.publicParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public [|publicParam|]: number) {
+      //         let localPublic = publicParam;
+      //         this.publicParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+        // class Foo {
+        //     constructor([|public publicParam: number|]) {
+        //         let localPublic = publicParam;
+        //         this.publicParam += 10;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public publicParam: number) {
+      //         let localPublic = publicParam;
+      //         this.[|publicParam|] += 10;
+      //     }
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public [|publicParam|]: number) {
+      //         let localPublic = publicParam;
+      //         this.publicParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+        // class Foo {
+        //     constructor([|public publicParam: number|]) {
+        //         let localPublic = publicParam;
+        //         this.publicParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration2.ts ===
+      // class Foo {
+      //     constructor(public publicParam: number) {
+      //         let localPublic = [|publicParam|];
+      //         this.publicParam += 10;
+      //     }
+      // }
+  }
+]
 
 [
   {

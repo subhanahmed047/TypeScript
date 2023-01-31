@@ -12,6 +12,84 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     [|value1|] = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     [|value1 = 1|],
+        //     "value2" = value1,
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     [|value1|] = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     [|value1 = 1|],
+        //     "value2" = value1,
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = [|value1|],
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.[|value1|];
+      // E["value2"];
+      // E.value2;
+      // E[111];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -120,6 +198,84 @@
 // E["[|value2|]"];
 // E.[|value2|];
 // E[111];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "[|value2|]" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     value1 = 1,
+        //     [|"value2" = value1|],
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "[|value2|]" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     value1 = 1,
+        //     [|"value2" = value1|],
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["[|value2|]"];
+      // E.value2;
+      // E[111];
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.[|value2|];
+      // E[111];
+  }
+]
 
 [
   {
@@ -238,6 +394,84 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "[|value2|]" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     value1 = 1,
+        //     [|"value2" = value1|],
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "[|value2|]" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     value1 = 1,
+        //     [|"value2" = value1|],
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["[|value2|]"];
+      // E.value2;
+      // E[111];
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.[|value2|];
+      // E[111];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -353,6 +587,84 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     [|value1|] = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     [|value1 = 1|],
+        //     "value2" = value1,
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     [|value1|] = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     [|value1 = 1|],
+        //     "value2" = value1,
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = [|value1|],
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.[|value1|];
+      // E["value2"];
+      // E.value2;
+      // E[111];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -458,6 +770,72 @@
 // E["value2"];
 // E.value2;
 // E[[|111|]];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     [|111|] = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     value1 = 1,
+        //     "value2" = value1,
+        //     [|111 = 11|]
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     [|111|] = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     value1 = 1,
+        //     "value2" = value1,
+        //     [|111 = 11|]
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[[|111|]];
+  }
+]
 
 [
   {
@@ -567,6 +945,84 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     [|value1|] = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     [|value1 = 1|],
+        //     "value2" = value1,
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     [|value1|] = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     [|value1 = 1|],
+        //     "value2" = value1,
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = [|value1|],
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.[|value1|];
+      // E["value2"];
+      // E.value2;
+      // E[111];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -672,6 +1128,84 @@
 // E["/*FIND ALL REFS*/[|value2|]"];
 // E.[|value2|];
 // E[111];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "[|value2|]" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     value1 = 1,
+        //     [|"value2" = value1|],
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "[|value2|]" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     value1 = 1,
+        //     [|"value2" = value1|],
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["[|value2|]"];
+      // E.value2;
+      // E[111];
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.[|value2|];
+      // E[111];
+  }
+]
 
 [
   {
@@ -787,6 +1321,84 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "[|value2|]" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     value1 = 1,
+        //     [|"value2" = value1|],
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "[|value2|]" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     value1 = 1,
+        //     [|"value2" = value1|],
+        //     111 = 11
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["[|value2|]"];
+      // E.value2;
+      // E[111];
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.[|value2|];
+      // E[111];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -896,6 +1508,72 @@
 // E["value2"];
 // E.value2;
 // E[/*FIND ALL REFS*/[|111|]];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     [|111|] = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     value1 = 1,
+        //     "value2" = value1,
+        //     [|111 = 11|]
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     [|111|] = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[111];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForEnums.ts ===
+        // enum E {
+        //     value1 = 1,
+        //     "value2" = value1,
+        //     [|111 = 11|]
+        // }
+        // 
+        // E.value1;
+        // E["value2"];
+        // E.value2;
+        // E[111];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForEnums.ts ===
+      // enum E {
+      //     value1 = 1,
+      //     "value2" = value1,
+      //     111 = 11
+      // }
+      // 
+      // E.value1;
+      // E["value2"];
+      // E.value2;
+      // E[[|111|]];
+  }
+]
 
 [
   {

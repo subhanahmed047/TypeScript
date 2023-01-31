@@ -6,6 +6,48 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllReferencesOfConstructor_badOverload.ts ===
+      // class [|C|] {
+      //     constructor(n: number);
+      //     constructor(){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesOfConstructor_badOverload.ts ===
+        // [|class C {
+        //     constructor(n: number);
+        //     constructor(){}
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllReferencesOfConstructor_badOverload.ts ===
+      // class C {
+      //     [|constructor|](n: number);
+      //     constructor(){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesOfConstructor_badOverload.ts ===
+        // class C {
+        //     [|constructor(n: number);|]
+        //     constructor(){}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllReferencesOfConstructor_badOverload.ts ===
+      // class C {
+      //     constructor(n: number);
+      //     [|constructor|](){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesOfConstructor_badOverload.ts ===
+        // class C {
+        //     constructor(n: number);
+        //     [|constructor(){}|]
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -71,6 +113,48 @@
 //     [|constructor|](n: number);
 //     /*FIND ALL REFS*/[|constructor|](){}
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllReferencesOfConstructor_badOverload.ts ===
+      // class [|C|] {
+      //     constructor(n: number);
+      //     constructor(){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesOfConstructor_badOverload.ts ===
+        // [|class C {
+        //     constructor(n: number);
+        //     constructor(){}
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllReferencesOfConstructor_badOverload.ts ===
+      // class C {
+      //     [|constructor|](n: number);
+      //     constructor(){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesOfConstructor_badOverload.ts ===
+        // class C {
+        //     [|constructor(n: number);|]
+        //     constructor(){}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllReferencesOfConstructor_badOverload.ts ===
+      // class C {
+      //     constructor(n: number);
+      //     [|constructor|](){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferencesOfConstructor_badOverload.ts ===
+        // class C {
+        //     constructor(n: number);
+        //     [|constructor(){}|]
+        // }
+  }
+]
 
 [
   {

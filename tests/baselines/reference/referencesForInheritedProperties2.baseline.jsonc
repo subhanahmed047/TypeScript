@@ -25,6 +25,343 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+      // interface interface1 {
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // interface interface2 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2 extends interface1 {
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+        // interface interface1 {
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // interface interface2 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2 extends interface1 {
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+      // interface interface1 {
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // interface interface2 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2 extends interface1 {
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+        // interface interface1 {
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // interface interface2 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2 extends interface1 {
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2 {
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // interface interface2 extends interface1 {
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2 {
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // interface interface2 extends interface1 {
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2 {
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // interface interface2 extends interface1 {
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2 {
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // interface interface2 extends interface1 {
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2 extends interface1 {
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     [|doStuff|]() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2 extends interface1 {
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     [|doStuff() {
+        // 
+        //     }|]
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2 extends interface1 {
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     [|doStuff|]() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2 extends interface1 {
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     [|doStuff() {
+        // 
+        //     }|]
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties2.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2 extends interface1 {
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.[|doStuff|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

@@ -11,6 +11,45 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // interface Foo {
+      //     property: "[|foo|]";
+      // }
+      // /**
+      //  * @type {{ property: "foo"}}
+      //  */
+      // const obj: Foo = {
+      //     property: "foo",
+      // }
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // interface Foo {
+      //     property: "[|foo|]";
+      // }
+      // /**
+      //  * @type {{ property: "foo"}}
+      //  */
+      // const obj: Foo = {
+      //     property: "foo",
+      // }
+      === 1 ===
+      // === /a.ts ===
+      // interface Foo {
+      //     property: "foo";
+      // }
+      // /**
+      //  * @type {{ property: "foo"}}
+      //  */
+      // const obj: Foo = {
+      //     property: "[|foo|]",
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

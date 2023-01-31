@@ -21,4 +21,4 @@ verify.occurrencesAtPositionContains(def);
 verify.occurrencesAtPositionContains(imp);
 verify.occurrencesAtPositionContains(mem);
 
-verify.goToDefinitionIs("def");
+verify.baselineGetDefinitionAtPosition("import");

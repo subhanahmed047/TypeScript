@@ -1,3 +1,8 @@
+// === /a.js ===
+// module.exports = 0;
+// /** /*FIND ALL REFS*/@typedef {number} Foo */
+// const dummy = 0;
+
 undefined
 
 // === /b.js ===
@@ -8,6 +13,36 @@ undefined
 // module.exports = 0;
 // /** @typedef {number} /*FIND ALL REFS*/[|Foo|] */
 // const dummy = 0;
+
+[
+  {
+    === Definition ===
+      // === /a.js ===
+      // module.exports = 0;
+      // /** @typedef {number} [|Foo|] */
+      // const dummy = 0;
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = 0;
+        // /** [|@typedef {number} Foo|] */
+        // const dummy = 0;
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // module.exports = 0;
+      // /** @typedef {number} [|Foo|] */
+      // const dummy = 0;
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = 0;
+        // /** [|@typedef {number} Foo|] */
+        // const dummy = 0;
+      === 1 ===
+      // === /b.js ===
+      // /** @type {import('./a').[|Foo|]} */
+      // const x = 0;
+  }
+]
 
 [
   {
@@ -91,6 +126,36 @@ undefined
 // module.exports = 0;
 // /** @typedef {number} [|Foo|] */
 // const dummy = 0;
+
+[
+  {
+    === Definition ===
+      // === /a.js ===
+      // module.exports = 0;
+      // /** @typedef {number} [|Foo|] */
+      // const dummy = 0;
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = 0;
+        // /** [|@typedef {number} Foo|] */
+        // const dummy = 0;
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // module.exports = 0;
+      // /** @typedef {number} [|Foo|] */
+      // const dummy = 0;
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = 0;
+        // /** [|@typedef {number} Foo|] */
+        // const dummy = 0;
+      === 1 ===
+      // === /b.js ===
+      // /** @type {import('./a').[|Foo|]} */
+      // const x = 0;
+  }
+]
 
 [
   {

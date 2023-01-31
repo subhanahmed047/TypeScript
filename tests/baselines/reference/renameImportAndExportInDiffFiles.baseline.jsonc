@@ -7,6 +7,51 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export var [|a|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export var a;|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export var [|a|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export var a;|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|a|] } from './a';
+      // export { a };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { a } from './a';|]
+        // export { a };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|a|] } from './a';
+      // export { a };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { a } from './a';|]
+        // export { a };
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { a } from './a';
+      // export { [|a|] };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // import { a } from './a';
+        // [|export { a };|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -178,6 +223,51 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|a|] } from './a';
+      // export { a };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { a } from './a';|]
+        // export { a };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|a|] } from './a';
+      // export { a };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { a } from './a';|]
+        // export { a };
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { a } from './a';
+      // export { [|a|] };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // import { a } from './a';
+        // [|export { a };|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export var [|a|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export var a;|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export var [|a|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export var a;|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -346,6 +436,51 @@
 
 // === /tests/cases/fourslash/a.ts ===
 // export var [|a|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|a|] } from './a';
+      // export { a };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { a } from './a';|]
+        // export { a };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|a|] } from './a';
+      // export { a };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { a } from './a';|]
+        // export { a };
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { a } from './a';
+      // export { [|a|] };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // import { a } from './a';
+        // [|export { a };|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export var [|a|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export var a;|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export var [|a|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export var a;|]
+  }
+]
 
 [
   {

@@ -8,6 +8,60 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // class C {
+      //     get [|g|](): number { return 0; }
+      // 
+      //     set s(value: number) {}
+      // }
+      // const { g, s } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     [|get g(): number { return 0; }|]
+        // 
+        //     set s(value: number) {}
+        // }
+        // const { g, s } = new C();
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // class C {
+      //     get [|g|](): number { return 0; }
+      // 
+      //     set s(value: number) {}
+      // }
+      // const { g, s } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     [|get g(): number { return 0; }|]
+        // 
+        //     set s(value: number) {}
+        // }
+        // const { g, s } = new C();
+      === 1 ===
+      // === /a.ts ===
+      // class C {
+      //     get g(): number { return 0; }
+      // 
+      //     set s(value: number) {}
+      // }
+      // const { [|g|], s } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     get g(): number { return 0; }
+        // 
+        //     set s(value: number) {}
+        // }
+        // [|const { g, s } = new C();|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -103,6 +157,79 @@
 //     set s(value: number) {}
 // }
 // const { /*FIND ALL REFS*/[|g|], s } = new C();
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // class C {
+      //     get [|g|](): number { return 0; }
+      // 
+      //     set s(value: number) {}
+      // }
+      // const { g, s } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     [|get g(): number { return 0; }|]
+        // 
+        //     set s(value: number) {}
+        // }
+        // const { g, s } = new C();
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // class C {
+      //     get [|g|](): number { return 0; }
+      // 
+      //     set s(value: number) {}
+      // }
+      // const { g, s } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     [|get g(): number { return 0; }|]
+        // 
+        //     set s(value: number) {}
+        // }
+        // const { g, s } = new C();
+  },
+  {
+    === Definition ===
+      // === /a.ts ===
+      // class C {
+      //     get g(): number { return 0; }
+      // 
+      //     set s(value: number) {}
+      // }
+      // const { [|g|], s } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     get g(): number { return 0; }
+        // 
+        //     set s(value: number) {}
+        // }
+        // [|const { g, s } = new C();|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // class C {
+      //     get g(): number { return 0; }
+      // 
+      //     set s(value: number) {}
+      // }
+      // const { [|g|], s } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     get g(): number { return 0; }
+        // 
+        //     set s(value: number) {}
+        // }
+        // [|const { g, s } = new C();|]
+  }
+]
 
 [
   {
@@ -249,6 +376,60 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // class C {
+      //     get g(): number { return 0; }
+      // 
+      //     set [|s|](value: number) {}
+      // }
+      // const { g, s } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     get g(): number { return 0; }
+        // 
+        //     [|set s(value: number) {}|]
+        // }
+        // const { g, s } = new C();
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // class C {
+      //     get g(): number { return 0; }
+      // 
+      //     set [|s|](value: number) {}
+      // }
+      // const { g, s } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     get g(): number { return 0; }
+        // 
+        //     [|set s(value: number) {}|]
+        // }
+        // const { g, s } = new C();
+      === 1 ===
+      // === /a.ts ===
+      // class C {
+      //     get g(): number { return 0; }
+      // 
+      //     set s(value: number) {}
+      // }
+      // const { g, [|s|] } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     get g(): number { return 0; }
+        // 
+        //     set s(value: number) {}
+        // }
+        // [|const { g, s } = new C();|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -344,6 +525,79 @@
 //     set [|s|](value: number) {}
 // }
 // const { g, /*FIND ALL REFS*/[|s|] } = new C();
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // class C {
+      //     get g(): number { return 0; }
+      // 
+      //     set [|s|](value: number) {}
+      // }
+      // const { g, s } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     get g(): number { return 0; }
+        // 
+        //     [|set s(value: number) {}|]
+        // }
+        // const { g, s } = new C();
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // class C {
+      //     get g(): number { return 0; }
+      // 
+      //     set [|s|](value: number) {}
+      // }
+      // const { g, s } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     get g(): number { return 0; }
+        // 
+        //     [|set s(value: number) {}|]
+        // }
+        // const { g, s } = new C();
+  },
+  {
+    === Definition ===
+      // === /a.ts ===
+      // class C {
+      //     get g(): number { return 0; }
+      // 
+      //     set s(value: number) {}
+      // }
+      // const { g, [|s|] } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     get g(): number { return 0; }
+        // 
+        //     set s(value: number) {}
+        // }
+        // [|const { g, s } = new C();|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // class C {
+      //     get g(): number { return 0; }
+      // 
+      //     set s(value: number) {}
+      // }
+      // const { g, [|s|] } = new C();
+      === ContextSpan ===
+        // === /a.ts ===
+        // class C {
+        //     get g(): number { return 0; }
+        // 
+        //     set s(value: number) {}
+        // }
+        // [|const { g, s } = new C();|]
+  }
+]
 
 [
   {

@@ -12,6 +12,84 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import [|alias|] = ATest; // definition
+      // 
+      // var a: alias.Bar; // namespace
+      // alias.call(this); // value
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+        // module ATest {
+        //     export interface Bar { }
+        // }
+        // 
+        // function ATest() { }
+        // 
+        // [|import alias = ATest;|] // definition
+        // 
+        // var a: alias.Bar; // namespace
+        // alias.call(this); // value
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import [|alias|] = ATest; // definition
+      // 
+      // var a: alias.Bar; // namespace
+      // alias.call(this); // value
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+        // module ATest {
+        //     export interface Bar { }
+        // }
+        // 
+        // function ATest() { }
+        // 
+        // [|import alias = ATest;|] // definition
+        // 
+        // var a: alias.Bar; // namespace
+        // alias.call(this); // value
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import alias = ATest; // definition
+      // 
+      // var a: [|alias|].Bar; // namespace
+      // alias.call(this); // value
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import alias = ATest; // definition
+      // 
+      // var a: alias.Bar; // namespace
+      // [|alias|].call(this); // value
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -188,6 +266,84 @@
 // 
 // var a: [|alias|].Bar; // namespace
 // [|alias|].call(this); // value
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import [|alias|] = ATest; // definition
+      // 
+      // var a: alias.Bar; // namespace
+      // alias.call(this); // value
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+        // module ATest {
+        //     export interface Bar { }
+        // }
+        // 
+        // function ATest() { }
+        // 
+        // [|import alias = ATest;|] // definition
+        // 
+        // var a: alias.Bar; // namespace
+        // alias.call(this); // value
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import [|alias|] = ATest; // definition
+      // 
+      // var a: alias.Bar; // namespace
+      // alias.call(this); // value
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+        // module ATest {
+        //     export interface Bar { }
+        // }
+        // 
+        // function ATest() { }
+        // 
+        // [|import alias = ATest;|] // definition
+        // 
+        // var a: alias.Bar; // namespace
+        // alias.call(this); // value
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import alias = ATest; // definition
+      // 
+      // var a: [|alias|].Bar; // namespace
+      // alias.call(this); // value
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import alias = ATest; // definition
+      // 
+      // var a: alias.Bar; // namespace
+      // [|alias|].call(this); // value
+  }
+]
 
 [
   {
@@ -370,6 +526,84 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import [|alias|] = ATest; // definition
+      // 
+      // var a: alias.Bar; // namespace
+      // alias.call(this); // value
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+        // module ATest {
+        //     export interface Bar { }
+        // }
+        // 
+        // function ATest() { }
+        // 
+        // [|import alias = ATest;|] // definition
+        // 
+        // var a: alias.Bar; // namespace
+        // alias.call(this); // value
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import [|alias|] = ATest; // definition
+      // 
+      // var a: alias.Bar; // namespace
+      // alias.call(this); // value
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+        // module ATest {
+        //     export interface Bar { }
+        // }
+        // 
+        // function ATest() { }
+        // 
+        // [|import alias = ATest;|] // definition
+        // 
+        // var a: alias.Bar; // namespace
+        // alias.call(this); // value
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import alias = ATest; // definition
+      // 
+      // var a: [|alias|].Bar; // namespace
+      // alias.call(this); // value
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import alias = ATest; // definition
+      // 
+      // var a: alias.Bar; // namespace
+      // [|alias|].call(this); // value
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -543,6 +777,84 @@
 // 
 // var a: [|alias|].Bar; // namespace
 // /*FIND ALL REFS*/[|alias|].call(this); // value
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import [|alias|] = ATest; // definition
+      // 
+      // var a: alias.Bar; // namespace
+      // alias.call(this); // value
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+        // module ATest {
+        //     export interface Bar { }
+        // }
+        // 
+        // function ATest() { }
+        // 
+        // [|import alias = ATest;|] // definition
+        // 
+        // var a: alias.Bar; // namespace
+        // alias.call(this); // value
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import [|alias|] = ATest; // definition
+      // 
+      // var a: alias.Bar; // namespace
+      // alias.call(this); // value
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+        // module ATest {
+        //     export interface Bar { }
+        // }
+        // 
+        // function ATest() { }
+        // 
+        // [|import alias = ATest;|] // definition
+        // 
+        // var a: alias.Bar; // namespace
+        // alias.call(this); // value
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import alias = ATest; // definition
+      // 
+      // var a: [|alias|].Bar; // namespace
+      // alias.call(this); // value
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations2.ts ===
+      // module ATest {
+      //     export interface Bar { }
+      // }
+      // 
+      // function ATest() { }
+      // 
+      // import alias = ATest; // definition
+      // 
+      // var a: alias.Bar; // namespace
+      // [|alias|].call(this); // value
+  }
+]
 
 [
   {

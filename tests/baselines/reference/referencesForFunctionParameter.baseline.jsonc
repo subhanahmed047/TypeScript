@@ -9,6 +9,66 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+      // var x;
+      // var n;
+      // 
+      // function n(x: number, [|n|]: number) {
+      //     n = 32;
+      //     x = n;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+        // var x;
+        // var n;
+        // 
+        // function n(x: number, [|n: number|]) {
+        //     n = 32;
+        //     x = n;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+      // var x;
+      // var n;
+      // 
+      // function n(x: number, [|n|]: number) {
+      //     n = 32;
+      //     x = n;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+        // var x;
+        // var n;
+        // 
+        // function n(x: number, [|n: number|]) {
+        //     n = 32;
+        //     x = n;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+      // var x;
+      // var n;
+      // 
+      // function n(x: number, n: number) {
+      //     [|n|] = 32;
+      //     x = n;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+      // var x;
+      // var n;
+      // 
+      // function n(x: number, n: number) {
+      //     n = 32;
+      //     x = [|n|];
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -105,6 +165,66 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+      // var x;
+      // var n;
+      // 
+      // function n(x: number, [|n|]: number) {
+      //     n = 32;
+      //     x = n;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+        // var x;
+        // var n;
+        // 
+        // function n(x: number, [|n: number|]) {
+        //     n = 32;
+        //     x = n;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+      // var x;
+      // var n;
+      // 
+      // function n(x: number, [|n|]: number) {
+      //     n = 32;
+      //     x = n;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+        // var x;
+        // var n;
+        // 
+        // function n(x: number, [|n: number|]) {
+        //     n = 32;
+        //     x = n;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+      // var x;
+      // var n;
+      // 
+      // function n(x: number, n: number) {
+      //     [|n|] = 32;
+      //     x = n;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+      // var x;
+      // var n;
+      // 
+      // function n(x: number, n: number) {
+      //     n = 32;
+      //     x = [|n|];
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -195,6 +315,66 @@
 //     [|n|] = 32;
 //     x = /*FIND ALL REFS*/[|n|];
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+      // var x;
+      // var n;
+      // 
+      // function n(x: number, [|n|]: number) {
+      //     n = 32;
+      //     x = n;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+        // var x;
+        // var n;
+        // 
+        // function n(x: number, [|n: number|]) {
+        //     n = 32;
+        //     x = n;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+      // var x;
+      // var n;
+      // 
+      // function n(x: number, [|n|]: number) {
+      //     n = 32;
+      //     x = n;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+        // var x;
+        // var n;
+        // 
+        // function n(x: number, [|n: number|]) {
+        //     n = 32;
+        //     x = n;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+      // var x;
+      // var n;
+      // 
+      // function n(x: number, n: number) {
+      //     [|n|] = 32;
+      //     x = n;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForFunctionParameter.ts ===
+      // var x;
+      // var n;
+      // 
+      // function n(x: number, n: number) {
+      //     n = 32;
+      //     x = [|n|];
+      // }
+  }
+]
 
 [
   {

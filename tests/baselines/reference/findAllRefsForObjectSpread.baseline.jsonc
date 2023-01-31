@@ -9,6 +9,66 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly [|a|]: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+        // interface A1 { [|readonly a: string|] };
+        // interface A2 { a?: number };
+        // let a1: A1;
+        // let a2: A2;
+        // let a12 = { ...a1, ...a2 };
+        // a12.a;
+        // a1.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly [|a|]: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+        // interface A1 { [|readonly a: string|] };
+        // interface A2 { a?: number };
+        // let a1: A1;
+        // let a2: A2;
+        // let a12 = { ...a1, ...a2 };
+        // a12.a;
+        // a1.a;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly a: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.[|a|];
+      // a1.a;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly a: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.[|a|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -113,6 +173,57 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly a: string };
+      // interface A2 { [|a|]?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+        // interface A1 { readonly a: string };
+        // interface A2 { [|a?: number|] };
+        // let a1: A1;
+        // let a2: A2;
+        // let a12 = { ...a1, ...a2 };
+        // a12.a;
+        // a1.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly a: string };
+      // interface A2 { [|a|]?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+        // interface A1 { readonly a: string };
+        // interface A2 { [|a?: number|] };
+        // let a1: A1;
+        // let a2: A2;
+        // let a12 = { ...a1, ...a2 };
+        // a12.a;
+        // a1.a;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly a: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.[|a|];
+      // a1.a;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -209,6 +320,105 @@
 // let a12 = { ...a1, ...a2 };
 // a12./*FIND ALL REFS*/[|a|];
 // a1.[|a|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly [|a|]: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+        // interface A1 { [|readonly a: string|] };
+        // interface A2 { a?: number };
+        // let a1: A1;
+        // let a2: A2;
+        // let a12 = { ...a1, ...a2 };
+        // a12.a;
+        // a1.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly [|a|]: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+        // interface A1 { [|readonly a: string|] };
+        // interface A2 { a?: number };
+        // let a1: A1;
+        // let a2: A2;
+        // let a12 = { ...a1, ...a2 };
+        // a12.a;
+        // a1.a;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly a: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.[|a|];
+      // a1.a;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly a: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.[|a|];
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly a: string };
+      // interface A2 { [|a|]?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+        // interface A1 { readonly a: string };
+        // interface A2 { [|a?: number|] };
+        // let a1: A1;
+        // let a2: A2;
+        // let a12 = { ...a1, ...a2 };
+        // a12.a;
+        // a1.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly a: string };
+      // interface A2 { [|a|]?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+        // interface A1 { readonly a: string };
+        // interface A2 { [|a?: number|] };
+        // let a1: A1;
+        // let a2: A2;
+        // let a12 = { ...a1, ...a2 };
+        // a12.a;
+        // a1.a;
+  }
+]
 
 [
   {
@@ -387,6 +597,66 @@
 // let a12 = { ...a1, ...a2 };
 // a12.[|a|];
 // a1./*FIND ALL REFS*/[|a|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly [|a|]: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+        // interface A1 { [|readonly a: string|] };
+        // interface A2 { a?: number };
+        // let a1: A1;
+        // let a2: A2;
+        // let a12 = { ...a1, ...a2 };
+        // a12.a;
+        // a1.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly [|a|]: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+        // interface A1 { [|readonly a: string|] };
+        // interface A2 { a?: number };
+        // let a1: A1;
+        // let a2: A2;
+        // let a12 = { ...a1, ...a2 };
+        // a12.a;
+        // a1.a;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly a: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.[|a|];
+      // a1.a;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectSpread.ts ===
+      // interface A1 { readonly a: string };
+      // interface A2 { a?: number };
+      // let a1: A1;
+      // let a2: A2;
+      // let a12 = { ...a1, ...a2 };
+      // a12.a;
+      // a1.[|a|];
+  }
+]
 
 [
   {

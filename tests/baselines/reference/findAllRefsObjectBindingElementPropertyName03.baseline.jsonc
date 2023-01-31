@@ -9,6 +9,84 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var foo: I;
+      // var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var foo: I;
+        // var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var foo: I;
+      // var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var foo: I;
+        // var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var foo: I;
+      // var [ { [|property1|]: prop1 }, { property1, property2 } ] = [foo, foo];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var foo: I;
+        // [|var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];|]
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var foo: I;
+      // var [ { property1: prop1 }, { [|property1|], property2 } ] = [foo, foo];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var foo: I;
+        // [|var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -118,6 +196,105 @@
 // 
 // var foo: I;
 // var [ { [|property1|]: prop1 }, { /*FIND ALL REFS*/[|property1|], property2 } ] = [foo, foo];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var foo: I;
+      // var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var foo: I;
+        // var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var foo: I;
+      // var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var foo: I;
+        // var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var foo: I;
+      // var [ { [|property1|]: prop1 }, { property1, property2 } ] = [foo, foo];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var foo: I;
+        // [|var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var foo: I;
+      // var [ { property1: prop1 }, { [|property1|], property2 } ] = [foo, foo];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var foo: I;
+        // [|var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var foo: I;
+      // var [ { property1: prop1 }, { [|property1|], property2 } ] = [foo, foo];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName03.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var foo: I;
+        // [|var [ { property1: prop1 }, { property1, property2 } ] = [foo, foo];|]
+  }
+]
 
 [
   {

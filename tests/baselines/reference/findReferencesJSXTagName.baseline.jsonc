@@ -11,6 +11,73 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // import { [|SubmissionComp|] } from "./RedditSubmission"
+      // function displaySubreddit(subreddit: string) {
+      //     let components = submissions
+      //         .map((value, index) => <SubmissionComp key={ index } elementPosition= { index } {...value.data} />);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/index.tsx ===
+        // [|import { SubmissionComp } from "./RedditSubmission"|]
+        // function displaySubreddit(subreddit: string) {
+        //     let components = submissions
+        //         .map((value, index) => <SubmissionComp key={ index } elementPosition= { index } {...value.data} />);
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // import { [|SubmissionComp|] } from "./RedditSubmission"
+      // function displaySubreddit(subreddit: string) {
+      //     let components = submissions
+      //         .map((value, index) => <SubmissionComp key={ index } elementPosition= { index } {...value.data} />);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/index.tsx ===
+        // [|import { SubmissionComp } from "./RedditSubmission"|]
+        // function displaySubreddit(subreddit: string) {
+        //     let components = submissions
+        //         .map((value, index) => <SubmissionComp key={ index } elementPosition= { index } {...value.data} />);
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // import { SubmissionComp } from "./RedditSubmission"
+      // function displaySubreddit(subreddit: string) {
+      //     let components = submissions
+      //         .map((value, index) => <[|SubmissionComp|] key={ index } elementPosition= { index } {...value.data} />);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/index.tsx ===
+        // import { SubmissionComp } from "./RedditSubmission"
+        // function displaySubreddit(subreddit: string) {
+        //     let components = submissions
+        //         .map((value, index) => [|<SubmissionComp key={ index } elementPosition= { index } {...value.data} />|]);
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/RedditSubmission.ts ===
+      // export const [|SubmissionComp|] = (submission: SubmissionProps) =>
+      //     <div style={{ fontFamily: "sans-serif" }}></div>;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/RedditSubmission.ts ===
+        // export const [|SubmissionComp = (submission: SubmissionProps) =>
+        //     <div style|]={{ fontFamily: "sans-serif" }}></div>;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/RedditSubmission.ts ===
+      // export const [|SubmissionComp|] = (submission: SubmissionProps) =>
+      //     <div style={{ fontFamily: "sans-serif" }}></div>;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/RedditSubmission.ts ===
+        // export const [|SubmissionComp = (submission: SubmissionProps) =>
+        //     <div style|]={{ fontFamily: "sans-serif" }}></div>;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -255,6 +322,73 @@
 // === /tests/cases/fourslash/RedditSubmission.ts ===
 // export const /*FIND ALL REFS*/[|SubmissionComp|] = (submission: SubmissionProps) =>
 //     <div style={{ fontFamily: "sans-serif" }}></div>;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/RedditSubmission.ts ===
+      // export const [|SubmissionComp|] = (submission: SubmissionProps) =>
+      //     <div style={{ fontFamily: "sans-serif" }}></div>;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/RedditSubmission.ts ===
+        // export const [|SubmissionComp = (submission: SubmissionProps) =>
+        //     <div style|]={{ fontFamily: "sans-serif" }}></div>;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/RedditSubmission.ts ===
+      // export const [|SubmissionComp|] = (submission: SubmissionProps) =>
+      //     <div style={{ fontFamily: "sans-serif" }}></div>;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/RedditSubmission.ts ===
+        // export const [|SubmissionComp = (submission: SubmissionProps) =>
+        //     <div style|]={{ fontFamily: "sans-serif" }}></div>;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // import { [|SubmissionComp|] } from "./RedditSubmission"
+      // function displaySubreddit(subreddit: string) {
+      //     let components = submissions
+      //         .map((value, index) => <SubmissionComp key={ index } elementPosition= { index } {...value.data} />);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/index.tsx ===
+        // [|import { SubmissionComp } from "./RedditSubmission"|]
+        // function displaySubreddit(subreddit: string) {
+        //     let components = submissions
+        //         .map((value, index) => <SubmissionComp key={ index } elementPosition= { index } {...value.data} />);
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // import { [|SubmissionComp|] } from "./RedditSubmission"
+      // function displaySubreddit(subreddit: string) {
+      //     let components = submissions
+      //         .map((value, index) => <SubmissionComp key={ index } elementPosition= { index } {...value.data} />);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/index.tsx ===
+        // [|import { SubmissionComp } from "./RedditSubmission"|]
+        // function displaySubreddit(subreddit: string) {
+        //     let components = submissions
+        //         .map((value, index) => <SubmissionComp key={ index } elementPosition= { index } {...value.data} />);
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // import { SubmissionComp } from "./RedditSubmission"
+      // function displaySubreddit(subreddit: string) {
+      //     let components = submissions
+      //         .map((value, index) => <[|SubmissionComp|] key={ index } elementPosition= { index } {...value.data} />);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/index.tsx ===
+        // import { SubmissionComp } from "./RedditSubmission"
+        // function displaySubreddit(subreddit: string) {
+        //     let components = submissions
+        //         .map((value, index) => [|<SubmissionComp key={ index } elementPosition= { index } {...value.data} />|]);
+        // }
+  }
+]
 
 [
   {

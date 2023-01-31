@@ -19,6 +19,240 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWriteAccess.ts ===
+      // interface Obj {
+      //     [`[|num|]`]: number;
+      // }
+      // 
+      // let o: Obj = {
+      //     [`num`]: 0
+      // };
+      // 
+      // o = {
+      //     ['num']: 1
+      // };
+      // 
+      // o['num'] = 2;
+      // o[`num`] = 3;
+      // 
+      // o['num'];
+      // o[`num`];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWriteAccess.ts ===
+        // interface Obj {
+        //     [|[`num`]: number;|]
+        // }
+        // 
+        // let o: Obj = {
+        //     [`num`]: 0
+        // };
+        // 
+        // o = {
+        //     ['num']: 1
+        // };
+        // 
+        // o['num'] = 2;
+        // o[`num`] = 3;
+        // 
+        // o['num'];
+        // o[`num`];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWriteAccess.ts ===
+      // interface Obj {
+      //     [`[|num|]`]: number;
+      // }
+      // 
+      // let o: Obj = {
+      //     [`num`]: 0
+      // };
+      // 
+      // o = {
+      //     ['num']: 1
+      // };
+      // 
+      // o['num'] = 2;
+      // o[`num`] = 3;
+      // 
+      // o['num'];
+      // o[`num`];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWriteAccess.ts ===
+        // interface Obj {
+        //     [|[`num`]: number;|]
+        // }
+        // 
+        // let o: Obj = {
+        //     [`num`]: 0
+        // };
+        // 
+        // o = {
+        //     ['num']: 1
+        // };
+        // 
+        // o['num'] = 2;
+        // o[`num`] = 3;
+        // 
+        // o['num'];
+        // o[`num`];
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWriteAccess.ts ===
+      // interface Obj {
+      //     [`num`]: number;
+      // }
+      // 
+      // let o: Obj = {
+      //     [`[|num|]`]: 0
+      // };
+      // 
+      // o = {
+      //     ['num']: 1
+      // };
+      // 
+      // o['num'] = 2;
+      // o[`num`] = 3;
+      // 
+      // o['num'];
+      // o[`num`];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWriteAccess.ts ===
+        // interface Obj {
+        //     [`num`]: number;
+        // }
+        // 
+        // let o: Obj = {
+        //     [|[`num`]: 0|]
+        // };
+        // 
+        // o = {
+        //     ['num']: 1
+        // };
+        // 
+        // o['num'] = 2;
+        // o[`num`] = 3;
+        // 
+        // o['num'];
+        // o[`num`];
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsWriteAccess.ts ===
+      // interface Obj {
+      //     [`num`]: number;
+      // }
+      // 
+      // let o: Obj = {
+      //     [`num`]: 0
+      // };
+      // 
+      // o = {
+      //     ['[|num|]']: 1
+      // };
+      // 
+      // o['num'] = 2;
+      // o[`num`] = 3;
+      // 
+      // o['num'];
+      // o[`num`];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWriteAccess.ts ===
+        // interface Obj {
+        //     [`num`]: number;
+        // }
+        // 
+        // let o: Obj = {
+        //     [`num`]: 0
+        // };
+        // 
+        // o = {
+        //     [|['num']: 1|]
+        // };
+        // 
+        // o['num'] = 2;
+        // o[`num`] = 3;
+        // 
+        // o['num'];
+        // o[`num`];
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsWriteAccess.ts ===
+      // interface Obj {
+      //     [`num`]: number;
+      // }
+      // 
+      // let o: Obj = {
+      //     [`num`]: 0
+      // };
+      // 
+      // o = {
+      //     ['num']: 1
+      // };
+      // 
+      // o['[|num|]'] = 2;
+      // o[`num`] = 3;
+      // 
+      // o['num'];
+      // o[`num`];
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsWriteAccess.ts ===
+      // interface Obj {
+      //     [`num`]: number;
+      // }
+      // 
+      // let o: Obj = {
+      //     [`num`]: 0
+      // };
+      // 
+      // o = {
+      //     ['num']: 1
+      // };
+      // 
+      // o['num'] = 2;
+      // o[`[|num|]`] = 3;
+      // 
+      // o['num'];
+      // o[`num`];
+      === 5 ===
+      // === /tests/cases/fourslash/findAllRefsWriteAccess.ts ===
+      // interface Obj {
+      //     [`num`]: number;
+      // }
+      // 
+      // let o: Obj = {
+      //     [`num`]: 0
+      // };
+      // 
+      // o = {
+      //     ['num']: 1
+      // };
+      // 
+      // o['num'] = 2;
+      // o[`num`] = 3;
+      // 
+      // o['[|num|]'];
+      // o[`num`];
+      === 6 ===
+      // === /tests/cases/fourslash/findAllRefsWriteAccess.ts ===
+      // interface Obj {
+      //     [`num`]: number;
+      // }
+      // 
+      // let o: Obj = {
+      //     [`num`]: 0
+      // };
+      // 
+      // o = {
+      //     ['num']: 1
+      // };
+      // 
+      // o['num'] = 2;
+      // o[`num`] = 3;
+      // 
+      // o['num'];
+      // o[`[|num|]`];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

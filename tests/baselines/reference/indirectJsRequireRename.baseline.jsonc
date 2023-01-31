@@ -9,6 +9,33 @@
 
 [
   {
+    === Definition ===
+      // === /lib/classes/Error.js ===
+      // module.exports.[|logWarning|] = message => { };
+      === ContextSpan ===
+        // === /lib/classes/Error.js ===
+        // [|module.exports.logWarning|] = message => { };
+    === References ===
+      === 0 ===
+      // === /lib/classes/Error.js ===
+      // module.exports.[|logWarning|] = message => { };
+      === ContextSpan ===
+        // === /lib/classes/Error.js ===
+        // [|module.exports.logWarning = message => { };|]
+      === 1 ===
+      // === /bin/serverless.js ===
+      // require('../lib/classes/Error').[|logWarning|](`CLI triage crashed with: ${error.stack}`);
+      === 2 ===
+      // === /lib/plugins/aws/package/compile/events/httpApi/index.js ===
+      // const { [|logWarning|] } = require('../../../../../../classes/Error');
+      === ContextSpan ===
+        // === /lib/plugins/aws/package/compile/events/httpApi/index.js ===
+        // [|const { logWarning } = require('../../../../../../classes/Error');|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

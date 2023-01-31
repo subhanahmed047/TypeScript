@@ -15,6 +15,102 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "[|foo|]" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // [|declare module "foo" {
+        //     var f: number;
+        // }|]
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "[|foo|]" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // [|declare module "foo" {
+        //     var f: number;
+        // }|]
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("[|foo|]");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     [|export import foo = require("foo");|]
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -92,6 +188,102 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "[|foo|]" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // [|declare module "foo" {
+        //     var f: number;
+        // }|]
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "[|foo|]" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // [|declare module "foo" {
+        //     var f: number;
+        // }|]
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("[|foo|]");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     [|export import foo = require("foo");|]
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -166,6 +358,87 @@
 //     import bar = require("bar");
 //     var f2: typeof bar.foo;
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var [|f|]: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     [|var f: number;|]
+        // }
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var [|f|]: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     [|var f: number;|]
+        // }
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.[|f|];
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+  }
+]
 
 [
   {
@@ -254,6 +527,87 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var [|f|]: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     [|var f: number;|]
+        // }
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var [|f|]: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     [|var f: number;|]
+        // }
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.[|f|];
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -339,6 +693,102 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "[|bar|]" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // [|declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }|]
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "[|bar|]" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // [|declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }|]
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("[|bar|]");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     [|import bar = require("bar");|]
+        //     var f2: typeof bar.foo;
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -416,6 +866,102 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "[|bar|]" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // [|declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }|]
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "[|bar|]" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // [|declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }|]
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("[|bar|]");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     [|import bar = require("bar");|]
+        //     var f2: typeof bar.foo;
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -490,6 +1036,102 @@
 //     import bar = require("bar");
 //     var f2: typeof bar.[|foo|];
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import [|foo|] = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     [|export import foo = require("foo");|]
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import [|foo|] = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     [|export import foo = require("foo");|]
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof [|foo|].f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.[|foo|];
+      // }
+  }
+]
 
 [
   {
@@ -635,6 +1277,102 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import [|foo|] = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     [|export import foo = require("foo");|]
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import [|foo|] = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     [|export import foo = require("foo");|]
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof [|foo|].f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.[|foo|];
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -777,6 +1515,102 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "[|foo|]" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // [|declare module "foo" {
+        //     var f: number;
+        // }|]
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "[|foo|]" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // [|declare module "foo" {
+        //     var f: number;
+        // }|]
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("[|foo|]");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     [|export import foo = require("foo");|]
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -849,6 +1683,102 @@
 //     import bar = require("bar");
 //     var f2: typeof bar.[|foo|];
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import [|foo|] = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     [|export import foo = require("foo");|]
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import [|foo|] = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     [|export import foo = require("foo");|]
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof [|foo|].f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.[|foo|];
+      // }
+  }
+]
 
 [
   {
@@ -991,6 +1921,87 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var [|f|]: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     [|var f: number;|]
+        // }
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var [|f|]: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     [|var f: number;|]
+        // }
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.[|f|];
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1071,6 +2082,87 @@
 //     /*FIND ALL REFS*/import [|bar|] = require("bar");
 //     var f2: typeof [|bar|].foo;
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import [|bar|] = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     [|import bar = require("bar");|]
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import [|bar|] = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     [|import bar = require("bar");|]
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof [|bar|].foo;
+      // }
+  }
+]
 
 [
   {
@@ -1207,6 +2299,102 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "[|bar|]" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // [|declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }|]
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "[|bar|]" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // [|declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }|]
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("[|bar|]");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     export import foo = require("foo");
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     [|import bar = require("bar");|]
+        //     var f2: typeof bar.foo;
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1279,6 +2467,102 @@
 //     import bar = require("bar");
 //     var f2: typeof bar./*FIND ALL REFS*/[|foo|];
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import [|foo|] = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     [|export import foo = require("foo");|]
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import [|foo|] = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForAmbients.ts ===
+        // declare module "foo" {
+        //     var f: number;
+        // }
+        // 
+        // declare module "bar" {
+        //     [|export import foo = require("foo");|]
+        //     var f2: typeof foo.f;
+        // }
+        // 
+        // declare module "baz" {
+        //     import bar = require("bar");
+        //     var f2: typeof bar.foo;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof [|foo|].f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.foo;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForAmbients.ts ===
+      // declare module "foo" {
+      //     var f: number;
+      // }
+      // 
+      // declare module "bar" {
+      //     export import foo = require("foo");
+      //     var f2: typeof foo.f;
+      // }
+      // 
+      // declare module "baz" {
+      //     import bar = require("bar");
+      //     var f2: typeof bar.[|foo|];
+      // }
+  }
+]
 
 [
   {

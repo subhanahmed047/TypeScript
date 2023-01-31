@@ -10,6 +10,46 @@
 
 [
   {
+    === Definition ===
+      // === /node_modules/a/index.d.ts ===
+      // export function [|f|](): void;
+      // export as namespace A;
+      === ContextSpan ===
+        // === /node_modules/a/index.d.ts ===
+        // [|export function f(): void;|]
+        // export as namespace A;
+    === References ===
+      === 0 ===
+      // === /node_modules/a/index.d.ts ===
+      // export function [|f|](): void;
+      // export as namespace A;
+      === ContextSpan ===
+        // === /node_modules/a/index.d.ts ===
+        // [|export function f(): void;|]
+        // export as namespace A;
+      === 1 ===
+      // === /c.ts ===
+      // A.[|f|]();
+  },
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import { [|f|] } from "a";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import { f } from "a";|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import { [|f|] } from "a";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import { f } from "a";|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -196,6 +236,46 @@
 
 [
   {
+    === Definition ===
+      // === /b.ts ===
+      // import { [|f|] } from "a";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import { f } from "a";|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import { [|f|] } from "a";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import { f } from "a";|]
+  },
+  {
+    === Definition ===
+      // === /node_modules/a/index.d.ts ===
+      // export function [|f|](): void;
+      // export as namespace A;
+      === ContextSpan ===
+        // === /node_modules/a/index.d.ts ===
+        // [|export function f(): void;|]
+        // export as namespace A;
+    === References ===
+      === 0 ===
+      // === /node_modules/a/index.d.ts ===
+      // export function [|f|](): void;
+      // export as namespace A;
+      === ContextSpan ===
+        // === /node_modules/a/index.d.ts ===
+        // [|export function f(): void;|]
+        // export as namespace A;
+      === 1 ===
+      // === /c.ts ===
+      // A.[|f|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -379,6 +459,46 @@
 // === /node_modules/a/index.d.ts ===
 // export function [|f|](): void;
 // export as namespace A;
+
+[
+  {
+    === Definition ===
+      // === /node_modules/a/index.d.ts ===
+      // export function [|f|](): void;
+      // export as namespace A;
+      === ContextSpan ===
+        // === /node_modules/a/index.d.ts ===
+        // [|export function f(): void;|]
+        // export as namespace A;
+    === References ===
+      === 0 ===
+      // === /node_modules/a/index.d.ts ===
+      // export function [|f|](): void;
+      // export as namespace A;
+      === ContextSpan ===
+        // === /node_modules/a/index.d.ts ===
+        // [|export function f(): void;|]
+        // export as namespace A;
+      === 1 ===
+      // === /c.ts ===
+      // A.[|f|]();
+  },
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import { [|f|] } from "a";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import { f } from "a";|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import { [|f|] } from "a";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import { f } from "a";|]
+  }
+]
 
 [
   {

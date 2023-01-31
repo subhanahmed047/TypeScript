@@ -10,6 +10,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsClassStaticBlocks.ts ===
+      // class ClassStaticBocks {
+      //     static x;
+      //     [|static|] {}
+      //     static y;
+      //     static {}
+      //     static y;
+      //     static {}
+      // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsClassStaticBlocks.ts ===
+      // class ClassStaticBocks {
+      //     static x;
+      //     [|static|] {}
+      //     static y;
+      //     static {}
+      //     static y;
+      //     static {}
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -52,6 +78,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsClassStaticBlocks.ts ===
+      // class ClassStaticBocks {
+      //     static x;
+      //     static {}
+      //     static y;
+      //     [|static|] {}
+      //     static y;
+      //     static {}
+      // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsClassStaticBlocks.ts ===
+      // class ClassStaticBocks {
+      //     static x;
+      //     static {}
+      //     static y;
+      //     [|static|] {}
+      //     static y;
+      //     static {}
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -91,6 +143,32 @@
 //     static y;
 //     /*FIND ALL REFS*/[|static|] {}
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsClassStaticBlocks.ts ===
+      // class ClassStaticBocks {
+      //     static x;
+      //     static {}
+      //     static y;
+      //     static {}
+      //     static y;
+      //     [|static|] {}
+      // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsClassStaticBlocks.ts ===
+      // class ClassStaticBocks {
+      //     static x;
+      //     static {}
+      //     static y;
+      //     static {}
+      //     static y;
+      //     [|static|] {}
+      // }
+  }
+]
 
 [
   {

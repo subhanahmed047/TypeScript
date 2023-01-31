@@ -5,6 +5,37 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+      // function [|func|](x: number) {
+      // }
+      // func(x)
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+        // [|function func(x: number) {
+        // }|]
+        // func(x)
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+      // function [|func|](x: number) {
+      // }
+      // func(x)
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+        // [|function func(x: number) {
+        // }|]
+        // func(x)
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+      // function func(x: number) {
+      // }
+      // [|func|](x)
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -104,6 +135,37 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+      // function [|func|](x: number) {
+      // }
+      // func(x)
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+        // [|function func(x: number) {
+        // }|]
+        // func(x)
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+      // function [|func|](x: number) {
+      // }
+      // func(x)
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+        // [|function func(x: number) {
+        // }|]
+        // func(x)
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+      // function func(x: number) {
+      // }
+      // [|func|](x)
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -200,6 +262,37 @@
 // function [|func|](x: number) {
 // }
 // /*FIND ALL REFS*/[|func|](x)
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+      // function [|func|](x: number) {
+      // }
+      // func(x)
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+        // [|function func(x: number) {
+        // }|]
+        // func(x)
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+      // function [|func|](x: number) {
+      // }
+      // func(x)
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+        // [|function func(x: number) {
+        // }|]
+        // func(x)
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfFunction.ts ===
+      // function func(x: number) {
+      // }
+      // [|func|](x)
+  }
+]
 
 [
   {

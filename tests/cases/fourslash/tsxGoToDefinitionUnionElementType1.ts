@@ -10,7 +10,7 @@
 ////     }
 ////     interface ElementAttributesProperty { props; }
 //// }
-//// function /*pt1*/SFC1(prop: { x: number }) {
+//// function SFC1(prop: { x: number }) {
 ////     return <div>hello </div>;
 //// };
 
@@ -18,9 +18,7 @@
 ////     return <h1>World </h1>;
 //// }
 
-//// var /*def*/SFCComp = SFC1 || SFC2;
+//// var SFCComp = SFC1 || SFC2;
 //// <[|SFC/*one*/Comp|] x />
 
-verify.goToDefinition({
-    "one": ["def", "pt1"],
-});
+verify.baselineGoToDefinition("one");

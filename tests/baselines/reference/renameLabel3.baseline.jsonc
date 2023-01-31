@@ -1,0 +1,121 @@
+/*====== /tests/cases/fourslash/renameLabel3.ts ======*/
+
+[|RENAME|]:
+for (let i = 0; i <= 10; i++) {
+   if (i === 0) continue RENAME;
+   if (i === 1) continue RENAME;
+   if (i === 10) break RENAME;
+}
+
+=== 0 ===
+// === /tests/cases/fourslash/renameLabel3.ts ===
+// [|loop|]:
+// for (let i = 0; i <= 10; i++) {
+//    if (i === 0) continue loop;
+//    if (i === 1) continue loop;
+//    if (i === 10) break loop;
+// }
+=== ContextSpan ===
+  // === /tests/cases/fourslash/renameLabel3.ts ===
+  // [|loop:
+  // for (let i = 0; i <= 10; i++) {
+  //    if (i === 0) continue loop;
+  //    if (i === 1) continue loop;
+  //    if (i === 10) break loop;
+  // }|]
+=== 1 ===
+// === /tests/cases/fourslash/renameLabel3.ts ===
+// loop:
+// for (let i = 0; i <= 10; i++) {
+//    if (i === 0) continue [|loop|];
+//    if (i === 1) continue loop;
+//    if (i === 10) break loop;
+// }
+=== ContextSpan ===
+  // === /tests/cases/fourslash/renameLabel3.ts ===
+  // loop:
+  // for (let i = 0; i <= 10; i++) {
+  //    if (i === 0) [|continue loop;|]
+  //    if (i === 1) continue loop;
+  //    if (i === 10) break loop;
+  // }
+=== 2 ===
+// === /tests/cases/fourslash/renameLabel3.ts ===
+// loop:
+// for (let i = 0; i <= 10; i++) {
+//    if (i === 0) continue loop;
+//    if (i === 1) continue [|loop|];
+//    if (i === 10) break loop;
+// }
+=== ContextSpan ===
+  // === /tests/cases/fourslash/renameLabel3.ts ===
+  // loop:
+  // for (let i = 0; i <= 10; i++) {
+  //    if (i === 0) continue loop;
+  //    if (i === 1) [|continue loop;|]
+  //    if (i === 10) break loop;
+  // }
+=== 3 ===
+// === /tests/cases/fourslash/renameLabel3.ts ===
+// loop:
+// for (let i = 0; i <= 10; i++) {
+//    if (i === 0) continue loop;
+//    if (i === 1) continue loop;
+//    if (i === 10) break [|loop|];
+// }
+=== ContextSpan ===
+  // === /tests/cases/fourslash/renameLabel3.ts ===
+  // loop:
+  // for (let i = 0; i <= 10; i++) {
+  //    if (i === 0) continue loop;
+  //    if (i === 1) continue loop;
+  //    if (i === 10) [|break loop;|]
+  // }
+
+
+[
+  {
+    "textSpan": {
+      "start": 0,
+      "length": 4
+    },
+    "fileName": "/tests/cases/fourslash/renameLabel3.ts",
+    "contextSpan": {
+      "start": 0,
+      "length": 130
+    }
+  },
+  {
+    "textSpan": {
+      "start": 63,
+      "length": 4
+    },
+    "fileName": "/tests/cases/fourslash/renameLabel3.ts",
+    "contextSpan": {
+      "start": 54,
+      "length": 14
+    }
+  },
+  {
+    "textSpan": {
+      "start": 94,
+      "length": 4
+    },
+    "fileName": "/tests/cases/fourslash/renameLabel3.ts",
+    "contextSpan": {
+      "start": 85,
+      "length": 14
+    }
+  },
+  {
+    "textSpan": {
+      "start": 123,
+      "length": 4
+    },
+    "fileName": "/tests/cases/fourslash/renameLabel3.ts",
+    "contextSpan": {
+      "start": 117,
+      "length": 11
+    }
+  }
+]

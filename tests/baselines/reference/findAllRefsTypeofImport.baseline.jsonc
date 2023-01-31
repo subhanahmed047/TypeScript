@@ -1,9 +1,45 @@
+// === /a.ts ===
+// /*FIND ALL REFS*/export const x = 0;
+// declare const a: typeof import("./a");
+// a.x;
+
 undefined
 
 // === /a.ts ===
 // export const /*FIND ALL REFS*/[|x|] = 0;
 // declare const a: typeof import("./a");
 // a.[|x|];
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // export const [|x|] = 0;
+      // declare const a: typeof import("./a");
+      // a.x;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export const x = 0;|]
+        // declare const a: typeof import("./a");
+        // a.x;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export const [|x|] = 0;
+      // declare const a: typeof import("./a");
+      // a.x;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export const x = 0;|]
+        // declare const a: typeof import("./a");
+        // a.x;
+      === 1 ===
+      // === /a.ts ===
+      // export const x = 0;
+      // declare const a: typeof import("./a");
+      // a.[|x|];
+  }
+]
 
 [
   {
@@ -79,6 +115,37 @@ undefined
 // export const [|x|] = 0;
 // declare const a: typeof import("./a");
 // a./*FIND ALL REFS*/[|x|];
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // export const [|x|] = 0;
+      // declare const a: typeof import("./a");
+      // a.x;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export const x = 0;|]
+        // declare const a: typeof import("./a");
+        // a.x;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export const [|x|] = 0;
+      // declare const a: typeof import("./a");
+      // a.x;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export const x = 0;|]
+        // declare const a: typeof import("./a");
+        // a.x;
+      === 1 ===
+      // === /a.ts ===
+      // export const x = 0;
+      // declare const a: typeof import("./a");
+      // a.[|x|];
+  }
+]
 
 [
   {

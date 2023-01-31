@@ -6,6 +6,36 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // [|export default function() {}|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export [|default|] function() {}
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export default function() {}|]
+  },
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import [|f|] from "./a";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import f from "./a";|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import [|f|] from "./a";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import f from "./a";|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -120,6 +150,36 @@
 
 // === /a.ts ===
 // export [|default|] function() {}
+
+[
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import [|f|] from "./a";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import f from "./a";|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import [|f|] from "./a";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import f from "./a";|]
+  },
+  {
+    === Definition ===
+      // === /a.ts ===
+      // [|export default function() {}|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export [|default|] function() {}
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export default function() {}|]
+  }
+]
 
 [
   {

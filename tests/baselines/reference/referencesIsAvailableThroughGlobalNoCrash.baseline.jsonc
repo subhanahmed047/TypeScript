@@ -13,6 +13,161 @@
 
 [
   {
+    === Definition ===
+      // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+      // [|declare var debug: debug.Debug & { debug: debug.Debug; default: debug.Debug };
+      // export = debug;
+      // export as namespace debug;
+      // declare namespace debug {
+      //     interface Debug {
+      //        coerce: (val: any) => any;
+      //     }
+      // }|]
+    === References ===
+      === 0 ===
+      // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+      // declare var debug: debug.Debug & { debug: debug.Debug; default: debug.Debug };
+      // [|export|] = debug;
+      // export as namespace debug;
+      // declare namespace debug {
+      //     interface Debug {
+      //        coerce: (val: any) => any;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+        // declare var debug: debug.Debug & { debug: debug.Debug; default: debug.Debug };
+        // [|export = debug;|]
+        // export as namespace debug;
+        // declare namespace debug {
+        //     interface Debug {
+        //        coerce: (val: any) => any;
+        //     }
+        // }
+  },
+  {
+    === Definition ===
+      // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+      // declare var [|debug|]: debug.Debug & { debug: debug.Debug; default: debug.Debug };
+      // export = debug;
+      // export as namespace debug;
+      // declare namespace debug {
+      //     interface Debug {
+      //        coerce: (val: any) => any;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+        // [|declare var debug: debug.Debug & { debug: debug.Debug; default: debug.Debug };|]
+        // export = debug;
+        // export as namespace debug;
+        // declare namespace debug {
+        //     interface Debug {
+        //        coerce: (val: any) => any;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+      // declare var [|debug|]: debug.Debug & { debug: debug.Debug; default: debug.Debug };
+      // export = debug;
+      // export as namespace debug;
+      // declare namespace debug {
+      //     interface Debug {
+      //        coerce: (val: any) => any;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+        // [|declare var debug: debug.Debug & { debug: debug.Debug; default: debug.Debug };|]
+        // export = debug;
+        // export as namespace debug;
+        // declare namespace debug {
+        //     interface Debug {
+        //        coerce: (val: any) => any;
+        //     }
+        // }
+      === 1 ===
+      // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+      // declare var debug: [|debug|].Debug & { debug: debug.Debug; default: debug.Debug };
+      // export = debug;
+      // export as namespace debug;
+      // declare namespace debug {
+      //     interface Debug {
+      //        coerce: (val: any) => any;
+      //     }
+      // }
+      === 2 ===
+      // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+      // declare var debug: debug.Debug & { debug: [|debug|].Debug; default: debug.Debug };
+      // export = debug;
+      // export as namespace debug;
+      // declare namespace debug {
+      //     interface Debug {
+      //        coerce: (val: any) => any;
+      //     }
+      // }
+      === 3 ===
+      // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+      // declare var debug: debug.Debug & { debug: debug.Debug; default: [|debug|].Debug };
+      // export = debug;
+      // export as namespace debug;
+      // declare namespace debug {
+      //     interface Debug {
+      //        coerce: (val: any) => any;
+      //     }
+      // }
+      === 4 ===
+      // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+      // declare var debug: debug.Debug & { debug: debug.Debug; default: debug.Debug };
+      // export = [|debug|];
+      // export as namespace debug;
+      // declare namespace debug {
+      //     interface Debug {
+      //        coerce: (val: any) => any;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+        // declare var debug: debug.Debug & { debug: debug.Debug; default: debug.Debug };
+        // [|export = debug;|]
+        // export as namespace debug;
+        // declare namespace debug {
+        //     interface Debug {
+        //        coerce: (val: any) => any;
+        //     }
+        // }
+      === 5 ===
+      // === /packages/playwright-core/src/index.ts ===
+      // export const debug: typeof import('[|../bundles/utils/node_modules/@types/debug|]') = require('./utilsBundleImpl').debug;
+      === ContextSpan ===
+        // === /packages/playwright-core/src/index.ts ===
+        // [|export const debug: typeof import('../bundles/utils/node_modules/@types/debug') = require('./utilsBundleImpl').debug;|]
+      === 6 ===
+      // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+      // declare var debug: debug.Debug & { debug: debug.Debug; default: debug.Debug };
+      // export = debug;
+      // export as namespace debug;
+      // declare namespace [|debug|] {
+      //     interface Debug {
+      //        coerce: (val: any) => any;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /packages/playwright-core/bundles/utils/node_modules/@types/debug/index.d.ts ===
+        // declare var debug: debug.Debug & { debug: debug.Debug; default: debug.Debug };
+        // export = debug;
+        // export as namespace debug;
+        // [|declare namespace debug {
+        //     interface Debug {
+        //        coerce: (val: any) => any;
+        //     }
+        // }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

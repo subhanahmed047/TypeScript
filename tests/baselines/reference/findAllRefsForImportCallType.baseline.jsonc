@@ -8,6 +8,29 @@
 
 [
   {
+    === Definition ===
+      // === /app.ts ===
+      // export function [|hello|]() {};
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|export function hello() {}|];
+    === References ===
+      === 0 ===
+      // === /app.ts ===
+      // export function [|hello|]() {};
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|export function hello() {}|];
+      === 1 ===
+      // === /indirect-use.ts ===
+      // import type { app } from "./re-export";
+      // declare const app: app
+      // app.[|hello|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

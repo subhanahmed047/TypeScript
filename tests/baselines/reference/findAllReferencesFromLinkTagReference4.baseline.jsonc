@@ -7,6 +7,33 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllReferencesFromLinkTagReference4.ts ===
+      // enum E {
+      //     /** {@link B} */
+      //     A,
+      //     [|B|]
+      // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllReferencesFromLinkTagReference4.ts ===
+      // enum E {
+      //     /** {@link [|B|]} */
+      //     A,
+      //     B
+      // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllReferencesFromLinkTagReference4.ts ===
+      // enum E {
+      //     /** {@link B} */
+      //     A,
+      //     [|B|]
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

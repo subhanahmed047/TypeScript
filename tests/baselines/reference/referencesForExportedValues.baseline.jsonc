@@ -1,3 +1,14 @@
+// === /tests/cases/fourslash/referencesForExportedValues.ts ===
+// module M {
+//     /*FIND ALL REFS*/export var variable = 0;
+// 
+//     // local use
+//     var x = variable;
+// }
+// 
+// // external use
+// M.variable
+
 undefined
 
 // === /tests/cases/fourslash/referencesForExportedValues.ts ===
@@ -10,6 +21,78 @@ undefined
 // 
 // // external use
 // M.[|variable|]
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+      // module M {
+      //     export var [|variable|] = 0;
+      // 
+      //     // local use
+      //     var x = variable;
+      // }
+      // 
+      // // external use
+      // M.variable
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+        // module M {
+        //     [|export var variable = 0;|]
+        // 
+        //     // local use
+        //     var x = variable;
+        // }
+        // 
+        // // external use
+        // M.variable
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+      // module M {
+      //     export var [|variable|] = 0;
+      // 
+      //     // local use
+      //     var x = variable;
+      // }
+      // 
+      // // external use
+      // M.variable
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+        // module M {
+        //     [|export var variable = 0;|]
+        // 
+        //     // local use
+        //     var x = variable;
+        // }
+        // 
+        // // external use
+        // M.variable
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+      // module M {
+      //     export var variable = 0;
+      // 
+      //     // local use
+      //     var x = [|variable|];
+      // }
+      // 
+      // // external use
+      // M.variable
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+      // module M {
+      //     export var variable = 0;
+      // 
+      //     // local use
+      //     var x = variable;
+      // }
+      // 
+      // // external use
+      // M.[|variable|]
+  }
+]
 
 [
   {
@@ -111,6 +194,78 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+      // module M {
+      //     export var [|variable|] = 0;
+      // 
+      //     // local use
+      //     var x = variable;
+      // }
+      // 
+      // // external use
+      // M.variable
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+        // module M {
+        //     [|export var variable = 0;|]
+        // 
+        //     // local use
+        //     var x = variable;
+        // }
+        // 
+        // // external use
+        // M.variable
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+      // module M {
+      //     export var [|variable|] = 0;
+      // 
+      //     // local use
+      //     var x = variable;
+      // }
+      // 
+      // // external use
+      // M.variable
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+        // module M {
+        //     [|export var variable = 0;|]
+        // 
+        //     // local use
+        //     var x = variable;
+        // }
+        // 
+        // // external use
+        // M.variable
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+      // module M {
+      //     export var variable = 0;
+      // 
+      //     // local use
+      //     var x = [|variable|];
+      // }
+      // 
+      // // external use
+      // M.variable
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+      // module M {
+      //     export var variable = 0;
+      // 
+      //     // local use
+      //     var x = variable;
+      // }
+      // 
+      // // external use
+      // M.[|variable|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -203,6 +358,78 @@ undefined
 // 
 // // external use
 // M./*FIND ALL REFS*/[|variable|]
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+      // module M {
+      //     export var [|variable|] = 0;
+      // 
+      //     // local use
+      //     var x = variable;
+      // }
+      // 
+      // // external use
+      // M.variable
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+        // module M {
+        //     [|export var variable = 0;|]
+        // 
+        //     // local use
+        //     var x = variable;
+        // }
+        // 
+        // // external use
+        // M.variable
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+      // module M {
+      //     export var [|variable|] = 0;
+      // 
+      //     // local use
+      //     var x = variable;
+      // }
+      // 
+      // // external use
+      // M.variable
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+        // module M {
+        //     [|export var variable = 0;|]
+        // 
+        //     // local use
+        //     var x = variable;
+        // }
+        // 
+        // // external use
+        // M.variable
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+      // module M {
+      //     export var variable = 0;
+      // 
+      //     // local use
+      //     var x = [|variable|];
+      // }
+      // 
+      // // external use
+      // M.variable
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForExportedValues.ts ===
+      // module M {
+      //     export var variable = 0;
+      // 
+      //     // local use
+      //     var x = variable;
+      // }
+      // 
+      // // external use
+      // M.[|variable|]
+  }
+]
 
 [
   {

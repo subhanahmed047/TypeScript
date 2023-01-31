@@ -5,6 +5,37 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+      // function [|__foo|]() {
+      //     __foo();
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+        // [|function __foo() {
+        //     __foo();
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+      // function [|__foo|]() {
+      //     __foo();
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+        // [|function __foo() {
+        //     __foo();
+        // }|]
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+      // function __foo() {
+      //     [|__foo|]();
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -88,6 +119,37 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+      // function [|__foo|]() {
+      //     __foo();
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+        // [|function __foo() {
+        //     __foo();
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+      // function [|__foo|]() {
+      //     __foo();
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+        // [|function __foo() {
+        //     __foo();
+        // }|]
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+      // function __foo() {
+      //     [|__foo|]();
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -168,6 +230,37 @@
 // function [|__foo|]() {
 //     /*FIND ALL REFS*/[|__foo|]();
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+      // function [|__foo|]() {
+      //     __foo();
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+        // [|function __foo() {
+        //     __foo();
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+      // function [|__foo|]() {
+      //     __foo();
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+        // [|function __foo() {
+        //     __foo();
+        // }|]
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames7.ts ===
+      // function __foo() {
+      //     [|__foo|]();
+      // }
+  }
+]
 
 [
   {

@@ -9,6 +9,36 @@
 
 [
   {
+    === Definition ===
+      // === /foo/types/types.ts ===
+      // export type [|Full|] = { prop: string; };
+      === ContextSpan ===
+        // === /foo/types/types.ts ===
+        // [|export type Full = { prop: string; };|]
+    === References ===
+      === 0 ===
+      // === /foo/types/types.ts ===
+      // export type [|Full|] = { prop: string; };
+      === ContextSpan ===
+        // === /foo/types/types.ts ===
+        // [|export type Full = { prop: string; };|]
+      === 1 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = foo.[|Full|];
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === 2 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.[|Full|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -137,6 +167,36 @@
 
 [
   {
+    === Definition ===
+      // === /foo/types/types.ts ===
+      // export type [|Full|] = { prop: string; };
+      === ContextSpan ===
+        // === /foo/types/types.ts ===
+        // [|export type Full = { prop: string; };|]
+    === References ===
+      === 0 ===
+      // === /foo/types/types.ts ===
+      // export type [|Full|] = { prop: string; };
+      === ContextSpan ===
+        // === /foo/types/types.ts ===
+        // [|export type Full = { prop: string; };|]
+      === 1 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = foo.[|Full|];
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === 2 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.[|Full|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -259,6 +319,36 @@
 // export type fullType = foo.[|Full|];
 // type namespaceImport = typeof import('./foo/types');
 // type fullType2 = import('./foo/types').foo./*FIND ALL REFS*/[|Full|];
+
+[
+  {
+    === Definition ===
+      // === /foo/types/types.ts ===
+      // export type [|Full|] = { prop: string; };
+      === ContextSpan ===
+        // === /foo/types/types.ts ===
+        // [|export type Full = { prop: string; };|]
+    === References ===
+      === 0 ===
+      // === /foo/types/types.ts ===
+      // export type [|Full|] = { prop: string; };
+      === ContextSpan ===
+        // === /foo/types/types.ts ===
+        // [|export type Full = { prop: string; };|]
+      === 1 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = foo.[|Full|];
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === 2 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.[|Full|];
+  }
+]
 
 [
   {
@@ -385,6 +475,86 @@
 // === /foo/types/index.ts ===
 // import * as /*FIND ALL REFS*/[|foo|] from './types';
 // export { [|foo|] };
+
+[
+  {
+    === Definition ===
+      // === /foo/types/index.ts ===
+      // import * as [|foo|] from './types';
+      // export { foo };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // [|import * as foo from './types';|]
+        // export { foo };
+    === References ===
+      === 0 ===
+      // === /foo/types/index.ts ===
+      // import * as [|foo|] from './types';
+      // export { foo };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // [|import * as foo from './types';|]
+        // export { foo };
+      === 1 ===
+      // === /foo/types/index.ts ===
+      // import * as foo from './types';
+      // export { [|foo|] };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // import * as foo from './types';
+        // [|export { foo };|]
+  },
+  {
+    === Definition ===
+      // === /foo/types/index.ts ===
+      // import * as foo from './types';
+      // export { [|foo|] };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // import * as foo from './types';
+        // [|export { foo };|]
+    === References ===
+      === 0 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').[|foo|].Full;
+  },
+  {
+    === Definition ===
+      // === /app.ts ===
+      // import { [|foo|] } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|import { foo } from './foo/types';|]
+        // export type fullType = foo.Full;
+        // type namespaceImport = typeof import('./foo/types');
+        // type fullType2 = import('./foo/types').foo.Full;
+    === References ===
+      === 0 ===
+      // === /app.ts ===
+      // import { [|foo|] } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|import { foo } from './foo/types';|]
+        // export type fullType = foo.Full;
+        // type namespaceImport = typeof import('./foo/types');
+        // type fullType2 = import('./foo/types').foo.Full;
+      === 1 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = [|foo|].Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+  }
+]
 
 [
   {
@@ -557,6 +727,86 @@
 
 [
   {
+    === Definition ===
+      // === /foo/types/index.ts ===
+      // import * as [|foo|] from './types';
+      // export { foo };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // [|import * as foo from './types';|]
+        // export { foo };
+    === References ===
+      === 0 ===
+      // === /foo/types/index.ts ===
+      // import * as [|foo|] from './types';
+      // export { foo };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // [|import * as foo from './types';|]
+        // export { foo };
+      === 1 ===
+      // === /foo/types/index.ts ===
+      // import * as foo from './types';
+      // export { [|foo|] };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // import * as foo from './types';
+        // [|export { foo };|]
+  },
+  {
+    === Definition ===
+      // === /foo/types/index.ts ===
+      // import * as foo from './types';
+      // export { [|foo|] };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // import * as foo from './types';
+        // [|export { foo };|]
+    === References ===
+      === 0 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').[|foo|].Full;
+  },
+  {
+    === Definition ===
+      // === /app.ts ===
+      // import { [|foo|] } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|import { foo } from './foo/types';|]
+        // export type fullType = foo.Full;
+        // type namespaceImport = typeof import('./foo/types');
+        // type fullType2 = import('./foo/types').foo.Full;
+    === References ===
+      === 0 ===
+      // === /app.ts ===
+      // import { [|foo|] } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|import { foo } from './foo/types';|]
+        // export type fullType = foo.Full;
+        // type namespaceImport = typeof import('./foo/types');
+        // type fullType2 = import('./foo/types').foo.Full;
+      === 1 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = [|foo|].Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -723,6 +973,86 @@
 // === /foo/types/index.ts ===
 // import * as [|foo|] from './types';
 // export { [|foo|] };
+
+[
+  {
+    === Definition ===
+      // === /app.ts ===
+      // import { [|foo|] } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|import { foo } from './foo/types';|]
+        // export type fullType = foo.Full;
+        // type namespaceImport = typeof import('./foo/types');
+        // type fullType2 = import('./foo/types').foo.Full;
+    === References ===
+      === 0 ===
+      // === /app.ts ===
+      // import { [|foo|] } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|import { foo } from './foo/types';|]
+        // export type fullType = foo.Full;
+        // type namespaceImport = typeof import('./foo/types');
+        // type fullType2 = import('./foo/types').foo.Full;
+      === 1 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = [|foo|].Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+  },
+  {
+    === Definition ===
+      // === /foo/types/index.ts ===
+      // import * as [|foo|] from './types';
+      // export { foo };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // [|import * as foo from './types';|]
+        // export { foo };
+    === References ===
+      === 0 ===
+      // === /foo/types/index.ts ===
+      // import * as [|foo|] from './types';
+      // export { foo };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // [|import * as foo from './types';|]
+        // export { foo };
+      === 1 ===
+      // === /foo/types/index.ts ===
+      // import * as foo from './types';
+      // export { [|foo|] };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // import * as foo from './types';
+        // [|export { foo };|]
+  },
+  {
+    === Definition ===
+      // === /foo/types/index.ts ===
+      // import * as foo from './types';
+      // export { [|foo|] };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // import * as foo from './types';
+        // [|export { foo };|]
+    === References ===
+      === 0 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').[|foo|].Full;
+  }
+]
 
 [
   {
@@ -895,6 +1225,86 @@
 
 [
   {
+    === Definition ===
+      // === /app.ts ===
+      // import { [|foo|] } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|import { foo } from './foo/types';|]
+        // export type fullType = foo.Full;
+        // type namespaceImport = typeof import('./foo/types');
+        // type fullType2 = import('./foo/types').foo.Full;
+    === References ===
+      === 0 ===
+      // === /app.ts ===
+      // import { [|foo|] } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|import { foo } from './foo/types';|]
+        // export type fullType = foo.Full;
+        // type namespaceImport = typeof import('./foo/types');
+        // type fullType2 = import('./foo/types').foo.Full;
+      === 1 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = [|foo|].Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+  },
+  {
+    === Definition ===
+      // === /foo/types/index.ts ===
+      // import * as [|foo|] from './types';
+      // export { foo };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // [|import * as foo from './types';|]
+        // export { foo };
+    === References ===
+      === 0 ===
+      // === /foo/types/index.ts ===
+      // import * as [|foo|] from './types';
+      // export { foo };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // [|import * as foo from './types';|]
+        // export { foo };
+      === 1 ===
+      // === /foo/types/index.ts ===
+      // import * as foo from './types';
+      // export { [|foo|] };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // import * as foo from './types';
+        // [|export { foo };|]
+  },
+  {
+    === Definition ===
+      // === /foo/types/index.ts ===
+      // import * as foo from './types';
+      // export { [|foo|] };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // import * as foo from './types';
+        // [|export { foo };|]
+    === References ===
+      === 0 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').[|foo|].Full;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1056,6 +1466,86 @@
 // === /foo/types/index.ts ===
 // import * as [|foo|] from './types';
 // export { [|foo|] };
+
+[
+  {
+    === Definition ===
+      // === /foo/types/index.ts ===
+      // import * as [|foo|] from './types';
+      // export { foo };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // [|import * as foo from './types';|]
+        // export { foo };
+    === References ===
+      === 0 ===
+      // === /foo/types/index.ts ===
+      // import * as [|foo|] from './types';
+      // export { foo };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // [|import * as foo from './types';|]
+        // export { foo };
+      === 1 ===
+      // === /foo/types/index.ts ===
+      // import * as foo from './types';
+      // export { [|foo|] };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // import * as foo from './types';
+        // [|export { foo };|]
+  },
+  {
+    === Definition ===
+      // === /foo/types/index.ts ===
+      // import * as foo from './types';
+      // export { [|foo|] };
+      === ContextSpan ===
+        // === /foo/types/index.ts ===
+        // import * as foo from './types';
+        // [|export { foo };|]
+    === References ===
+      === 0 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').[|foo|].Full;
+  },
+  {
+    === Definition ===
+      // === /app.ts ===
+      // import { [|foo|] } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|import { foo } from './foo/types';|]
+        // export type fullType = foo.Full;
+        // type namespaceImport = typeof import('./foo/types');
+        // type fullType2 = import('./foo/types').foo.Full;
+    === References ===
+      === 0 ===
+      // === /app.ts ===
+      // import { [|foo|] } from './foo/types';
+      // export type fullType = foo.Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|import { foo } from './foo/types';|]
+        // export type fullType = foo.Full;
+        // type namespaceImport = typeof import('./foo/types');
+        // type fullType2 = import('./foo/types').foo.Full;
+      === 1 ===
+      // === /app.ts ===
+      // import { foo } from './foo/types';
+      // export type fullType = [|foo|].Full;
+      // type namespaceImport = typeof import('./foo/types');
+      // type fullType2 = import('./foo/types').foo.Full;
+  }
+]
 
 [
   {

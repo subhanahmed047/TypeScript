@@ -8,6 +8,60 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+      // class B {}
+      // function foo() {
+      //     return {[|B|]: B};
+      // }
+      // class C extends (foo()).B {}
+      // class C1 extends foo().B {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+        // class B {}
+        // function foo() {
+        //     return {[|B: B|]};
+        // }
+        // class C extends (foo()).B {}
+        // class C1 extends foo().B {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+      // class B {}
+      // function foo() {
+      //     return {[|B|]: B};
+      // }
+      // class C extends (foo()).B {}
+      // class C1 extends foo().B {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+        // class B {}
+        // function foo() {
+        //     return {[|B: B|]};
+        // }
+        // class C extends (foo()).B {}
+        // class C1 extends foo().B {}
+      === 1 ===
+      // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+      // class B {}
+      // function foo() {
+      //     return {B: B};
+      // }
+      // class C extends (foo()).[|B|] {}
+      // class C1 extends foo().B {}
+      === 2 ===
+      // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+      // class B {}
+      // function foo() {
+      //     return {B: B};
+      // }
+      // class C extends (foo()).B {}
+      // class C1 extends foo().[|B|] {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -111,6 +165,60 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+      // class B {}
+      // function foo() {
+      //     return {[|B|]: B};
+      // }
+      // class C extends (foo()).B {}
+      // class C1 extends foo().B {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+        // class B {}
+        // function foo() {
+        //     return {[|B: B|]};
+        // }
+        // class C extends (foo()).B {}
+        // class C1 extends foo().B {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+      // class B {}
+      // function foo() {
+      //     return {[|B|]: B};
+      // }
+      // class C extends (foo()).B {}
+      // class C1 extends foo().B {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+        // class B {}
+        // function foo() {
+        //     return {[|B: B|]};
+        // }
+        // class C extends (foo()).B {}
+        // class C1 extends foo().B {}
+      === 1 ===
+      // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+      // class B {}
+      // function foo() {
+      //     return {B: B};
+      // }
+      // class C extends (foo()).[|B|] {}
+      // class C1 extends foo().B {}
+      === 2 ===
+      // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+      // class B {}
+      // function foo() {
+      //     return {B: B};
+      // }
+      // class C extends (foo()).B {}
+      // class C1 extends foo().[|B|] {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -208,6 +316,60 @@
 // }
 // class C extends (foo()).[|B|] {}
 // class C1 extends foo()./*FIND ALL REFS*/[|B|] {}
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+      // class B {}
+      // function foo() {
+      //     return {[|B|]: B};
+      // }
+      // class C extends (foo()).B {}
+      // class C1 extends foo().B {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+        // class B {}
+        // function foo() {
+        //     return {[|B: B|]};
+        // }
+        // class C extends (foo()).B {}
+        // class C1 extends foo().B {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+      // class B {}
+      // function foo() {
+      //     return {[|B|]: B};
+      // }
+      // class C extends (foo()).B {}
+      // class C1 extends foo().B {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+        // class B {}
+        // function foo() {
+        //     return {[|B: B|]};
+        // }
+        // class C extends (foo()).B {}
+        // class C1 extends foo().B {}
+      === 1 ===
+      // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+      // class B {}
+      // function foo() {
+      //     return {B: B};
+      // }
+      // class C extends (foo()).[|B|] {}
+      // class C1 extends foo().B {}
+      === 2 ===
+      // === /tests/cases/fourslash/findAllReferPropertyAccessExpressionHeritageClause.ts ===
+      // class B {}
+      // function foo() {
+      //     return {B: B};
+      // }
+      // class C extends (foo()).B {}
+      // class C1 extends foo().[|B|] {}
+  }
+]
 
 [
   {

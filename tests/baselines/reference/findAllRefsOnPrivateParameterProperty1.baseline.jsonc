@@ -10,6 +10,62 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+      // class ABCD {
+      //     constructor(private x: number, public y: number, private [|z|]: number) {
+      //     }
+      // 
+      //     func() {
+      //         return this.z;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+        // class ABCD {
+        //     constructor(private x: number, public y: number, [|private z: number|]) {
+        //     }
+        // 
+        //     func() {
+        //         return this.z;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+      // class ABCD {
+      //     constructor(private x: number, public y: number, private [|z|]: number) {
+      //     }
+      // 
+      //     func() {
+      //         return this.z;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+        // class ABCD {
+        //     constructor(private x: number, public y: number, [|private z: number|]) {
+        //     }
+        // 
+        //     func() {
+        //         return this.z;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+      // class ABCD {
+      //     constructor(private x: number, public y: number, private z: number) {
+      //     }
+      // 
+      //     func() {
+      //         return this.[|z|];
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -106,6 +162,62 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+      // class ABCD {
+      //     constructor(private x: number, public y: number, private [|z|]: number) {
+      //     }
+      // 
+      //     func() {
+      //         return this.z;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+        // class ABCD {
+        //     constructor(private x: number, public y: number, [|private z: number|]) {
+        //     }
+        // 
+        //     func() {
+        //         return this.z;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+      // class ABCD {
+      //     constructor(private x: number, public y: number, private [|z|]: number) {
+      //     }
+      // 
+      //     func() {
+      //         return this.z;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+        // class ABCD {
+        //     constructor(private x: number, public y: number, [|private z: number|]) {
+        //     }
+        // 
+        //     func() {
+        //         return this.z;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+      // class ABCD {
+      //     constructor(private x: number, public y: number, private z: number) {
+      //     }
+      // 
+      //     func() {
+      //         return this.[|z|];
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -199,6 +311,62 @@
 //         return this./*FIND ALL REFS*/[|z|];
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+      // class ABCD {
+      //     constructor(private x: number, public y: number, private [|z|]: number) {
+      //     }
+      // 
+      //     func() {
+      //         return this.z;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+        // class ABCD {
+        //     constructor(private x: number, public y: number, [|private z: number|]) {
+        //     }
+        // 
+        //     func() {
+        //         return this.z;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+      // class ABCD {
+      //     constructor(private x: number, public y: number, private [|z|]: number) {
+      //     }
+      // 
+      //     func() {
+      //         return this.z;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+        // class ABCD {
+        //     constructor(private x: number, public y: number, [|private z: number|]) {
+        //     }
+        // 
+        //     func() {
+        //         return this.z;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsOnPrivateParameterProperty1.ts ===
+      // class ABCD {
+      //     constructor(private x: number, public y: number, private z: number) {
+      //     }
+      // 
+      //     func() {
+      //         return this.[|z|];
+      //     }
+      // }
+  }
+]
 
 [
   {

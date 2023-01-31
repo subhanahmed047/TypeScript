@@ -7,6 +7,28 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.js ===
+      // exports.[|area|] = function (r) { return r * r; }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // [|exports.area|] = function (r) { return r * r; }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.js ===
+      // exports.[|area|] = function (r) { return r * r; }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // [|exports.area = function (r) { return r * r; }|]
+      === 1 ===
+      // === /tests/cases/fourslash/b.js ===
+      // var mod = require('./a');
+      // var t = mod.[|area|](10);
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

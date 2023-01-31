@@ -7,6 +7,47 @@
 
 [
   {
+    === Definition ===
+      // === /a.js ===
+      // module.exports = class [|A|] {};
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = [|class A {}|];
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // module.exports = class [|A|] {};
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = [|class A {}|];
+  },
+  {
+    === Definition ===
+      // === /b.js ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|import A = require("./a");|]
+        // A;
+    === References ===
+      === 0 ===
+      // === /b.js ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|import A = require("./a");|]
+        // A;
+      === 1 ===
+      // === /b.js ===
+      // import A = require("./a");
+      // [|A|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -194,6 +235,47 @@
 
 [
   {
+    === Definition ===
+      // === /b.js ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|import A = require("./a");|]
+        // A;
+    === References ===
+      === 0 ===
+      // === /b.js ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|import A = require("./a");|]
+        // A;
+      === 1 ===
+      // === /b.js ===
+      // import A = require("./a");
+      // [|A|];
+  },
+  {
+    === Definition ===
+      // === /a.js ===
+      // module.exports = class [|A|] {};
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = [|class A {}|];
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // module.exports = class [|A|] {};
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = [|class A {}|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -378,6 +460,47 @@
 
 // === /a.js ===
 // module.exports = class [|A|] {};
+
+[
+  {
+    === Definition ===
+      // === /b.js ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|import A = require("./a");|]
+        // A;
+    === References ===
+      === 0 ===
+      // === /b.js ===
+      // import [|A|] = require("./a");
+      // A;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|import A = require("./a");|]
+        // A;
+      === 1 ===
+      // === /b.js ===
+      // import A = require("./a");
+      // [|A|];
+  },
+  {
+    === Definition ===
+      // === /a.js ===
+      // module.exports = class [|A|] {};
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = [|class A {}|];
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // module.exports = class [|A|] {};
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = [|class A {}|];
+  }
+]
 
 [
   {

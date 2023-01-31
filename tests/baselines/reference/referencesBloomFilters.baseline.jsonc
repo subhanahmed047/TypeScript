@@ -12,6 +12,36 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/declaration.ts ===
+      // var container = { [|searchProp|] : 1 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/declaration.ts ===
+        // var container = { [|searchProp : 1|] };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/declaration.ts ===
+      // var container = { [|searchProp|] : 1 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/declaration.ts ===
+        // var container = { [|searchProp : 1|] };
+      === 1 ===
+      // === /tests/cases/fourslash/expression.ts ===
+      // function blah() { return (1 + 2 + container.[|searchProp|]()) === 2;  };
+      === 2 ===
+      // === /tests/cases/fourslash/stringIndexer.ts ===
+      // function blah2() { container["[|searchProp|]"] };
+      === 3 ===
+      // === /tests/cases/fourslash/redeclaration.ts ===
+      // container = { "[|searchProp|]" : 18 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/redeclaration.ts ===
+        // container = { [|"searchProp" : 18|] };
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

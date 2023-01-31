@@ -12,6 +12,61 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // class [|A|] {
+      // }
+      // export = A;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|class A {
+        // }|]
+        // export = A;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // class [|A|] {
+      // }
+      // export = A;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|class A {
+        // }|]
+        // export = A;
+      === 1 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // class A {
+      // }
+      // export = [|A|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // class A {
+        // }
+        // [|export = A;|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // export import [|b|] = require('./a');
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|export import b = require('./a');|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // export import [|b|] = require('./a');
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|export import b = require('./a');|]
+      === 1 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // import b = require('./b');
+      // var a = new b.[|b|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -196,6 +251,28 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // export import [|b|] = require('./a');
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|export import b = require('./a');|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // export import [|b|] = require('./a');
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|export import b = require('./a');|]
+      === 1 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // import b = require('./b');
+      // var a = new b.[|b|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -318,6 +395,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/c.ts ===
+      // import [|b|] = require('./b');
+      // var a = new b.b();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|import b = require('./b');|]
+        // var a = new b.b();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // import [|b|] = require('./b');
+      // var a = new b.b();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|import b = require('./b');|]
+        // var a = new b.b();
+      === 1 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // import b = require('./b');
+      // var a = new [|b|].b();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -405,6 +508,32 @@
 // === /tests/cases/fourslash/c.ts ===
 // import [|b|] = require('./b');
 // var a = new /*FIND ALL REFS*/[|b|].b();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/c.ts ===
+      // import [|b|] = require('./b');
+      // var a = new b.b();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|import b = require('./b');|]
+        // var a = new b.b();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // import [|b|] = require('./b');
+      // var a = new b.b();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/c.ts ===
+        // [|import b = require('./b');|]
+        // var a = new b.b();
+      === 1 ===
+      // === /tests/cases/fourslash/c.ts ===
+      // import b = require('./b');
+      // var a = new [|b|].b();
+  }
+]
 
 [
   {

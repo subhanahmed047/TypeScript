@@ -15,6 +15,162 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default [|f|];
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // [|export default f;|]
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof [|f|];
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = [|f|]();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace [|f|] {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // [|namespace f {
+        //     var local = 100;
+        // }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -156,6 +312,162 @@
 // namespace [|f|] {
 //     var local = 100;
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default [|f|];
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // [|export default f;|]
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof [|f|];
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = [|f|]();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace [|f|] {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // [|namespace f {
+        //     var local = 100;
+        // }|]
+  }
+]
 
 [
   {
@@ -303,6 +615,162 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default [|f|];
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // [|export default f;|]
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof [|f|];
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = [|f|]();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace [|f|] {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // [|namespace f {
+        //     var local = 100;
+        // }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -439,6 +907,162 @@
 // namespace [|f|] {
 //     var local = 100;
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default [|f|];
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // [|export default f;|]
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof [|f|];
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = [|f|]();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace [|f|] {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // [|namespace f {
+        //     var local = 100;
+        // }|]
+  }
+]
 
 [
   {
@@ -581,6 +1205,162 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default [|f|];
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // [|export default f;|]
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof [|f|];
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = [|f|]();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace [|f|] {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // [|namespace f {
+        //     var local = 100;
+        // }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -720,6 +1500,162 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default [|f|];
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // [|export default f;|]
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof [|f|];
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = [|f|]();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace [|f|] {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // [|namespace f {
+        //     var local = 100;
+        // }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -856,6 +1792,162 @@
 // /*FIND ALL REFS*/namespace [|f|] {
 //     var local = 100;
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default [|f|];
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // [|export default f;|]
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof [|f|];
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = [|f|]();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace [|f|] {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // [|namespace f {
+        //     var local = 100;
+        // }|]
+  }
+]
 
 [
   {
@@ -1000,6 +2092,162 @@
 // namespace /*FIND ALL REFS*/[|f|] {
 //     var local = 100;
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function [|f|]() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // [|function f() {
+        //     return 100;
+        // }|]
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default [|f|];
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // [|export default f;|]
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // namespace f {
+        //     var local = 100;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof [|f|];
+      // 
+      // var y = f();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = [|f|]();
+      // 
+      // namespace f {
+      //     var local = 100;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+      // function f() {
+      //     return 100;
+      // }
+      // 
+      // export default f;
+      // 
+      // var x: typeof f;
+      // 
+      // var y = f();
+      // 
+      // namespace [|f|] {
+      //     var local = 100;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport03.ts ===
+        // function f() {
+        //     return 100;
+        // }
+        // 
+        // export default f;
+        // 
+        // var x: typeof f;
+        // 
+        // var y = f();
+        // 
+        // [|namespace f {
+        //     var local = 100;
+        // }|]
+  }
+]
 
 [
   {

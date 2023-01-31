@@ -6,9 +6,9 @@
 // goToDefinition should work the same way.
 
 // @Filename: foo.d.ts
-////declare const [|/*foo_value_declaration*/foo: number|];
+////declare const [|foo: number|];
 ////[|declare module "foo_module" {
-////    interface /*foo_type_declaration*/I { x: number; y: number }
+////    interface I { x: number; y: number }
 ////    export = I;
 ////}|]
 
@@ -32,20 +32,17 @@ verify.navigateTo({
 
 goTo.marker("foo_value");
 verify.quickInfoIs("const foo: number");
-verify.goToDefinitionIs("foo_value_declaration");
 
 goTo.marker("foo_type");
 verify.quickInfoIs("(alias) interface foo\nimport foo = require(\"foo_module\")");
-verify.goToDefinitionIs("foo_type_declaration");
 
 
 // Above tested for global const and imported interface. Now test with global interface and imported const.
 
-
 // @Filename: bar.d.ts
-////[|declare interface /*bar_type_declaration*/bar { x: number; y: number }|]
+////[|declare interface bar { x: number; y: number }|]
 ////[|declare module "bar_module" {
-////    const /*bar_value_declaration*/x: number;
+////    const x: number;
 ////    export = x;
 ////}|]
 
@@ -68,8 +65,8 @@ verify.navigateTo({
 
 goTo.marker("bar_value");
 verify.quickInfoIs("(alias) const bar: number\nimport bar = require(\"bar_module\")");
-verify.goToDefinitionIs("bar_value_declaration");
 
 goTo.marker("bar_type");
 verify.quickInfoIs("interface bar");
-verify.goToDefinitionIs("bar_type_declaration");
+
+verify.baselineGetDefinitionAtPosition("foo_value", "foo_type", "bar_value", "bar_type");

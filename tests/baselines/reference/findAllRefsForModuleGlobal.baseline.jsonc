@@ -5,6 +5,40 @@
 
 [
   {
+    === Definition ===
+      // === /node_modules/foo/index.d.ts ===
+      // [|export const x = 0;|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // /// <reference types="[|foo|]" />
+      // import { x } from "foo";
+      // declare module "foo" {}
+      === 1 ===
+      // === /b.ts ===
+      // /// <reference types="foo" />
+      // import { x } from "[|foo|]";
+      // declare module "foo" {}
+      === ContextSpan ===
+        // === /b.ts ===
+        // /// <reference types="foo" />
+        // [|import { x } from "foo";|]
+        // declare module "foo" {}
+      === 2 ===
+      // === /b.ts ===
+      // /// <reference types="foo" />
+      // import { x } from "foo";
+      // declare module "[|foo|]" {}
+      === ContextSpan ===
+        // === /b.ts ===
+        // /// <reference types="foo" />
+        // import { x } from "foo";
+        // [|declare module "foo" {}|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

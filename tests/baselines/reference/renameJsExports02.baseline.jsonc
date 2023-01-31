@@ -6,6 +6,39 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.js ===
+      // module.exports = class [|A|] {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // module.exports = [|class A {}|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.js ===
+      // module.exports = class [|A|] {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // module.exports = [|class A {}|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.js ===
+      // const [|A|] = require("./a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.js ===
+        // [|const A = require("./a");|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.js ===
+      // const [|A|] = require("./a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.js ===
+        // [|const A = require("./a");|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -149,6 +182,24 @@
 
 // === /tests/cases/fourslash/b.js ===
 // const /*FIND ALL REFS*/[|A|] = require("./a");
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.js ===
+      // const [|A|] = require("./a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.js ===
+        // [|const A = require("./a");|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.js ===
+      // const [|A|] = require("./a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.js ===
+        // [|const A = require("./a");|]
+  }
+]
 
 [
   {

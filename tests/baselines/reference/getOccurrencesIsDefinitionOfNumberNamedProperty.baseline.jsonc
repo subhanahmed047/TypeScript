@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfNumberNamedProperty.ts ===
+      // let o = { [|1|]: 12 };
+      // let y = o[1];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfNumberNamedProperty.ts ===
+        // let o = { [|1: 12|] };
+        // let y = o[1];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfNumberNamedProperty.ts ===
+      // let o = { [|1|]: 12 };
+      // let y = o[1];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfNumberNamedProperty.ts ===
+        // let o = { [|1: 12|] };
+        // let y = o[1];
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfNumberNamedProperty.ts ===
+      // let o = { 1: 12 };
+      // let y = o[[|1|]];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -83,6 +109,32 @@
 // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfNumberNamedProperty.ts ===
 // let o = { [|1|]: 12 };
 // let y = o[/*FIND ALL REFS*/[|1|]];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfNumberNamedProperty.ts ===
+      // let o = { [|1|]: 12 };
+      // let y = o[1];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfNumberNamedProperty.ts ===
+        // let o = { [|1: 12|] };
+        // let y = o[1];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfNumberNamedProperty.ts ===
+      // let o = { [|1|]: 12 };
+      // let y = o[1];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfNumberNamedProperty.ts ===
+        // let o = { [|1: 12|] };
+        // let y = o[1];
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfNumberNamedProperty.ts ===
+      // let o = { 1: 12 };
+      // let y = o[[|1|]];
+  }
+]
 
 [
   {

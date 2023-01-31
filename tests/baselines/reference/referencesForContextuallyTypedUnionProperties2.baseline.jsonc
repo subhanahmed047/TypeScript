@@ -35,6 +35,572 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+      // interface A {
+      //     a: number;
+      //     common: string;
+      // }
+      // 
+      // interface B {
+      //     [|b|]: number;
+      //     common: number;
+      // }
+      // 
+      // // Assignment
+      // var v1: A | B = { a: 0, common: "" };
+      // var v2: A | B = { b: 0, common: 3 };
+      // 
+      // // Function call
+      // function consumer(f:  A | B) { }
+      // consumer({ a: 0, b: 0, common: 1 });
+      // 
+      // // Type cast
+      // var c = <A | B> { common: 0, b: 0 };
+      // 
+      // // Array literal
+      // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+      // 
+      // // Nested object literal
+      // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+      // 
+      // // Widened type
+      // var w: A|B = { b:undefined, common: undefined };
+      // 
+      // // Untped -- should not be included
+      // var u1 = { a: 0, b: 0, common: "" };
+      // var u2 = { b: 0, common: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+        // interface A {
+        //     a: number;
+        //     common: string;
+        // }
+        // 
+        // interface B {
+        //     [|b: number;|]
+        //     common: number;
+        // }
+        // 
+        // // Assignment
+        // var v1: A | B = { a: 0, common: "" };
+        // var v2: A | B = { b: 0, common: 3 };
+        // 
+        // // Function call
+        // function consumer(f:  A | B) { }
+        // consumer({ a: 0, b: 0, common: 1 });
+        // 
+        // // Type cast
+        // var c = <A | B> { common: 0, b: 0 };
+        // 
+        // // Array literal
+        // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+        // 
+        // // Nested object literal
+        // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+        // 
+        // // Widened type
+        // var w: A|B = { b:undefined, common: undefined };
+        // 
+        // // Untped -- should not be included
+        // var u1 = { a: 0, b: 0, common: "" };
+        // var u2 = { b: 0, common: 0 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+      // interface A {
+      //     a: number;
+      //     common: string;
+      // }
+      // 
+      // interface B {
+      //     [|b|]: number;
+      //     common: number;
+      // }
+      // 
+      // // Assignment
+      // var v1: A | B = { a: 0, common: "" };
+      // var v2: A | B = { b: 0, common: 3 };
+      // 
+      // // Function call
+      // function consumer(f:  A | B) { }
+      // consumer({ a: 0, b: 0, common: 1 });
+      // 
+      // // Type cast
+      // var c = <A | B> { common: 0, b: 0 };
+      // 
+      // // Array literal
+      // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+      // 
+      // // Nested object literal
+      // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+      // 
+      // // Widened type
+      // var w: A|B = { b:undefined, common: undefined };
+      // 
+      // // Untped -- should not be included
+      // var u1 = { a: 0, b: 0, common: "" };
+      // var u2 = { b: 0, common: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+        // interface A {
+        //     a: number;
+        //     common: string;
+        // }
+        // 
+        // interface B {
+        //     [|b: number;|]
+        //     common: number;
+        // }
+        // 
+        // // Assignment
+        // var v1: A | B = { a: 0, common: "" };
+        // var v2: A | B = { b: 0, common: 3 };
+        // 
+        // // Function call
+        // function consumer(f:  A | B) { }
+        // consumer({ a: 0, b: 0, common: 1 });
+        // 
+        // // Type cast
+        // var c = <A | B> { common: 0, b: 0 };
+        // 
+        // // Array literal
+        // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+        // 
+        // // Nested object literal
+        // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+        // 
+        // // Widened type
+        // var w: A|B = { b:undefined, common: undefined };
+        // 
+        // // Untped -- should not be included
+        // var u1 = { a: 0, b: 0, common: "" };
+        // var u2 = { b: 0, common: 0 };
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+      // interface A {
+      //     a: number;
+      //     common: string;
+      // }
+      // 
+      // interface B {
+      //     b: number;
+      //     common: number;
+      // }
+      // 
+      // // Assignment
+      // var v1: A | B = { a: 0, common: "" };
+      // var v2: A | B = { [|b|]: 0, common: 3 };
+      // 
+      // // Function call
+      // function consumer(f:  A | B) { }
+      // consumer({ a: 0, b: 0, common: 1 });
+      // 
+      // // Type cast
+      // var c = <A | B> { common: 0, b: 0 };
+      // 
+      // // Array literal
+      // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+      // 
+      // // Nested object literal
+      // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+      // 
+      // // Widened type
+      // var w: A|B = { b:undefined, common: undefined };
+      // 
+      // // Untped -- should not be included
+      // var u1 = { a: 0, b: 0, common: "" };
+      // var u2 = { b: 0, common: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+        // interface A {
+        //     a: number;
+        //     common: string;
+        // }
+        // 
+        // interface B {
+        //     b: number;
+        //     common: number;
+        // }
+        // 
+        // // Assignment
+        // var v1: A | B = { a: 0, common: "" };
+        // var v2: A | B = { [|b: 0|], common: 3 };
+        // 
+        // // Function call
+        // function consumer(f:  A | B) { }
+        // consumer({ a: 0, b: 0, common: 1 });
+        // 
+        // // Type cast
+        // var c = <A | B> { common: 0, b: 0 };
+        // 
+        // // Array literal
+        // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+        // 
+        // // Nested object literal
+        // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+        // 
+        // // Widened type
+        // var w: A|B = { b:undefined, common: undefined };
+        // 
+        // // Untped -- should not be included
+        // var u1 = { a: 0, b: 0, common: "" };
+        // var u2 = { b: 0, common: 0 };
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+      // interface A {
+      //     a: number;
+      //     common: string;
+      // }
+      // 
+      // interface B {
+      //     b: number;
+      //     common: number;
+      // }
+      // 
+      // // Assignment
+      // var v1: A | B = { a: 0, common: "" };
+      // var v2: A | B = { b: 0, common: 3 };
+      // 
+      // // Function call
+      // function consumer(f:  A | B) { }
+      // consumer({ a: 0, [|b|]: 0, common: 1 });
+      // 
+      // // Type cast
+      // var c = <A | B> { common: 0, b: 0 };
+      // 
+      // // Array literal
+      // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+      // 
+      // // Nested object literal
+      // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+      // 
+      // // Widened type
+      // var w: A|B = { b:undefined, common: undefined };
+      // 
+      // // Untped -- should not be included
+      // var u1 = { a: 0, b: 0, common: "" };
+      // var u2 = { b: 0, common: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+        // interface A {
+        //     a: number;
+        //     common: string;
+        // }
+        // 
+        // interface B {
+        //     b: number;
+        //     common: number;
+        // }
+        // 
+        // // Assignment
+        // var v1: A | B = { a: 0, common: "" };
+        // var v2: A | B = { b: 0, common: 3 };
+        // 
+        // // Function call
+        // function consumer(f:  A | B) { }
+        // consumer({ a: 0, [|b: 0|], common: 1 });
+        // 
+        // // Type cast
+        // var c = <A | B> { common: 0, b: 0 };
+        // 
+        // // Array literal
+        // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+        // 
+        // // Nested object literal
+        // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+        // 
+        // // Widened type
+        // var w: A|B = { b:undefined, common: undefined };
+        // 
+        // // Untped -- should not be included
+        // var u1 = { a: 0, b: 0, common: "" };
+        // var u2 = { b: 0, common: 0 };
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+      // interface A {
+      //     a: number;
+      //     common: string;
+      // }
+      // 
+      // interface B {
+      //     b: number;
+      //     common: number;
+      // }
+      // 
+      // // Assignment
+      // var v1: A | B = { a: 0, common: "" };
+      // var v2: A | B = { b: 0, common: 3 };
+      // 
+      // // Function call
+      // function consumer(f:  A | B) { }
+      // consumer({ a: 0, b: 0, common: 1 });
+      // 
+      // // Type cast
+      // var c = <A | B> { common: 0, [|b|]: 0 };
+      // 
+      // // Array literal
+      // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+      // 
+      // // Nested object literal
+      // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+      // 
+      // // Widened type
+      // var w: A|B = { b:undefined, common: undefined };
+      // 
+      // // Untped -- should not be included
+      // var u1 = { a: 0, b: 0, common: "" };
+      // var u2 = { b: 0, common: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+        // interface A {
+        //     a: number;
+        //     common: string;
+        // }
+        // 
+        // interface B {
+        //     b: number;
+        //     common: number;
+        // }
+        // 
+        // // Assignment
+        // var v1: A | B = { a: 0, common: "" };
+        // var v2: A | B = { b: 0, common: 3 };
+        // 
+        // // Function call
+        // function consumer(f:  A | B) { }
+        // consumer({ a: 0, b: 0, common: 1 });
+        // 
+        // // Type cast
+        // var c = <A | B> { common: 0, [|b: 0|] };
+        // 
+        // // Array literal
+        // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+        // 
+        // // Nested object literal
+        // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+        // 
+        // // Widened type
+        // var w: A|B = { b:undefined, common: undefined };
+        // 
+        // // Untped -- should not be included
+        // var u1 = { a: 0, b: 0, common: "" };
+        // var u2 = { b: 0, common: 0 };
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+      // interface A {
+      //     a: number;
+      //     common: string;
+      // }
+      // 
+      // interface B {
+      //     b: number;
+      //     common: number;
+      // }
+      // 
+      // // Assignment
+      // var v1: A | B = { a: 0, common: "" };
+      // var v2: A | B = { b: 0, common: 3 };
+      // 
+      // // Function call
+      // function consumer(f:  A | B) { }
+      // consumer({ a: 0, b: 0, common: 1 });
+      // 
+      // // Type cast
+      // var c = <A | B> { common: 0, b: 0 };
+      // 
+      // // Array literal
+      // var ar: Array<A|B> = [{ a: 0, common: "" }, { [|b|]: 0, common: 0 }];
+      // 
+      // // Nested object literal
+      // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+      // 
+      // // Widened type
+      // var w: A|B = { b:undefined, common: undefined };
+      // 
+      // // Untped -- should not be included
+      // var u1 = { a: 0, b: 0, common: "" };
+      // var u2 = { b: 0, common: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+        // interface A {
+        //     a: number;
+        //     common: string;
+        // }
+        // 
+        // interface B {
+        //     b: number;
+        //     common: number;
+        // }
+        // 
+        // // Assignment
+        // var v1: A | B = { a: 0, common: "" };
+        // var v2: A | B = { b: 0, common: 3 };
+        // 
+        // // Function call
+        // function consumer(f:  A | B) { }
+        // consumer({ a: 0, b: 0, common: 1 });
+        // 
+        // // Type cast
+        // var c = <A | B> { common: 0, b: 0 };
+        // 
+        // // Array literal
+        // var ar: Array<A|B> = [{ a: 0, common: "" }, { [|b: 0|], common: 0 }];
+        // 
+        // // Nested object literal
+        // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+        // 
+        // // Widened type
+        // var w: A|B = { b:undefined, common: undefined };
+        // 
+        // // Untped -- should not be included
+        // var u1 = { a: 0, b: 0, common: "" };
+        // var u2 = { b: 0, common: 0 };
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+      // interface A {
+      //     a: number;
+      //     common: string;
+      // }
+      // 
+      // interface B {
+      //     b: number;
+      //     common: number;
+      // }
+      // 
+      // // Assignment
+      // var v1: A | B = { a: 0, common: "" };
+      // var v2: A | B = { b: 0, common: 3 };
+      // 
+      // // Function call
+      // function consumer(f:  A | B) { }
+      // consumer({ a: 0, b: 0, common: 1 });
+      // 
+      // // Type cast
+      // var c = <A | B> { common: 0, b: 0 };
+      // 
+      // // Array literal
+      // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+      // 
+      // // Nested object literal
+      // var ob: { aorb: A|B } = { aorb: { [|b|]: 0, common: 0 } };
+      // 
+      // // Widened type
+      // var w: A|B = { b:undefined, common: undefined };
+      // 
+      // // Untped -- should not be included
+      // var u1 = { a: 0, b: 0, common: "" };
+      // var u2 = { b: 0, common: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+        // interface A {
+        //     a: number;
+        //     common: string;
+        // }
+        // 
+        // interface B {
+        //     b: number;
+        //     common: number;
+        // }
+        // 
+        // // Assignment
+        // var v1: A | B = { a: 0, common: "" };
+        // var v2: A | B = { b: 0, common: 3 };
+        // 
+        // // Function call
+        // function consumer(f:  A | B) { }
+        // consumer({ a: 0, b: 0, common: 1 });
+        // 
+        // // Type cast
+        // var c = <A | B> { common: 0, b: 0 };
+        // 
+        // // Array literal
+        // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+        // 
+        // // Nested object literal
+        // var ob: { aorb: A|B } = { aorb: { [|b: 0|], common: 0 } };
+        // 
+        // // Widened type
+        // var w: A|B = { b:undefined, common: undefined };
+        // 
+        // // Untped -- should not be included
+        // var u1 = { a: 0, b: 0, common: "" };
+        // var u2 = { b: 0, common: 0 };
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+      // interface A {
+      //     a: number;
+      //     common: string;
+      // }
+      // 
+      // interface B {
+      //     b: number;
+      //     common: number;
+      // }
+      // 
+      // // Assignment
+      // var v1: A | B = { a: 0, common: "" };
+      // var v2: A | B = { b: 0, common: 3 };
+      // 
+      // // Function call
+      // function consumer(f:  A | B) { }
+      // consumer({ a: 0, b: 0, common: 1 });
+      // 
+      // // Type cast
+      // var c = <A | B> { common: 0, b: 0 };
+      // 
+      // // Array literal
+      // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+      // 
+      // // Nested object literal
+      // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+      // 
+      // // Widened type
+      // var w: A|B = { [|b|]:undefined, common: undefined };
+      // 
+      // // Untped -- should not be included
+      // var u1 = { a: 0, b: 0, common: "" };
+      // var u2 = { b: 0, common: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForContextuallyTypedUnionProperties2.ts ===
+        // interface A {
+        //     a: number;
+        //     common: string;
+        // }
+        // 
+        // interface B {
+        //     b: number;
+        //     common: number;
+        // }
+        // 
+        // // Assignment
+        // var v1: A | B = { a: 0, common: "" };
+        // var v2: A | B = { b: 0, common: 3 };
+        // 
+        // // Function call
+        // function consumer(f:  A | B) { }
+        // consumer({ a: 0, b: 0, common: 1 });
+        // 
+        // // Type cast
+        // var c = <A | B> { common: 0, b: 0 };
+        // 
+        // // Array literal
+        // var ar: Array<A|B> = [{ a: 0, common: "" }, { b: 0, common: 0 }];
+        // 
+        // // Nested object literal
+        // var ob: { aorb: A|B } = { aorb: { b: 0, common: 0 } };
+        // 
+        // // Widened type
+        // var w: A|B = { [|b:undefined|], common: undefined };
+        // 
+        // // Untped -- should not be included
+        // var u1 = { a: 0, b: 0, common: "" };
+        // var u2 = { b: 0, common: 0 };
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

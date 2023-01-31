@@ -8,6 +8,44 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: [|Bar|];
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: [|Bar|];
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: [|Bar|]<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: [|Bar|]<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -93,6 +131,44 @@
 // let d: Bar.X;
 // let e: Bar.X<string>;
 // let f: Bar.X.Y;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: [|Bar|]<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: [|Bar|];
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: [|Bar|]<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: [|Bar|]<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+  }
+]
 
 [
   {
@@ -184,6 +260,44 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: [|Bar|]<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: [|Bar|];
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: [|Bar|]<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: [|Bar|]<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -272,6 +386,44 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: [|Bar|].X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: [|Bar|].X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: [|Bar|].X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: [|Bar|].X.Y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -320,6 +472,44 @@
 // let d: [|Bar|].X;
 // let e: /*FIND ALL REFS*/[|Bar|].X<string>;
 // let f: [|Bar|].X.Y;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: [|Bar|].X<string>;
+      // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: [|Bar|].X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: [|Bar|].X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: [|Bar|].X.Y;
+  }
+]
 
 [
   {
@@ -374,6 +564,44 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: [|Bar|].X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: [|Bar|].X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: [|Bar|].X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: [|Bar|].X.Y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -422,6 +650,36 @@
 // let d: Bar./*FIND ALL REFS*/[|X|];
 // let e: Bar.[|X|]<string>;
 // let f: Bar.X.Y;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.[|X|];
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.[|X|];
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.[|X|]<string>;
+      // let f: Bar.X.Y;
+  }
+]
 
 [
   {
@@ -513,6 +771,36 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.[|X|]<string>;
+      // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.[|X|];
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.[|X|]<string>;
+      // let f: Bar.X.Y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -601,6 +889,28 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.[|X|].Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.[|X|].Y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -633,6 +943,28 @@
 // let d: Bar.X;
 // let e: Bar.X<string>;
 // let f: Bar.X./*FIND ALL REFS*/[|Y|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.[|Y|];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols1.ts ===
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.[|Y|];
+  }
+]
 
 [
   {

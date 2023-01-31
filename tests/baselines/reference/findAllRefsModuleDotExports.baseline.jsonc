@@ -3,6 +3,24 @@
 
 [
   {
+    === Definition ===
+      // === /a.js ===
+      // const [|b|] = require("./b");
+      === ContextSpan ===
+        // === /a.js ===
+        // [|const b = require("./b");|]
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // const [|b|] = require("./b");
+      === ContextSpan ===
+        // === /a.js ===
+        // [|const b = require("./b");|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -55,6 +73,27 @@
 
 // === /a.js ===
 // const b = require("/*FIND ALL REFS*/[|./b|]");
+
+[
+  {
+    === Definition ===
+      // === /b.js ===
+      // [|module.exports = 0;|]
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // const b = require("[|./b|]");
+      === ContextSpan ===
+        // === /a.js ===
+        // [|const b = require("./b");|]
+      === 1 ===
+      // === /b.js ===
+      // [|module|].exports = 0;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|module.exports = 0;|]
+  }
+]
 
 [
   {
@@ -117,6 +156,27 @@
 
 // === /a.js ===
 // const b = require("[|./b|]");
+
+[
+  {
+    === Definition ===
+      // === /b.js ===
+      // [|module.exports = 0;|]
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // const b = require("[|./b|]");
+      === ContextSpan ===
+        // === /a.js ===
+        // [|const b = require("./b");|]
+      === 1 ===
+      // === /b.js ===
+      // [|module|].exports = 0;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|module.exports = 0;|]
+  }
+]
 
 [
   {

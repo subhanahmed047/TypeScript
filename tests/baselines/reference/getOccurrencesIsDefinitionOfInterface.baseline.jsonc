@@ -6,6 +6,42 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+      // interface [|I|] {
+      //     p: number;
+      // }
+      // let i: I = { p: 12 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+        // [|interface I {
+        //     p: number;
+        // }|]
+        // let i: I = { p: 12 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+      // interface [|I|] {
+      //     p: number;
+      // }
+      // let i: I = { p: 12 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+        // [|interface I {
+        //     p: number;
+        // }|]
+        // let i: I = { p: 12 };
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+      // interface I {
+      //     p: number;
+      // }
+      // let i: [|I|] = { p: 12 };
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -70,6 +106,42 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+      // interface [|I|] {
+      //     p: number;
+      // }
+      // let i: I = { p: 12 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+        // [|interface I {
+        //     p: number;
+        // }|]
+        // let i: I = { p: 12 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+      // interface [|I|] {
+      //     p: number;
+      // }
+      // let i: I = { p: 12 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+        // [|interface I {
+        //     p: number;
+        // }|]
+        // let i: I = { p: 12 };
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+      // interface I {
+      //     p: number;
+      // }
+      // let i: [|I|] = { p: 12 };
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -131,6 +203,42 @@
 //     p: number;
 // }
 // let i: /*FIND ALL REFS*/[|I|] = { p: 12 };
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+      // interface [|I|] {
+      //     p: number;
+      // }
+      // let i: I = { p: 12 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+        // [|interface I {
+        //     p: number;
+        // }|]
+        // let i: I = { p: 12 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+      // interface [|I|] {
+      //     p: number;
+      // }
+      // let i: I = { p: 12 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+        // [|interface I {
+        //     p: number;
+        // }|]
+        // let i: I = { p: 12 };
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfInterface.ts ===
+      // interface I {
+      //     p: number;
+      // }
+      // let i: [|I|] = { p: 12 };
+  }
+]
 
 [
   {

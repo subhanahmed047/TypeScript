@@ -5,6 +5,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDeclareClass.ts ===
+      // declare class [|C|] {
+      //     static m(): void;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDeclareClass.ts ===
+        // [|declare class C {
+        //     static m(): void;
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDeclareClass.ts ===
+      // declare class [|C|] {
+      //     static m(): void;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDeclareClass.ts ===
+        // [|declare class C {
+        //     static m(): void;
+        // }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -56,6 +82,32 @@
 // declare class /*FIND ALL REFS*/[|C|] {
 //     static m(): void;
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDeclareClass.ts ===
+      // declare class [|C|] {
+      //     static m(): void;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDeclareClass.ts ===
+        // [|declare class C {
+        //     static m(): void;
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDeclareClass.ts ===
+      // declare class [|C|] {
+      //     static m(): void;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDeclareClass.ts ===
+        // [|declare class C {
+        //     static m(): void;
+        // }|]
+  }
+]
 
 [
   {

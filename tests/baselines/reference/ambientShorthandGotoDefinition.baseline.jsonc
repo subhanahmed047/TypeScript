@@ -1,0 +1,376 @@
+// === /tests/cases/fourslash/declarations.d.ts ===
+// declare module [|"jquery"|]
+
+// === /tests/cases/fourslash/user.ts ===
+// ///<reference path="declarations.d.ts"/>
+// import foo, {bar} from "jquery";
+// import * as baz from "jquery";
+// import bang = require("jquery");
+// foo/*GOTO DEF*/(bar, baz, bang);
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/declarations.d.ts ===
+    // declare module [|"jquery"|]
+    === ContextSpan ===
+      // === /tests/cases/fourslash/declarations.d.ts ===
+      // [|declare module "jquery"|]
+  === TextSpan ===
+    // === /tests/cases/fourslash/user.ts ===
+    // ///<reference path="declarations.d.ts"/>
+    // import foo, {bar} from "jquery";
+    // import * as baz from "jquery";
+    // import bang = require("jquery");
+    // [|foo|](bar, baz, bang);
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/declarations.d.ts",
+      "textSpan": {
+        "start": 15,
+        "length": 8
+      },
+      "kind": "module",
+      "name": "\"jquery\"",
+      "containerName": "",
+      "contextSpan": {
+        "start": 0,
+        "length": 23
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false
+    }
+  ],
+  "textSpan": {
+    "start": 138,
+    "length": 3
+  }
+}
+
+// === /tests/cases/fourslash/declarations.d.ts ===
+// declare module [|"jquery"|]
+
+// === /tests/cases/fourslash/user.ts ===
+// ///<reference path="declarations.d.ts"/>
+// import /*GOTO DEF*/foo, {bar} from "jquery";
+// import * as baz from "jquery";
+// import bang = require("jquery");
+// foo(bar, baz, bang);
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/declarations.d.ts ===
+    // declare module [|"jquery"|]
+    === ContextSpan ===
+      // === /tests/cases/fourslash/declarations.d.ts ===
+      // [|declare module "jquery"|]
+  === TextSpan ===
+    // === /tests/cases/fourslash/user.ts ===
+    // ///<reference path="declarations.d.ts"/>
+    // import [|foo|], {bar} from "jquery";
+    // import * as baz from "jquery";
+    // import bang = require("jquery");
+    // foo(bar, baz, bang);
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/declarations.d.ts",
+      "textSpan": {
+        "start": 15,
+        "length": 8
+      },
+      "kind": "module",
+      "name": "\"jquery\"",
+      "containerName": "",
+      "contextSpan": {
+        "start": 0,
+        "length": 23
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false
+    }
+  ],
+  "textSpan": {
+    "start": 48,
+    "length": 3
+  }
+}
+
+// === /tests/cases/fourslash/declarations.d.ts ===
+// declare module [|"jquery"|]
+
+// === /tests/cases/fourslash/user.ts ===
+// ///<reference path="declarations.d.ts"/>
+// import foo, {bar} from "jquery";
+// import * as baz from "jquery";
+// import bang = require("jquery");
+// foo(bar/*GOTO DEF*/, baz, bang);
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/declarations.d.ts ===
+    // declare module [|"jquery"|]
+    === ContextSpan ===
+      // === /tests/cases/fourslash/declarations.d.ts ===
+      // [|declare module "jquery"|]
+  === TextSpan ===
+    // === /tests/cases/fourslash/user.ts ===
+    // ///<reference path="declarations.d.ts"/>
+    // import foo, {bar} from "jquery";
+    // import * as baz from "jquery";
+    // import bang = require("jquery");
+    // foo([|bar|], baz, bang);
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/declarations.d.ts",
+      "textSpan": {
+        "start": 15,
+        "length": 8
+      },
+      "kind": "module",
+      "name": "\"jquery\"",
+      "containerName": "",
+      "contextSpan": {
+        "start": 0,
+        "length": 23
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false
+    }
+  ],
+  "textSpan": {
+    "start": 142,
+    "length": 3
+  }
+}
+
+// === /tests/cases/fourslash/user.ts ===
+// ///<reference path="declarations.d.ts"/>
+// import foo, {bar} from "jquery";
+// import * as [|baz|] from "jquery";
+// import bang = require("jquery");
+// foo(bar, baz/*GOTO DEF*/, bang);
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/user.ts ===
+    // ///<reference path="declarations.d.ts"/>
+    // import foo, {bar} from "jquery";
+    // import * as [|baz|] from "jquery";
+    // import bang = require("jquery");
+    // foo(bar, baz, bang);
+    === ContextSpan ===
+      // === /tests/cases/fourslash/user.ts ===
+      // ///<reference path="declarations.d.ts"/>
+      // import foo, {bar} from "jquery";
+      // [|import * as baz from "jquery";|]
+      // import bang = require("jquery");
+      // foo(bar, baz, bang);
+  === TextSpan ===
+    // === /tests/cases/fourslash/user.ts ===
+    // ///<reference path="declarations.d.ts"/>
+    // import foo, {bar} from "jquery";
+    // import * as baz from "jquery";
+    // import bang = require("jquery");
+    // foo(bar, [|baz|], bang);
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/user.ts",
+      "textSpan": {
+        "start": 86,
+        "length": 3
+      },
+      "kind": "alias",
+      "name": "baz",
+      "containerName": "",
+      "contextSpan": {
+        "start": 74,
+        "length": 30
+      },
+      "isLocal": true,
+      "isAmbient": false,
+      "unverified": false,
+      "failedAliasResolution": false
+    }
+  ],
+  "textSpan": {
+    "start": 147,
+    "length": 3
+  }
+}
+
+// === /tests/cases/fourslash/declarations.d.ts ===
+// declare module [|"jquery"|]
+
+// === /tests/cases/fourslash/user.ts ===
+// ///<reference path="declarations.d.ts"/>
+// import foo, {bar} from "jquery";
+// import * as /*GOTO DEF*/baz from "jquery";
+// import bang = require("jquery");
+// foo(bar, baz, bang);
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/declarations.d.ts ===
+    // declare module [|"jquery"|]
+    === ContextSpan ===
+      // === /tests/cases/fourslash/declarations.d.ts ===
+      // [|declare module "jquery"|]
+  === TextSpan ===
+    // === /tests/cases/fourslash/user.ts ===
+    // ///<reference path="declarations.d.ts"/>
+    // import foo, {bar} from "jquery";
+    // import * as [|baz|] from "jquery";
+    // import bang = require("jquery");
+    // foo(bar, baz, bang);
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/declarations.d.ts",
+      "textSpan": {
+        "start": 15,
+        "length": 8
+      },
+      "kind": "module",
+      "name": "\"jquery\"",
+      "containerName": "",
+      "contextSpan": {
+        "start": 0,
+        "length": 23
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false
+    }
+  ],
+  "textSpan": {
+    "start": 86,
+    "length": 3
+  }
+}
+
+// === /tests/cases/fourslash/declarations.d.ts ===
+// declare module [|"jquery"|]
+
+// === /tests/cases/fourslash/user.ts ===
+// ///<reference path="declarations.d.ts"/>
+// import foo, {bar} from "jquery";
+// import * as baz from "jquery";
+// import bang = require("jquery");
+// foo(bar, baz, bang/*GOTO DEF*/);
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/declarations.d.ts ===
+    // declare module [|"jquery"|]
+    === ContextSpan ===
+      // === /tests/cases/fourslash/declarations.d.ts ===
+      // [|declare module "jquery"|]
+  === TextSpan ===
+    // === /tests/cases/fourslash/user.ts ===
+    // ///<reference path="declarations.d.ts"/>
+    // import foo, {bar} from "jquery";
+    // import * as baz from "jquery";
+    // import bang = require("jquery");
+    // foo(bar, baz, [|bang|]);
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/declarations.d.ts",
+      "textSpan": {
+        "start": 15,
+        "length": 8
+      },
+      "kind": "module",
+      "name": "\"jquery\"",
+      "containerName": "",
+      "contextSpan": {
+        "start": 0,
+        "length": 23
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false
+    }
+  ],
+  "textSpan": {
+    "start": 152,
+    "length": 4
+  }
+}
+
+// === /tests/cases/fourslash/declarations.d.ts ===
+// declare module [|"jquery"|]
+
+// === /tests/cases/fourslash/user.ts ===
+// ///<reference path="declarations.d.ts"/>
+// import foo, {bar} from "jquery";
+// import * as baz from "jquery";
+// import /*GOTO DEF*/bang = require("jquery");
+// foo(bar, baz, bang);
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/declarations.d.ts ===
+    // declare module [|"jquery"|]
+    === ContextSpan ===
+      // === /tests/cases/fourslash/declarations.d.ts ===
+      // [|declare module "jquery"|]
+  === TextSpan ===
+    // === /tests/cases/fourslash/user.ts ===
+    // ///<reference path="declarations.d.ts"/>
+    // import foo, {bar} from "jquery";
+    // import * as baz from "jquery";
+    // import [|bang|] = require("jquery");
+    // foo(bar, baz, bang);
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/declarations.d.ts",
+      "textSpan": {
+        "start": 15,
+        "length": 8
+      },
+      "kind": "module",
+      "name": "\"jquery\"",
+      "containerName": "",
+      "contextSpan": {
+        "start": 0,
+        "length": 23
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false
+    }
+  ],
+  "textSpan": {
+    "start": 112,
+    "length": 4
+  }
+}

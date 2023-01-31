@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+      // var [|Base|] = class { };
+      // class C extends Base { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+        // [|var Base = class { };|]
+        // class C extends Base { }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+      // var [|Base|] = class { };
+      // class C extends Base { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+        // [|var Base = class { };|]
+        // class C extends Base { }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+      // var Base = class { };
+      // class C extends [|Base|] { }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -86,6 +112,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+      // var [|Base|] = class { };
+      // class C extends Base { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+        // [|var Base = class { };|]
+        // class C extends Base { }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+      // var [|Base|] = class { };
+      // class C extends Base { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+        // [|var Base = class { };|]
+        // class C extends Base { }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+      // var Base = class { };
+      // class C extends [|Base|] { }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -165,6 +217,32 @@
 // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
 // var [|Base|] = class { };
 // class C extends /*FIND ALL REFS*/[|Base|] { }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+      // var [|Base|] = class { };
+      // class C extends Base { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+        // [|var Base = class { };|]
+        // class C extends Base { }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+      // var [|Base|] = class { };
+      // class C extends Base { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+        // [|var Base = class { };|]
+        // class C extends Base { }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForVariableInExtendsClause01.ts ===
+      // var Base = class { };
+      // class C extends [|Base|] { }
+  }
+]
 
 [
   {

@@ -1,0 +1,52 @@
+/*====== /tests/cases/fourslash/renameLabel1.ts ======*/
+
+RENAME: {
+    break [|RENAME|];
+}
+
+=== 0 ===
+// === /tests/cases/fourslash/renameLabel1.ts ===
+// [|foo|]: {
+//     break foo;
+// }
+=== ContextSpan ===
+  // === /tests/cases/fourslash/renameLabel1.ts ===
+  // [|foo: {
+  //     break foo;
+  // }|]
+=== 1 ===
+// === /tests/cases/fourslash/renameLabel1.ts ===
+// foo: {
+//     break [|foo|];
+// }
+=== ContextSpan ===
+  // === /tests/cases/fourslash/renameLabel1.ts ===
+  // foo: {
+  //     [|break foo;|]
+  // }
+
+
+[
+  {
+    "textSpan": {
+      "start": 0,
+      "length": 3
+    },
+    "fileName": "/tests/cases/fourslash/renameLabel1.ts",
+    "contextSpan": {
+      "start": 0,
+      "length": 23
+    }
+  },
+  {
+    "textSpan": {
+      "start": 17,
+      "length": 3
+    },
+    "fileName": "/tests/cases/fourslash/renameLabel1.ts",
+    "contextSpan": {
+      "start": 11,
+      "length": 10
+    }
+  }
+]

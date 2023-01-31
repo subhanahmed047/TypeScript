@@ -1,0 +1,37 @@
+/*====== /tests/cases/fourslash/renameJSDocNamepath.ts ======*/
+
+/**
+ * @type {module:foo/A} x
+ */
+var x = 1
+var [|RENAME|] = 0;
+
+=== 0 ===
+// === /tests/cases/fourslash/renameJSDocNamepath.ts ===
+// /**
+//  * @type {module:foo/A} x
+//  */
+// var x = 1
+// var [|A|] = 0;
+=== ContextSpan ===
+  // === /tests/cases/fourslash/renameJSDocNamepath.ts ===
+  // /**
+  //  * @type {module:foo/A} x
+  //  */
+  // var x = 1
+  // [|var A = 0;|]
+
+
+[
+  {
+    "textSpan": {
+      "start": 48,
+      "length": 1
+    },
+    "fileName": "/tests/cases/fourslash/renameJSDocNamepath.ts",
+    "contextSpan": {
+      "start": 44,
+      "length": 10
+    }
+  }
+]

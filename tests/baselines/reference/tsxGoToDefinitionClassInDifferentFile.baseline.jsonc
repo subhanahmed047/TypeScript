@@ -1,0 +1,34 @@
+// === /tests/cases/fourslash/C.tsx ===
+// export default class [|C|] {}
+
+// === /tests/cases/fourslash/a.tsx ===
+// import C from "./C";
+// const foo = </*GOTO DEF POS*/C />;
+
+=== 0 ===
+// === /tests/cases/fourslash/C.tsx ===
+// export default class [|C|] {}
+=== ContextSpan ===
+  // === /tests/cases/fourslash/C.tsx ===
+  // [|export default class C {}|]
+
+
+[
+  {
+    "fileName": "/tests/cases/fourslash/C.tsx",
+    "textSpan": {
+      "start": 21,
+      "length": 1
+    },
+    "kind": "class",
+    "name": "C",
+    "containerName": "\"/tests/cases/fourslash/C\"",
+    "contextSpan": {
+      "start": 0,
+      "length": 25
+    },
+    "isLocal": false,
+    "isAmbient": false,
+    "unverified": false
+  }
+]

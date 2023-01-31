@@ -8,6 +8,32 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // export type [|T|] = 0;
+      // export const T = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export type T = 0;|]
+        // export const T = 0;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export type [|T|] = 0;
+      // export const T = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export type T = 0;|]
+        // export const T = 0;
+      === 1 ===
+      // === /b.ts ===
+      // const x: import("./a").[|T|] = 0;
+      // const x: typeof import("./a").T = 0;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -90,6 +116,32 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // export type [|T|] = 0;
+      // export const T = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export type T = 0;|]
+        // export const T = 0;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export type [|T|] = 0;
+      // export const T = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export type T = 0;|]
+        // export const T = 0;
+      === 1 ===
+      // === /b.ts ===
+      // const x: import("./a").[|T|] = 0;
+      // const x: typeof import("./a").T = 0;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -162,6 +214,10 @@
   }
 ]
 
+// === /a.ts ===
+// export type T = 0;
+// /*FIND ALL REFS*/export const T = 0;
+
 undefined
 
 // === /a.ts ===
@@ -171,6 +227,32 @@ undefined
 // === /b.ts ===
 // const x: import("./a").T = 0;
 // const x: typeof import("./a").[|T|] = 0;
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // export type [|T|] = 0;
+      // export const T = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export type T = 0;|]
+        // export const T = 0;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export type T = 0;
+      // export const [|T|] = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // export type T = 0;
+        // [|export const T = 0;|]
+      === 1 ===
+      // === /b.ts ===
+      // const x: import("./a").T = 0;
+      // const x: typeof import("./a").[|T|] = 0;
+  }
+]
 
 [
   {
@@ -252,6 +334,32 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // export type [|T|] = 0;
+      // export const T = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export type T = 0;|]
+        // export const T = 0;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export type [|T|] = 0;
+      // export const T = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export type T = 0;|]
+        // export const T = 0;
+      === 1 ===
+      // === /b.ts ===
+      // const x: import("./a").[|T|] = 0;
+      // const x: typeof import("./a").T = 0;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -329,6 +437,32 @@ undefined
 // === /b.ts ===
 // const x: import("./a").T = 0;
 // const x: typeof import("./a")./*FIND ALL REFS*/[|T|] = 0;
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // export type [|T|] = 0;
+      // export const T = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export type T = 0;|]
+        // export const T = 0;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export type T = 0;
+      // export const [|T|] = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // export type T = 0;
+        // [|export const T = 0;|]
+      === 1 ===
+      // === /b.ts ===
+      // const x: import("./a").T = 0;
+      // const x: typeof import("./a").[|T|] = 0;
+  }
+]
 
 [
   {

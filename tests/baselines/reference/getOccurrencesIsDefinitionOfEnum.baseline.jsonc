@@ -7,6 +7,47 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+      // enum [|E|] {
+      //     First,
+      //     Second
+      // }
+      // let first = E.First;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+        // [|enum E {
+        //     First,
+        //     Second
+        // }|]
+        // let first = E.First;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+      // enum [|E|] {
+      //     First,
+      //     Second
+      // }
+      // let first = E.First;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+        // [|enum E {
+        //     First,
+        //     Second
+        // }|]
+        // let first = E.First;
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+      // enum E {
+      //     First,
+      //     Second
+      // }
+      // let first = [|E|].First;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -72,6 +113,47 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+      // enum [|E|] {
+      //     First,
+      //     Second
+      // }
+      // let first = E.First;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+        // [|enum E {
+        //     First,
+        //     Second
+        // }|]
+        // let first = E.First;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+      // enum [|E|] {
+      //     First,
+      //     Second
+      // }
+      // let first = E.First;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+        // [|enum E {
+        //     First,
+        //     Second
+        // }|]
+        // let first = E.First;
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+      // enum E {
+      //     First,
+      //     Second
+      // }
+      // let first = [|E|].First;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -134,6 +216,47 @@
 //     Second
 // }
 // let first = /*FIND ALL REFS*/[|E|].First;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+      // enum [|E|] {
+      //     First,
+      //     Second
+      // }
+      // let first = E.First;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+        // [|enum E {
+        //     First,
+        //     Second
+        // }|]
+        // let first = E.First;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+      // enum [|E|] {
+      //     First,
+      //     Second
+      // }
+      // let first = E.First;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+        // [|enum E {
+        //     First,
+        //     Second
+        // }|]
+        // let first = E.First;
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfEnum.ts ===
+      // enum E {
+      //     First,
+      //     Second
+      // }
+      // let first = [|E|].First;
+  }
+]
 
 [
   {

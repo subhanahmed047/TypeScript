@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // import [|j|] = require("./j.json");
+      // j;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|import j = require("./j.json");|]
+        // j;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // import [|j|] = require("./j.json");
+      // j;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|import j = require("./j.json");|]
+        // j;
+      === 1 ===
+      // === /a.ts ===
+      // import j = require("./j.json");
+      // [|j|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -91,6 +117,32 @@
 // === /a.ts ===
 // import [|j|] = require("./j.json");
 // /*FIND ALL REFS*/[|j|];
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // import [|j|] = require("./j.json");
+      // j;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|import j = require("./j.json");|]
+        // j;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // import [|j|] = require("./j.json");
+      // j;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|import j = require("./j.json");|]
+        // j;
+      === 1 ===
+      // === /a.ts ===
+      // import j = require("./j.json");
+      // [|j|];
+  }
+]
 
 [
   {
@@ -189,6 +241,34 @@
 
 [
   {
+    === Definition ===
+      // === /j.json ===
+      // [|{ "x": 0 }|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // import j = require("[|./j.json|]");
+      // j;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|import j = require("./j.json");|]
+        // j;
+      === 1 ===
+      // === /b.js ===
+      // const j = require("[|./j.json|]");
+      // j;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|const j = require("./j.json");|]
+        // j;
+      === 2 ===
+      // === /j.json ===
+      // [|{ "x": 0 }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -264,6 +344,34 @@
 
 [
   {
+    === Definition ===
+      // === /j.json ===
+      // [|{ "x": 0 }|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // import j = require("[|./j.json|]");
+      // j;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|import j = require("./j.json");|]
+        // j;
+      === 1 ===
+      // === /b.js ===
+      // const j = require("[|./j.json|]");
+      // j;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|const j = require("./j.json");|]
+        // j;
+      === 2 ===
+      // === /j.json ===
+      // [|{ "x": 0 }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -332,6 +440,32 @@
 
 [
   {
+    === Definition ===
+      // === /b.js ===
+      // const [|j|] = require("./j.json");
+      // j;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|const j = require("./j.json");|]
+        // j;
+    === References ===
+      === 0 ===
+      // === /b.js ===
+      // const [|j|] = require("./j.json");
+      // j;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|const j = require("./j.json");|]
+        // j;
+      === 1 ===
+      // === /b.js ===
+      // const j = require("./j.json");
+      // [|j|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -394,6 +528,32 @@
 
 [
   {
+    === Definition ===
+      // === /b.js ===
+      // const [|j|] = require("./j.json");
+      // j;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|const j = require("./j.json");|]
+        // j;
+    === References ===
+      === 0 ===
+      // === /b.js ===
+      // const [|j|] = require("./j.json");
+      // j;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|const j = require("./j.json");|]
+        // j;
+      === 1 ===
+      // === /b.js ===
+      // const j = require("./j.json");
+      // [|j|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -447,5 +607,8 @@
     ]
   }
 ]
+
+// === /j.json ===
+// /*FIND ALL REFS*/{ "x": 0 }
 
 undefined

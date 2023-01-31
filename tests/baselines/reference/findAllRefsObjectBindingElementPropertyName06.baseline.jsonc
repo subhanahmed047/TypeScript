@@ -17,6 +17,216 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { [|property1|]: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for ([|let { property1: p } of elems|]) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { [|property1|] } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for ([|let { property1 } of elems|]) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { [|property1|]: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for ([|var { property1: p1 } of elems|]) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ [|property1|] : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ([|{ property1 : p2 } of elems|]) {
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -163,6 +373,216 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { [|property1|]: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for ([|let { property1: p } of elems|]) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { [|property1|] } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for ([|let { property1 } of elems|]) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { [|property1|]: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for ([|var { property1: p1 } of elems|]) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ [|property1|] : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ([|{ property1 : p2 } of elems|]) {
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -304,6 +724,216 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { [|property1|]: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for ([|let { property1: p } of elems|]) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { [|property1|] } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for ([|let { property1 } of elems|]) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { [|property1|]: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for ([|var { property1: p1 } of elems|]) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ [|property1|] : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ([|{ property1 : p2 } of elems|]) {
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -442,6 +1072,216 @@
 // var p2;
 // for ({ /*FIND ALL REFS*/[|property1|] : p2 } of elems) {
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { [|property1|]: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for ([|let { property1: p } of elems|]) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { [|property1|] } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for ([|let { property1 } of elems|]) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { [|property1|]: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for ([|var { property1: p1 } of elems|]) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ [|property1|] : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ([|{ property1 : p2 } of elems|]) {
+        // }
+  }
+]
 
 [
   {
@@ -588,6 +1428,253 @@
 // var p2;
 // for ({ [|property1|] : p2 } of elems) {
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     [|property1|]: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     [|property1: number;|]
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { [|property1|]: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for ([|let { property1: p } of elems|]) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { [|property1|]: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for ([|var { property1: p1 } of elems|]) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { property1 } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ [|property1|] : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for (let { property1 } of elems) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ([|{ property1 : p2 } of elems|]) {
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { [|property1|] } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for ([|let { property1 } of elems|]) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+      // interface I {
+      //     property1: number;
+      //     property2: string;
+      // }
+      // 
+      // var elems: I[];
+      // for (let { property1: p } of elems) {
+      // }
+      // for (let { [|property1|] } of elems) {
+      // }
+      // for (var { property1: p1 } of elems) {
+      // }
+      // var p2;
+      // for ({ property1 : p2 } of elems) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName06.ts ===
+        // interface I {
+        //     property1: number;
+        //     property2: string;
+        // }
+        // 
+        // var elems: I[];
+        // for (let { property1: p } of elems) {
+        // }
+        // for ([|let { property1 } of elems|]) {
+        // }
+        // for (var { property1: p1 } of elems) {
+        // }
+        // var p2;
+        // for ({ property1 : p2 } of elems) {
+        // }
+  }
+]
 
 [
   {

@@ -7,6 +7,51 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // export = T;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // export = T;
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // export = [|T|];
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // [|export = T;|]
+  },
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import [|T|] = require("./a");
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import T = require("./a");|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import [|T|] = require("./a");
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import T = require("./a");|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -214,6 +259,51 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // export = T;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // export = T;
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // export = [|T|];
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // [|export = T;|]
+  },
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import [|T|] = require("./a");
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import T = require("./a");|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import [|T|] = require("./a");
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import T = require("./a");|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -415,6 +505,51 @@
 
 // === /b.ts ===
 // import [|T|] = require("./a");
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // export = T;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // export = T;
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // export = [|T|];
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // [|export = T;|]
+  },
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import [|T|] = require("./a");
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import T = require("./a");|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import [|T|] = require("./a");
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import T = require("./a");|]
+  }
+]
 
 [
   {
@@ -622,6 +757,51 @@
 
 [
   {
+    === Definition ===
+      // === /b.ts ===
+      // import [|T|] = require("./a");
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import T = require("./a");|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import [|T|] = require("./a");
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import T = require("./a");|]
+  },
+  {
+    === Definition ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // export = T;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // export = T;
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // export = [|T|];
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // [|export = T;|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -826,6 +1006,72 @@
 
 // === /b.ts ===
 // import [|T|] = require("/*FIND ALL REFS*/[|./a|]");
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // [|type T = number;
+      // export = T;|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import T = require("[|./a|]");
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import T = require("./a");|]
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // [|export|] = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // [|export = T;|]
+  },
+  {
+    === Definition ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // export = T;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // type [|T|] = number;
+      // export = T;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|type T = number;|]
+        // export = T;
+      === 1 ===
+      // === /a.ts ===
+      // type T = number;
+      // export = [|T|];
+      === ContextSpan ===
+        // === /a.ts ===
+        // type T = number;
+        // [|export = T;|]
+  },
+  {
+    === Definition ===
+      // === /b.ts ===
+      // import [|T|] = require("./a");
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import T = require("./a");|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import [|T|] = require("./a");
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import T = require("./a");|]
+  }
+]
 
 [
   {

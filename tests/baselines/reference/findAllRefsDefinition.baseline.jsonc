@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDefinition.ts ===
+      // const [|x|] = 0;
+      // x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDefinition.ts ===
+        // [|const x = 0;|]
+        // x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDefinition.ts ===
+      // const [|x|] = 0;
+      // x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDefinition.ts ===
+        // [|const x = 0;|]
+        // x;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsDefinition.ts ===
+      // const x = 0;
+      // [|x|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -75,6 +101,32 @@
 // === /tests/cases/fourslash/findAllRefsDefinition.ts ===
 // const [|x|] = 0;
 // /*FIND ALL REFS*/[|x|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDefinition.ts ===
+      // const [|x|] = 0;
+      // x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDefinition.ts ===
+        // [|const x = 0;|]
+        // x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDefinition.ts ===
+      // const [|x|] = 0;
+      // x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDefinition.ts ===
+        // [|const x = 0;|]
+        // x;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsDefinition.ts ===
+      // const x = 0;
+      // [|x|];
+  }
+]
 
 [
   {

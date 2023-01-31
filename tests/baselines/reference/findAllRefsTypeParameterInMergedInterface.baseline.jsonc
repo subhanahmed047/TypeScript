@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<[|T|]> { a: T }
+      // interface I<T> { b: T }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<[|T|]> { a: T }
+      // interface I<T> { b: T }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<T> { a: [|T|] }
+      // interface I<T> { b: T }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<T> { a: T }
+      // interface I<[|T|]> { b: T }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<T> { a: T }
+      // interface I<T> { b: [|T|] }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -112,6 +138,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<[|T|]> { a: T }
+      // interface I<T> { b: T }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<[|T|]> { a: T }
+      // interface I<T> { b: T }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<T> { a: [|T|] }
+      // interface I<T> { b: T }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<T> { a: T }
+      // interface I<[|T|]> { b: T }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<T> { a: T }
+      // interface I<T> { b: [|T|] }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -213,6 +265,32 @@
 // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
 // interface I<[|T|]> { a: [|T|] }
 // interface I</*FIND ALL REFS*/[|T|]> { b: [|T|] }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<[|T|]> { a: T }
+      // interface I<T> { b: T }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<[|T|]> { a: T }
+      // interface I<T> { b: T }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<T> { a: [|T|] }
+      // interface I<T> { b: T }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<T> { a: T }
+      // interface I<[|T|]> { b: T }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<T> { a: T }
+      // interface I<T> { b: [|T|] }
+  }
+]
 
 [
   {
@@ -321,6 +399,32 @@
 // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
 // interface I<[|T|]> { a: [|T|] }
 // interface I<[|T|]> { b: /*FIND ALL REFS*/[|T|] }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<[|T|]> { a: T }
+      // interface I<T> { b: T }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<[|T|]> { a: T }
+      // interface I<T> { b: T }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<T> { a: [|T|] }
+      // interface I<T> { b: T }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<T> { a: T }
+      // interface I<[|T|]> { b: T }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsTypeParameterInMergedInterface.ts ===
+      // interface I<T> { a: T }
+      // interface I<T> { b: [|T|] }
+  }
+]
 
 [
   {

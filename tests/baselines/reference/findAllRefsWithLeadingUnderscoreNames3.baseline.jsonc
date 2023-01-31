@@ -8,6 +8,52 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+      // class Foo {
+      //     public [|___bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.___bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+        // class Foo {
+        //     [|public ___bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.___bar;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+      // class Foo {
+      //     public [|___bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.___bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+        // class Foo {
+        //     [|public ___bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.___bar;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+      // class Foo {
+      //     public ___bar() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.[|___bar|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -110,6 +156,52 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+      // class Foo {
+      //     public [|___bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.___bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+        // class Foo {
+        //     [|public ___bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.___bar;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+      // class Foo {
+      //     public [|___bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.___bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+        // class Foo {
+        //     [|public ___bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.___bar;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+      // class Foo {
+      //     public ___bar() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.[|___bar|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -209,6 +301,52 @@
 // 
 // var x: Foo;
 // x./*FIND ALL REFS*/[|___bar|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+      // class Foo {
+      //     public [|___bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.___bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+        // class Foo {
+        //     [|public ___bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.___bar;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+      // class Foo {
+      //     public [|___bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.___bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+        // class Foo {
+        //     [|public ___bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.___bar;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames3.ts ===
+      // class Foo {
+      //     public ___bar() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.[|___bar|];
+  }
+]
 
 [
   {

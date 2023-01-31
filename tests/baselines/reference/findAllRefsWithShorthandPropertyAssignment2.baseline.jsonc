@@ -10,6 +10,52 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var [|dx|] = "Foo";
+      // 
+      // module M { export var dx; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { dx, z };
+      // }
+      // M.y.dx;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+        // [|var dx = "Foo";|]
+        // 
+        // module M { export var dx; }
+        // module M {
+        //    var z = 100;
+        //    export var y = { dx, z };
+        // }
+        // M.y.dx;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var [|dx|] = "Foo";
+      // 
+      // module M { export var dx; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { dx, z };
+      // }
+      // M.y.dx;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+        // [|var dx = "Foo";|]
+        // 
+        // module M { export var dx; }
+        // module M {
+        //    var z = 100;
+        //    export var y = { dx, z };
+        // }
+        // M.y.dx;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -78,6 +124,62 @@
 //    export var y = { [|dx|], z };
 // }
 // M.y.dx;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var dx = "Foo";
+      // 
+      // module M { export var [|dx|]; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { dx, z };
+      // }
+      // M.y.dx;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+        // var dx = "Foo";
+        // 
+        // module M { [|export var dx;|] }
+        // module M {
+        //    var z = 100;
+        //    export var y = { dx, z };
+        // }
+        // M.y.dx;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var dx = "Foo";
+      // 
+      // module M { export var [|dx|]; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { dx, z };
+      // }
+      // M.y.dx;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+        // var dx = "Foo";
+        // 
+        // module M { [|export var dx;|] }
+        // module M {
+        //    var z = 100;
+        //    export var y = { dx, z };
+        // }
+        // M.y.dx;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var dx = "Foo";
+      // 
+      // module M { export var dx; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { [|dx|], z };
+      // }
+      // M.y.dx;
+  }
+]
 
 [
   {
@@ -166,6 +268,85 @@
 //    export var y = { /*FIND ALL REFS*/[|dx|], z };
 // }
 // M.y.[|dx|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var dx = "Foo";
+      // 
+      // module M { export var [|dx|]; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { dx, z };
+      // }
+      // M.y.dx;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+        // var dx = "Foo";
+        // 
+        // module M { [|export var dx;|] }
+        // module M {
+        //    var z = 100;
+        //    export var y = { dx, z };
+        // }
+        // M.y.dx;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var dx = "Foo";
+      // 
+      // module M { export var [|dx|]; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { dx, z };
+      // }
+      // M.y.dx;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+        // var dx = "Foo";
+        // 
+        // module M { [|export var dx;|] }
+        // module M {
+        //    var z = 100;
+        //    export var y = { dx, z };
+        // }
+        // M.y.dx;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var dx = "Foo";
+      // 
+      // module M { export var dx; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { [|dx|], z };
+      // }
+      // M.y.dx;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var dx = "Foo";
+      // 
+      // module M { export var dx; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { [|dx|], z };
+      // }
+      // M.y.dx;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var dx = "Foo";
+      // 
+      // module M { export var dx; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { dx, z };
+      // }
+      // M.y.[|dx|];
+  }
+]
 
 [
   {
@@ -312,6 +493,42 @@
 //    export var y = { [|dx|], z };
 // }
 // M.y./*FIND ALL REFS*/[|dx|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var dx = "Foo";
+      // 
+      // module M { export var dx; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { [|dx|], z };
+      // }
+      // M.y.dx;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var dx = "Foo";
+      // 
+      // module M { export var dx; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { [|dx|], z };
+      // }
+      // M.y.dx;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment2.ts ===
+      // var dx = "Foo";
+      // 
+      // module M { export var dx; }
+      // module M {
+      //    var z = 100;
+      //    export var y = { dx, z };
+      // }
+      // M.y.[|dx|];
+  }
+]
 
 [
   {

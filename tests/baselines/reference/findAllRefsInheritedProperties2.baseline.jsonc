@@ -10,6 +10,62 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+      // interface interface1 extends interface1 {
+      //    [|doStuff|](): void;   // r0
+      //    propName: string;  // r1
+      // }
+      // 
+      // var v: interface1;
+      // v.doStuff();  // r2
+      // v.propName;   // r3
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+        // interface interface1 extends interface1 {
+        //    [|doStuff(): void;|]   // r0
+        //    propName: string;  // r1
+        // }
+        // 
+        // var v: interface1;
+        // v.doStuff();  // r2
+        // v.propName;   // r3
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+      // interface interface1 extends interface1 {
+      //    [|doStuff|](): void;   // r0
+      //    propName: string;  // r1
+      // }
+      // 
+      // var v: interface1;
+      // v.doStuff();  // r2
+      // v.propName;   // r3
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+        // interface interface1 extends interface1 {
+        //    [|doStuff(): void;|]   // r0
+        //    propName: string;  // r1
+        // }
+        // 
+        // var v: interface1;
+        // v.doStuff();  // r2
+        // v.propName;   // r3
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+      // interface interface1 extends interface1 {
+      //    doStuff(): void;   // r0
+      //    propName: string;  // r1
+      // }
+      // 
+      // var v: interface1;
+      // v.[|doStuff|]();  // r2
+      // v.propName;   // r3
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -114,6 +170,62 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+      // interface interface1 extends interface1 {
+      //    doStuff(): void;   // r0
+      //    [|propName|]: string;  // r1
+      // }
+      // 
+      // var v: interface1;
+      // v.doStuff();  // r2
+      // v.propName;   // r3
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+        // interface interface1 extends interface1 {
+        //    doStuff(): void;   // r0
+        //    [|propName: string;|]  // r1
+        // }
+        // 
+        // var v: interface1;
+        // v.doStuff();  // r2
+        // v.propName;   // r3
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+      // interface interface1 extends interface1 {
+      //    doStuff(): void;   // r0
+      //    [|propName|]: string;  // r1
+      // }
+      // 
+      // var v: interface1;
+      // v.doStuff();  // r2
+      // v.propName;   // r3
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+        // interface interface1 extends interface1 {
+        //    doStuff(): void;   // r0
+        //    [|propName: string;|]  // r1
+        // }
+        // 
+        // var v: interface1;
+        // v.doStuff();  // r2
+        // v.propName;   // r3
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+      // interface interface1 extends interface1 {
+      //    doStuff(): void;   // r0
+      //    propName: string;  // r1
+      // }
+      // 
+      // var v: interface1;
+      // v.doStuff();  // r2
+      // v.[|propName|];   // r3
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -207,6 +319,62 @@
 // var v: interface1;
 // v./*FIND ALL REFS*/[|doStuff|]();  // r2
 // v.propName;   // r3
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+      // interface interface1 extends interface1 {
+      //    [|doStuff|](): void;   // r0
+      //    propName: string;  // r1
+      // }
+      // 
+      // var v: interface1;
+      // v.doStuff();  // r2
+      // v.propName;   // r3
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+        // interface interface1 extends interface1 {
+        //    [|doStuff(): void;|]   // r0
+        //    propName: string;  // r1
+        // }
+        // 
+        // var v: interface1;
+        // v.doStuff();  // r2
+        // v.propName;   // r3
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+      // interface interface1 extends interface1 {
+      //    [|doStuff|](): void;   // r0
+      //    propName: string;  // r1
+      // }
+      // 
+      // var v: interface1;
+      // v.doStuff();  // r2
+      // v.propName;   // r3
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+        // interface interface1 extends interface1 {
+        //    [|doStuff(): void;|]   // r0
+        //    propName: string;  // r1
+        // }
+        // 
+        // var v: interface1;
+        // v.doStuff();  // r2
+        // v.propName;   // r3
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+      // interface interface1 extends interface1 {
+      //    doStuff(): void;   // r0
+      //    propName: string;  // r1
+      // }
+      // 
+      // var v: interface1;
+      // v.[|doStuff|]();  // r2
+      // v.propName;   // r3
+  }
+]
 
 [
   {
@@ -309,6 +477,62 @@
 // var v: interface1;
 // v.doStuff();  // r2
 // v./*FIND ALL REFS*/[|propName|];   // r3
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+      // interface interface1 extends interface1 {
+      //    doStuff(): void;   // r0
+      //    [|propName|]: string;  // r1
+      // }
+      // 
+      // var v: interface1;
+      // v.doStuff();  // r2
+      // v.propName;   // r3
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+        // interface interface1 extends interface1 {
+        //    doStuff(): void;   // r0
+        //    [|propName: string;|]  // r1
+        // }
+        // 
+        // var v: interface1;
+        // v.doStuff();  // r2
+        // v.propName;   // r3
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+      // interface interface1 extends interface1 {
+      //    doStuff(): void;   // r0
+      //    [|propName|]: string;  // r1
+      // }
+      // 
+      // var v: interface1;
+      // v.doStuff();  // r2
+      // v.propName;   // r3
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+        // interface interface1 extends interface1 {
+        //    doStuff(): void;   // r0
+        //    [|propName: string;|]  // r1
+        // }
+        // 
+        // var v: interface1;
+        // v.doStuff();  // r2
+        // v.propName;   // r3
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties2.ts ===
+      // interface interface1 extends interface1 {
+      //    doStuff(): void;   // r0
+      //    propName: string;  // r1
+      // }
+      // 
+      // var v: interface1;
+      // v.doStuff();  // r2
+      // v.[|propName|];   // r3
+  }
+]
 
 [
   {

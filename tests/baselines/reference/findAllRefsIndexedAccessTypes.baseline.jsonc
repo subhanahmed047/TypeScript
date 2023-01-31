@@ -10,6 +10,62 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+      // interface I {
+      //     [|0|]: number;
+      //     s: string;
+      // }
+      // interface J {
+      //     a: I[0],
+      //     b: I["s"],
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+        // interface I {
+        //     [|0: number;|]
+        //     s: string;
+        // }
+        // interface J {
+        //     a: I[0],
+        //     b: I["s"],
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+      // interface I {
+      //     [|0|]: number;
+      //     s: string;
+      // }
+      // interface J {
+      //     a: I[0],
+      //     b: I["s"],
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+        // interface I {
+        //     [|0: number;|]
+        //     s: string;
+        // }
+        // interface J {
+        //     a: I[0],
+        //     b: I["s"],
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+      // interface I {
+      //     0: number;
+      //     s: string;
+      // }
+      // interface J {
+      //     a: I[[|0|]],
+      //     b: I["s"],
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -110,6 +166,62 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+      // interface I {
+      //     0: number;
+      //     [|s|]: string;
+      // }
+      // interface J {
+      //     a: I[0],
+      //     b: I["s"],
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+        // interface I {
+        //     0: number;
+        //     [|s: string;|]
+        // }
+        // interface J {
+        //     a: I[0],
+        //     b: I["s"],
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+      // interface I {
+      //     0: number;
+      //     [|s|]: string;
+      // }
+      // interface J {
+      //     a: I[0],
+      //     b: I["s"],
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+        // interface I {
+        //     0: number;
+        //     [|s: string;|]
+        // }
+        // interface J {
+        //     a: I[0],
+        //     b: I["s"],
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+      // interface I {
+      //     0: number;
+      //     s: string;
+      // }
+      // interface J {
+      //     a: I[0],
+      //     b: I["[|s|]"],
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -203,6 +315,62 @@
 //     a: I[/*FIND ALL REFS*/[|0|]],
 //     b: I["s"],
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+      // interface I {
+      //     [|0|]: number;
+      //     s: string;
+      // }
+      // interface J {
+      //     a: I[0],
+      //     b: I["s"],
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+        // interface I {
+        //     [|0: number;|]
+        //     s: string;
+        // }
+        // interface J {
+        //     a: I[0],
+        //     b: I["s"],
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+      // interface I {
+      //     [|0|]: number;
+      //     s: string;
+      // }
+      // interface J {
+      //     a: I[0],
+      //     b: I["s"],
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+        // interface I {
+        //     [|0: number;|]
+        //     s: string;
+        // }
+        // interface J {
+        //     a: I[0],
+        //     b: I["s"],
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+      // interface I {
+      //     0: number;
+      //     s: string;
+      // }
+      // interface J {
+      //     a: I[[|0|]],
+      //     b: I["s"],
+      // }
+  }
+]
 
 [
   {
@@ -301,6 +469,62 @@
 //     a: I[0],
 //     b: I["/*FIND ALL REFS*/[|s|]"],
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+      // interface I {
+      //     0: number;
+      //     [|s|]: string;
+      // }
+      // interface J {
+      //     a: I[0],
+      //     b: I["s"],
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+        // interface I {
+        //     0: number;
+        //     [|s: string;|]
+        // }
+        // interface J {
+        //     a: I[0],
+        //     b: I["s"],
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+      // interface I {
+      //     0: number;
+      //     [|s|]: string;
+      // }
+      // interface J {
+      //     a: I[0],
+      //     b: I["s"],
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+        // interface I {
+        //     0: number;
+        //     [|s: string;|]
+        // }
+        // interface J {
+        //     a: I[0],
+        //     b: I["s"],
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsIndexedAccessTypes.ts ===
+      // interface I {
+      //     0: number;
+      //     s: string;
+      // }
+      // interface J {
+      //     a: I[0],
+      //     b: I["[|s|]"],
+      // }
+  }
+]
 
 [
   {

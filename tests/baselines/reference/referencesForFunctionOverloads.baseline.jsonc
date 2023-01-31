@@ -6,6 +6,54 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function [|foo|](x: string);
+      // function foo(x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // [|function foo(x: string);|]
+        // function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function [|foo|](x: string);
+      // function foo(x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // [|function foo(x: string);|]
+        // function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function foo(x: string);
+      // function [|foo|](x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // function foo(x: string);
+        // [|function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }|]
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function foo(x: string);
+      // function foo(x: string, y: number) {
+      //     [|foo|]('', 43);
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -116,6 +164,54 @@
 // function [|foo|](x: string, y: number) {
 //     [|foo|]('', 43);
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function [|foo|](x: string);
+      // function foo(x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // [|function foo(x: string);|]
+        // function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function [|foo|](x: string);
+      // function foo(x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // [|function foo(x: string);|]
+        // function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function foo(x: string);
+      // function [|foo|](x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // function foo(x: string);
+        // [|function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }|]
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function foo(x: string);
+      // function foo(x: string, y: number) {
+      //     [|foo|]('', 43);
+      // }
+  }
+]
 
 [
   {
@@ -232,6 +328,54 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function [|foo|](x: string);
+      // function foo(x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // [|function foo(x: string);|]
+        // function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function [|foo|](x: string);
+      // function foo(x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // [|function foo(x: string);|]
+        // function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function foo(x: string);
+      // function [|foo|](x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // function foo(x: string);
+        // [|function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }|]
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function foo(x: string);
+      // function foo(x: string, y: number) {
+      //     [|foo|]('', 43);
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -345,6 +489,54 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function [|foo|](x: string);
+      // function foo(x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // [|function foo(x: string);|]
+        // function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function [|foo|](x: string);
+      // function foo(x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // [|function foo(x: string);|]
+        // function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function foo(x: string);
+      // function [|foo|](x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // function foo(x: string);
+        // [|function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }|]
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function foo(x: string);
+      // function foo(x: string, y: number) {
+      //     [|foo|]('', 43);
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -455,6 +647,54 @@
 // function [|foo|](x: string, y: number) {
 //     /*FIND ALL REFS*/[|foo|]('', 43);
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function [|foo|](x: string);
+      // function foo(x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // [|function foo(x: string);|]
+        // function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function [|foo|](x: string);
+      // function foo(x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // [|function foo(x: string);|]
+        // function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function foo(x: string);
+      // function [|foo|](x: string, y: number) {
+      //     foo('', 43);
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+        // function foo(x: string);
+        // [|function foo(x: string, y: number) {
+        //     foo('', 43);
+        // }|]
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForFunctionOverloads.ts ===
+      // function foo(x: string);
+      // function foo(x: string, y: number) {
+      //     [|foo|]('', 43);
+      // }
+  }
+]
 
 [
   {

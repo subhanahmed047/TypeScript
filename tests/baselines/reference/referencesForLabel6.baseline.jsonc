@@ -6,6 +6,30 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForLabel6.ts ===
+      // [|labela|]: while (true) {
+      // labelb:     while (false) { break labelb; }
+      //             break labelc;
+      // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForLabel6.ts ===
+      // [|labela|]: while (true) {
+      // labelb:     while (false) { break labelb; }
+      //             break labelc;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForLabel6.ts ===
+        // [|labela: while (true) {
+        // labelb:     while (false) { break labelb; }
+        //             break labelc;
+        // }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -45,6 +69,42 @@
 // /*FIND ALL REFS*/[|labelb|]:     while (false) { break [|labelb|]; }
 //             break labelc;
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForLabel6.ts ===
+      // labela: while (true) {
+      // [|labelb|]:     while (false) { break labelb; }
+      //             break labelc;
+      // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForLabel6.ts ===
+      // labela: while (true) {
+      // [|labelb|]:     while (false) { break labelb; }
+      //             break labelc;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForLabel6.ts ===
+        // labela: while (true) {
+        // [|labelb:     while (false) { break labelb; }|]
+        //             break labelc;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForLabel6.ts ===
+      // labela: while (true) {
+      // labelb:     while (false) { break [|labelb|]; }
+      //             break labelc;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForLabel6.ts ===
+        // labela: while (true) {
+        // labelb:     while (false) { [|break labelb;|] }
+        //             break labelc;
+        // }
+  }
+]
 
 [
   {
@@ -94,6 +154,12 @@
   }
 ]
 
+// === /tests/cases/fourslash/referencesForLabel6.ts ===
+// labela: while (true) {
+// labelb:     while (false) { /*FIND ALL REFS*/break labelb; }
+//             break labelc;
+// }
+
 undefined
 
 // === /tests/cases/fourslash/referencesForLabel6.ts ===
@@ -101,6 +167,42 @@ undefined
 // [|labelb|]:     while (false) { break /*FIND ALL REFS*/[|labelb|]; }
 //             break labelc;
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForLabel6.ts ===
+      // labela: while (true) {
+      // [|labelb|]:     while (false) { break labelb; }
+      //             break labelc;
+      // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForLabel6.ts ===
+      // labela: while (true) {
+      // [|labelb|]:     while (false) { break labelb; }
+      //             break labelc;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForLabel6.ts ===
+        // labela: while (true) {
+        // [|labelb:     while (false) { break labelb; }|]
+        //             break labelc;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForLabel6.ts ===
+      // labela: while (true) {
+      // labelb:     while (false) { break [|labelb|]; }
+      //             break labelc;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForLabel6.ts ===
+        // labela: while (true) {
+        // labelb:     while (false) { [|break labelb;|] }
+        //             break labelc;
+        // }
+  }
+]
 
 [
   {

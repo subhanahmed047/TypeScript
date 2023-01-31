@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+      // enum [|E|] { A }
+      // let e: E.A;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+        // [|enum E { A }|]
+        // let e: E.A;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+      // enum [|E|] { A }
+      // let e: E.A;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+        // [|enum E { A }|]
+        // let e: E.A;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+      // enum E { A }
+      // let e: [|E|].A;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -66,6 +92,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+      // enum [|E|] { A }
+      // let e: E.A;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+        // [|enum E { A }|]
+        // let e: E.A;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+      // enum [|E|] { A }
+      // let e: E.A;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+        // [|enum E { A }|]
+        // let e: E.A;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+      // enum E { A }
+      // let e: [|E|].A;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -125,6 +177,32 @@
 // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
 // enum [|E|] { A }
 // let e: /*FIND ALL REFS*/[|E|].A;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+      // enum [|E|] { A }
+      // let e: E.A;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+        // [|enum E { A }|]
+        // let e: E.A;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+      // enum [|E|] { A }
+      // let e: E.A;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+        // [|enum E { A }|]
+        // let e: E.A;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsEnumAsNamespace.ts ===
+      // enum E { A }
+      // let e: [|E|].A;
+  }
+]
 
 [
   {

@@ -15,6 +15,243 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     [|type|]: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     [|type: "a"|],
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.[|type|];
+      // } else {
+      //     t.type;
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { [|type|]: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { [|type: "b",|] prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { [|type|]: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { [|type: "b",|] prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.[|type|];
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.[|type|] === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -271,6 +508,243 @@
 // } else {
 //     t.[|type|];
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     [|type|]: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     [|type: "a"|],
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.[|type|];
+      // } else {
+      //     t.type;
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { [|type|]: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { [|type: "b",|] prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { [|type|]: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { [|type: "b",|] prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.[|type|];
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.[|type|] === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+  }
+]
 
 [
   {
@@ -533,6 +1007,243 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     [|type|]: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     [|type: "a"|],
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.[|type|];
+      // } else {
+      //     t.type;
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { [|type|]: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { [|type: "b",|] prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { [|type|]: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { [|type: "b",|] prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.[|type|];
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.[|type|] === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -786,6 +1497,243 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     [|type|]: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     [|type: "a"|],
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.[|type|];
+      // } else {
+      //     t.type;
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { [|type|]: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { [|type: "b",|] prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { [|type|]: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { [|type: "b",|] prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.[|type|];
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.[|type|] === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1036,6 +1984,243 @@
 // } else {
 //     t./*FIND ALL REFS*/[|type|];
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     [|type|]: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     [|type: "a"|],
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.[|type|];
+      // } else {
+      //     t.type;
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { [|type|]: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { [|type: "b",|] prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { [|type|]: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { [|type: "b",|] prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.[|type|];
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.[|type|] === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+  }
+]
 
 [
   {
@@ -1292,6 +2477,165 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     [|type|]: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     [|type: "a"|],
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.[|type|];
+      // } else {
+      //     t.type;
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { [|type|]: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { [|type: "a",|] prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.[|type|] === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1476,6 +2820,165 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", [|prop|]: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", [|prop: number|] }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", [|prop|]: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", [|prop: number|] }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     [|prop|]: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     [|prop: 0|],
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", [|prop|]: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", [|prop: string|] };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", [|prop|]: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", [|prop: string|] };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1639,6 +3142,165 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", [|prop|]: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", [|prop: number|] }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", [|prop|]: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", [|prop: number|] }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     [|prop|]: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     [|prop: 0|],
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", [|prop|]: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", [|prop: string|] };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", [|prop|]: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", [|prop: string|] };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1799,6 +3461,102 @@
 // } else {
 //     t.type;
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", [|prop|]: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", [|prop: number|] }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", [|prop|]: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     prop: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", [|prop: number|] }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     prop: 0,
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+      // type T =
+      //     | { type: "a", prop: number }
+      //     | { type: "b", prop: string };
+      // const tt: T = {
+      //     type: "a",
+      //     [|prop|]: 0,
+      // };
+      // declare const t: T;
+      // if (t.type === "a") {
+      //     t.type;
+      // } else {
+      //     t.type;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnionProperty.ts ===
+        // type T =
+        //     | { type: "a", prop: number }
+        //     | { type: "b", prop: string };
+        // const tt: T = {
+        //     type: "a",
+        //     [|prop: 0|],
+        // };
+        // declare const t: T;
+        // if (t.type === "a") {
+        //     t.type;
+        // } else {
+        //     t.type;
+        // }
+  }
+]
 
 [
   {

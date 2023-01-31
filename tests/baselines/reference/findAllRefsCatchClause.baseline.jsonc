@@ -6,6 +6,30 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsCatchClause.ts ===
+      // try { }
+      // catch ([|err|]) {
+      //     err;
+      // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsCatchClause.ts ===
+      // try { }
+      // catch ([|err|]) {
+      //     err;
+      // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsCatchClause.ts ===
+      // try { }
+      // catch (err) {
+      //     [|err|];
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -71,6 +95,30 @@
 // catch ([|err|]) {
 //     /*FIND ALL REFS*/[|err|];
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsCatchClause.ts ===
+      // try { }
+      // catch ([|err|]) {
+      //     err;
+      // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsCatchClause.ts ===
+      // try { }
+      // catch ([|err|]) {
+      //     err;
+      // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsCatchClause.ts ===
+      // try { }
+      // catch (err) {
+      //     [|err|];
+      // }
+  }
+]
 
 [
   {

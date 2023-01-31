@@ -19,6 +19,126 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private [|n|] = 0;
+      // 
+      //     public bar() {
+      //         this.n = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.n = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+        // var n = 14;
+        // 
+        // class foo {
+        //     [|private n = 0;|]
+        // 
+        //     public bar() {
+        //         this.n = 9;
+        //     }
+        // 
+        //     constructor() {
+        //         this.n = 4;
+        //     }
+        // 
+        //     public bar2() {
+        //         var n = 12;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private [|n|] = 0;
+      // 
+      //     public bar() {
+      //         this.n = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.n = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+        // var n = 14;
+        // 
+        // class foo {
+        //     [|private n = 0;|]
+        // 
+        //     public bar() {
+        //         this.n = 9;
+        //     }
+        // 
+        //     constructor() {
+        //         this.n = 4;
+        //     }
+        // 
+        //     public bar2() {
+        //         var n = 12;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private n = 0;
+      // 
+      //     public bar() {
+      //         this.[|n|] = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.n = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private n = 0;
+      // 
+      //     public bar() {
+      //         this.n = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.[|n|] = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -130,6 +250,126 @@
 //         var n = 12;
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private [|n|] = 0;
+      // 
+      //     public bar() {
+      //         this.n = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.n = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+        // var n = 14;
+        // 
+        // class foo {
+        //     [|private n = 0;|]
+        // 
+        //     public bar() {
+        //         this.n = 9;
+        //     }
+        // 
+        //     constructor() {
+        //         this.n = 4;
+        //     }
+        // 
+        //     public bar2() {
+        //         var n = 12;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private [|n|] = 0;
+      // 
+      //     public bar() {
+      //         this.n = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.n = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+        // var n = 14;
+        // 
+        // class foo {
+        //     [|private n = 0;|]
+        // 
+        //     public bar() {
+        //         this.n = 9;
+        //     }
+        // 
+        //     constructor() {
+        //         this.n = 4;
+        //     }
+        // 
+        //     public bar2() {
+        //         var n = 12;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private n = 0;
+      // 
+      //     public bar() {
+      //         this.[|n|] = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.n = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private n = 0;
+      // 
+      //     public bar() {
+      //         this.n = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.[|n|] = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+  }
+]
 
 [
   {
@@ -247,6 +487,126 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private [|n|] = 0;
+      // 
+      //     public bar() {
+      //         this.n = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.n = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+        // var n = 14;
+        // 
+        // class foo {
+        //     [|private n = 0;|]
+        // 
+        //     public bar() {
+        //         this.n = 9;
+        //     }
+        // 
+        //     constructor() {
+        //         this.n = 4;
+        //     }
+        // 
+        //     public bar2() {
+        //         var n = 12;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private [|n|] = 0;
+      // 
+      //     public bar() {
+      //         this.n = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.n = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+        // var n = 14;
+        // 
+        // class foo {
+        //     [|private n = 0;|]
+        // 
+        //     public bar() {
+        //         this.n = 9;
+        //     }
+        // 
+        //     constructor() {
+        //         this.n = 4;
+        //     }
+        // 
+        //     public bar2() {
+        //         var n = 12;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private n = 0;
+      // 
+      //     public bar() {
+      //         this.[|n|] = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.n = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private n = 0;
+      // 
+      //     public bar() {
+      //         this.n = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.[|n|] = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -355,6 +715,126 @@
 //         var n = 12;
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private [|n|] = 0;
+      // 
+      //     public bar() {
+      //         this.n = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.n = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+        // var n = 14;
+        // 
+        // class foo {
+        //     [|private n = 0;|]
+        // 
+        //     public bar() {
+        //         this.n = 9;
+        //     }
+        // 
+        //     constructor() {
+        //         this.n = 4;
+        //     }
+        // 
+        //     public bar2() {
+        //         var n = 12;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private [|n|] = 0;
+      // 
+      //     public bar() {
+      //         this.n = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.n = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+        // var n = 14;
+        // 
+        // class foo {
+        //     [|private n = 0;|]
+        // 
+        //     public bar() {
+        //         this.n = 9;
+        //     }
+        // 
+        //     constructor() {
+        //         this.n = 4;
+        //     }
+        // 
+        //     public bar2() {
+        //         var n = 12;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private n = 0;
+      // 
+      //     public bar() {
+      //         this.[|n|] = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.n = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForClassLocal.ts ===
+      // var n = 14;
+      // 
+      // class foo {
+      //     private n = 0;
+      // 
+      //     public bar() {
+      //         this.n = 9;
+      //     }
+      // 
+      //     constructor() {
+      //         this.[|n|] = 4;
+      //     }
+      // 
+      //     public bar2() {
+      //         var n = 12;
+      //     }
+      // }
+  }
+]
 
 [
   {

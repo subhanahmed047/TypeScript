@@ -8,6 +8,51 @@
 
 [
   {
+    === Definition ===
+      // === /b.js ===
+      // const { [|f|] } = require('./a')
+      // f
+      === ContextSpan ===
+        // === /b.js ===
+        // [|const { f } = require('./a')|]
+        // f
+    === References ===
+      === 0 ===
+      // === /b.js ===
+      // const { [|f|] } = require('./a')
+      // f
+      === ContextSpan ===
+        // === /b.js ===
+        // [|const { f } = require('./a')|]
+        // f
+      === 1 ===
+      // === /b.js ===
+      // const { f } = require('./a')
+      // [|f|]
+  },
+  {
+    === Definition ===
+      // === /a.js ===
+      // function f() { }
+      // module.exports.[|f|] = f
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() { }
+        // [|module.exports.f|] = f
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // function f() { }
+      // module.exports.[|f|] = f
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() { }
+        // [|module.exports.f = f|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

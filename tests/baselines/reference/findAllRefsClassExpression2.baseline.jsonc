@@ -7,6 +7,47 @@
 
 [
   {
+    === Definition ===
+      // === /a.js ===
+      // exports.[|A|] = class {};
+      === ContextSpan ===
+        // === /a.js ===
+        // [|exports.A|] = class {};
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // exports.[|A|] = class {};
+      === ContextSpan ===
+        // === /a.js ===
+        // [|exports.A = class {};|]
+  },
+  {
+    === Definition ===
+      // === /b.js ===
+      // import { [|A|] } from "./a";
+      // A;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|import { A } from "./a";|]
+        // A;
+    === References ===
+      === 0 ===
+      // === /b.js ===
+      // import { [|A|] } from "./a";
+      // A;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|import { A } from "./a";|]
+        // A;
+      === 1 ===
+      // === /b.js ===
+      // import { A } from "./a";
+      // [|A|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -198,6 +239,47 @@
 
 [
   {
+    === Definition ===
+      // === /b.js ===
+      // import { [|A|] } from "./a";
+      // A;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|import { A } from "./a";|]
+        // A;
+    === References ===
+      === 0 ===
+      // === /b.js ===
+      // import { [|A|] } from "./a";
+      // A;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|import { A } from "./a";|]
+        // A;
+      === 1 ===
+      // === /b.js ===
+      // import { A } from "./a";
+      // [|A|];
+  },
+  {
+    === Definition ===
+      // === /a.js ===
+      // exports.[|A|] = class {};
+      === ContextSpan ===
+        // === /a.js ===
+        // [|exports.A|] = class {};
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // exports.[|A|] = class {};
+      === ContextSpan ===
+        // === /a.js ===
+        // [|exports.A = class {};|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -386,6 +468,47 @@
 // === /b.js ===
 // import { [|A|] } from "./a";
 // /*FIND ALL REFS*/[|A|];
+
+[
+  {
+    === Definition ===
+      // === /b.js ===
+      // import { [|A|] } from "./a";
+      // A;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|import { A } from "./a";|]
+        // A;
+    === References ===
+      === 0 ===
+      // === /b.js ===
+      // import { [|A|] } from "./a";
+      // A;
+      === ContextSpan ===
+        // === /b.js ===
+        // [|import { A } from "./a";|]
+        // A;
+      === 1 ===
+      // === /b.js ===
+      // import { A } from "./a";
+      // [|A|];
+  },
+  {
+    === Definition ===
+      // === /a.js ===
+      // exports.[|A|] = class {};
+      === ContextSpan ===
+        // === /a.js ===
+        // [|exports.A|] = class {};
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // exports.[|A|] = class {};
+      === ContextSpan ===
+        // === /a.js ===
+        // [|exports.A = class {};|]
+  }
+]
 
 [
   {

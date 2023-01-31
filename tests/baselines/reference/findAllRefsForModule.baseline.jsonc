@@ -9,6 +9,30 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // [|export const x = 0;|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import { x } from "[|./a|]";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import { x } from "./a";|]
+      === 1 ===
+      // === /c/sub.js ===
+      // const a = require("[|../a|]");
+      === ContextSpan ===
+        // === /c/sub.js ===
+        // [|const a = require("../a");|]
+      === 2 ===
+      // === /d.ts ===
+      // /// <reference path="[|./a.ts|]" />
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -82,6 +106,30 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // [|export const x = 0;|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import { x } from "[|./a|]";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import { x } from "./a";|]
+      === 1 ===
+      // === /c/sub.js ===
+      // const a = require("[|../a|]");
+      === ContextSpan ===
+        // === /c/sub.js ===
+        // [|const a = require("../a");|]
+      === 2 ===
+      // === /d.ts ===
+      // /// <reference path="[|./a.ts|]" />
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -152,6 +200,30 @@
 
 // === /d.ts ===
 // /// <reference path="/*FIND ALL REFS*/[|./a.ts|]" />
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // [|export const x = 0;|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // import { x } from "[|./a|]";
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|import { x } from "./a";|]
+      === 1 ===
+      // === /c/sub.js ===
+      // const a = require("[|../a|]");
+      === ContextSpan ===
+        // === /c/sub.js ===
+        // [|const a = require("../a");|]
+      === 2 ===
+      // === /d.ts ===
+      // /// <reference path="[|./a.ts|]" />
+  }
+]
 
 [
   {

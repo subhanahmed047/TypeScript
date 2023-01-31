@@ -1,0 +1,73 @@
+/*====== /tests/cases/fourslash/Foo.js ======*/
+
+let RENAME;
+module.exports = [|RENAME|];
+exports["foo"] = RENAME;
+
+=== 0 ===
+// === /tests/cases/fourslash/Foo.js ===
+// let [|a|];
+// module.exports = a;
+// exports["foo"] = a;
+=== ContextSpan ===
+  // === /tests/cases/fourslash/Foo.js ===
+  // [|let a;|]
+  // module.exports = a;
+  // exports["foo"] = a;
+=== 1 ===
+// === /tests/cases/fourslash/Foo.js ===
+// let a;
+// module.exports = [|a|];
+// exports["foo"] = a;
+=== ContextSpan ===
+  // === /tests/cases/fourslash/Foo.js ===
+  // let a;
+  // [|module.exports = a;|]
+  // exports["foo"] = a;
+=== 2 ===
+// === /tests/cases/fourslash/Foo.js ===
+// let a;
+// module.exports = a;
+// exports["foo"] = [|a|];
+=== ContextSpan ===
+  // === /tests/cases/fourslash/Foo.js ===
+  // let a;
+  // module.exports = a;
+  // [|exports["foo"] = a;|]
+
+
+[
+  {
+    "textSpan": {
+      "start": 4,
+      "length": 1
+    },
+    "fileName": "/tests/cases/fourslash/Foo.js",
+    "contextSpan": {
+      "start": 0,
+      "length": 6
+    }
+  },
+  {
+    "textSpan": {
+      "start": 24,
+      "length": 1
+    },
+    "fileName": "/tests/cases/fourslash/Foo.js",
+    "contextSpan": {
+      "start": 7,
+      "length": 19
+    }
+  },
+  {
+    "textSpan": {
+      "start": 44,
+      "length": 1
+    },
+    "fileName": "/tests/cases/fourslash/Foo.js",
+    "contextSpan": {
+      "start": 27,
+      "length": 19
+    }
+  }
+]

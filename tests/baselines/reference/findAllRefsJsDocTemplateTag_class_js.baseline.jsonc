@@ -9,6 +9,39 @@
 
 [
   {
+    === Definition ===
+      // === /a.js ===
+      // /** @template [|T|] */
+      // class C {
+      //     constructor() {
+      //         /** @type {T} */
+      //         this.x = null;
+      //     }
+      // }
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // /** @template [|T|] */
+      // class C {
+      //     constructor() {
+      //         /** @type {T} */
+      //         this.x = null;
+      //     }
+      // }
+      === 1 ===
+      // === /a.js ===
+      // /** @template T */
+      // class C {
+      //     constructor() {
+      //         /** @type {[|T|]} */
+      //         this.x = null;
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -101,6 +134,39 @@
 //         this.x = null;
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /a.js ===
+      // /** @template [|T|] */
+      // class C {
+      //     constructor() {
+      //         /** @type {T} */
+      //         this.x = null;
+      //     }
+      // }
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // /** @template [|T|] */
+      // class C {
+      //     constructor() {
+      //         /** @type {T} */
+      //         this.x = null;
+      //     }
+      // }
+      === 1 ===
+      // === /a.js ===
+      // /** @template T */
+      // class C {
+      //     constructor() {
+      //         /** @type {[|T|]} */
+      //         this.x = null;
+      //     }
+      // }
+  }
+]
 
 [
   {

@@ -8,6 +8,92 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function [|f|](x: number): void;
+      // function f(x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // f(1);
+      // f("a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+        // [|function f(x: number): void;|]
+        // function f(x: string): void;
+        // function f(x: number | string) { }
+        // 
+        // f(1);
+        // f("a");
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function [|f|](x: number): void;
+      // function f(x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // f(1);
+      // f("a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+        // [|function f(x: number): void;|]
+        // function f(x: string): void;
+        // function f(x: number | string) { }
+        // 
+        // f(1);
+        // f("a");
+      === 1 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function f(x: number): void;
+      // function [|f|](x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // f(1);
+      // f("a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+        // function f(x: number): void;
+        // [|function f(x: string): void;|]
+        // function f(x: number | string) { }
+        // 
+        // f(1);
+        // f("a");
+      === 2 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function f(x: number): void;
+      // function f(x: string): void;
+      // function [|f|](x: number | string) { }
+      // 
+      // f(1);
+      // f("a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+        // function f(x: number): void;
+        // function f(x: string): void;
+        // [|function f(x: number | string) { }|]
+        // 
+        // f(1);
+        // f("a");
+      === 3 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function f(x: number): void;
+      // function f(x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // [|f|](1);
+      // f("a");
+      === 4 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function f(x: number): void;
+      // function f(x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // f(1);
+      // [|f|]("a");
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -173,6 +259,92 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function [|f|](x: number): void;
+      // function f(x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // f(1);
+      // f("a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+        // [|function f(x: number): void;|]
+        // function f(x: string): void;
+        // function f(x: number | string) { }
+        // 
+        // f(1);
+        // f("a");
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function [|f|](x: number): void;
+      // function f(x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // f(1);
+      // f("a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+        // [|function f(x: number): void;|]
+        // function f(x: string): void;
+        // function f(x: number | string) { }
+        // 
+        // f(1);
+        // f("a");
+      === 1 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function f(x: number): void;
+      // function [|f|](x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // f(1);
+      // f("a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+        // function f(x: number): void;
+        // [|function f(x: string): void;|]
+        // function f(x: number | string) { }
+        // 
+        // f(1);
+        // f("a");
+      === 2 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function f(x: number): void;
+      // function f(x: string): void;
+      // function [|f|](x: number | string) { }
+      // 
+      // f(1);
+      // f("a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+        // function f(x: number): void;
+        // function f(x: string): void;
+        // [|function f(x: number | string) { }|]
+        // 
+        // f(1);
+        // f("a");
+      === 3 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function f(x: number): void;
+      // function f(x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // [|f|](1);
+      // f("a");
+      === 4 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function f(x: number): void;
+      // function f(x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // f(1);
+      // [|f|]("a");
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -335,6 +507,92 @@
 // 
 // [|f|](1);
 // [|f|]("a");
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function [|f|](x: number): void;
+      // function f(x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // f(1);
+      // f("a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+        // [|function f(x: number): void;|]
+        // function f(x: string): void;
+        // function f(x: number | string) { }
+        // 
+        // f(1);
+        // f("a");
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function [|f|](x: number): void;
+      // function f(x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // f(1);
+      // f("a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+        // [|function f(x: number): void;|]
+        // function f(x: string): void;
+        // function f(x: number | string) { }
+        // 
+        // f(1);
+        // f("a");
+      === 1 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function f(x: number): void;
+      // function [|f|](x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // f(1);
+      // f("a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+        // function f(x: number): void;
+        // [|function f(x: string): void;|]
+        // function f(x: number | string) { }
+        // 
+        // f(1);
+        // f("a");
+      === 2 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function f(x: number): void;
+      // function f(x: string): void;
+      // function [|f|](x: number | string) { }
+      // 
+      // f(1);
+      // f("a");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+        // function f(x: number): void;
+        // function f(x: string): void;
+        // [|function f(x: number | string) { }|]
+        // 
+        // f(1);
+        // f("a");
+      === 3 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function f(x: number): void;
+      // function f(x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // [|f|](1);
+      // f("a");
+      === 4 ===
+      // === /tests/cases/fourslash/isDefinitionOverloads.ts ===
+      // function f(x: number): void;
+      // function f(x: string): void;
+      // function f(x: number | string) { }
+      // 
+      // f(1);
+      // [|f|]("a");
+  }
+]
 
 [
   {

@@ -6,6 +6,39 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export function [|f|]() {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export function f() {}|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export function [|f|]() {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export function f() {}|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|f|] } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { f } from "./a";|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|f|] } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { f } from "./a";|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -176,6 +209,39 @@
 
 // === /tests/cases/fourslash/a.ts ===
 // export function [|f|]() {}
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|f|] } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { f } from "./a";|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import { [|f|] } from "./a";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import { f } from "./a";|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export function [|f|]() {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export function f() {}|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export function [|f|]() {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export function f() {}|]
+  }
+]
 
 [
   {

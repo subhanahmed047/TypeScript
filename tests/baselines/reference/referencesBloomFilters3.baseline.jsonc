@@ -6,6 +6,27 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/declaration.ts ===
+      // enum Test { "[|42|]" = 1 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/declaration.ts ===
+        // enum Test { [|"42" = 1|] };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/declaration.ts ===
+      // enum Test { "[|42|]" = 1 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/declaration.ts ===
+        // enum Test { [|"42" = 1|] };
+      === 1 ===
+      // === /tests/cases/fourslash/expression.ts ===
+      // (Test[[|42|]]);
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -106,6 +127,27 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/declaration.ts ===
+      // enum Test { "[|42|]" = 1 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/declaration.ts ===
+        // enum Test { [|"42" = 1|] };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/declaration.ts ===
+      // enum Test { "[|42|]" = 1 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/declaration.ts ===
+        // enum Test { [|"42" = 1|] };
+      === 1 ===
+      // === /tests/cases/fourslash/expression.ts ===
+      // (Test[[|42|]]);
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -203,6 +245,27 @@
 
 // === /tests/cases/fourslash/declaration.ts ===
 // enum Test { "[|42|]" = 1 };
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/declaration.ts ===
+      // enum Test { "[|42|]" = 1 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/declaration.ts ===
+        // enum Test { [|"42" = 1|] };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/declaration.ts ===
+      // enum Test { "[|42|]" = 1 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/declaration.ts ===
+        // enum Test { [|"42" = 1|] };
+      === 1 ===
+      // === /tests/cases/fourslash/expression.ts ===
+      // (Test[[|42|]]);
+  }
+]
 
 [
   {

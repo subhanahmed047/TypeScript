@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+      // type [|Alias|]= number;
+      // let n: Alias = 12;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+        // [|type Alias= number;|]
+        // let n: Alias = 12;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+      // type [|Alias|]= number;
+      // let n: Alias = 12;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+        // [|type Alias= number;|]
+        // let n: Alias = 12;
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+      // type Alias= number;
+      // let n: [|Alias|] = 12;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -82,6 +108,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+      // type [|Alias|]= number;
+      // let n: Alias = 12;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+        // [|type Alias= number;|]
+        // let n: Alias = 12;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+      // type [|Alias|]= number;
+      // let n: Alias = 12;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+        // [|type Alias= number;|]
+        // let n: Alias = 12;
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+      // type Alias= number;
+      // let n: [|Alias|] = 12;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -157,6 +209,32 @@
 // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
 // type [|Alias|]= number;
 // let n: /*FIND ALL REFS*/[|Alias|] = 12;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+      // type [|Alias|]= number;
+      // let n: Alias = 12;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+        // [|type Alias= number;|]
+        // let n: Alias = 12;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+      // type [|Alias|]= number;
+      // let n: Alias = 12;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+        // [|type Alias= number;|]
+        // let n: Alias = 12;
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfTypeAlias.ts ===
+      // type Alias= number;
+      // let n: [|Alias|] = 12;
+  }
+]
 
 [
   {

@@ -23,6 +23,176 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { [|a|]: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { [|a: number;|] };
+        // }
+        // 
+        // interface Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { [|a|]: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { [|a: number;|] };
+        // }
+        // 
+        // interface Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { [|a|]: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { [|a: number;|] };
+        // }
+        // 
+        // interface Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { a: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.[|a|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -190,6 +360,271 @@
 // var x : One | Two;
 // 
 // x.common.[|a|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { a: number; };
+      // }
+      // 
+      // interface Base {
+      //     [|a|]: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { a: number; };
+        // }
+        // 
+        // interface Base {
+        //     [|a: string;|]
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { a: number; };
+      // }
+      // 
+      // interface Base {
+      //     [|a|]: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { a: number; };
+        // }
+        // 
+        // interface Base {
+        //     [|a: string;|]
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { a: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     [|a|]: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { a: number; };
+        // }
+        // 
+        // interface Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     [|a: string;|]
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { a: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     [|a|]: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { a: number; };
+        // }
+        // 
+        // interface Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     [|a: string;|]
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { [|a|]: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { [|a: number;|] };
+        // }
+        // 
+        // interface Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { a: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.[|a|];
+  }
+]
 
 [
   {
@@ -442,6 +877,366 @@
 // var x : One | Two;
 // 
 // x.common./*FIND ALL REFS*/[|a|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { [|a|]: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { [|a: number;|] };
+        // }
+        // 
+        // interface Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { [|a|]: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { [|a: number;|] };
+        // }
+        // 
+        // interface Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { a: number; };
+      // }
+      // 
+      // interface Base {
+      //     [|a|]: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { a: number; };
+        // }
+        // 
+        // interface Base {
+        //     [|a: string;|]
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { a: number; };
+      // }
+      // 
+      // interface Base {
+      //     [|a|]: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { a: number; };
+        // }
+        // 
+        // interface Base {
+        //     [|a: string;|]
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { a: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     [|a|]: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { a: number; };
+        // }
+        // 
+        // interface Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     [|a: string;|]
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { a: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     [|a|]: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { a: number; };
+        // }
+        // 
+        // interface Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     [|a: string;|]
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { [|a|]: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+        // interface One {
+        //     common: { [|a: number;|] };
+        // }
+        // 
+        // interface Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface HasAOrB extends Base {
+        //     a: string;
+        //     b: string;
+        // }
+        // 
+        // interface Two {
+        //     common: HasAOrB;
+        // }
+        // 
+        // var x : One | Two;
+        // 
+        // x.common.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForUnionProperties.ts ===
+      // interface One {
+      //     common: { a: number; };
+      // }
+      // 
+      // interface Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface HasAOrB extends Base {
+      //     a: string;
+      //     b: string;
+      // }
+      // 
+      // interface Two {
+      //     common: HasAOrB;
+      // }
+      // 
+      // var x : One | Two;
+      // 
+      // x.common.[|a|];
+  }
+]
 
 [
   {

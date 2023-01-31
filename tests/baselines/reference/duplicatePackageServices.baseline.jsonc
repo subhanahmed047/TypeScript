@@ -1,3 +1,111 @@
+=== goToDefinition ===
+// === /node_modules/a/node_modules/x/index.d.ts ===
+// export default class [|X|] {
+//     private x: number;
+// }
+
+// === /node_modules/a/index.d.ts ===
+// import X/*GOTO DEF*/ from "x";
+// export function a(x: X): void;
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /node_modules/a/node_modules/x/index.d.ts ===
+    // export default class [|X|] {
+    //     private x: number;
+    // }
+    === ContextSpan ===
+      // === /node_modules/a/node_modules/x/index.d.ts ===
+      // [|export default class X {
+      //     private x: number;
+      // }|]
+  === TextSpan ===
+    // === /node_modules/a/index.d.ts ===
+    // import [|X|] from "x";
+    // export function a(x: X): void;
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/node_modules/a/node_modules/x/index.d.ts",
+      "textSpan": {
+        "start": 21,
+        "length": 1
+      },
+      "kind": "class",
+      "name": "X",
+      "containerName": "\"/node_modules/a/node_modules/x/index\"",
+      "contextSpan": {
+        "start": 0,
+        "length": 49
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false
+    }
+  ],
+  "textSpan": {
+    "start": 7,
+    "length": 1
+  }
+}
+
+// === /node_modules/a/node_modules/x/index.d.ts ===
+// export default class [|X|] {
+//     private x: number;
+// }
+
+// === /node_modules/b/index.d.ts ===
+// import X/*GOTO DEF*/ from "x";
+// export const b: X;
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /node_modules/a/node_modules/x/index.d.ts ===
+    // export default class [|X|] {
+    //     private x: number;
+    // }
+    === ContextSpan ===
+      // === /node_modules/a/node_modules/x/index.d.ts ===
+      // [|export default class X {
+      //     private x: number;
+      // }|]
+  === TextSpan ===
+    // === /node_modules/b/index.d.ts ===
+    // import [|X|] from "x";
+    // export const b: X;
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/node_modules/a/node_modules/x/index.d.ts",
+      "textSpan": {
+        "start": 21,
+        "length": 1
+      },
+      "kind": "class",
+      "name": "X",
+      "containerName": "\"/node_modules/a/node_modules/x/index\"",
+      "contextSpan": {
+        "start": 0,
+        "length": 49
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false
+    }
+  ],
+  "textSpan": {
+    "start": 7,
+    "length": 1
+  }
+}
+
+=== findAllReferences ===
 // === /node_modules/a/index.d.ts ===
 // import [|X|]/*FIND ALL REFS*/ from "x";
 // export function a(x: [|X|]): void;
@@ -10,6 +118,78 @@
 // export default class [|X|] {
 //     private x: number;
 // }
+
+[
+  {
+    === Definition ===
+      // === /node_modules/a/index.d.ts ===
+      // import [|X|] from "x";
+      // export function a(x: X): void;
+      === ContextSpan ===
+        // === /node_modules/a/index.d.ts ===
+        // [|import X from "x";|]
+        // export function a(x: X): void;
+    === References ===
+      === 0 ===
+      // === /node_modules/a/index.d.ts ===
+      // import [|X|] from "x";
+      // export function a(x: X): void;
+      === ContextSpan ===
+        // === /node_modules/a/index.d.ts ===
+        // [|import X from "x";|]
+        // export function a(x: X): void;
+      === 1 ===
+      // === /node_modules/a/index.d.ts ===
+      // import X from "x";
+      // export function a(x: [|X|]): void;
+  },
+  {
+    === Definition ===
+      // === /node_modules/a/node_modules/x/index.d.ts ===
+      // export default class [|X|] {
+      //     private x: number;
+      // }
+      === ContextSpan ===
+        // === /node_modules/a/node_modules/x/index.d.ts ===
+        // [|export default class X {
+        //     private x: number;
+        // }|]
+    === References ===
+      === 0 ===
+      // === /node_modules/a/node_modules/x/index.d.ts ===
+      // export default class [|X|] {
+      //     private x: number;
+      // }
+      === ContextSpan ===
+        // === /node_modules/a/node_modules/x/index.d.ts ===
+        // [|export default class X {
+        //     private x: number;
+        // }|]
+  },
+  {
+    === Definition ===
+      // === /node_modules/b/index.d.ts ===
+      // import [|X|] from "x";
+      // export const b: X;
+      === ContextSpan ===
+        // === /node_modules/b/index.d.ts ===
+        // [|import X from "x";|]
+        // export const b: X;
+    === References ===
+      === 0 ===
+      // === /node_modules/b/index.d.ts ===
+      // import [|X|] from "x";
+      // export const b: X;
+      === ContextSpan ===
+        // === /node_modules/b/index.d.ts ===
+        // [|import X from "x";|]
+        // export const b: X;
+      === 1 ===
+      // === /node_modules/b/index.d.ts ===
+      // import X from "x";
+      // export const b: [|X|];
+  }
+]
 
 [
   {
@@ -249,6 +429,78 @@
 
 [
   {
+    === Definition ===
+      // === /node_modules/a/node_modules/x/index.d.ts ===
+      // export default class [|X|] {
+      //     private x: number;
+      // }
+      === ContextSpan ===
+        // === /node_modules/a/node_modules/x/index.d.ts ===
+        // [|export default class X {
+        //     private x: number;
+        // }|]
+    === References ===
+      === 0 ===
+      // === /node_modules/a/node_modules/x/index.d.ts ===
+      // export default class [|X|] {
+      //     private x: number;
+      // }
+      === ContextSpan ===
+        // === /node_modules/a/node_modules/x/index.d.ts ===
+        // [|export default class X {
+        //     private x: number;
+        // }|]
+  },
+  {
+    === Definition ===
+      // === /node_modules/a/index.d.ts ===
+      // import [|X|] from "x";
+      // export function a(x: X): void;
+      === ContextSpan ===
+        // === /node_modules/a/index.d.ts ===
+        // [|import X from "x";|]
+        // export function a(x: X): void;
+    === References ===
+      === 0 ===
+      // === /node_modules/a/index.d.ts ===
+      // import [|X|] from "x";
+      // export function a(x: X): void;
+      === ContextSpan ===
+        // === /node_modules/a/index.d.ts ===
+        // [|import X from "x";|]
+        // export function a(x: X): void;
+      === 1 ===
+      // === /node_modules/a/index.d.ts ===
+      // import X from "x";
+      // export function a(x: [|X|]): void;
+  },
+  {
+    === Definition ===
+      // === /node_modules/b/index.d.ts ===
+      // import [|X|] from "x";
+      // export const b: X;
+      === ContextSpan ===
+        // === /node_modules/b/index.d.ts ===
+        // [|import X from "x";|]
+        // export const b: X;
+    === References ===
+      === 0 ===
+      // === /node_modules/b/index.d.ts ===
+      // import [|X|] from "x";
+      // export const b: X;
+      === ContextSpan ===
+        // === /node_modules/b/index.d.ts ===
+        // [|import X from "x";|]
+        // export const b: X;
+      === 1 ===
+      // === /node_modules/b/index.d.ts ===
+      // import X from "x";
+      // export const b: [|X|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -485,6 +737,78 @@
 
 [
   {
+    === Definition ===
+      // === /node_modules/b/index.d.ts ===
+      // import [|X|] from "x";
+      // export const b: X;
+      === ContextSpan ===
+        // === /node_modules/b/index.d.ts ===
+        // [|import X from "x";|]
+        // export const b: X;
+    === References ===
+      === 0 ===
+      // === /node_modules/b/index.d.ts ===
+      // import [|X|] from "x";
+      // export const b: X;
+      === ContextSpan ===
+        // === /node_modules/b/index.d.ts ===
+        // [|import X from "x";|]
+        // export const b: X;
+      === 1 ===
+      // === /node_modules/b/index.d.ts ===
+      // import X from "x";
+      // export const b: [|X|];
+  },
+  {
+    === Definition ===
+      // === /node_modules/a/node_modules/x/index.d.ts ===
+      // export default class [|X|] {
+      //     private x: number;
+      // }
+      === ContextSpan ===
+        // === /node_modules/a/node_modules/x/index.d.ts ===
+        // [|export default class X {
+        //     private x: number;
+        // }|]
+    === References ===
+      === 0 ===
+      // === /node_modules/a/node_modules/x/index.d.ts ===
+      // export default class [|X|] {
+      //     private x: number;
+      // }
+      === ContextSpan ===
+        // === /node_modules/a/node_modules/x/index.d.ts ===
+        // [|export default class X {
+        //     private x: number;
+        // }|]
+  },
+  {
+    === Definition ===
+      // === /node_modules/a/index.d.ts ===
+      // import [|X|] from "x";
+      // export function a(x: X): void;
+      === ContextSpan ===
+        // === /node_modules/a/index.d.ts ===
+        // [|import X from "x";|]
+        // export function a(x: X): void;
+    === References ===
+      === 0 ===
+      // === /node_modules/a/index.d.ts ===
+      // import [|X|] from "x";
+      // export function a(x: X): void;
+      === ContextSpan ===
+        // === /node_modules/a/index.d.ts ===
+        // [|import X from "x";|]
+        // export function a(x: X): void;
+      === 1 ===
+      // === /node_modules/a/index.d.ts ===
+      // import X from "x";
+      // export function a(x: [|X|]): void;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -705,3 +1029,4 @@
     ]
   }
 ]
+

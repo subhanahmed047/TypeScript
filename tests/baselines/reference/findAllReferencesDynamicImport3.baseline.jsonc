@@ -4,6 +4,36 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function [|bar|]() { return "bar"; }
+      // import('./foo').then(({ bar }) => undefined);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.ts ===
+        // [|export function bar() { return "bar"; }|]
+        // import('./foo').then(({ bar }) => undefined);
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function [|bar|]() { return "bar"; }
+      // import('./foo').then(({ bar }) => undefined);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.ts ===
+        // [|export function bar() { return "bar"; }|]
+        // import('./foo').then(({ bar }) => undefined);
+      === 1 ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function bar() { return "bar"; }
+      // import('./foo').then(({ [|bar|] }) => undefined);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.ts ===
+        // export function bar() { return "bar"; }
+        // import('./foo').then(([|{ bar }|]) => undefined);
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -87,6 +117,47 @@
 // === /tests/cases/fourslash/foo.ts ===
 // export function [|bar|]() { return "bar"; }
 // import('./foo').then(({ /*FIND ALL REFS*/[|bar|] }) => undefined);
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function [|bar|]() { return "bar"; }
+      // import('./foo').then(({ bar }) => undefined);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.ts ===
+        // [|export function bar() { return "bar"; }|]
+        // import('./foo').then(({ bar }) => undefined);
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function [|bar|]() { return "bar"; }
+      // import('./foo').then(({ bar }) => undefined);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.ts ===
+        // [|export function bar() { return "bar"; }|]
+        // import('./foo').then(({ bar }) => undefined);
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function bar() { return "bar"; }
+      // import('./foo').then(({ [|bar|] }) => undefined);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.ts ===
+        // export function bar() { return "bar"; }
+        // import('./foo').then(([|{ bar }|]) => undefined);
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function bar() { return "bar"; }
+      // import('./foo').then(({ [|bar|] }) => undefined);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.ts ===
+        // export function bar() { return "bar"; }
+        // import('./foo').then(([|{ bar }|]) => undefined);
+  }
+]
 
 [
   {

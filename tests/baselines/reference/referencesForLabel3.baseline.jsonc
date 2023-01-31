@@ -5,6 +5,27 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForLabel3.ts ===
+      // [|label|]: while (true) {
+      //     var label = "label";
+      // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForLabel3.ts ===
+      // [|label|]: while (true) {
+      //     var label = "label";
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForLabel3.ts ===
+        // [|label: while (true) {
+        //     var label = "label";
+        // }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

@@ -1,0 +1,39 @@
+/*====== /src/index.ts ======*/
+
+import * as [|RENAME|] from '../lib/index';
+RENAME.someExportedVariable;
+
+=== 0 ===
+// === /src/index.ts ===
+// import * as [|lib|] from '../lib/index';
+// lib.someExportedVariable;
+=== ContextSpan ===
+  // === /src/index.ts ===
+  // [|import * as lib from '../lib/index';|]
+  // lib.someExportedVariable;
+=== 1 ===
+// === /src/index.ts ===
+// import * as lib from '../lib/index';
+// [|lib|].someExportedVariable;
+
+
+[
+  {
+    "textSpan": {
+      "start": 12,
+      "length": 3
+    },
+    "fileName": "/src/index.ts",
+    "contextSpan": {
+      "start": 0,
+      "length": 36
+    }
+  },
+  {
+    "textSpan": {
+      "start": 37,
+      "length": 3
+    },
+    "fileName": "/src/index.ts"
+  }
+]

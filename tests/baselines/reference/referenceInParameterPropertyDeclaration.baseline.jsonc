@@ -17,6 +17,151 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private [|privateParam|]: number,
+      //         public publicParam: string,
+      //         protected protectedParam: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file1.ts ===
+        // class Foo {
+        //     constructor([|private privateParam: number|],
+        //         public publicParam: string,
+        //         protected protectedParam: boolean) {
+        // 
+        //         let localPrivate = privateParam;
+        //         this.privateParam += 10;
+        // 
+        //         let localPublic = publicParam;
+        //         this.publicParam += " Hello!";
+        // 
+        //         let localProtected = protectedParam;
+        //         this.protectedParam = false;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private [|privateParam|]: number,
+      //         public publicParam: string,
+      //         protected protectedParam: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file1.ts ===
+        // class Foo {
+        //     constructor([|private privateParam: number|],
+        //         public publicParam: string,
+        //         protected protectedParam: boolean) {
+        // 
+        //         let localPrivate = privateParam;
+        //         this.privateParam += 10;
+        // 
+        //         let localPublic = publicParam;
+        //         this.publicParam += " Hello!";
+        // 
+        //         let localProtected = protectedParam;
+        //         this.protectedParam = false;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number,
+      //         public publicParam: string,
+      //         protected protectedParam: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.[|privateParam|] += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private [|privateParam|]: number,
+      //         public publicParam: string,
+      //         protected protectedParam: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file1.ts ===
+        // class Foo {
+        //     constructor([|private privateParam: number|],
+        //         public publicParam: string,
+        //         protected protectedParam: boolean) {
+        // 
+        //         let localPrivate = privateParam;
+        //         this.privateParam += 10;
+        // 
+        //         let localPublic = publicParam;
+        //         this.publicParam += " Hello!";
+        // 
+        //         let localProtected = protectedParam;
+        //         this.protectedParam = false;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number,
+      //         public publicParam: string,
+      //         protected protectedParam: boolean) {
+      // 
+      //         let localPrivate = [|privateParam|];
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -182,6 +327,151 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number,
+      //         public [|publicParam|]: string,
+      //         protected protectedParam: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file1.ts ===
+        // class Foo {
+        //     constructor(private privateParam: number,
+        //         [|public publicParam: string|],
+        //         protected protectedParam: boolean) {
+        // 
+        //         let localPrivate = privateParam;
+        //         this.privateParam += 10;
+        // 
+        //         let localPublic = publicParam;
+        //         this.publicParam += " Hello!";
+        // 
+        //         let localProtected = protectedParam;
+        //         this.protectedParam = false;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number,
+      //         public [|publicParam|]: string,
+      //         protected protectedParam: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file1.ts ===
+        // class Foo {
+        //     constructor(private privateParam: number,
+        //         [|public publicParam: string|],
+        //         protected protectedParam: boolean) {
+        // 
+        //         let localPrivate = privateParam;
+        //         this.privateParam += 10;
+        // 
+        //         let localPublic = publicParam;
+        //         this.publicParam += " Hello!";
+        // 
+        //         let localProtected = protectedParam;
+        //         this.protectedParam = false;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number,
+      //         public publicParam: string,
+      //         protected protectedParam: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.[|publicParam|] += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number,
+      //         public [|publicParam|]: string,
+      //         protected protectedParam: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file1.ts ===
+        // class Foo {
+        //     constructor(private privateParam: number,
+        //         [|public publicParam: string|],
+        //         protected protectedParam: boolean) {
+        // 
+        //         let localPrivate = privateParam;
+        //         this.privateParam += 10;
+        // 
+        //         let localPublic = publicParam;
+        //         this.publicParam += " Hello!";
+        // 
+        //         let localProtected = protectedParam;
+        //         this.protectedParam = false;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number,
+      //         public publicParam: string,
+      //         protected protectedParam: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = [|publicParam|];
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -344,6 +634,151 @@
 //         this.[|protectedParam|] = false;
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number,
+      //         public publicParam: string,
+      //         protected [|protectedParam|]: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file1.ts ===
+        // class Foo {
+        //     constructor(private privateParam: number,
+        //         public publicParam: string,
+        //         [|protected protectedParam: boolean|]) {
+        // 
+        //         let localPrivate = privateParam;
+        //         this.privateParam += 10;
+        // 
+        //         let localPublic = publicParam;
+        //         this.publicParam += " Hello!";
+        // 
+        //         let localProtected = protectedParam;
+        //         this.protectedParam = false;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number,
+      //         public publicParam: string,
+      //         protected [|protectedParam|]: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file1.ts ===
+        // class Foo {
+        //     constructor(private privateParam: number,
+        //         public publicParam: string,
+        //         [|protected protectedParam: boolean|]) {
+        // 
+        //         let localPrivate = privateParam;
+        //         this.privateParam += 10;
+        // 
+        //         let localPublic = publicParam;
+        //         this.publicParam += " Hello!";
+        // 
+        //         let localProtected = protectedParam;
+        //         this.protectedParam = false;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number,
+      //         public publicParam: string,
+      //         protected protectedParam: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.[|protectedParam|] = false;
+      //     }
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number,
+      //         public publicParam: string,
+      //         protected [|protectedParam|]: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = protectedParam;
+      //         this.protectedParam = false;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file1.ts ===
+        // class Foo {
+        //     constructor(private privateParam: number,
+        //         public publicParam: string,
+        //         [|protected protectedParam: boolean|]) {
+        // 
+        //         let localPrivate = privateParam;
+        //         this.privateParam += 10;
+        // 
+        //         let localPublic = publicParam;
+        //         this.publicParam += " Hello!";
+        // 
+        //         let localProtected = protectedParam;
+        //         this.protectedParam = false;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number,
+      //         public publicParam: string,
+      //         protected protectedParam: boolean) {
+      // 
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      // 
+      //         let localPublic = publicParam;
+      //         this.publicParam += " Hello!";
+      // 
+      //         let localProtected = [|protectedParam|];
+      //         this.protectedParam = false;
+      //     }
+      // }
+  }
+]
 
 [
   {

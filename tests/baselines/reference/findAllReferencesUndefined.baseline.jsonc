@@ -8,6 +8,30 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // [|undefined|];
+      // 
+      // void undefined;
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // [|undefined|];
+      // 
+      // void undefined;
+      === 1 ===
+      // === /a.ts ===
+      // undefined;
+      // 
+      // void [|undefined|];
+      === 2 ===
+      // === /b.ts ===
+      // [|undefined|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

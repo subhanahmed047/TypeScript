@@ -22,6 +22,304 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     [|doStuff|]() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     [|doStuff() {
+        // 
+        //     }|]
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     [|doStuff|]() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     [|doStuff() {
+        // 
+        //     }|]
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.[|doStuff|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -299,6 +597,304 @@
 // 
 // var v: class2;
 // v.[|doStuff|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     [|doStuff|]() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     [|doStuff() {
+        // 
+        //     }|]
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     [|doStuff|]() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     [|doStuff() {
+        // 
+        //     }|]
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.[|doStuff|]();
+  }
+]
 
 [
   {
@@ -582,6 +1178,304 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     [|doStuff|]() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     [|doStuff() {
+        // 
+        //     }|]
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     [|doStuff|]() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     [|doStuff() {
+        // 
+        //     }|]
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.[|doStuff|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -859,6 +1753,304 @@
 // 
 // var v: class2;
 // v./*FIND ALL REFS*/[|doStuff|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     [|doStuff|](): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     [|doStuff(): void;|]
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     doStuff() {
+        // 
+        //     }
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     [|doStuff|]() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     [|doStuff() {
+        // 
+        //     }|]
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     [|doStuff|]() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.doStuff();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+        // interface interface1 {
+        //     doStuff(): void;
+        // }
+        // 
+        // interface interface2  extends interface1{
+        //     doStuff(): void;
+        // }
+        // 
+        // class class1 implements interface2 {
+        //     [|doStuff() {
+        // 
+        //     }|]
+        // }
+        // 
+        // class class2 extends class1 {
+        // 
+        // }
+        // 
+        // var v: class2;
+        // v.doStuff();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties.ts ===
+      // interface interface1 {
+      //     doStuff(): void;
+      // }
+      // 
+      // interface interface2  extends interface1{
+      //     doStuff(): void;
+      // }
+      // 
+      // class class1 implements interface2 {
+      //     doStuff() {
+      // 
+      //     }
+      // }
+      // 
+      // class class2 extends class1 {
+      // 
+      // }
+      // 
+      // var v: class2;
+      // v.[|doStuff|]();
+  }
+]
 
 [
   {

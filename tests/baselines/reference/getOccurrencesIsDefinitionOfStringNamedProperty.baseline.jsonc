@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+      // let o = { "[|x|]": 12 };
+      // let y = o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+        // let o = { [|"x": 12|] };
+        // let y = o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+      // let o = { "[|x|]": 12 };
+      // let y = o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+        // let o = { [|"x": 12|] };
+        // let y = o.x;
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+      // let o = { "x": 12 };
+      // let y = o.[|x|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -86,6 +112,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+      // let o = { "[|x|]": 12 };
+      // let y = o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+        // let o = { [|"x": 12|] };
+        // let y = o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+      // let o = { "[|x|]": 12 };
+      // let y = o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+        // let o = { [|"x": 12|] };
+        // let y = o.x;
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+      // let o = { "x": 12 };
+      // let y = o.[|x|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -165,6 +217,32 @@
 // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
 // let o = { "[|x|]": 12 };
 // let y = o./*FIND ALL REFS*/[|x|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+      // let o = { "[|x|]": 12 };
+      // let y = o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+        // let o = { [|"x": 12|] };
+        // let y = o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+      // let o = { "[|x|]": 12 };
+      // let y = o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+        // let o = { [|"x": 12|] };
+        // let y = o.x;
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfStringNamedProperty.ts ===
+      // let o = { "x": 12 };
+      // let y = o.[|x|];
+  }
+]
 
 [
   {

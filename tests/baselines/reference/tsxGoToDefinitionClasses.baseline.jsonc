@@ -1,0 +1,271 @@
+// === /tests/cases/fourslash/file.tsx ===
+// declare module JSX {
+//     interface Element { }
+//     interface IntrinsicElements { }
+//     interface ElementAttributesProperty { props; }
+// }
+// class [|MyClass|] {
+//     props: {
+//         foo: string;
+//     }
+// }
+// var x = <My/*GOTO DEF*/Class />;
+// var y = <MyClass foo= 'hello' />;
+// var z = <MyClass wrong= 'hello' />;
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements { }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // class [|MyClass|] {
+    //     props: {
+    //         foo: string;
+    //     }
+    // }
+    // var x = <MyClass />;
+    // var y = <MyClass foo= 'hello' />;
+    // var z = <MyClass wrong= 'hello' />;
+    === ContextSpan ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements { }
+      //     interface ElementAttributesProperty { props; }
+      // }
+      // [|class MyClass {
+      //     props: {
+      //         foo: string;
+      //     }
+      // }|]
+      // var x = <MyClass />;
+      // var y = <MyClass foo= 'hello' />;
+      // var z = <MyClass wrong= 'hello' />;
+  === TextSpan ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements { }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // class MyClass {
+    //     props: {
+    //         foo: string;
+    //     }
+    // }
+    // var x = <[|MyClass|] />;
+    // var y = <MyClass foo= 'hello' />;
+    // var z = <MyClass wrong= 'hello' />;
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/file.tsx",
+      "textSpan": {
+        "start": 142,
+        "length": 7
+      },
+      "kind": "class",
+      "name": "MyClass",
+      "containerName": "",
+      "contextSpan": {
+        "start": 136,
+        "length": 57
+      },
+      "isLocal": false,
+      "isAmbient": false,
+      "unverified": false,
+      "failedAliasResolution": false
+    }
+  ],
+  "textSpan": {
+    "start": 203,
+    "length": 7
+  }
+}
+
+// === /tests/cases/fourslash/file.tsx ===
+// declare module JSX {
+//     interface Element { }
+//     interface IntrinsicElements { }
+//     interface ElementAttributesProperty { props; }
+// }
+// class MyClass {
+//     props: {
+//         [|foo|]: string;
+//     }
+// }
+// var x = <MyClass />;
+// var y = <MyClass f/*GOTO DEF*/oo= 'hello' />;
+// var z = <MyClass wrong= 'hello' />;
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements { }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // class MyClass {
+    //     props: {
+    //         [|foo|]: string;
+    //     }
+    // }
+    // var x = <MyClass />;
+    // var y = <MyClass foo= 'hello' />;
+    // var z = <MyClass wrong= 'hello' />;
+    === ContextSpan ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements { }
+      //     interface ElementAttributesProperty { props; }
+      // }
+      // class MyClass {
+      //     props: {
+      //         [|foo: string;|]
+      //     }
+      // }
+      // var x = <MyClass />;
+      // var y = <MyClass foo= 'hello' />;
+      // var z = <MyClass wrong= 'hello' />;
+  === TextSpan ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements { }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // class MyClass {
+    //     props: {
+    //         foo: string;
+    //     }
+    // }
+    // var x = <MyClass />;
+    // var y = <MyClass [|foo|]= 'hello' />;
+    // var z = <MyClass wrong= 'hello' />;
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/file.tsx",
+      "textSpan": {
+        "start": 173,
+        "length": 3
+      },
+      "kind": "property",
+      "name": "foo",
+      "containerName": "__type",
+      "contextSpan": {
+        "start": 173,
+        "length": 12
+      },
+      "isLocal": false,
+      "isAmbient": false,
+      "unverified": false
+    }
+  ],
+  "textSpan": {
+    "start": 232,
+    "length": 3
+  }
+}
+
+// === /tests/cases/fourslash/file.tsx ===
+// declare module JSX {
+//     interface Element { }
+//     interface IntrinsicElements { }
+//     interface ElementAttributesProperty { props; }
+// }
+// class [|MyClass|] {
+//     props: {
+//         foo: string;
+//     }
+// }
+// var x = <MyClass />;
+// var y = <MyClass foo= 'hello' />;
+// var z = <MyCl/*GOTO DEF*/ass wrong= 'hello' />;
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements { }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // class [|MyClass|] {
+    //     props: {
+    //         foo: string;
+    //     }
+    // }
+    // var x = <MyClass />;
+    // var y = <MyClass foo= 'hello' />;
+    // var z = <MyClass wrong= 'hello' />;
+    === ContextSpan ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements { }
+      //     interface ElementAttributesProperty { props; }
+      // }
+      // [|class MyClass {
+      //     props: {
+      //         foo: string;
+      //     }
+      // }|]
+      // var x = <MyClass />;
+      // var y = <MyClass foo= 'hello' />;
+      // var z = <MyClass wrong= 'hello' />;
+  === TextSpan ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements { }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // class MyClass {
+    //     props: {
+    //         foo: string;
+    //     }
+    // }
+    // var x = <MyClass />;
+    // var y = <MyClass foo= 'hello' />;
+    // var z = <[|MyClass|] wrong= 'hello' />;
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/file.tsx",
+      "textSpan": {
+        "start": 142,
+        "length": 7
+      },
+      "kind": "class",
+      "name": "MyClass",
+      "containerName": "",
+      "contextSpan": {
+        "start": 136,
+        "length": 57
+      },
+      "isLocal": false,
+      "isAmbient": false,
+      "unverified": false,
+      "failedAliasResolution": false
+    }
+  ],
+  "textSpan": {
+    "start": 258,
+    "length": 7
+  }
+}

@@ -8,6 +8,52 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+      // class Foo {
+      //     public [|__bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.__bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+        // class Foo {
+        //     [|public __bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.__bar;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+      // class Foo {
+      //     public [|__bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.__bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+        // class Foo {
+        //     [|public __bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.__bar;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+      // class Foo {
+      //     public __bar() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.[|__bar|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -110,6 +156,52 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+      // class Foo {
+      //     public [|__bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.__bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+        // class Foo {
+        //     [|public __bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.__bar;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+      // class Foo {
+      //     public [|__bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.__bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+        // class Foo {
+        //     [|public __bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.__bar;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+      // class Foo {
+      //     public __bar() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.[|__bar|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -209,6 +301,52 @@
 // 
 // var x: Foo;
 // x./*FIND ALL REFS*/[|__bar|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+      // class Foo {
+      //     public [|__bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.__bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+        // class Foo {
+        //     [|public __bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.__bar;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+      // class Foo {
+      //     public [|__bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.__bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+        // class Foo {
+        //     [|public __bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.__bar;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames2.ts ===
+      // class Foo {
+      //     public __bar() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.[|__bar|];
+  }
+]
 
 [
   {

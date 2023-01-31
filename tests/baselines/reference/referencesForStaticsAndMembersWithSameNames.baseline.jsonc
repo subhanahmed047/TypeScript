@@ -26,6 +26,142 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			[|bar|]: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			[|bar: Foo;|]
+        // 			static bar: Foo;
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			[|bar|]: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			[|bar: Foo;|]
+        // 			static bar: Foo;
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.[|bar|];
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -143,6 +279,142 @@
 // 		MixedStaticsClassTest.Foo.[|bar|];
 // 	}
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static [|bar|]: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			[|static bar: Foo;|]
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static [|bar|]: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			[|static bar: Foo;|]
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.[|bar|];
+      // 	}
+      // }
+  }
+]
 
 [
   {
@@ -266,6 +538,142 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static [|bar|]: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			[|static bar: Foo;|]
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static [|bar|]: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			[|static bar: Foo;|]
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.[|bar|];
+      // 	}
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -383,6 +791,142 @@
 // 		MixedStaticsClassTest.Foo.bar;
 // 	}
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public [|foo|](): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			static bar: Foo;
+        // 
+        // 			[|public foo(): void {
+        // 			}|]
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public [|foo|](): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			static bar: Foo;
+        // 
+        // 			[|public foo(): void {
+        // 			}|]
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.[|foo|]();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+  }
+]
 
 [
   {
@@ -514,6 +1058,142 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public [|foo|](): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			static bar: Foo;
+        // 
+        // 			[|public foo(): void {
+        // 			}|]
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public [|foo|](): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			static bar: Foo;
+        // 
+        // 			[|public foo(): void {
+        // 			}|]
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.[|foo|]();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -639,6 +1319,142 @@
 // 		MixedStaticsClassTest.Foo.bar;
 // 	}
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static [|foo|](): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			static bar: Foo;
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			[|public static foo(): void {
+        // 			}|]
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static [|foo|](): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			static bar: Foo;
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			[|public static foo(): void {
+        // 			}|]
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.[|foo|]();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+  }
+]
 
 [
   {
@@ -770,6 +1586,142 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static [|foo|](): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			static bar: Foo;
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			[|public static foo(): void {
+        // 			}|]
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static [|foo|](): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			static bar: Foo;
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			[|public static foo(): void {
+        // 			}|]
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.[|foo|]();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -895,6 +1847,142 @@
 // 		MixedStaticsClassTest.Foo.bar;
 // 	}
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public [|foo|](): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			static bar: Foo;
+        // 
+        // 			[|public foo(): void {
+        // 			}|]
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public [|foo|](): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			static bar: Foo;
+        // 
+        // 			[|public foo(): void {
+        // 			}|]
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.[|foo|]();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+  }
+]
 
 [
   {
@@ -1024,6 +2112,142 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			[|bar|]: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			[|bar: Foo;|]
+        // 			static bar: Foo;
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			[|bar|]: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			[|bar: Foo;|]
+        // 			static bar: Foo;
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.[|bar|];
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1139,6 +2363,142 @@
 // 		MixedStaticsClassTest.Foo.bar;
 // 	}
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static [|foo|](): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			static bar: Foo;
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			[|public static foo(): void {
+        // 			}|]
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static [|foo|](): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			static bar: Foo;
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			[|public static foo(): void {
+        // 			}|]
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.[|foo|]();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+  }
+]
 
 [
   {
@@ -1265,6 +2625,142 @@
 // 		MixedStaticsClassTest.Foo./*FIND ALL REFS*/[|bar|];
 // 	}
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static [|bar|]: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			[|static bar: Foo;|]
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static [|bar|]: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.bar;
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+        // module FindRef4 {
+        // 	module MixedStaticsClassTest {
+        // 		export class Foo {
+        // 			bar: Foo;
+        // 			[|static bar: Foo;|]
+        // 
+        // 			public foo(): void {
+        // 			}
+        // 			public static foo(): void {
+        // 			}
+        // 		}
+        // 	}
+        // 
+        // 	function test() {
+        // 		// instance function
+        // 		var x = new MixedStaticsClassTest.Foo();
+        // 		x.foo();
+        // 		x.bar;
+        // 
+        // 		// static function
+        // 		MixedStaticsClassTest.Foo.foo();
+        // 		MixedStaticsClassTest.Foo.bar;
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStaticsAndMembersWithSameNames.ts ===
+      // module FindRef4 {
+      // 	module MixedStaticsClassTest {
+      // 		export class Foo {
+      // 			bar: Foo;
+      // 			static bar: Foo;
+      // 
+      // 			public foo(): void {
+      // 			}
+      // 			public static foo(): void {
+      // 			}
+      // 		}
+      // 	}
+      // 
+      // 	function test() {
+      // 		// instance function
+      // 		var x = new MixedStaticsClassTest.Foo();
+      // 		x.foo();
+      // 		x.bar;
+      // 
+      // 		// static function
+      // 		MixedStaticsClassTest.Foo.foo();
+      // 		MixedStaticsClassTest.Foo.[|bar|];
+      // 	}
+      // }
+  }
+]
 
 [
   {

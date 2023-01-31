@@ -330,9 +330,14 @@ declare namespace FourSlashInterface {
         goToType(startMarkerNames: ArrayOrSingle<string>, endMarkerNames: ArrayOrSingle<string>): void;
         verifyGetEmitOutputForCurrentFile(expected: string): void;
         verifyGetEmitOutputContentsForCurrentFile(expected: ts.OutputFile[]): void;
+        baselineCommands(...commands: BaselineCommand[]): void;
         baselineFindAllReferences(...markerNames: string[]): void;
-        baselineFindAllReferencesMulti(seq: number, ...markerNames: string[]): void;
         baselineGetFileReferences(fileName: string): void;
+        baselineGoToDefinition(...markerNames: string[]): void;
+        baselineGetDefinitionAtPosition(...markerNames: string[]): void;
+        baselineGoToSourceDefinition(...markerNames: string[]): void;
+        baselineGoToType(...markerNames: string[]): void;
+        baselineGoToImplementation(...markerNames: string[]): void;
         symbolAtLocation(startRange: Range, ...declarationRanges: Range[]): void;
         typeOfSymbolAtLocation(range: Range, symbol: any, expected: string): void;
         typeAtLocation(range: Range, expected: string): void;
@@ -851,6 +856,20 @@ declare namespace FourSlashInterface {
     type RenameOptions = { readonly findInStrings?: boolean, readonly findInComments?: boolean, readonly providePrefixAndSuffixTextForRename?: boolean };
     type RenameLocationOptions = Range | { readonly range: Range, readonly prefixText?: string, readonly suffixText?: string };
     type DiagnosticIgnoredInterpolations = { template: string }
+    type BaselineCommand = {
+        type: "findAllReferences" | "goToDefinition" | "getDefinitionAtPosition" | "goToSourceDefinition" | "goToType" | "goToImplementation",
+        markerNames: string[];
+    } | {
+        type: "getFileReferences",
+        fileName: string;
+    } | {
+        type: "findRenameLocations",
+        marker: string;
+        options: RenameOptions;
+    } | {
+        type: "customWork",
+        work: () => string | undefined;
+    };
 }
 /** Wraps a diagnostic message to be compared ignoring interpolated strings */
 declare function ignoreInterpolations(diagnostic: string | ts.DiagnosticMessage): FourSlashInterface.DiagnosticIgnoredInterpolations;

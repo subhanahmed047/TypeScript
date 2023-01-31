@@ -7,6 +7,31 @@
 
 [
   {
+    === Definition ===
+      // === /a.js ===
+      // module.exports = 0;
+      // export type [|N|] = number;
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = 0;
+        // [|export type N = number;|]
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // module.exports = 0;
+      // export type [|N|] = number;
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = 0;
+        // [|export type N = number;|]
+      === 1 ===
+      // === /b.js ===
+      // type T = import("./a").[|N|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -88,6 +113,31 @@
 
 [
   {
+    === Definition ===
+      // === /a.js ===
+      // module.exports = 0;
+      // export type [|N|] = number;
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = 0;
+        // [|export type N = number;|]
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // module.exports = 0;
+      // export type [|N|] = number;
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = 0;
+        // [|export type N = number;|]
+      === 1 ===
+      // === /b.js ===
+      // type T = import("./a").[|N|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -166,6 +216,31 @@
 // === /a.js ===
 // module.exports = 0;
 // export type [|N|] = number;
+
+[
+  {
+    === Definition ===
+      // === /a.js ===
+      // module.exports = 0;
+      // export type [|N|] = number;
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = 0;
+        // [|export type N = number;|]
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // module.exports = 0;
+      // export type [|N|] = number;
+      === ContextSpan ===
+        // === /a.js ===
+        // module.exports = 0;
+        // [|export type N = number;|]
+      === 1 ===
+      // === /b.js ===
+      // type T = import("./a").[|N|];
+  }
+]
 
 [
   {

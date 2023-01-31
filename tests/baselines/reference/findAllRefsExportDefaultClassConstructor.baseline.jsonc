@@ -5,6 +5,27 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsExportDefaultClassConstructor.ts ===
+      // [|export default class {
+      //     constructor() {}
+      // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsExportDefaultClassConstructor.ts ===
+      // export default class {
+      //     [|constructor|]() {}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsExportDefaultClassConstructor.ts ===
+        // export default class {
+        //     [|constructor() {}|]
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

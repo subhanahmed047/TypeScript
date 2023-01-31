@@ -17,6 +17,97 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var [|topLevelVar|] = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // [|var topLevelVar = 2;|]
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var [|topLevelVar|] = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // [|var topLevelVar = 2;|]
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = [|topLevelVar|];
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -101,6 +192,97 @@
 // var x = topLevelModule.x;
 // 
 // export = x;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var [|topLevelVar|] = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // [|var topLevelVar = 2;|]
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var [|topLevelVar|] = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // [|var topLevelVar = 2;|]
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = [|topLevelVar|];
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+  }
+]
 
 [
   {
@@ -191,6 +373,97 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var [|topLevelVar|] = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // [|var topLevelVar = 2;|]
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var [|topLevelVar|] = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // [|var topLevelVar = 2;|]
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = [|topLevelVar|];
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -276,6 +549,97 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class [|topLevelClass|] { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // [|class topLevelClass { }|]
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class [|topLevelClass|] { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // [|class topLevelClass { }|]
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new [|topLevelClass|]();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -348,6 +712,97 @@
 // var x = topLevelModule.x;
 // 
 // export = x;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class [|topLevelClass|] { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // [|class topLevelClass { }|]
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class [|topLevelClass|] { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // [|class topLevelClass { }|]
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new [|topLevelClass|]();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+  }
+]
 
 [
   {
@@ -426,6 +881,97 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class [|topLevelClass|] { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // [|class topLevelClass { }|]
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class [|topLevelClass|] { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // [|class topLevelClass { }|]
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new [|topLevelClass|]();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -496,6 +1042,97 @@
 // var x = topLevelModule.x;
 // 
 // export = x;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface [|topLevelInterface|] { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // [|interface topLevelInterface { }|]
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface [|topLevelInterface|] { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // [|interface topLevelInterface { }|]
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: [|topLevelInterface|];
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+  }
+]
 
 [
   {
@@ -574,6 +1211,97 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface [|topLevelInterface|] { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // [|interface topLevelInterface { }|]
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface [|topLevelInterface|] { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // [|interface topLevelInterface { }|]
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: [|topLevelInterface|];
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -649,6 +1377,97 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface [|topLevelInterface|] { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // [|interface topLevelInterface { }|]
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface [|topLevelInterface|] { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // [|interface topLevelInterface { }|]
+        // var i: topLevelInterface;
+        // 
+        // module topLevelModule {
+        //     export var x;
+        // }
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: [|topLevelInterface|];
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -719,6 +1538,97 @@
 // var x = [|topLevelModule|].x;
 // 
 // export = x;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module [|topLevelModule|] {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // [|module topLevelModule {
+        //     export var x;
+        // }|]
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module [|topLevelModule|] {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // [|module topLevelModule {
+        //     export var x;
+        // }|]
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = [|topLevelModule|].x;
+      // 
+      // export = x;
+  }
+]
 
 [
   {
@@ -797,6 +1707,97 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module [|topLevelModule|] {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // [|module topLevelModule {
+        //     export var x;
+        // }|]
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module [|topLevelModule|] {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // [|module topLevelModule {
+        //     export var x;
+        // }|]
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = [|topLevelModule|].x;
+      // 
+      // export = x;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -869,6 +1870,97 @@
 // var x = /*FIND ALL REFS*/[|topLevelModule|].x;
 // 
 // export = x;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module [|topLevelModule|] {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // [|module topLevelModule {
+        //     export var x;
+        // }|]
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module [|topLevelModule|] {
+      //     export var x;
+      // }
+      // var x = topLevelModule.x;
+      // 
+      // export = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+        // var topLevelVar = 2;
+        // var topLevelVar2 = topLevelVar;
+        // 
+        // class topLevelClass { }
+        // var c = new topLevelClass();
+        // 
+        // interface topLevelInterface { }
+        // var i: topLevelInterface;
+        // 
+        // [|module topLevelModule {
+        //     export var x;
+        // }|]
+        // var x = topLevelModule.x;
+        // 
+        // export = x;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobalsInExternalModule.ts ===
+      // var topLevelVar = 2;
+      // var topLevelVar2 = topLevelVar;
+      // 
+      // class topLevelClass { }
+      // var c = new topLevelClass();
+      // 
+      // interface topLevelInterface { }
+      // var i: topLevelInterface;
+      // 
+      // module topLevelModule {
+      //     export var x;
+      // }
+      // var x = [|topLevelModule|].x;
+      // 
+      // export = x;
+  }
+]
 
 [
   {

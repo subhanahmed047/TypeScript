@@ -11,6 +11,67 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+      // interface [|Foo|] { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a1 = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+        // [|interface Foo { }|]
+        // module Foo {
+        //     export interface Bar { }
+        //     export module Bar { export interface Baz { } }
+        //     export function Bar() { }
+        // }
+        // 
+        // // module
+        // import a1 = Foo;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+      // interface Foo { }
+      // module [|Foo|] {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a1 = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+        // interface Foo { }
+        // [|module Foo {
+        //     export interface Bar { }
+        //     export module Bar { export interface Baz { } }
+        //     export function Bar() { }
+        // }|]
+        // 
+        // // module
+        // import a1 = Foo;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+      // interface Foo { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a1 = [|Foo|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -80,6 +141,67 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+      // interface [|Foo|] { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a1 = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+        // [|interface Foo { }|]
+        // module Foo {
+        //     export interface Bar { }
+        //     export module Bar { export interface Baz { } }
+        //     export function Bar() { }
+        // }
+        // 
+        // // module
+        // import a1 = Foo;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+      // interface Foo { }
+      // module [|Foo|] {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a1 = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+        // interface Foo { }
+        // [|module Foo {
+        //     export interface Bar { }
+        //     export module Bar { export interface Baz { } }
+        //     export function Bar() { }
+        // }|]
+        // 
+        // // module
+        // import a1 = Foo;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+      // interface Foo { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a1 = [|Foo|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -146,6 +268,67 @@
 // 
 // // module
 // import a1 = /*FIND ALL REFS*/[|Foo|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+      // interface [|Foo|] { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a1 = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+        // [|interface Foo { }|]
+        // module Foo {
+        //     export interface Bar { }
+        //     export module Bar { export interface Baz { } }
+        //     export function Bar() { }
+        // }
+        // 
+        // // module
+        // import a1 = Foo;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+      // interface Foo { }
+      // module [|Foo|] {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a1 = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+        // interface Foo { }
+        // [|module Foo {
+        //     export interface Bar { }
+        //     export module Bar { export interface Baz { } }
+        //     export function Bar() { }
+        // }|]
+        // 
+        // // module
+        // import a1 = Foo;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations6.ts ===
+      // interface Foo { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a1 = [|Foo|];
+  }
+]
 
 [
   {

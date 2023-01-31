@@ -10,6 +10,135 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly [|x|]: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     [|readonly x: number | string;|]
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly [|x|]: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     [|readonly x: number | string;|]
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { [|x|]: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { [|x: 0|] };
+        // const b: B = { x: 0 };
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly [|x|]: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     [|readonly x: number;|]
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly [|x|]: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     [|readonly x: number;|]
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { [|x|]: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { [|x: 0|] };
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -210,6 +339,135 @@
 // }
 // const a: A = { [|x|]: 0 };
 // const b: B = { [|x|]: 0 };
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly [|x|]: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     [|readonly x: number | string;|]
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly [|x|]: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     [|readonly x: number | string;|]
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { [|x|]: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { [|x: 0|] };
+        // const b: B = { x: 0 };
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly [|x|]: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     [|readonly x: number;|]
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly [|x|]: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     [|readonly x: number;|]
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { [|x|]: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { [|x: 0|] };
+  }
+]
 
 [
   {
@@ -416,6 +674,135 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly [|x|]: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     [|readonly x: number | string;|]
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly [|x|]: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     [|readonly x: number | string;|]
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { [|x|]: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { [|x: 0|] };
+        // const b: B = { x: 0 };
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly [|x|]: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     [|readonly x: number;|]
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly [|x|]: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     [|readonly x: number;|]
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { [|x|]: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { [|x: 0|] };
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -616,6 +1003,135 @@
 // }
 // const a: A = { [|x|]: 0 };
 // const b: B = { /*FIND ALL REFS*/[|x|]: 0 };
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly [|x|]: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     [|readonly x: number | string;|]
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly [|x|]: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     [|readonly x: number | string;|]
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { [|x|]: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { [|x: 0|] };
+        // const b: B = { x: 0 };
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly [|x|]: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     [|readonly x: number;|]
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly [|x|]: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { x: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     [|readonly x: number;|]
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { x: 0 };
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+      // interface A {
+      //     readonly x: number | string;
+      // }
+      // interface B extends A {
+      //     readonly x: number;
+      // }
+      // const a: A = { x: 0 };
+      // const b: B = { [|x|]: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRedeclaredPropertyInDerivedInterface.ts ===
+        // interface A {
+        //     readonly x: number | string;
+        // }
+        // interface B extends A {
+        //     readonly x: number;
+        // }
+        // const a: A = { x: 0 };
+        // const b: B = { [|x: 0|] };
+  }
+]
 
 [
   {

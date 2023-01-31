@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+      // var [|f|] = x => x + 1;
+      // f(12);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+        // [|var f = x => x + 1;|]
+        // f(12);
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+      // var [|f|] = x => x + 1;
+      // f(12);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+        // [|var f = x => x + 1;|]
+        // f(12);
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+      // var f = x => x + 1;
+      // [|f|](12);
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -114,6 +140,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+      // var [|f|] = x => x + 1;
+      // f(12);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+        // [|var f = x => x + 1;|]
+        // f(12);
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+      // var [|f|] = x => x + 1;
+      // f(12);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+        // [|var f = x => x + 1;|]
+        // f(12);
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+      // var f = x => x + 1;
+      // [|f|](12);
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -221,6 +273,32 @@
 // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
 // var [|f|] = x => x + 1;
 // /*FIND ALL REFS*/[|f|](12);
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+      // var [|f|] = x => x + 1;
+      // f(12);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+        // [|var f = x => x + 1;|]
+        // f(12);
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+      // var [|f|] = x => x + 1;
+      // f(12);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+        // [|var f = x => x + 1;|]
+        // f(12);
+      === 1 ===
+      // === /tests/cases/fourslash/getOccurrencesIsDefinitionOfArrowFunction.ts ===
+      // var f = x => x + 1;
+      // [|f|](12);
+  }
+]
 
 [
   {

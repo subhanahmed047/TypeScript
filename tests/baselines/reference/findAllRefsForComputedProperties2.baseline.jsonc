@@ -13,6 +13,145 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [[|42|]](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [42]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["42"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [|[42](): void;|]
+        // }
+        // 
+        // class C implements I {
+        //     [42]: any;
+        // }
+        // 
+        // var x: I = {
+        //     ["42"]: function () { }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [[|42|]](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [42]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["42"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [|[42](): void;|]
+        // }
+        // 
+        // class C implements I {
+        //     [42]: any;
+        // }
+        // 
+        // var x: I = {
+        //     ["42"]: function () { }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [42](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [42]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["[|42|]"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [42](): void;
+        // }
+        // 
+        // class C implements I {
+        //     [42]: any;
+        // }
+        // 
+        // var x: I = {
+        //     [|["42"]: function () { }|]
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [42](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [[|42|]]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["42"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [42](): void;
+        // }
+        // 
+        // class C implements I {
+        //     [|[42]: any;|]
+        // }
+        // 
+        // var x: I = {
+        //     ["42"]: function () { }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [42](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [[|42|]]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["42"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [42](): void;
+        // }
+        // 
+        // class C implements I {
+        //     [|[42]: any;|]
+        // }
+        // 
+        // var x: I = {
+        //     ["42"]: function () { }
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -206,6 +345,145 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [[|42|]](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [42]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["42"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [|[42](): void;|]
+        // }
+        // 
+        // class C implements I {
+        //     [42]: any;
+        // }
+        // 
+        // var x: I = {
+        //     ["42"]: function () { }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [[|42|]](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [42]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["42"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [|[42](): void;|]
+        // }
+        // 
+        // class C implements I {
+        //     [42]: any;
+        // }
+        // 
+        // var x: I = {
+        //     ["42"]: function () { }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [42](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [42]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["[|42|]"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [42](): void;
+        // }
+        // 
+        // class C implements I {
+        //     [42]: any;
+        // }
+        // 
+        // var x: I = {
+        //     [|["42"]: function () { }|]
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [42](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [[|42|]]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["42"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [42](): void;
+        // }
+        // 
+        // class C implements I {
+        //     [|[42]: any;|]
+        // }
+        // 
+        // var x: I = {
+        //     ["42"]: function () { }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [42](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [[|42|]]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["42"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [42](): void;
+        // }
+        // 
+        // class C implements I {
+        //     [|[42]: any;|]
+        // }
+        // 
+        // var x: I = {
+        //     ["42"]: function () { }
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -396,6 +674,145 @@
 // var x: I = {
 //     ["/*FIND ALL REFS*/[|42|]"]: function () { }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [[|42|]](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [42]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["42"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [|[42](): void;|]
+        // }
+        // 
+        // class C implements I {
+        //     [42]: any;
+        // }
+        // 
+        // var x: I = {
+        //     ["42"]: function () { }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [[|42|]](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [42]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["42"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [|[42](): void;|]
+        // }
+        // 
+        // class C implements I {
+        //     [42]: any;
+        // }
+        // 
+        // var x: I = {
+        //     ["42"]: function () { }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [42](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [42]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["[|42|]"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [42](): void;
+        // }
+        // 
+        // class C implements I {
+        //     [42]: any;
+        // }
+        // 
+        // var x: I = {
+        //     [|["42"]: function () { }|]
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [42](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [[|42|]]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["42"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [42](): void;
+        // }
+        // 
+        // class C implements I {
+        //     [|[42]: any;|]
+        // }
+        // 
+        // var x: I = {
+        //     ["42"]: function () { }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+      // interface I {
+      //     [42](): void;
+      // }
+      // 
+      // class C implements I {
+      //     [[|42|]]: any;
+      // }
+      // 
+      // var x: I = {
+      //     ["42"]: function () { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForComputedProperties2.ts ===
+        // interface I {
+        //     [42](): void;
+        // }
+        // 
+        // class C implements I {
+        //     [|[42]: any;|]
+        // }
+        // 
+        // var x: I = {
+        //     ["42"]: function () { }
+        // }
+  }
+]
 
 [
   {

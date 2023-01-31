@@ -1,0 +1,144 @@
+// === /tests/cases/fourslash/file.tsx ===
+// declare module JSX {
+//     interface Element { }
+//     interface IntrinsicElements {
+//     }
+//     interface ElementAttributesProperty { props; }
+// }
+// function [|SFC1|](prop: { x: number }) {
+//     return <div>hello </div>;
+// };
+// function SFC2(prop: { x: boolean }) {
+//     return <h1>World </h1>;
+// }
+// var [|SFCComp|] = SFC1 || SFC2;
+// <SFC/*GOTO DEF*/Comp x />
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // function SFC1(prop: { x: number }) {
+    //     return <div>hello </div>;
+    // };
+    // function SFC2(prop: { x: boolean }) {
+    //     return <h1>World </h1>;
+    // }
+    // var [|SFCComp|] = SFC1 || SFC2;
+    // <SFCComp x />
+    === ContextSpan ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //     }
+      //     interface ElementAttributesProperty { props; }
+      // }
+      // function SFC1(prop: { x: number }) {
+      //     return <div>hello </div>;
+      // };
+      // function SFC2(prop: { x: boolean }) {
+      //     return <h1>World </h1>;
+      // }
+      // [|var SFCComp = SFC1 || SFC2;|]
+      // <SFCComp x />
+    === 1 ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // function [|SFC1|](prop: { x: number }) {
+    //     return <div>hello </div>;
+    // };
+    // function SFC2(prop: { x: boolean }) {
+    //     return <h1>World </h1>;
+    // }
+    // var SFCComp = SFC1 || SFC2;
+    // <SFCComp x />
+    === ContextSpan ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //     }
+      //     interface ElementAttributesProperty { props; }
+      // }
+      // [|function SFC1(prop: { x: number }) {
+      //     return <div>hello </div>;
+      // }|];
+      // function SFC2(prop: { x: boolean }) {
+      //     return <h1>World </h1>;
+      // }
+      // var SFCComp = SFC1 || SFC2;
+      // <SFCComp x />
+  === TextSpan ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // function SFC1(prop: { x: number }) {
+    //     return <div>hello </div>;
+    // };
+    // function SFC2(prop: { x: boolean }) {
+    //     return <h1>World </h1>;
+    // }
+    // var SFCComp = SFC1 || SFC2;
+    // <[|SFCComp|] x />
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/file.tsx",
+      "textSpan": {
+        "start": 282,
+        "length": 7
+      },
+      "kind": "var",
+      "name": "SFCComp",
+      "containerName": "",
+      "contextSpan": {
+        "start": 278,
+        "length": 27
+      },
+      "isLocal": false,
+      "isAmbient": false,
+      "unverified": false,
+      "failedAliasResolution": false
+    },
+    {
+      "fileName": "/tests/cases/fourslash/file.tsx",
+      "textSpan": {
+        "start": 149,
+        "length": 4
+      },
+      "kind": "function",
+      "name": "SFC1",
+      "containerName": "",
+      "contextSpan": {
+        "start": 140,
+        "length": 68
+      },
+      "isLocal": false,
+      "isAmbient": false,
+      "unverified": false,
+      "failedAliasResolution": false
+    }
+  ],
+  "textSpan": {
+    "start": 307,
+    "length": 7
+  }
+}

@@ -4,6 +4,20 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/Foo.js ===
+      // /** @type {function (this: string, string): string} */
+      // var f = function (s) { return [|this|] + s; }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/Foo.js ===
+      // /** @type {function (this: string, string): string} */
+      // var f = function (s) { return [|this|] + s; }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

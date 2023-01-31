@@ -12,6 +12,33 @@
 
 [
   {
+    === Definition ===
+      // === /app.ts ===
+      // export function [|hello|]() {};
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|export function hello() {}|];
+    === References ===
+      === 0 ===
+      // === /app.ts ===
+      // export function [|hello|]() {};
+      === ContextSpan ===
+        // === /app.ts ===
+        // [|export function hello() {}|];
+      === 1 ===
+      // === /indirect-use.ts ===
+      // import("./re-export").then(mod => mod.services.app.[|hello|]());
+      === 2 ===
+      // === /direct-use.ts ===
+      // async function main() {
+      //     const mod = await import("./app")
+      //     mod.[|hello|]();
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

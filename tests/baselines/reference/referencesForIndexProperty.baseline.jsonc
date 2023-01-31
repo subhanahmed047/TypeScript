@@ -10,6 +10,62 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+      // class Foo {
+      //     [|property|]: number;
+      //     method(): void { }
+      // }
+      // 
+      // var f: Foo;
+      // f["property"];
+      // f["method"];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+        // class Foo {
+        //     [|property: number;|]
+        //     method(): void { }
+        // }
+        // 
+        // var f: Foo;
+        // f["property"];
+        // f["method"];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+      // class Foo {
+      //     [|property|]: number;
+      //     method(): void { }
+      // }
+      // 
+      // var f: Foo;
+      // f["property"];
+      // f["method"];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+        // class Foo {
+        //     [|property: number;|]
+        //     method(): void { }
+        // }
+        // 
+        // var f: Foo;
+        // f["property"];
+        // f["method"];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+      // class Foo {
+      //     property: number;
+      //     method(): void { }
+      // }
+      // 
+      // var f: Foo;
+      // f["[|property|]"];
+      // f["method"];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -103,6 +159,62 @@
 // var f: Foo;
 // f["property"];
 // f["[|method|]"];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+      // class Foo {
+      //     property: number;
+      //     [|method|](): void { }
+      // }
+      // 
+      // var f: Foo;
+      // f["property"];
+      // f["method"];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+        // class Foo {
+        //     property: number;
+        //     [|method(): void { }|]
+        // }
+        // 
+        // var f: Foo;
+        // f["property"];
+        // f["method"];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+      // class Foo {
+      //     property: number;
+      //     [|method|](): void { }
+      // }
+      // 
+      // var f: Foo;
+      // f["property"];
+      // f["method"];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+        // class Foo {
+        //     property: number;
+        //     [|method(): void { }|]
+        // }
+        // 
+        // var f: Foo;
+        // f["property"];
+        // f["method"];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+      // class Foo {
+      //     property: number;
+      //     method(): void { }
+      // }
+      // 
+      // var f: Foo;
+      // f["property"];
+      // f["[|method|]"];
+  }
+]
 
 [
   {
@@ -210,6 +322,62 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+      // class Foo {
+      //     [|property|]: number;
+      //     method(): void { }
+      // }
+      // 
+      // var f: Foo;
+      // f["property"];
+      // f["method"];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+        // class Foo {
+        //     [|property: number;|]
+        //     method(): void { }
+        // }
+        // 
+        // var f: Foo;
+        // f["property"];
+        // f["method"];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+      // class Foo {
+      //     [|property|]: number;
+      //     method(): void { }
+      // }
+      // 
+      // var f: Foo;
+      // f["property"];
+      // f["method"];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+        // class Foo {
+        //     [|property: number;|]
+        //     method(): void { }
+        // }
+        // 
+        // var f: Foo;
+        // f["property"];
+        // f["method"];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+      // class Foo {
+      //     property: number;
+      //     method(): void { }
+      // }
+      // 
+      // var f: Foo;
+      // f["[|property|]"];
+      // f["method"];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -301,6 +469,62 @@
 // var f: Foo;
 // f["property"];
 // f["/*FIND ALL REFS*/[|method|]"];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+      // class Foo {
+      //     property: number;
+      //     [|method|](): void { }
+      // }
+      // 
+      // var f: Foo;
+      // f["property"];
+      // f["method"];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+        // class Foo {
+        //     property: number;
+        //     [|method(): void { }|]
+        // }
+        // 
+        // var f: Foo;
+        // f["property"];
+        // f["method"];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+      // class Foo {
+      //     property: number;
+      //     [|method|](): void { }
+      // }
+      // 
+      // var f: Foo;
+      // f["property"];
+      // f["method"];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+        // class Foo {
+        //     property: number;
+        //     [|method(): void { }|]
+        // }
+        // 
+        // var f: Foo;
+        // f["property"];
+        // f["method"];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty.ts ===
+      // class Foo {
+      //     property: number;
+      //     method(): void { }
+      // }
+      // 
+      // var f: Foo;
+      // f["property"];
+      // f["[|method|]"];
+  }
+]
 
 [
   {

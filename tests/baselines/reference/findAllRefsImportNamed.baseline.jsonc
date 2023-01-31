@@ -8,6 +8,59 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/f.ts ===
+      // export { foo as foo }
+      // function [|foo|](a: number, b: number) { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // export { foo as foo }
+        // [|function foo(a: number, b: number) { }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/f.ts ===
+      // export { [|foo|] as foo }
+      // function foo(a: number, b: number) { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // [|export { foo as foo }|]
+        // function foo(a: number, b: number) { }
+      === 1 ===
+      // === /tests/cases/fourslash/f.ts ===
+      // export { foo as foo }
+      // function [|foo|](a: number, b: number) { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // export { foo as foo }
+        // [|function foo(a: number, b: number) { }|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/f.ts ===
+      // export { foo as [|foo|] }
+      // function foo(a: number, b: number) { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // [|export { foo as foo }|]
+        // function foo(a: number, b: number) { }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/f.ts ===
+      // export { foo as [|foo|] }
+      // function foo(a: number, b: number) { }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // [|export { foo as foo }|]
+        // function foo(a: number, b: number) { }
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import x = require("./f");
+      // x.[|foo|](1, 2);
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

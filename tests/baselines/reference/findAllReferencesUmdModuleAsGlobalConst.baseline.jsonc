@@ -14,6 +14,52 @@
 
 [
   {
+    === Definition ===
+      // === /node_modules/@types/three/index.d.ts ===
+      // [|export * from "./three-core";
+      // export as namespace THREE;|]
+    === References ===
+      === 0 ===
+      // === /node_modules/@types/three/index.d.ts ===
+      // export * from "./three-core";
+      // export as namespace [|THREE|];
+      === ContextSpan ===
+        // === /node_modules/@types/three/index.d.ts ===
+        // export * from "./three-core";
+        // [|export as namespace THREE;|]
+      === 1 ===
+      // === /typings/global.d.ts ===
+      // import * as _THREE from '[|three|]';
+      // declare global {
+      //     const THREE: typeof _THREE;
+      // }
+      === ContextSpan ===
+        // === /typings/global.d.ts ===
+        // [|import * as _THREE from 'three';|]
+        // declare global {
+        //     const THREE: typeof _THREE;
+        // }
+      === 2 ===
+      // === /typings/global.d.ts ===
+      // import * as _THREE from 'three';
+      // declare global {
+      //     const [|THREE|]: typeof _THREE;
+      // }
+      === ContextSpan ===
+        // === /typings/global.d.ts ===
+        // import * as _THREE from 'three';
+        // declare global {
+        //     [|const THREE: typeof _THREE;|]
+        // }
+      === 3 ===
+      // === /src/index.ts ===
+      // export const a = {};
+      // let v = new [|THREE|].Vector2();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -156,6 +202,52 @@
 
 [
   {
+    === Definition ===
+      // === /node_modules/@types/three/index.d.ts ===
+      // [|export * from "./three-core";
+      // export as namespace THREE;|]
+    === References ===
+      === 0 ===
+      // === /node_modules/@types/three/index.d.ts ===
+      // export * from "./three-core";
+      // export as namespace [|THREE|];
+      === ContextSpan ===
+        // === /node_modules/@types/three/index.d.ts ===
+        // export * from "./three-core";
+        // [|export as namespace THREE;|]
+      === 1 ===
+      // === /typings/global.d.ts ===
+      // import * as _THREE from '[|three|]';
+      // declare global {
+      //     const THREE: typeof _THREE;
+      // }
+      === ContextSpan ===
+        // === /typings/global.d.ts ===
+        // [|import * as _THREE from 'three';|]
+        // declare global {
+        //     const THREE: typeof _THREE;
+        // }
+      === 2 ===
+      // === /typings/global.d.ts ===
+      // import * as _THREE from 'three';
+      // declare global {
+      //     const [|THREE|]: typeof _THREE;
+      // }
+      === ContextSpan ===
+        // === /typings/global.d.ts ===
+        // import * as _THREE from 'three';
+        // declare global {
+        //     [|const THREE: typeof _THREE;|]
+        // }
+      === 3 ===
+      // === /src/index.ts ===
+      // export const a = {};
+      // let v = new [|THREE|].Vector2();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -291,6 +383,52 @@
 // === /node_modules/@types/three/index.d.ts ===
 // export * from "./three-core";
 // export as namespace [|THREE|];
+
+[
+  {
+    === Definition ===
+      // === /node_modules/@types/three/index.d.ts ===
+      // [|export * from "./three-core";
+      // export as namespace THREE;|]
+    === References ===
+      === 0 ===
+      // === /node_modules/@types/three/index.d.ts ===
+      // export * from "./three-core";
+      // export as namespace [|THREE|];
+      === ContextSpan ===
+        // === /node_modules/@types/three/index.d.ts ===
+        // export * from "./three-core";
+        // [|export as namespace THREE;|]
+      === 1 ===
+      // === /typings/global.d.ts ===
+      // import * as _THREE from '[|three|]';
+      // declare global {
+      //     const THREE: typeof _THREE;
+      // }
+      === ContextSpan ===
+        // === /typings/global.d.ts ===
+        // [|import * as _THREE from 'three';|]
+        // declare global {
+        //     const THREE: typeof _THREE;
+        // }
+      === 2 ===
+      // === /typings/global.d.ts ===
+      // import * as _THREE from 'three';
+      // declare global {
+      //     const [|THREE|]: typeof _THREE;
+      // }
+      === ContextSpan ===
+        // === /typings/global.d.ts ===
+        // import * as _THREE from 'three';
+        // declare global {
+        //     [|const THREE: typeof _THREE;|]
+        // }
+      === 3 ===
+      // === /src/index.ts ===
+      // export const a = {};
+      // let v = new [|THREE|].Vector2();
+  }
+]
 
 [
   {

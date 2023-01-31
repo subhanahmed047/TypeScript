@@ -1,3 +1,8 @@
+// === /tests/cases/fourslash/0.d.ts ===
+// export function doThing(): string;
+// export function doTheOtherThing(): void;
+// /*FIND ALL REFS*/export as namespace myLib;
+
 undefined
 
 // === /tests/cases/fourslash/1.ts ===
@@ -8,6 +13,36 @@ undefined
 // export function doThing(): string;
 // export function doTheOtherThing(): void;
 // export as namespace /*FIND ALL REFS*/[|myLib|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/0.d.ts ===
+      // export function doThing(): string;
+      // export function doTheOtherThing(): void;
+      // export as namespace [|myLib|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/0.d.ts ===
+        // export function doThing(): string;
+        // export function doTheOtherThing(): void;
+        // [|export as namespace myLib;|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/0.d.ts ===
+      // export function doThing(): string;
+      // export function doTheOtherThing(): void;
+      // export as namespace [|myLib|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/0.d.ts ===
+        // export function doThing(): string;
+        // export function doTheOtherThing(): void;
+        // [|export as namespace myLib;|]
+      === 1 ===
+      // === /tests/cases/fourslash/1.ts ===
+      // /// <reference path="0.d.ts" />
+      // [|myLib|].doThing();
+  }
+]
 
 [
   {
@@ -83,6 +118,36 @@ undefined
 // export function doThing(): string;
 // export function doTheOtherThing(): void;
 // export as namespace [|myLib|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/0.d.ts ===
+      // export function doThing(): string;
+      // export function doTheOtherThing(): void;
+      // export as namespace [|myLib|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/0.d.ts ===
+        // export function doThing(): string;
+        // export function doTheOtherThing(): void;
+        // [|export as namespace myLib;|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/0.d.ts ===
+      // export function doThing(): string;
+      // export function doTheOtherThing(): void;
+      // export as namespace [|myLib|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/0.d.ts ===
+        // export function doThing(): string;
+        // export function doTheOtherThing(): void;
+        // [|export as namespace myLib;|]
+      === 1 ===
+      // === /tests/cases/fourslash/1.ts ===
+      // /// <reference path="0.d.ts" />
+      // [|myLib|].doThing();
+  }
+]
 
 [
   {

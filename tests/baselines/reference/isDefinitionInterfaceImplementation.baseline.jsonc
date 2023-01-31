@@ -12,6 +12,135 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+      // interface I {
+      //     [|M|](): void;
+      // }
+      // 
+      // class C implements I {
+      //     M() { }
+      // }
+      // 
+      // ({} as I).M();
+      // ({} as C).M();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+        // interface I {
+        //     [|M(): void;|]
+        // }
+        // 
+        // class C implements I {
+        //     M() { }
+        // }
+        // 
+        // ({} as I).M();
+        // ({} as C).M();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+      // interface I {
+      //     [|M|](): void;
+      // }
+      // 
+      // class C implements I {
+      //     M() { }
+      // }
+      // 
+      // ({} as I).M();
+      // ({} as C).M();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+        // interface I {
+        //     [|M(): void;|]
+        // }
+        // 
+        // class C implements I {
+        //     M() { }
+        // }
+        // 
+        // ({} as I).M();
+        // ({} as C).M();
+      === 1 ===
+      // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+      // interface I {
+      //     M(): void;
+      // }
+      // 
+      // class C implements I {
+      //     M() { }
+      // }
+      // 
+      // ({} as I).[|M|]();
+      // ({} as C).M();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+      // interface I {
+      //     M(): void;
+      // }
+      // 
+      // class C implements I {
+      //     [|M|]() { }
+      // }
+      // 
+      // ({} as I).M();
+      // ({} as C).M();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+        // interface I {
+        //     M(): void;
+        // }
+        // 
+        // class C implements I {
+        //     [|M() { }|]
+        // }
+        // 
+        // ({} as I).M();
+        // ({} as C).M();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+      // interface I {
+      //     M(): void;
+      // }
+      // 
+      // class C implements I {
+      //     [|M|]() { }
+      // }
+      // 
+      // ({} as I).M();
+      // ({} as C).M();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+        // interface I {
+        //     M(): void;
+        // }
+        // 
+        // class C implements I {
+        //     [|M() { }|]
+        // }
+        // 
+        // ({} as I).M();
+        // ({} as C).M();
+      === 1 ===
+      // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+      // interface I {
+      //     M(): void;
+      // }
+      // 
+      // class C implements I {
+      //     M() { }
+      // }
+      // 
+      // ({} as I).M();
+      // ({} as C).[|M|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -206,6 +335,135 @@
 // 
 // ({} as I).[|M|]();
 // ({} as C).[|M|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+      // interface I {
+      //     [|M|](): void;
+      // }
+      // 
+      // class C implements I {
+      //     M() { }
+      // }
+      // 
+      // ({} as I).M();
+      // ({} as C).M();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+        // interface I {
+        //     [|M(): void;|]
+        // }
+        // 
+        // class C implements I {
+        //     M() { }
+        // }
+        // 
+        // ({} as I).M();
+        // ({} as C).M();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+      // interface I {
+      //     [|M|](): void;
+      // }
+      // 
+      // class C implements I {
+      //     M() { }
+      // }
+      // 
+      // ({} as I).M();
+      // ({} as C).M();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+        // interface I {
+        //     [|M(): void;|]
+        // }
+        // 
+        // class C implements I {
+        //     M() { }
+        // }
+        // 
+        // ({} as I).M();
+        // ({} as C).M();
+      === 1 ===
+      // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+      // interface I {
+      //     M(): void;
+      // }
+      // 
+      // class C implements I {
+      //     M() { }
+      // }
+      // 
+      // ({} as I).[|M|]();
+      // ({} as C).M();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+      // interface I {
+      //     M(): void;
+      // }
+      // 
+      // class C implements I {
+      //     [|M|]() { }
+      // }
+      // 
+      // ({} as I).M();
+      // ({} as C).M();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+        // interface I {
+        //     M(): void;
+        // }
+        // 
+        // class C implements I {
+        //     [|M() { }|]
+        // }
+        // 
+        // ({} as I).M();
+        // ({} as C).M();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+      // interface I {
+      //     M(): void;
+      // }
+      // 
+      // class C implements I {
+      //     [|M|]() { }
+      // }
+      // 
+      // ({} as I).M();
+      // ({} as C).M();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+        // interface I {
+        //     M(): void;
+        // }
+        // 
+        // class C implements I {
+        //     [|M() { }|]
+        // }
+        // 
+        // ({} as I).M();
+        // ({} as C).M();
+      === 1 ===
+      // === /tests/cases/fourslash/isDefinitionInterfaceImplementation.ts ===
+      // interface I {
+      //     M(): void;
+      // }
+      // 
+      // class C implements I {
+      //     M() { }
+      // }
+      // 
+      // ({} as I).M();
+      // ({} as C).[|M|]();
+  }
+]
 
 [
   {

@@ -20,6 +20,112 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+      // class C {
+      //     [|#foo|](){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      // class D extends C {
+      //     constructor() {
+      //         super()
+      //         this.#foo = 20;
+      //     }
+      // }
+      // class E {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+        // class C {
+        //     [|#foo(){ }|]
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+        // class D extends C {
+        //     constructor() {
+        //         super()
+        //         this.#foo = 20;
+        //     }
+        // }
+        // class E {
+        //     #foo(){ }
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+      // class C {
+      //     [|#foo|](){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      // class D extends C {
+      //     constructor() {
+      //         super()
+      //         this.#foo = 20;
+      //     }
+      // }
+      // class E {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+        // class C {
+        //     [|#foo(){ }|]
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+        // class D extends C {
+        //     constructor() {
+        //         super()
+        //         this.#foo = 20;
+        //     }
+        // }
+        // class E {
+        //     #foo(){ }
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+      // class C {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.[|#foo|]();
+      //     }
+      // }
+      // class D extends C {
+      //     constructor() {
+      //         super()
+      //         this.#foo = 20;
+      //     }
+      // }
+      // class E {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -131,6 +237,112 @@
 //         this.#foo();
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+      // class C {
+      //     [|#foo|](){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      // class D extends C {
+      //     constructor() {
+      //         super()
+      //         this.#foo = 20;
+      //     }
+      // }
+      // class E {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+        // class C {
+        //     [|#foo(){ }|]
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+        // class D extends C {
+        //     constructor() {
+        //         super()
+        //         this.#foo = 20;
+        //     }
+        // }
+        // class E {
+        //     #foo(){ }
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+      // class C {
+      //     [|#foo|](){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      // class D extends C {
+      //     constructor() {
+      //         super()
+      //         this.#foo = 20;
+      //     }
+      // }
+      // class E {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+        // class C {
+        //     [|#foo(){ }|]
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+        // class D extends C {
+        //     constructor() {
+        //         super()
+        //         this.#foo = 20;
+        //     }
+        // }
+        // class E {
+        //     #foo(){ }
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+      // class C {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.[|#foo|]();
+      //     }
+      // }
+      // class D extends C {
+      //     constructor() {
+      //         super()
+      //         this.#foo = 20;
+      //     }
+      // }
+      // class E {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+  }
+]
 
 [
   {
@@ -246,6 +458,112 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+      // class C {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      // class D extends C {
+      //     constructor() {
+      //         super()
+      //         this.#foo = 20;
+      //     }
+      // }
+      // class E {
+      //     [|#foo|](){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+        // class C {
+        //     #foo(){ }
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+        // class D extends C {
+        //     constructor() {
+        //         super()
+        //         this.#foo = 20;
+        //     }
+        // }
+        // class E {
+        //     [|#foo(){ }|]
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+      // class C {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      // class D extends C {
+      //     constructor() {
+      //         super()
+      //         this.#foo = 20;
+      //     }
+      // }
+      // class E {
+      //     [|#foo|](){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+        // class C {
+        //     #foo(){ }
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+        // class D extends C {
+        //     constructor() {
+        //         super()
+        //         this.#foo = 20;
+        //     }
+        // }
+        // class E {
+        //     [|#foo(){ }|]
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+      // class C {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      // class D extends C {
+      //     constructor() {
+      //         super()
+      //         this.#foo = 20;
+      //     }
+      // }
+      // class E {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.[|#foo|]();
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -357,6 +675,112 @@
 //         this./*FIND ALL REFS*/[|#foo|]();
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+      // class C {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      // class D extends C {
+      //     constructor() {
+      //         super()
+      //         this.#foo = 20;
+      //     }
+      // }
+      // class E {
+      //     [|#foo|](){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+        // class C {
+        //     #foo(){ }
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+        // class D extends C {
+        //     constructor() {
+        //         super()
+        //         this.#foo = 20;
+        //     }
+        // }
+        // class E {
+        //     [|#foo(){ }|]
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+      // class C {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      // class D extends C {
+      //     constructor() {
+      //         super()
+      //         this.#foo = 20;
+      //     }
+      // }
+      // class E {
+      //     [|#foo|](){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+        // class C {
+        //     #foo(){ }
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+        // class D extends C {
+        //     constructor() {
+        //         super()
+        //         this.#foo = 20;
+        //     }
+        // }
+        // class E {
+        //     [|#foo(){ }|]
+        //     constructor() {
+        //         this.#foo();
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsPrivateNameMethods.ts ===
+      // class C {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.#foo();
+      //     }
+      // }
+      // class D extends C {
+      //     constructor() {
+      //         super()
+      //         this.#foo = 20;
+      //     }
+      // }
+      // class E {
+      //     #foo(){ }
+      //     constructor() {
+      //         this.[|#foo|]();
+      //     }
+      // }
+  }
+]
 
 [
   {

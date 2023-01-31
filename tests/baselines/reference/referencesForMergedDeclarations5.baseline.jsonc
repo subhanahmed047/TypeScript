@@ -7,6 +7,54 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface Foo { }
+      // module Foo { export interface Bar { } }
+      // function [|Foo|]() { }
+      // 
+      // export = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // interface Foo { }
+        // module Foo { export interface Bar { } }
+        // [|function Foo() { }|]
+        // 
+        // export = Foo;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface [|Foo|] { }
+      // module Foo { export interface Bar { } }
+      // function Foo() { }
+      // 
+      // export = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // [|interface Foo { }|]
+        // module Foo { export interface Bar { } }
+        // function Foo() { }
+        // 
+        // export = Foo;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface Foo { }
+      // module Foo { export interface Bar { } }
+      // function Foo() { }
+      // 
+      // export = [|Foo|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // interface Foo { }
+        // module Foo { export interface Bar { } }
+        // function Foo() { }
+        // 
+        // [|export = Foo;|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -92,6 +140,54 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface Foo { }
+      // module Foo { export interface Bar { } }
+      // function [|Foo|]() { }
+      // 
+      // export = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // interface Foo { }
+        // module Foo { export interface Bar { } }
+        // [|function Foo() { }|]
+        // 
+        // export = Foo;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface Foo { }
+      // module [|Foo|] { export interface Bar { } }
+      // function Foo() { }
+      // 
+      // export = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // interface Foo { }
+        // [|module Foo { export interface Bar { } }|]
+        // function Foo() { }
+        // 
+        // export = Foo;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface Foo { }
+      // module Foo { export interface Bar { } }
+      // function Foo() { }
+      // 
+      // export = [|Foo|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // interface Foo { }
+        // module Foo { export interface Bar { } }
+        // function Foo() { }
+        // 
+        // [|export = Foo;|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -158,6 +254,54 @@
 // function /*FIND ALL REFS*/[|Foo|]() { }
 // 
 // export = [|Foo|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface Foo { }
+      // module Foo { export interface Bar { } }
+      // function [|Foo|]() { }
+      // 
+      // export = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // interface Foo { }
+        // module Foo { export interface Bar { } }
+        // [|function Foo() { }|]
+        // 
+        // export = Foo;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface Foo { }
+      // module Foo { export interface Bar { } }
+      // function [|Foo|]() { }
+      // 
+      // export = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // interface Foo { }
+        // module Foo { export interface Bar { } }
+        // [|function Foo() { }|]
+        // 
+        // export = Foo;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface Foo { }
+      // module Foo { export interface Bar { } }
+      // function Foo() { }
+      // 
+      // export = [|Foo|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // interface Foo { }
+        // module Foo { export interface Bar { } }
+        // function Foo() { }
+        // 
+        // [|export = Foo;|]
+  }
+]
 
 [
   {
@@ -263,6 +407,82 @@
 // function [|Foo|]() { }
 // 
 // export = /*FIND ALL REFS*/[|Foo|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface Foo { }
+      // module Foo { export interface Bar { } }
+      // function [|Foo|]() { }
+      // 
+      // export = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // interface Foo { }
+        // module Foo { export interface Bar { } }
+        // [|function Foo() { }|]
+        // 
+        // export = Foo;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface [|Foo|] { }
+      // module Foo { export interface Bar { } }
+      // function Foo() { }
+      // 
+      // export = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // [|interface Foo { }|]
+        // module Foo { export interface Bar { } }
+        // function Foo() { }
+        // 
+        // export = Foo;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface Foo { }
+      // module [|Foo|] { export interface Bar { } }
+      // function Foo() { }
+      // 
+      // export = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // interface Foo { }
+        // [|module Foo { export interface Bar { } }|]
+        // function Foo() { }
+        // 
+        // export = Foo;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface Foo { }
+      // module Foo { export interface Bar { } }
+      // function [|Foo|]() { }
+      // 
+      // export = Foo;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // interface Foo { }
+        // module Foo { export interface Bar { } }
+        // [|function Foo() { }|]
+        // 
+        // export = Foo;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+      // interface Foo { }
+      // module Foo { export interface Bar { } }
+      // function Foo() { }
+      // 
+      // export = [|Foo|];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations5.ts ===
+        // interface Foo { }
+        // module Foo { export interface Bar { } }
+        // function Foo() { }
+        // 
+        // [|export = Foo;|]
+  }
+]
 
 [
   {

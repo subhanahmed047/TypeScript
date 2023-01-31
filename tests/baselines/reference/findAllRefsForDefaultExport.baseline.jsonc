@@ -7,6 +7,47 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export default function [|f|]() {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export default function f() {}|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // export default function [|f|]() {}
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|export default function f() {}|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import [|g|] from "./a";
+      // g();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import g from "./a";|]
+        // g();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import [|g|] from "./a";
+      // g();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import g from "./a";|]
+        // g();
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import g from "./a";
+      // [|g|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -184,6 +225,32 @@
 // === /tests/cases/fourslash/b.ts ===
 // import /*FIND ALL REFS*/[|g|] from "./a";
 // [|g|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import [|g|] from "./a";
+      // g();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import g from "./a";|]
+        // g();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import [|g|] from "./a";
+      // g();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import g from "./a";|]
+        // g();
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import g from "./a";
+      // [|g|]();
+  }
+]
 
 [
   {

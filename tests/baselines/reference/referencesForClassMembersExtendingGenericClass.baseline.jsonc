@@ -14,6 +14,141 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     [|a|]: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     [|a: this;|]
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     [|a|]: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     [|a: this;|]
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     [|a|];
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     [|a;|]
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     [|a|];
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     [|a;|]
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.[|a|];
+      // c.method();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -197,6 +332,141 @@
 // var c: MyClass;
 // c.[|a|];
 // c.method();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     [|a|]: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     [|a: this;|]
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     [|a|]: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     [|a: this;|]
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     [|a|];
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     [|a;|]
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     [|a|];
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     [|a;|]
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.[|a|];
+      // c.method();
+  }
+]
 
 [
   {
@@ -386,6 +656,141 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     [|a|]: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     [|a: this;|]
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     [|a|]: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     [|a: this;|]
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     [|a|];
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     [|a;|]
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     [|a|];
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     [|a;|]
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.[|a|];
+      // c.method();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -566,6 +971,141 @@
 // var c: MyClass;
 // c.a;
 // c.[|method|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     [|method|]<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     [|method<U>(a?:T, b?:U): this { }|]
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     [|method|]<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     [|method<U>(a?:T, b?:U): this { }|]
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     [|method|]() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     [|method() { }|]
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     [|method|]() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     [|method() { }|]
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.[|method|]();
+  }
+]
 
 [
   {
@@ -831,6 +1371,141 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     [|method|]<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     [|method<U>(a?:T, b?:U): this { }|]
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     [|method|]<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     [|method<U>(a?:T, b?:U): this { }|]
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     [|method|]() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     [|method() { }|]
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     [|method|]() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     [|method() { }|]
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.[|method|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1090,6 +1765,141 @@
 // var c: MyClass;
 // c.a;
 // c./*FIND ALL REFS*/[|method|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     [|method|]<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     [|method<U>(a?:T, b?:U): this { }|]
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     [|method|]<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     [|method<U>(a?:T, b?:U): this { }|]
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     [|method|]() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     [|method() { }|]
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     [|method|]() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+        // class Base<T> {
+        //     a: this;
+        //     method<U>(a?:T, b?:U): this { }
+        // }
+        // class MyClass extends Base<number> {
+        //     a;
+        //     [|method() { }|]
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingGenericClass.ts ===
+      // class Base<T> {
+      //     a: this;
+      //     method<U>(a?:T, b?:U): this { }
+      // }
+      // class MyClass extends Base<number> {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.[|method|]();
+  }
+]
 
 [
   {

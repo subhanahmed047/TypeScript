@@ -9,6 +9,30 @@
 
 [
   {
+    === Definition ===
+      // === /node_modules/foo/index.d.ts ===
+      // export type [|T|] = number;
+      === ContextSpan ===
+        // === /node_modules/foo/index.d.ts ===
+        // [|export type T = number;|]
+    === References ===
+      === 0 ===
+      // === /node_modules/foo/index.d.ts ===
+      // export type [|T|] = number;
+      === ContextSpan ===
+        // === /node_modules/foo/index.d.ts ===
+        // [|export type T = number;|]
+      === 1 ===
+      // === /a.ts ===
+      // import * as foo from "foo";
+      // declare module "foo" {
+      //     export const x: [|T|];
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -92,6 +116,30 @@
 
 [
   {
+    === Definition ===
+      // === /node_modules/foo/index.d.ts ===
+      // export type [|T|] = number;
+      === ContextSpan ===
+        // === /node_modules/foo/index.d.ts ===
+        // [|export type T = number;|]
+    === References ===
+      === 0 ===
+      // === /node_modules/foo/index.d.ts ===
+      // export type [|T|] = number;
+      === ContextSpan ===
+        // === /node_modules/foo/index.d.ts ===
+        // [|export type T = number;|]
+      === 1 ===
+      // === /a.ts ===
+      // import * as foo from "foo";
+      // declare module "foo" {
+      //     export const x: [|T|];
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -172,6 +220,30 @@
 // declare module "foo" {
 //     export const x: /*FIND ALL REFS*/[|T|];
 // }
+
+[
+  {
+    === Definition ===
+      // === /node_modules/foo/index.d.ts ===
+      // export type [|T|] = number;
+      === ContextSpan ===
+        // === /node_modules/foo/index.d.ts ===
+        // [|export type T = number;|]
+    === References ===
+      === 0 ===
+      // === /node_modules/foo/index.d.ts ===
+      // export type [|T|] = number;
+      === ContextSpan ===
+        // === /node_modules/foo/index.d.ts ===
+        // [|export type T = number;|]
+      === 1 ===
+      // === /a.ts ===
+      // import * as foo from "foo";
+      // declare module "foo" {
+      //     export const x: [|T|];
+      // }
+  }
+]
 
 [
   {

@@ -6,6 +6,39 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // export function [|foo|](): void {}
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export function foo(): void {}|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export function [|foo|](): void {}
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export function foo(): void {}|]
+  },
+  {
+    === Definition ===
+      // === /c.ts ===
+      // import { [|foo|] } from "./b";
+      === ContextSpan ===
+        // === /c.ts ===
+        // [|import { foo } from "./b";|]
+    === References ===
+      === 0 ===
+      // === /c.ts ===
+      // import { [|foo|] } from "./b";
+      === ContextSpan ===
+        // === /c.ts ===
+        // [|import { foo } from "./b";|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -176,6 +209,39 @@
 
 // === /a.ts ===
 // export function [|foo|](): void {}
+
+[
+  {
+    === Definition ===
+      // === /c.ts ===
+      // import { [|foo|] } from "./b";
+      === ContextSpan ===
+        // === /c.ts ===
+        // [|import { foo } from "./b";|]
+    === References ===
+      === 0 ===
+      // === /c.ts ===
+      // import { [|foo|] } from "./b";
+      === ContextSpan ===
+        // === /c.ts ===
+        // [|import { foo } from "./b";|]
+  },
+  {
+    === Definition ===
+      // === /a.ts ===
+      // export function [|foo|](): void {}
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export function foo(): void {}|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export function [|foo|](): void {}
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export function foo(): void {}|]
+  }
+]
 
 [
   {

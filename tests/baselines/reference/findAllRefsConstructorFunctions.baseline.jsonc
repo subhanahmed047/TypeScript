@@ -9,6 +9,39 @@
 
 [
   {
+    === Definition ===
+      // === /a.js ===
+      // function f() {
+      //     [|this|].x = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.x = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // function f() {
+      //     [|this|].x = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.x = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() {
+        //     [|this.x = 0;|]
+        // }
+        // f.prototype.setX = function() {
+        //     this.x = 1;
+        // }
+        // f.prototype.useX = function() { this.x; }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -63,6 +96,75 @@
 //     this.[|x|] = 1;
 // }
 // f.prototype.useX = function() { this.[|x|]; }
+
+[
+  {
+    === Definition ===
+      // === /a.js ===
+      // function f() {
+      //     this.[|x|] = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.x = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() {
+        //     [|this.x = 0;|]
+        // }
+        // f.prototype.setX = function() {
+        //     this.x = 1;
+        // }
+        // f.prototype.useX = function() { this.x; }
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // function f() {
+      //     this.[|x|] = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.x = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() {
+        //     [|this.x = 0;|]
+        // }
+        // f.prototype.setX = function() {
+        //     this.x = 1;
+        // }
+        // f.prototype.useX = function() { this.x; }
+      === 1 ===
+      // === /a.js ===
+      // function f() {
+      //     this.x = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.[|x|] = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() {
+        //     this.x = 0;
+        // }
+        // f.prototype.setX = function() {
+        //     [|this.x = 1;|]
+        // }
+        // f.prototype.useX = function() { this.x; }
+      === 2 ===
+      // === /a.js ===
+      // function f() {
+      //     this.x = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.x = 1;
+      // }
+      // f.prototype.useX = function() { this.[|x|]; }
+  }
+]
 
 [
   {
@@ -174,6 +276,39 @@
 
 [
   {
+    === Definition ===
+      // === /a.js ===
+      // function f() {
+      //     this.x = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     [|this|].x = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // function f() {
+      //     this.x = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     [|this|].x = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() {
+        //     this.x = 0;
+        // }
+        // f.prototype.setX = function() {
+        //     [|this.x = 1;|]
+        // }
+        // f.prototype.useX = function() { this.x; }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -228,6 +363,75 @@
 //     this./*FIND ALL REFS*/[|x|] = 1;
 // }
 // f.prototype.useX = function() { this.[|x|]; }
+
+[
+  {
+    === Definition ===
+      // === /a.js ===
+      // function f() {
+      //     this.[|x|] = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.x = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() {
+        //     [|this.x = 0;|]
+        // }
+        // f.prototype.setX = function() {
+        //     this.x = 1;
+        // }
+        // f.prototype.useX = function() { this.x; }
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // function f() {
+      //     this.[|x|] = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.x = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() {
+        //     [|this.x = 0;|]
+        // }
+        // f.prototype.setX = function() {
+        //     this.x = 1;
+        // }
+        // f.prototype.useX = function() { this.x; }
+      === 1 ===
+      // === /a.js ===
+      // function f() {
+      //     this.x = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.[|x|] = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() {
+        //     this.x = 0;
+        // }
+        // f.prototype.setX = function() {
+        //     [|this.x = 1;|]
+        // }
+        // f.prototype.useX = function() { this.x; }
+      === 2 ===
+      // === /a.js ===
+      // function f() {
+      //     this.x = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.x = 1;
+      // }
+      // f.prototype.useX = function() { this.[|x|]; }
+  }
+]
 
 [
   {
@@ -336,6 +540,75 @@
 //     this.[|x|] = 1;
 // }
 // f.prototype.useX = function() { this./*FIND ALL REFS*/[|x|]; }
+
+[
+  {
+    === Definition ===
+      // === /a.js ===
+      // function f() {
+      //     this.[|x|] = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.x = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() {
+        //     [|this.x = 0;|]
+        // }
+        // f.prototype.setX = function() {
+        //     this.x = 1;
+        // }
+        // f.prototype.useX = function() { this.x; }
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // function f() {
+      //     this.[|x|] = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.x = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() {
+        //     [|this.x = 0;|]
+        // }
+        // f.prototype.setX = function() {
+        //     this.x = 1;
+        // }
+        // f.prototype.useX = function() { this.x; }
+      === 1 ===
+      // === /a.js ===
+      // function f() {
+      //     this.x = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.[|x|] = 1;
+      // }
+      // f.prototype.useX = function() { this.x; }
+      === ContextSpan ===
+        // === /a.js ===
+        // function f() {
+        //     this.x = 0;
+        // }
+        // f.prototype.setX = function() {
+        //     [|this.x = 1;|]
+        // }
+        // f.prototype.useX = function() { this.x; }
+      === 2 ===
+      // === /a.js ===
+      // function f() {
+      //     this.x = 0;
+      // }
+      // f.prototype.setX = function() {
+      //     this.x = 1;
+      // }
+      // f.prototype.useX = function() { this.[|x|]; }
+  }
+]
 
 [
   {

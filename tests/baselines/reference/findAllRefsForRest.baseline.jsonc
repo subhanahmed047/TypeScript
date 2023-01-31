@@ -10,6 +10,62 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForRest.ts ===
+      // interface Gen {
+      //     x: number
+      //     [|parent|]: Gen;
+      //     millenial: string;
+      // }
+      // let t: Gen;
+      // var { x, ...rest } = t;
+      // rest.parent;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForRest.ts ===
+        // interface Gen {
+        //     x: number
+        //     [|parent: Gen;|]
+        //     millenial: string;
+        // }
+        // let t: Gen;
+        // var { x, ...rest } = t;
+        // rest.parent;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForRest.ts ===
+      // interface Gen {
+      //     x: number
+      //     [|parent|]: Gen;
+      //     millenial: string;
+      // }
+      // let t: Gen;
+      // var { x, ...rest } = t;
+      // rest.parent;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForRest.ts ===
+        // interface Gen {
+        //     x: number
+        //     [|parent: Gen;|]
+        //     millenial: string;
+        // }
+        // let t: Gen;
+        // var { x, ...rest } = t;
+        // rest.parent;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForRest.ts ===
+      // interface Gen {
+      //     x: number
+      //     parent: Gen;
+      //     millenial: string;
+      // }
+      // let t: Gen;
+      // var { x, ...rest } = t;
+      // rest.[|parent|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -103,6 +159,62 @@
 // let t: Gen;
 // var { x, ...rest } = t;
 // rest./*FIND ALL REFS*/[|parent|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForRest.ts ===
+      // interface Gen {
+      //     x: number
+      //     [|parent|]: Gen;
+      //     millenial: string;
+      // }
+      // let t: Gen;
+      // var { x, ...rest } = t;
+      // rest.parent;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForRest.ts ===
+        // interface Gen {
+        //     x: number
+        //     [|parent: Gen;|]
+        //     millenial: string;
+        // }
+        // let t: Gen;
+        // var { x, ...rest } = t;
+        // rest.parent;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForRest.ts ===
+      // interface Gen {
+      //     x: number
+      //     [|parent|]: Gen;
+      //     millenial: string;
+      // }
+      // let t: Gen;
+      // var { x, ...rest } = t;
+      // rest.parent;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForRest.ts ===
+        // interface Gen {
+        //     x: number
+        //     [|parent: Gen;|]
+        //     millenial: string;
+        // }
+        // let t: Gen;
+        // var { x, ...rest } = t;
+        // rest.parent;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForRest.ts ===
+      // interface Gen {
+      //     x: number
+      //     parent: Gen;
+      //     millenial: string;
+      // }
+      // let t: Gen;
+      // var { x, ...rest } = t;
+      // rest.[|parent|];
+  }
+]
 
 [
   {

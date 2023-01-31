@@ -4,6 +4,20 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForIndexProperty2.ts ===
+      // var a;
+      // a["[|blah|]"];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForIndexProperty2.ts ===
+      // var a;
+      // a["[|blah|]"];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

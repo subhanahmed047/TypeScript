@@ -1,0 +1,51 @@
+/*====== /tests/cases/fourslash/jsdocThrowsTag_rename.ts ======*/
+
+class [|RENAME|] extends Error {}
+/**
+ * @throws {RENAME}
+ */
+function f() {}
+
+=== 0 ===
+// === /tests/cases/fourslash/jsdocThrowsTag_rename.ts ===
+// class [|E|] extends Error {}
+// /**
+//  * @throws {E}
+//  */
+// function f() {}
+=== ContextSpan ===
+  // === /tests/cases/fourslash/jsdocThrowsTag_rename.ts ===
+  // [|class E extends Error {}|]
+  // /**
+  //  * @throws {E}
+  //  */
+  // function f() {}
+=== 1 ===
+// === /tests/cases/fourslash/jsdocThrowsTag_rename.ts ===
+// class E extends Error {}
+// /**
+//  * @throws {[|E|]}
+//  */
+// function f() {}
+
+
+[
+  {
+    "textSpan": {
+      "start": 6,
+      "length": 1
+    },
+    "fileName": "/tests/cases/fourslash/jsdocThrowsTag_rename.ts",
+    "contextSpan": {
+      "start": 0,
+      "length": 24
+    }
+  },
+  {
+    "textSpan": {
+      "start": 41,
+      "length": 1
+    },
+    "fileName": "/tests/cases/fourslash/jsdocThrowsTag_rename.ts"
+  }
+]

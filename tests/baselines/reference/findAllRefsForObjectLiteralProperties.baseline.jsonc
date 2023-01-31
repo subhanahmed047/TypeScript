@@ -9,6 +9,75 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+      // var x = {
+      //     [|property|]: {}
+      // };
+      // 
+      // x.property;
+      // 
+      // let {property: pVar} = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+        // var x = {
+        //     [|property: {}|]
+        // };
+        // 
+        // x.property;
+        // 
+        // let {property: pVar} = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+      // var x = {
+      //     [|property|]: {}
+      // };
+      // 
+      // x.property;
+      // 
+      // let {property: pVar} = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+        // var x = {
+        //     [|property: {}|]
+        // };
+        // 
+        // x.property;
+        // 
+        // let {property: pVar} = x;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+      // var x = {
+      //     property: {}
+      // };
+      // 
+      // x.[|property|];
+      // 
+      // let {property: pVar} = x;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+      // var x = {
+      //     property: {}
+      // };
+      // 
+      // x.property;
+      // 
+      // let {[|property|]: pVar} = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+        // var x = {
+        //     property: {}
+        // };
+        // 
+        // x.property;
+        // 
+        // [|let {property: pVar} = x;|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -113,6 +182,75 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+      // var x = {
+      //     [|property|]: {}
+      // };
+      // 
+      // x.property;
+      // 
+      // let {property: pVar} = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+        // var x = {
+        //     [|property: {}|]
+        // };
+        // 
+        // x.property;
+        // 
+        // let {property: pVar} = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+      // var x = {
+      //     [|property|]: {}
+      // };
+      // 
+      // x.property;
+      // 
+      // let {property: pVar} = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+        // var x = {
+        //     [|property: {}|]
+        // };
+        // 
+        // x.property;
+        // 
+        // let {property: pVar} = x;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+      // var x = {
+      //     property: {}
+      // };
+      // 
+      // x.[|property|];
+      // 
+      // let {property: pVar} = x;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+      // var x = {
+      //     property: {}
+      // };
+      // 
+      // x.property;
+      // 
+      // let {[|property|]: pVar} = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+        // var x = {
+        //     property: {}
+        // };
+        // 
+        // x.property;
+        // 
+        // [|let {property: pVar} = x;|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -203,6 +341,15 @@
   }
 ]
 
+// === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+// var x = {
+//     property: {}
+// };
+// 
+// x.property;
+// 
+// /*FIND ALL REFS*/let {property: pVar} = x;
+
 undefined
 
 // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
@@ -213,6 +360,75 @@ undefined
 // x.[|property|];
 // 
 // let {/*FIND ALL REFS*/[|property|]: pVar} = x;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+      // var x = {
+      //     [|property|]: {}
+      // };
+      // 
+      // x.property;
+      // 
+      // let {property: pVar} = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+        // var x = {
+        //     [|property: {}|]
+        // };
+        // 
+        // x.property;
+        // 
+        // let {property: pVar} = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+      // var x = {
+      //     [|property|]: {}
+      // };
+      // 
+      // x.property;
+      // 
+      // let {property: pVar} = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+        // var x = {
+        //     [|property: {}|]
+        // };
+        // 
+        // x.property;
+        // 
+        // let {property: pVar} = x;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+      // var x = {
+      //     property: {}
+      // };
+      // 
+      // x.[|property|];
+      // 
+      // let {property: pVar} = x;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+      // var x = {
+      //     property: {}
+      // };
+      // 
+      // x.property;
+      // 
+      // let {[|property|]: pVar} = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForObjectLiteralProperties.ts ===
+        // var x = {
+        //     property: {}
+        // };
+        // 
+        // x.property;
+        // 
+        // [|let {property: pVar} = x;|]
+  }
+]
 
 [
   {

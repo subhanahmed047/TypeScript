@@ -14,6 +14,141 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract [|a|]: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     [|abstract a: number;|]
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract [|a|]: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     [|abstract a: number;|]
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     [|a|];
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     [|a;|]
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     [|a|];
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     [|a;|]
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.[|a|];
+      // c.method();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -185,6 +320,141 @@
 // var c: MyClass;
 // c.[|a|];
 // c.method();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract [|a|]: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     [|abstract a: number;|]
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract [|a|]: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     [|abstract a: number;|]
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     [|a|];
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     [|a;|]
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     [|a|];
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     [|a;|]
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.[|a|];
+      // c.method();
+  }
+]
 
 [
   {
@@ -362,6 +632,141 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract [|a|]: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     [|abstract a: number;|]
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract [|a|]: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     [|abstract a: number;|]
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     [|a|];
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     [|a;|]
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     [|a|];
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     [|a;|]
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.[|a|];
+      // c.method();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -530,6 +935,141 @@
 // var c: MyClass;
 // c.a;
 // c.[|method|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract [|method|](): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     [|abstract method(): void;|]
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract [|method|](): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     [|abstract method(): void;|]
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     [|method|]() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     [|method() { }|]
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     [|method|]() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     [|method() { }|]
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.[|method|]();
+  }
+]
 
 [
   {
@@ -723,6 +1263,141 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract [|method|](): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     [|abstract method(): void;|]
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract [|method|](): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     [|abstract method(): void;|]
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     [|method|]() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     [|method() { }|]
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     [|method|]() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     [|method() { }|]
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.[|method|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -910,6 +1585,141 @@
 // var c: MyClass;
 // c.a;
 // c./*FIND ALL REFS*/[|method|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract [|method|](): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     [|abstract method(): void;|]
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract [|method|](): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     [|abstract method(): void;|]
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     method() { }
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     [|method|]() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     [|method() { }|]
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     [|method|]() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.method();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+        // abstract class Base {
+        //     abstract a: number;
+        //     abstract method(): void;
+        // }
+        // class MyClass extends Base {
+        //     a;
+        //     [|method() { }|]
+        // }
+        // 
+        // var c: MyClass;
+        // c.a;
+        // c.method();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForClassMembersExtendingAbstractClass.ts ===
+      // abstract class Base {
+      //     abstract a: number;
+      //     abstract method(): void;
+      // }
+      // class MyClass extends Base {
+      //     a;
+      //     method() { }
+      // }
+      // 
+      // var c: MyClass;
+      // c.a;
+      // c.[|method|]();
+  }
+]
 
 [
   {

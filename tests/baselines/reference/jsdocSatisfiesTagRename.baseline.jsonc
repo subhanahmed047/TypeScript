@@ -1,0 +1,59 @@
+/*====== /a.js ======*/
+
+/**
+ * @typedef {Object} RENAME
+ * @property {number} a
+ */
+
+/** @satisfies {[|RENAME|]} comment */
+const foo = { a: 1 };
+
+=== 0 ===
+// === /a.js ===
+// /**
+//  * @typedef {Object} [|T|]
+//  * @property {number} a
+//  */
+// 
+// /** @satisfies {T} comment */
+// const foo = { a: 1 };
+=== ContextSpan ===
+  // === /a.js ===
+  // /**
+  //  * [|@typedef {Object} T
+  //  * @property {number} a
+  //  |]*/
+  // 
+  // /** @satisfies {T} comment */
+  // const foo = { a: 1 };
+=== 1 ===
+// === /a.js ===
+// /**
+//  * @typedef {Object} T
+//  * @property {number} a
+//  */
+// 
+// /** @satisfies {[|T|]} comment */
+// const foo = { a: 1 };
+
+
+[
+  {
+    "textSpan": {
+      "start": 25,
+      "length": 1
+    },
+    "fileName": "/a.js",
+    "contextSpan": {
+      "start": 7,
+      "length": 45
+    }
+  },
+  {
+    "textSpan": {
+      "start": 72,
+      "length": 1
+    },
+    "fileName": "/a.js"
+  }
+]

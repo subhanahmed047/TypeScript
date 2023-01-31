@@ -10,6 +10,112 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: [|Bar|];
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: [|Bar|]<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: [|Bar|]<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: [|Bar|].X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 5 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: [|Bar|].X<string>;
+      // let f: Bar.X.Y;
+      === 6 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: [|Bar|].X.Y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -123,6 +229,112 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: [|Bar|];
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: [|Bar|]<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: [|Bar|]<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: [|Bar|].X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 5 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: [|Bar|].X<string>;
+      // let f: Bar.X.Y;
+      === 6 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: [|Bar|].X.Y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -226,6 +438,112 @@
 // let d: [|Bar|].X;
 // let e: [|Bar|].X<string>;
 // let f: [|Bar|].X.Y;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: [|Bar|];
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: [|Bar|]<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: [|Bar|]<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: [|Bar|].X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 5 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: [|Bar|].X<string>;
+      // let f: Bar.X.Y;
+      === 6 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: [|Bar|].X.Y;
+  }
+]
 
 [
   {
@@ -335,6 +653,112 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: [|Bar|];
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: [|Bar|]<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: [|Bar|]<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: [|Bar|].X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 5 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: [|Bar|].X<string>;
+      // let f: Bar.X.Y;
+      === 6 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: [|Bar|].X.Y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -438,6 +862,112 @@
 // let d: /*FIND ALL REFS*/[|Bar|].X;
 // let e: [|Bar|].X<string>;
 // let f: [|Bar|].X.Y;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: [|Bar|];
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: [|Bar|]<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: [|Bar|]<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: [|Bar|].X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 5 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: [|Bar|].X<string>;
+      // let f: Bar.X.Y;
+      === 6 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: [|Bar|].X.Y;
+  }
+]
 
 [
   {
@@ -547,6 +1077,112 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: [|Bar|];
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: [|Bar|]<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: [|Bar|]<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: [|Bar|].X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 5 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: [|Bar|].X<string>;
+      // let f: Bar.X.Y;
+      === 6 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: [|Bar|].X.Y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -650,6 +1286,112 @@
 // let d: [|Bar|].X;
 // let e: [|Bar|].X<string>;
 // let f: /*FIND ALL REFS*/[|Bar|].X.Y;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as [|Bar|] from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+        // [|import * as Bar from "does-not-exist";|]
+        // 
+        // let a: Bar;
+        // let b: Bar<string>;
+        // let c: Bar<string, number>;
+        // let d: Bar.X;
+        // let e: Bar.X<string>;
+        // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: [|Bar|];
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: [|Bar|]<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: [|Bar|]<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 4 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: [|Bar|].X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 5 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: [|Bar|].X<string>;
+      // let f: Bar.X.Y;
+      === 6 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: [|Bar|].X.Y;
+  }
+]
 
 [
   {
@@ -759,6 +1501,42 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.[|X|];
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.[|X|];
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.[|X|]<string>;
+      // let f: Bar.X.Y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -846,6 +1624,42 @@
 // let d: Bar.[|X|];
 // let e: Bar./*FIND ALL REFS*/[|X|]<string>;
 // let f: Bar.X.Y;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.[|X|]<string>;
+      // let f: Bar.X.Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.[|X|];
+      // let e: Bar.X<string>;
+      // let f: Bar.X.Y;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.[|X|]<string>;
+      // let f: Bar.X.Y;
+  }
+]
 
 [
   {
@@ -939,6 +1753,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.[|X|].Y;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.[|X|].Y;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -973,6 +1813,32 @@
 // let d: Bar.X;
 // let e: Bar.X<string>;
 // let f: Bar.X./*FIND ALL REFS*/[|Y|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.[|Y|];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsUnresolvedSymbols3.ts ===
+      // import * as Bar from "does-not-exist";
+      // 
+      // let a: Bar;
+      // let b: Bar<string>;
+      // let c: Bar<string, number>;
+      // let d: Bar.X;
+      // let e: Bar.X<string>;
+      // let f: Bar.X.[|Y|];
+  }
+]
 
 [
   {

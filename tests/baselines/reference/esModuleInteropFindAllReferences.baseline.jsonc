@@ -1,3 +1,8 @@
+// === /abc.d.ts ===
+// declare module "a" {
+//     /*FIND ALL REFS*/export const x: number;
+// }
+
 undefined
 
 // === /b.ts ===
@@ -8,6 +13,36 @@ undefined
 // declare module "a" {
 //     export const /*FIND ALL REFS*/[|x|]: number;
 // }
+
+[
+  {
+    === Definition ===
+      // === /abc.d.ts ===
+      // declare module "a" {
+      //     export const [|x|]: number;
+      // }
+      === ContextSpan ===
+        // === /abc.d.ts ===
+        // declare module "a" {
+        //     [|export const x: number;|]
+        // }
+    === References ===
+      === 0 ===
+      // === /abc.d.ts ===
+      // declare module "a" {
+      //     export const [|x|]: number;
+      // }
+      === ContextSpan ===
+        // === /abc.d.ts ===
+        // declare module "a" {
+        //     [|export const x: number;|]
+        // }
+      === 1 ===
+      // === /b.ts ===
+      // import a from "a";
+      // a.[|x|];
+  }
+]
 
 [
   {
@@ -87,6 +122,36 @@ undefined
 // declare module "a" {
 //     export const [|x|]: number;
 // }
+
+[
+  {
+    === Definition ===
+      // === /abc.d.ts ===
+      // declare module "a" {
+      //     export const [|x|]: number;
+      // }
+      === ContextSpan ===
+        // === /abc.d.ts ===
+        // declare module "a" {
+        //     [|export const x: number;|]
+        // }
+    === References ===
+      === 0 ===
+      // === /abc.d.ts ===
+      // declare module "a" {
+      //     export const [|x|]: number;
+      // }
+      === ContextSpan ===
+        // === /abc.d.ts ===
+        // declare module "a" {
+        //     [|export const x: number;|]
+        // }
+      === 1 ===
+      // === /b.ts ===
+      // import a from "a";
+      // a.[|x|];
+  }
+]
 
 [
   {

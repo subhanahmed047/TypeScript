@@ -8,6 +8,24 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // /// <reference path="[|b.ts|]" />
+      // /// <reference types="globals" />
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // /// <reference path="[|b.ts|]" />
+      // /// <reference types="globals" />
+      === 1 ===
+      // === /c.js ===
+      // require([|"./b"|]);
+      // require("globals");
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -53,6 +71,24 @@
 // === /a.ts ===
 // /// <reference path="b.ts" />
 // /// <reference types="[|globals|]/*FIND ALL REFS*/" />
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // /// <reference path="b.ts" />
+      // /// <reference types="[|globals|]" />
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // /// <reference path="b.ts" />
+      // /// <reference types="[|globals|]" />
+      === 1 ===
+      // === /c.js ===
+      // require("./b");
+      // require([|"globals"|]);
+  }
+]
 
 [
   {

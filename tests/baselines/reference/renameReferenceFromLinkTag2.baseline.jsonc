@@ -1,0 +1,59 @@
+/*====== /a.ts ======*/
+
+enum E {
+    /** {@link [|RENAME|]} */
+    Foo
+}
+interface RENAME {
+    foo: E.Foo;
+}
+
+=== 0 ===
+// === /a.ts ===
+// enum E {
+//     /** {@link [|Foo|]} */
+//     Foo
+// }
+// interface Foo {
+//     foo: E.Foo;
+// }
+=== 1 ===
+// === /a.ts ===
+// enum E {
+//     /** {@link Foo} */
+//     Foo
+// }
+// interface [|Foo|] {
+//     foo: E.Foo;
+// }
+=== ContextSpan ===
+  // === /a.ts ===
+  // enum E {
+  //     /** {@link Foo} */
+  //     Foo
+  // }
+  // [|interface Foo {
+  //     foo: E.Foo;
+  // }|]
+
+
+[
+  {
+    "textSpan": {
+      "start": 24,
+      "length": 3
+    },
+    "fileName": "/a.ts"
+  },
+  {
+    "textSpan": {
+      "start": 52,
+      "length": 3
+    },
+    "fileName": "/a.ts",
+    "contextSpan": {
+      "start": 42,
+      "length": 33
+    }
+  }
+]

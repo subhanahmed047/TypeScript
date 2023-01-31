@@ -6,6 +6,57 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { [|x|]: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { [|x: {};|] }
+        // interface J { x: {}; }
+        // declare const o: (I | J) & { x: string };
+        // o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { [|x|]: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { [|x: {};|] }
+        // interface J { x: {}; }
+        // declare const o: (I | J) & { x: string };
+        // o.x;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { [|x|]: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { [|x: {};|] }
+        // interface J { x: {}; }
+        // declare const o: (I | J) & { x: string };
+        // o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { x: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.[|x|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -152,6 +203,57 @@
 // interface J { /*FIND ALL REFS*/[|x|]: {}; }
 // declare const o: (I | J) & { x: string };
 // o.[|x|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { x: {}; }
+      // interface J { [|x|]: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { x: {}; }
+        // interface J { [|x: {};|] }
+        // declare const o: (I | J) & { x: string };
+        // o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { x: {}; }
+      // interface J { [|x|]: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { x: {}; }
+        // interface J { [|x: {};|] }
+        // declare const o: (I | J) & { x: string };
+        // o.x;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { [|x|]: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { [|x: {};|] }
+        // interface J { x: {}; }
+        // declare const o: (I | J) & { x: string };
+        // o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { x: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.[|x|];
+  }
+]
 
 [
   {
@@ -304,6 +406,57 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { x: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { [|x|]: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { x: {}; }
+        // interface J { x: {}; }
+        // declare const o: (I | J) & { [|x: string|] };
+        // o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { x: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { [|x|]: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { x: {}; }
+        // interface J { x: {}; }
+        // declare const o: (I | J) & { [|x: string|] };
+        // o.x;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { [|x|]: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { [|x: {};|] }
+        // interface J { x: {}; }
+        // declare const o: (I | J) & { x: string };
+        // o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { x: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.[|x|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -438,6 +591,111 @@
 // interface J { [|x|]: {}; }
 // declare const o: (I | J) & { [|x|]: string };
 // o./*FIND ALL REFS*/[|x|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { [|x|]: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { [|x: {};|] }
+        // interface J { x: {}; }
+        // declare const o: (I | J) & { x: string };
+        // o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { [|x|]: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { [|x: {};|] }
+        // interface J { x: {}; }
+        // declare const o: (I | J) & { x: string };
+        // o.x;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { x: {}; }
+      // interface J { [|x|]: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { x: {}; }
+        // interface J { [|x: {};|] }
+        // declare const o: (I | J) & { x: string };
+        // o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { x: {}; }
+      // interface J { [|x|]: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { x: {}; }
+        // interface J { [|x: {};|] }
+        // declare const o: (I | J) & { x: string };
+        // o.x;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { x: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { [|x|]: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { x: {}; }
+        // interface J { x: {}; }
+        // declare const o: (I | J) & { [|x: string|] };
+        // o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { x: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { [|x|]: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { x: {}; }
+        // interface J { x: {}; }
+        // declare const o: (I | J) & { [|x: string|] };
+        // o.x;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { [|x|]: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+        // interface I { [|x: {};|] }
+        // interface J { x: {}; }
+        // declare const o: (I | J) & { x: string };
+        // o.x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsRootSymbols.ts ===
+      // interface I { x: {}; }
+      // interface J { x: {}; }
+      // declare const o: (I | J) & { x: string };
+      // o.[|x|];
+  }
+]
 
 [
   {

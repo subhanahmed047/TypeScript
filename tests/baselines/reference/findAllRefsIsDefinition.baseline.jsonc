@@ -27,6 +27,255 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function [|foo|](a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // [|declare function foo(a: number): number;|]
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function [|foo|](a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // [|declare function foo(a: number): number;|]
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function [|foo|](a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // [|declare function foo(a: string): string;|]
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function [|foo|](a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // [|declare function foo(a: string | number): string | number;|]
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // [|foo|]; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -199,6 +448,255 @@
 //     foo(): void { }
 //     static init() { return new this() }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function [|foon|](a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // [|function foon(a: number): number;|]
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function [|foon|](a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // [|function foon(a: number): number;|]
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function [|foon|](a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // [|function foon(a: string): string;|]
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function [|foon|](a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // [|function foon(a: string | number): string | number {
+        //     return a
+        // }|]
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; [|foon|];
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+  }
+]
 
 [
   {
@@ -377,6 +875,147 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const [|bar|] = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // [|export const bar = 123;|]
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const [|bar|] = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // [|export const bar = 123;|]
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ [|bar|] });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -471,6 +1110,231 @@
 //     [|foo|](): void { }
 //     static init() { return new this() }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     [|foo|](): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     [|foo(): void;|]
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     [|foo|](): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     [|foo(): void;|]
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     [|foo|](): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     [|foo(): void { }|]
+        //     static init() { return new this() }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     [|foo|](): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     [|foo(): void { }|]
+        //     static init() { return new this() }
+        // }
+  }
+]
 
 [
   {
@@ -668,6 +1532,255 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class [|Foo|] implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // [|class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     [|constructor|](n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     [|constructor(n: number)|]
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     [|constructor|]()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     [|constructor()|]
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     [|constructor|](n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     [|constructor(n: number?) { }|]
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new [|this|]() }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -776,6 +1889,231 @@
 //     [|foo|]/*FIND ALL REFS*/(): void { }
 //     static init() { return new this() }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     [|foo|](): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     [|foo(): void;|]
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     [|foo|](): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     foo(): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     [|foo(): void;|]
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     foo(): void { }
+        //     static init() { return new this() }
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     [|foo|](): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     [|foo(): void { }|]
+        //     static init() { return new this() }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+      // declare function foo(a: number): number;
+      // declare function foo(a: string): string;
+      // declare function foo(a: string | number): string | number;
+      // 
+      // function foon(a: number): number;
+      // function foon(a: string): string;
+      // function foon(a: string | number): string | number {
+      //     return a
+      // }
+      // 
+      // foo; foon;
+      // 
+      // export const bar = 123;
+      // console.log({ bar });
+      // 
+      // interface IFoo {
+      //     foo(): void;
+      // }
+      // class Foo implements IFoo {
+      //     constructor(n: number)
+      //     constructor()
+      //     constructor(n: number?) { }
+      //     [|foo|](): void { }
+      //     static init() { return new this() }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsIsDefinition.ts ===
+        // declare function foo(a: number): number;
+        // declare function foo(a: string): string;
+        // declare function foo(a: string | number): string | number;
+        // 
+        // function foon(a: number): number;
+        // function foon(a: string): string;
+        // function foon(a: string | number): string | number {
+        //     return a
+        // }
+        // 
+        // foo; foon;
+        // 
+        // export const bar = 123;
+        // console.log({ bar });
+        // 
+        // interface IFoo {
+        //     foo(): void;
+        // }
+        // class Foo implements IFoo {
+        //     constructor(n: number)
+        //     constructor()
+        //     constructor(n: number?) { }
+        //     [|foo(): void { }|]
+        //     static init() { return new this() }
+        // }
+  }
+]
 
 [
   {

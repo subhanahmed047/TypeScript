@@ -8,6 +8,79 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration1.ts ===
+      // class Foo {
+      //     constructor(private [|privateParam|]: number) {
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration1.ts ===
+        // class Foo {
+        //     constructor([|private privateParam: number|]) {
+        //         let localPrivate = privateParam;
+        //         this.privateParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration1.ts ===
+      // class Foo {
+      //     constructor(private [|privateParam|]: number) {
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration1.ts ===
+        // class Foo {
+        //     constructor([|private privateParam: number|]) {
+        //         let localPrivate = privateParam;
+        //         this.privateParam += 10;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number) {
+      //         let localPrivate = privateParam;
+      //         this.[|privateParam|] += 10;
+      //     }
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration1.ts ===
+      // class Foo {
+      //     constructor(private [|privateParam|]: number) {
+      //         let localPrivate = privateParam;
+      //         this.privateParam += 10;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration1.ts ===
+        // class Foo {
+        //     constructor([|private privateParam: number|]) {
+        //         let localPrivate = privateParam;
+        //         this.privateParam += 10;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration1.ts ===
+      // class Foo {
+      //     constructor(private privateParam: number) {
+      //         let localPrivate = [|privateParam|];
+      //         this.privateParam += 10;
+      //     }
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

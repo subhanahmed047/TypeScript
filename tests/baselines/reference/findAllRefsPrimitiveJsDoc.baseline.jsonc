@@ -7,6 +7,47 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {[|number|]} n
+      //  * @returns {number}
+      //  */
+      // function f(n: number): number {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {[|number|]} n
+      //  * @returns {number}
+      //  */
+      // function f(n: number): number {}
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {number} n
+      //  * @returns {[|number|]}
+      //  */
+      // function f(n: number): number {}
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {number} n
+      //  * @returns {number}
+      //  */
+      // function f(n: [|number|]): number {}
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {number} n
+      //  * @returns {number}
+      //  */
+      // function f(n: number): [|number|] {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -67,6 +108,47 @@
 //  * @returns {/*FIND ALL REFS*/[|number|]}
 //  */
 // function f(n: [|number|]): [|number|] {}
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {[|number|]} n
+      //  * @returns {number}
+      //  */
+      // function f(n: number): number {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {[|number|]} n
+      //  * @returns {number}
+      //  */
+      // function f(n: number): number {}
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {number} n
+      //  * @returns {[|number|]}
+      //  */
+      // function f(n: number): number {}
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {number} n
+      //  * @returns {number}
+      //  */
+      // function f(n: [|number|]): number {}
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {number} n
+      //  * @returns {number}
+      //  */
+      // function f(n: number): [|number|] {}
+  }
+]
 
 [
   {
@@ -133,6 +215,47 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {[|number|]} n
+      //  * @returns {number}
+      //  */
+      // function f(n: number): number {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {[|number|]} n
+      //  * @returns {number}
+      //  */
+      // function f(n: number): number {}
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {number} n
+      //  * @returns {[|number|]}
+      //  */
+      // function f(n: number): number {}
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {number} n
+      //  * @returns {number}
+      //  */
+      // function f(n: [|number|]): number {}
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {number} n
+      //  * @returns {number}
+      //  */
+      // function f(n: number): [|number|] {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -193,6 +316,47 @@
 //  * @returns {[|number|]}
 //  */
 // function f(n: [|number|]): /*FIND ALL REFS*/[|number|] {}
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {[|number|]} n
+      //  * @returns {number}
+      //  */
+      // function f(n: number): number {}
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {[|number|]} n
+      //  * @returns {number}
+      //  */
+      // function f(n: number): number {}
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {number} n
+      //  * @returns {[|number|]}
+      //  */
+      // function f(n: number): number {}
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {number} n
+      //  * @returns {number}
+      //  */
+      // function f(n: [|number|]): number {}
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsPrimitiveJsDoc.ts ===
+      // /**
+      //  * @param {number} n
+      //  * @returns {number}
+      //  */
+      // function f(n: number): [|number|] {}
+  }
+]
 
 [
   {

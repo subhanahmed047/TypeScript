@@ -10,6 +10,62 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+      // class class1 extends class1 {
+      //    [|doStuff|]() { }
+      //    propName: string;
+      // }
+      // 
+      // var v: class1;
+      // v.doStuff();
+      // v.propName;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+        // class class1 extends class1 {
+        //    [|doStuff() { }|]
+        //    propName: string;
+        // }
+        // 
+        // var v: class1;
+        // v.doStuff();
+        // v.propName;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+      // class class1 extends class1 {
+      //    [|doStuff|]() { }
+      //    propName: string;
+      // }
+      // 
+      // var v: class1;
+      // v.doStuff();
+      // v.propName;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+        // class class1 extends class1 {
+        //    [|doStuff() { }|]
+        //    propName: string;
+        // }
+        // 
+        // var v: class1;
+        // v.doStuff();
+        // v.propName;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+      // class class1 extends class1 {
+      //    doStuff() { }
+      //    propName: string;
+      // }
+      // 
+      // var v: class1;
+      // v.[|doStuff|]();
+      // v.propName;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -114,6 +170,62 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+      // class class1 extends class1 {
+      //    doStuff() { }
+      //    [|propName|]: string;
+      // }
+      // 
+      // var v: class1;
+      // v.doStuff();
+      // v.propName;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+        // class class1 extends class1 {
+        //    doStuff() { }
+        //    [|propName: string;|]
+        // }
+        // 
+        // var v: class1;
+        // v.doStuff();
+        // v.propName;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+      // class class1 extends class1 {
+      //    doStuff() { }
+      //    [|propName|]: string;
+      // }
+      // 
+      // var v: class1;
+      // v.doStuff();
+      // v.propName;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+        // class class1 extends class1 {
+        //    doStuff() { }
+        //    [|propName: string;|]
+        // }
+        // 
+        // var v: class1;
+        // v.doStuff();
+        // v.propName;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+      // class class1 extends class1 {
+      //    doStuff() { }
+      //    propName: string;
+      // }
+      // 
+      // var v: class1;
+      // v.doStuff();
+      // v.[|propName|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -207,6 +319,62 @@
 // var v: class1;
 // v./*FIND ALL REFS*/[|doStuff|]();
 // v.propName;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+      // class class1 extends class1 {
+      //    [|doStuff|]() { }
+      //    propName: string;
+      // }
+      // 
+      // var v: class1;
+      // v.doStuff();
+      // v.propName;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+        // class class1 extends class1 {
+        //    [|doStuff() { }|]
+        //    propName: string;
+        // }
+        // 
+        // var v: class1;
+        // v.doStuff();
+        // v.propName;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+      // class class1 extends class1 {
+      //    [|doStuff|]() { }
+      //    propName: string;
+      // }
+      // 
+      // var v: class1;
+      // v.doStuff();
+      // v.propName;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+        // class class1 extends class1 {
+        //    [|doStuff() { }|]
+        //    propName: string;
+        // }
+        // 
+        // var v: class1;
+        // v.doStuff();
+        // v.propName;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+      // class class1 extends class1 {
+      //    doStuff() { }
+      //    propName: string;
+      // }
+      // 
+      // var v: class1;
+      // v.[|doStuff|]();
+      // v.propName;
+  }
+]
 
 [
   {
@@ -309,6 +477,62 @@
 // var v: class1;
 // v.doStuff();
 // v./*FIND ALL REFS*/[|propName|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+      // class class1 extends class1 {
+      //    doStuff() { }
+      //    [|propName|]: string;
+      // }
+      // 
+      // var v: class1;
+      // v.doStuff();
+      // v.propName;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+        // class class1 extends class1 {
+        //    doStuff() { }
+        //    [|propName: string;|]
+        // }
+        // 
+        // var v: class1;
+        // v.doStuff();
+        // v.propName;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+      // class class1 extends class1 {
+      //    doStuff() { }
+      //    [|propName|]: string;
+      // }
+      // 
+      // var v: class1;
+      // v.doStuff();
+      // v.propName;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+        // class class1 extends class1 {
+        //    doStuff() { }
+        //    [|propName: string;|]
+        // }
+        // 
+        // var v: class1;
+        // v.doStuff();
+        // v.propName;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInheritedProperties1.ts ===
+      // class class1 extends class1 {
+      //    doStuff() { }
+      //    propName: string;
+      // }
+      // 
+      // var v: class1;
+      // v.doStuff();
+      // v.[|propName|];
+  }
+]
 
 [
   {

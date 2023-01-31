@@ -3,6 +3,24 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // export { [|x|] };
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export { x };|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export { [|x|] };
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export { x };|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -52,6 +70,24 @@
 
 // === /a.ts ===
 // export { /*FIND ALL REFS*/[|x|] };
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // export { [|x|] };
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export { x };|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export { [|x|] };
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export { x };|]
+  }
+]
 
 [
   {

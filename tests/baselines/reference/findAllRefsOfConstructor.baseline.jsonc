@@ -18,6 +18,234 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+      // class [|A|] {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // class C extends B {
+      //     constructor() {
+      //         super("");
+      //     }
+      // }
+      // class D extends B { }
+      // class E implements A { }
+      // const a = new A("a");
+      // const b = new B("b");
+      // const c = new C();
+      // const d = new D("d");
+      // const e = new E();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+        // [|class A {
+        //     constructor(s: string) {}
+        // }|]
+        // class B extends A { }
+        // class C extends B {
+        //     constructor() {
+        //         super("");
+        //     }
+        // }
+        // class D extends B { }
+        // class E implements A { }
+        // const a = new A("a");
+        // const b = new B("b");
+        // const c = new C();
+        // const d = new D("d");
+        // const e = new E();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+      // class A {
+      //     [|constructor|](s: string) {}
+      // }
+      // class B extends A { }
+      // class C extends B {
+      //     constructor() {
+      //         super("");
+      //     }
+      // }
+      // class D extends B { }
+      // class E implements A { }
+      // const a = new A("a");
+      // const b = new B("b");
+      // const c = new C();
+      // const d = new D("d");
+      // const e = new E();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+        // class A {
+        //     [|constructor(s: string) {}|]
+        // }
+        // class B extends A { }
+        // class C extends B {
+        //     constructor() {
+        //         super("");
+        //     }
+        // }
+        // class D extends B { }
+        // class E implements A { }
+        // const a = new A("a");
+        // const b = new B("b");
+        // const c = new C();
+        // const d = new D("d");
+        // const e = new E();
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // class C extends B {
+      //     constructor() {
+      //         super("");
+      //     }
+      // }
+      // class D extends B { }
+      // class E implements A { }
+      // const a = new [|A|]("a");
+      // const b = new B("b");
+      // const c = new C();
+      // const d = new D("d");
+      // const e = new E();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class [|B|] extends A { }
+      // class C extends B {
+      //     constructor() {
+      //         super("");
+      //     }
+      // }
+      // class D extends B { }
+      // class E implements A { }
+      // const a = new A("a");
+      // const b = new B("b");
+      // const c = new C();
+      // const d = new D("d");
+      // const e = new E();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+        // class A {
+        //     constructor(s: string) {}
+        // }
+        // [|class B extends A { }|]
+        // class C extends B {
+        //     constructor() {
+        //         super("");
+        //     }
+        // }
+        // class D extends B { }
+        // class E implements A { }
+        // const a = new A("a");
+        // const b = new B("b");
+        // const c = new C();
+        // const d = new D("d");
+        // const e = new E();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // class C extends B {
+      //     constructor() {
+      //         [|super|]("");
+      //     }
+      // }
+      // class D extends B { }
+      // class E implements A { }
+      // const a = new A("a");
+      // const b = new B("b");
+      // const c = new C();
+      // const d = new D("d");
+      // const e = new E();
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // class C extends B {
+      //     constructor() {
+      //         super("");
+      //     }
+      // }
+      // class D extends B { }
+      // class E implements A { }
+      // const a = new A("a");
+      // const b = new [|B|]("b");
+      // const c = new C();
+      // const d = new D("d");
+      // const e = new E();
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // class C extends B {
+      //     constructor() {
+      //         super("");
+      //     }
+      // }
+      // class [|D|] extends B { }
+      // class E implements A { }
+      // const a = new A("a");
+      // const b = new B("b");
+      // const c = new C();
+      // const d = new D("d");
+      // const e = new E();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+        // class A {
+        //     constructor(s: string) {}
+        // }
+        // class B extends A { }
+        // class C extends B {
+        //     constructor() {
+        //         super("");
+        //     }
+        // }
+        // [|class D extends B { }|]
+        // class E implements A { }
+        // const a = new A("a");
+        // const b = new B("b");
+        // const c = new C();
+        // const d = new D("d");
+        // const e = new E();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // class C extends B {
+      //     constructor() {
+      //         super("");
+      //     }
+      // }
+      // class D extends B { }
+      // class E implements A { }
+      // const a = new A("a");
+      // const b = new B("b");
+      // const c = new C();
+      // const d = new [|D|]("d");
+      // const e = new E();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -184,6 +412,102 @@
 // const c = new [|C|]();
 // const d = new D("d");
 // const e = new E();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // class [|C|] extends B {
+      //     constructor() {
+      //         super("");
+      //     }
+      // }
+      // class D extends B { }
+      // class E implements A { }
+      // const a = new A("a");
+      // const b = new B("b");
+      // const c = new C();
+      // const d = new D("d");
+      // const e = new E();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+        // class A {
+        //     constructor(s: string) {}
+        // }
+        // class B extends A { }
+        // [|class C extends B {
+        //     constructor() {
+        //         super("");
+        //     }
+        // }|]
+        // class D extends B { }
+        // class E implements A { }
+        // const a = new A("a");
+        // const b = new B("b");
+        // const c = new C();
+        // const d = new D("d");
+        // const e = new E();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // class C extends B {
+      //     [|constructor|]() {
+      //         super("");
+      //     }
+      // }
+      // class D extends B { }
+      // class E implements A { }
+      // const a = new A("a");
+      // const b = new B("b");
+      // const c = new C();
+      // const d = new D("d");
+      // const e = new E();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+        // class A {
+        //     constructor(s: string) {}
+        // }
+        // class B extends A { }
+        // class C extends B {
+        //     [|constructor() {
+        //         super("");
+        //     }|]
+        // }
+        // class D extends B { }
+        // class E implements A { }
+        // const a = new A("a");
+        // const b = new B("b");
+        // const c = new C();
+        // const d = new D("d");
+        // const e = new E();
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsOfConstructor.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // class C extends B {
+      //     constructor() {
+      //         super("");
+      //     }
+      // }
+      // class D extends B { }
+      // class E implements A { }
+      // const a = new A("a");
+      // const b = new B("b");
+      // const c = new [|C|]();
+      // const d = new D("d");
+      // const e = new E();
+  }
+]
 
 [
   {

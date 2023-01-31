@@ -21,6 +21,285 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module [|testClass|] {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }
+        // 
+        // [|module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }|]
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: [|testClass|];
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: [|testClass|].Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // [|testClass|].staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // [|testClass|].prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // [|testClass|].bind(this);
+      // testClass.s;
+      // new testClass();
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // [|testClass|].s;
+      // new testClass();
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new [|testClass|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -180,6 +459,285 @@
 // [|testClass|].bind(this);
 // [|testClass|].s;
 // new [|testClass|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module [|testClass|] {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }
+        // 
+        // [|module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }|]
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: [|testClass|];
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: [|testClass|].Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // [|testClass|].staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // [|testClass|].prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // [|testClass|].bind(this);
+      // testClass.s;
+      // new testClass();
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // [|testClass|].s;
+      // new testClass();
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new [|testClass|]();
+  }
+]
 
 [
   {
@@ -345,6 +903,285 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module [|testClass|] {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }
+        // 
+        // [|module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }|]
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: [|testClass|];
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: [|testClass|].Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // [|testClass|].staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // [|testClass|].prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // [|testClass|].bind(this);
+      // testClass.s;
+      // new testClass();
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // [|testClass|].s;
+      // new testClass();
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new [|testClass|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -504,6 +1341,285 @@
 // [|testClass|].bind(this);
 // [|testClass|].s;
 // new [|testClass|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module [|testClass|] {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }
+        // 
+        // [|module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }|]
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: [|testClass|];
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: [|testClass|].Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // [|testClass|].staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // [|testClass|].prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // [|testClass|].bind(this);
+      // testClass.s;
+      // new testClass();
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // [|testClass|].s;
+      // new testClass();
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new [|testClass|]();
+  }
+]
 
 [
   {
@@ -669,6 +1785,285 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module [|testClass|] {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }
+        // 
+        // [|module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }|]
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: [|testClass|];
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: [|testClass|].Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // [|testClass|].staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // [|testClass|].prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // [|testClass|].bind(this);
+      // testClass.s;
+      // new testClass();
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // [|testClass|].s;
+      // new testClass();
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new [|testClass|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -819,6 +2214,285 @@
 // [|testClass|].bind(this);
 // [|testClass|].s;
 // new [|testClass|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module [|testClass|] {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }
+        // 
+        // [|module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }|]
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: [|testClass|];
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: [|testClass|].Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // [|testClass|].staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // [|testClass|].prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // [|testClass|].bind(this);
+      // testClass.s;
+      // new testClass();
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // [|testClass|].s;
+      // new testClass();
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new [|testClass|]();
+  }
+]
 
 [
   {
@@ -975,6 +2649,285 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module [|testClass|] {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }
+        // 
+        // [|module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }|]
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: [|testClass|];
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: [|testClass|].Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // [|testClass|].staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // [|testClass|].prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // [|testClass|].bind(this);
+      // testClass.s;
+      // new testClass();
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // [|testClass|].s;
+      // new testClass();
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new [|testClass|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1125,6 +3078,285 @@
 // [|testClass|].bind(this);
 // [|testClass|].s;
 // new [|testClass|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module [|testClass|] {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }
+        // 
+        // [|module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }|]
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: [|testClass|];
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: [|testClass|].Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // [|testClass|].staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // [|testClass|].prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // [|testClass|].bind(this);
+      // testClass.s;
+      // new testClass();
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // [|testClass|].s;
+      // new testClass();
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new [|testClass|]();
+  }
+]
 
 [
   {
@@ -1281,6 +3513,285 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module [|testClass|] {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }
+        // 
+        // [|module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }|]
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: [|testClass|];
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: [|testClass|].Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // [|testClass|].staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // [|testClass|].prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // [|testClass|].bind(this);
+      // testClass.s;
+      // new testClass();
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // [|testClass|].s;
+      // new testClass();
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new [|testClass|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1434,6 +3945,285 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module [|testClass|] {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }
+        // 
+        // [|module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }|]
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: [|testClass|];
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: [|testClass|].Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // [|testClass|].staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // [|testClass|].prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // [|testClass|].bind(this);
+      // testClass.s;
+      // new testClass();
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // [|testClass|].s;
+      // new testClass();
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new [|testClass|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1584,6 +4374,285 @@
 // [|testClass|].bind(this);
 // [|testClass|].s;
 // new /*FIND ALL REFS*/[|testClass|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class [|testClass|] {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // [|class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }|]
+        // 
+        // module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module [|testClass|] {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+        // class testClass {
+        //     static staticMethod() { }
+        //     method() { }
+        // }
+        // 
+        // [|module testClass {
+        //     export interface Bar {
+        // 
+        //     }
+        //     export var s = 0;
+        // }|]
+        // 
+        // var c1: testClass;
+        // var c2: testClass.Bar;
+        // testClass.staticMethod();
+        // testClass.prototype.method();
+        // testClass.bind(this);
+        // testClass.s;
+        // new testClass();
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: [|testClass|];
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: [|testClass|].Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // [|testClass|].staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 5 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // [|testClass|].prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new testClass();
+      === 6 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // [|testClass|].bind(this);
+      // testClass.s;
+      // new testClass();
+      === 7 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // [|testClass|].s;
+      // new testClass();
+      === 8 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations4.ts ===
+      // class testClass {
+      //     static staticMethod() { }
+      //     method() { }
+      // }
+      // 
+      // module testClass {
+      //     export interface Bar {
+      // 
+      //     }
+      //     export var s = 0;
+      // }
+      // 
+      // var c1: testClass;
+      // var c2: testClass.Bar;
+      // testClass.staticMethod();
+      // testClass.prototype.method();
+      // testClass.bind(this);
+      // testClass.s;
+      // new [|testClass|]();
+  }
+]
 
 [
   {

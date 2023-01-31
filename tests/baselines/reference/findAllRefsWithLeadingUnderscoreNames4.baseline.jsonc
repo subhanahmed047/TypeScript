@@ -8,6 +8,52 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+      // class Foo {
+      //     public [|____bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.____bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+        // class Foo {
+        //     [|public ____bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.____bar;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+      // class Foo {
+      //     public [|____bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.____bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+        // class Foo {
+        //     [|public ____bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.____bar;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+      // class Foo {
+      //     public ____bar() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.[|____bar|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -110,6 +156,52 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+      // class Foo {
+      //     public [|____bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.____bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+        // class Foo {
+        //     [|public ____bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.____bar;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+      // class Foo {
+      //     public [|____bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.____bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+        // class Foo {
+        //     [|public ____bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.____bar;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+      // class Foo {
+      //     public ____bar() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.[|____bar|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -209,6 +301,52 @@
 // 
 // var x: Foo;
 // x./*FIND ALL REFS*/[|____bar|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+      // class Foo {
+      //     public [|____bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.____bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+        // class Foo {
+        //     [|public ____bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.____bar;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+      // class Foo {
+      //     public [|____bar|]() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.____bar;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+        // class Foo {
+        //     [|public ____bar() { return 0; }|]
+        // }
+        // 
+        // var x: Foo;
+        // x.____bar;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames4.ts ===
+      // class Foo {
+      //     public ____bar() { return 0; }
+      // }
+      // 
+      // var x: Foo;
+      // x.[|____bar|];
+  }
+]
 
 [
   {

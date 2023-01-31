@@ -12,6 +12,96 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function [|DefaultExportedFunction|]() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // [|export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }|]
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // namespace DefaultExportedFunction {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function [|DefaultExportedFunction|]() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // [|export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }|]
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // namespace DefaultExportedFunction {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return [|DefaultExportedFunction|];
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof [|DefaultExportedFunction|];
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = [|DefaultExportedFunction|]();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -145,6 +235,96 @@
 // 
 // namespace DefaultExportedFunction {
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function [|DefaultExportedFunction|]() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // [|export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }|]
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // namespace DefaultExportedFunction {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function [|DefaultExportedFunction|]() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // [|export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }|]
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // namespace DefaultExportedFunction {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return [|DefaultExportedFunction|];
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof [|DefaultExportedFunction|];
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = [|DefaultExportedFunction|]();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+  }
+]
 
 [
   {
@@ -284,6 +464,96 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function [|DefaultExportedFunction|]() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // [|export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }|]
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // namespace DefaultExportedFunction {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function [|DefaultExportedFunction|]() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // [|export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }|]
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // namespace DefaultExportedFunction {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return [|DefaultExportedFunction|];
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof [|DefaultExportedFunction|];
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = [|DefaultExportedFunction|]();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -413,6 +683,96 @@
 // 
 // namespace DefaultExportedFunction {
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function [|DefaultExportedFunction|]() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // [|export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }|]
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // namespace DefaultExportedFunction {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function [|DefaultExportedFunction|]() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // [|export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }|]
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // namespace DefaultExportedFunction {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return [|DefaultExportedFunction|];
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof [|DefaultExportedFunction|];
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = [|DefaultExportedFunction|]();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+  }
+]
 
 [
   {
@@ -548,6 +908,96 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function [|DefaultExportedFunction|]() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // [|export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }|]
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // namespace DefaultExportedFunction {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function [|DefaultExportedFunction|]() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // [|export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }|]
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // namespace DefaultExportedFunction {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return [|DefaultExportedFunction|];
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof [|DefaultExportedFunction|];
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = [|DefaultExportedFunction|]();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -680,6 +1130,60 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function [|DefaultExportedFunction|]() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // [|export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }|]
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // namespace DefaultExportedFunction {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace [|DefaultExportedFunction|] {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // [|namespace DefaultExportedFunction {
+        // }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -738,6 +1242,60 @@
 // 
 // namespace /*FIND ALL REFS*/[|DefaultExportedFunction|] {
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function [|DefaultExportedFunction|]() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace DefaultExportedFunction {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // [|export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }|]
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // namespace DefaultExportedFunction {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+      // export default function DefaultExportedFunction() {
+      //     return DefaultExportedFunction;
+      // }
+      // 
+      // var x: typeof DefaultExportedFunction;
+      // 
+      // var y = DefaultExportedFunction();
+      // 
+      // namespace [|DefaultExportedFunction|] {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport02.ts ===
+        // export default function DefaultExportedFunction() {
+        //     return DefaultExportedFunction;
+        // }
+        // 
+        // var x: typeof DefaultExportedFunction;
+        // 
+        // var y = DefaultExportedFunction();
+        // 
+        // [|namespace DefaultExportedFunction {
+        // }|]
+  }
+]
 
 [
   {

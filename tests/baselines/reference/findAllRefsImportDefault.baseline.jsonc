@@ -10,6 +10,98 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/f.ts ===
+      // export { foo as default };
+      // function [|foo|](a: number, b: number) {
+      //     return a + b;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // export { foo as default };
+        // [|function foo(a: number, b: number) {
+        //     return a + b;
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/f.ts ===
+      // export { [|foo|] as default };
+      // function foo(a: number, b: number) {
+      //     return a + b;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // [|export { foo as default };|]
+        // function foo(a: number, b: number) {
+        //     return a + b;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/f.ts ===
+      // export { foo as default };
+      // function [|foo|](a: number, b: number) {
+      //     return a + b;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // export { foo as default };
+        // [|function foo(a: number, b: number) {
+        //     return a + b;
+        // }|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/f.ts ===
+      // export { foo as [|default|] };
+      // function foo(a: number, b: number) {
+      //     return a + b;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // [|export { foo as default };|]
+        // function foo(a: number, b: number) {
+        //     return a + b;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/f.ts ===
+      // export { foo as [|default|] };
+      // function foo(a: number, b: number) {
+      //     return a + b;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // [|export { foo as default };|]
+        // function foo(a: number, b: number) {
+        //     return a + b;
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import [|bar|] from "./f";
+      // bar(1, 2);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import bar from "./f";|]
+        // bar(1, 2);
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import [|bar|] from "./f";
+      // bar(1, 2);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import bar from "./f";|]
+        // bar(1, 2);
+      === 1 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import bar from "./f";
+      // [|bar|](1, 2);
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

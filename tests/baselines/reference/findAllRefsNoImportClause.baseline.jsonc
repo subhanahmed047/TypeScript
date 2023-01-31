@@ -1,7 +1,28 @@
+// === /a.ts ===
+// /*FIND ALL REFS*/export const x = 0;
+
 undefined
 
 // === /a.ts ===
 // export const /*FIND ALL REFS*/[|x|] = 0;
+
+[
+  {
+    === Definition ===
+      // === /a.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export const x = 0;|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export const x = 0;|]
+  }
+]
 
 [
   {

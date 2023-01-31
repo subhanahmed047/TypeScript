@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // const [|obj|] = {Component: () => <div/>};
+      // const element = <obj.Component/>;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/index.tsx ===
+        // [|const obj = {Component: () => <div/>};|]
+        // const element = <obj.Component/>;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // const [|obj|] = {Component: () => <div/>};
+      // const element = <obj.Component/>;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/index.tsx ===
+        // [|const obj = {Component: () => <div/>};|]
+        // const element = <obj.Component/>;
+      === 1 ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // const obj = {Component: () => <div/>};
+      // const element = <[|obj|].Component/>;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -134,6 +160,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // const [|obj|] = {Component: () => <div/>};
+      // const element = <obj.Component/>;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/index.tsx ===
+        // [|const obj = {Component: () => <div/>};|]
+        // const element = <obj.Component/>;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // const [|obj|] = {Component: () => <div/>};
+      // const element = <obj.Component/>;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/index.tsx ===
+        // [|const obj = {Component: () => <div/>};|]
+        // const element = <obj.Component/>;
+      === 1 ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // const obj = {Component: () => <div/>};
+      // const element = <[|obj|].Component/>;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -261,6 +313,32 @@
 // === /tests/cases/fourslash/index.tsx ===
 // const [|obj|] = {Component: () => <div/>};
 // const element = </*FIND ALL REFS*/[|obj|].Component/>;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // const [|obj|] = {Component: () => <div/>};
+      // const element = <obj.Component/>;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/index.tsx ===
+        // [|const obj = {Component: () => <div/>};|]
+        // const element = <obj.Component/>;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // const [|obj|] = {Component: () => <div/>};
+      // const element = <obj.Component/>;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/index.tsx ===
+        // [|const obj = {Component: () => <div/>};|]
+        // const element = <obj.Component/>;
+      === 1 ===
+      // === /tests/cases/fourslash/index.tsx ===
+      // const obj = {Component: () => <div/>};
+      // const element = <[|obj|].Component/>;
+  }
+]
 
 [
   {

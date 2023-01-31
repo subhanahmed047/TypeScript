@@ -7,6 +7,54 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/jsdocLink_findAllReferences1.ts ===
+      // interface [|A|] {}
+      // /**
+      //  * {@link A()} is ok
+      //  */
+      // declare const a: A
+      === ContextSpan ===
+        // === /tests/cases/fourslash/jsdocLink_findAllReferences1.ts ===
+        // [|interface A {}|]
+        // /**
+        //  * {@link A()} is ok
+        //  */
+        // declare const a: A
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/jsdocLink_findAllReferences1.ts ===
+      // interface [|A|] {}
+      // /**
+      //  * {@link A()} is ok
+      //  */
+      // declare const a: A
+      === ContextSpan ===
+        // === /tests/cases/fourslash/jsdocLink_findAllReferences1.ts ===
+        // [|interface A {}|]
+        // /**
+        //  * {@link A()} is ok
+        //  */
+        // declare const a: A
+      === 1 ===
+      // === /tests/cases/fourslash/jsdocLink_findAllReferences1.ts ===
+      // interface A {}
+      // /**
+      //  * {@link [|A|]()} is ok
+      //  */
+      // declare const a: A
+      === 2 ===
+      // === /tests/cases/fourslash/jsdocLink_findAllReferences1.ts ===
+      // interface A {}
+      // /**
+      //  * {@link A()} is ok
+      //  */
+      // declare const a: [|A|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

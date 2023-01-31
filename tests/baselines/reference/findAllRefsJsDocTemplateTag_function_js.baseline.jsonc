@@ -7,6 +7,33 @@
 
 [
   {
+    === Definition ===
+      // === /a.js ===
+      // /**
+      //  * @template [|T|]
+      //  * @return {T}
+      //  */
+      // function f() {}
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // /**
+      //  * @template [|T|]
+      //  * @return {T}
+      //  */
+      // function f() {}
+      === 1 ===
+      // === /a.js ===
+      // /**
+      //  * @template T
+      //  * @return {[|T|]}
+      //  */
+      // function f() {}
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -69,6 +96,33 @@
 //  * @return {/*FIND ALL REFS*/[|T|]}
 //  */
 // function f() {}
+
+[
+  {
+    === Definition ===
+      // === /a.js ===
+      // /**
+      //  * @template [|T|]
+      //  * @return {T}
+      //  */
+      // function f() {}
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // /**
+      //  * @template [|T|]
+      //  * @return {T}
+      //  */
+      // function f() {}
+      === 1 ===
+      // === /a.js ===
+      // /**
+      //  * @template T
+      //  * @return {[|T|]}
+      //  */
+      // function f() {}
+  }
+]
 
 [
   {

@@ -9,6 +9,57 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // enum E {
+      //     /** {@link Foo} */
+      //     Foo
+      // }
+      // interface [|Foo|] {
+      //     foo: E.Foo;
+      // }
+      === ContextSpan ===
+        // === /a.ts ===
+        // enum E {
+        //     /** {@link Foo} */
+        //     Foo
+        // }
+        // [|interface Foo {
+        //     foo: E.Foo;
+        // }|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // enum E {
+      //     /** {@link [|Foo|]} */
+      //     Foo
+      // }
+      // interface Foo {
+      //     foo: E.Foo;
+      // }
+      === 1 ===
+      // === /a.ts ===
+      // enum E {
+      //     /** {@link Foo} */
+      //     Foo
+      // }
+      // interface [|Foo|] {
+      //     foo: E.Foo;
+      // }
+      === ContextSpan ===
+        // === /a.ts ===
+        // enum E {
+        //     /** {@link Foo} */
+        //     Foo
+        // }
+        // [|interface Foo {
+        //     foo: E.Foo;
+        // }|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

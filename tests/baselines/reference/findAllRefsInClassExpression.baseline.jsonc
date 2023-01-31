@@ -6,6 +6,63 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+      // interface I { [|boom|](): void; }
+      // new class C implements I {
+      //    boom(){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+        // interface I { [|boom(): void;|] }
+        // new class C implements I {
+        //    boom(){}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+      // interface I { [|boom|](): void; }
+      // new class C implements I {
+      //    boom(){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+        // interface I { [|boom(): void;|] }
+        // new class C implements I {
+        //    boom(){}
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+      // interface I { boom(): void; }
+      // new class C implements I {
+      //    [|boom|](){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+        // interface I { boom(): void; }
+        // new class C implements I {
+        //    [|boom(){}|]
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+      // interface I { boom(): void; }
+      // new class C implements I {
+      //    [|boom|](){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+        // interface I { boom(): void; }
+        // new class C implements I {
+        //    [|boom(){}|]
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -176,6 +233,63 @@
 // new class C implements I {
 //    /*FIND ALL REFS*/[|boom|](){}
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+      // interface I { [|boom|](): void; }
+      // new class C implements I {
+      //    boom(){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+        // interface I { [|boom(): void;|] }
+        // new class C implements I {
+        //    boom(){}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+      // interface I { [|boom|](): void; }
+      // new class C implements I {
+      //    boom(){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+        // interface I { [|boom(): void;|] }
+        // new class C implements I {
+        //    boom(){}
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+      // interface I { boom(): void; }
+      // new class C implements I {
+      //    [|boom|](){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+        // interface I { boom(): void; }
+        // new class C implements I {
+        //    [|boom(){}|]
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+      // interface I { boom(): void; }
+      // new class C implements I {
+      //    [|boom|](){}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInClassExpression.ts ===
+        // interface I { boom(): void; }
+        // new class C implements I {
+        //    [|boom(){}|]
+        // }
+  }
+]
 
 [
   {

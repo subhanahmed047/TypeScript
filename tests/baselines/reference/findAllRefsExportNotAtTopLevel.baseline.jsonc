@@ -1,3 +1,9 @@
+// === /tests/cases/fourslash/findAllRefsExportNotAtTopLevel.ts ===
+// {
+//     /*FIND ALL REFS*/export const x = 0;
+//     x;
+// }
+
 undefined
 
 // === /tests/cases/fourslash/findAllRefsExportNotAtTopLevel.ts ===
@@ -5,6 +11,42 @@ undefined
 //     export const /*FIND ALL REFS*/[|x|] = 0;
 //     [|x|];
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsExportNotAtTopLevel.ts ===
+      // {
+      //     export const [|x|] = 0;
+      //     x;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsExportNotAtTopLevel.ts ===
+        // {
+        //     [|export const x = 0;|]
+        //     x;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsExportNotAtTopLevel.ts ===
+      // {
+      //     export const [|x|] = 0;
+      //     x;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsExportNotAtTopLevel.ts ===
+        // {
+        //     [|export const x = 0;|]
+        //     x;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsExportNotAtTopLevel.ts ===
+      // {
+      //     export const x = 0;
+      //     [|x|];
+      // }
+  }
+]
 
 [
   {
@@ -81,6 +123,42 @@ undefined
 //     export const [|x|] = 0;
 //     /*FIND ALL REFS*/[|x|];
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsExportNotAtTopLevel.ts ===
+      // {
+      //     export const [|x|] = 0;
+      //     x;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsExportNotAtTopLevel.ts ===
+        // {
+        //     [|export const x = 0;|]
+        //     x;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsExportNotAtTopLevel.ts ===
+      // {
+      //     export const [|x|] = 0;
+      //     x;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsExportNotAtTopLevel.ts ===
+        // {
+        //     [|export const x = 0;|]
+        //     x;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsExportNotAtTopLevel.ts ===
+      // {
+      //     export const x = 0;
+      //     [|x|];
+      // }
+  }
+]
 
 [
   {

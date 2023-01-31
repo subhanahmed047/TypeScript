@@ -10,6 +10,72 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var [|x|] = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // x = x + 1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+        // [|var x = 0;|]
+        // 
+        // with ({}) {
+        //     var y = x;  // Reference of x here should not be picked
+        //     y++;        // also reference for y should be ignored
+        // }
+        // 
+        // x = x + 1;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var [|x|] = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // x = x + 1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+        // [|var x = 0;|]
+        // 
+        // with ({}) {
+        //     var y = x;  // Reference of x here should not be picked
+        //     y++;        // also reference for y should be ignored
+        // }
+        // 
+        // x = x + 1;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var x = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // [|x|] = x + 1;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var x = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // x = [|x|] + 1;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -96,6 +162,72 @@
 // }
 // 
 // [|x|] = [|x|] + 1;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var [|x|] = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // x = x + 1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+        // [|var x = 0;|]
+        // 
+        // with ({}) {
+        //     var y = x;  // Reference of x here should not be picked
+        //     y++;        // also reference for y should be ignored
+        // }
+        // 
+        // x = x + 1;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var [|x|] = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // x = x + 1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+        // [|var x = 0;|]
+        // 
+        // with ({}) {
+        //     var y = x;  // Reference of x here should not be picked
+        //     y++;        // also reference for y should be ignored
+        // }
+        // 
+        // x = x + 1;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var x = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // [|x|] = x + 1;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var x = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // x = [|x|] + 1;
+  }
+]
 
 [
   {
@@ -188,6 +320,72 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var [|x|] = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // x = x + 1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+        // [|var x = 0;|]
+        // 
+        // with ({}) {
+        //     var y = x;  // Reference of x here should not be picked
+        //     y++;        // also reference for y should be ignored
+        // }
+        // 
+        // x = x + 1;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var [|x|] = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // x = x + 1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+        // [|var x = 0;|]
+        // 
+        // with ({}) {
+        //     var y = x;  // Reference of x here should not be picked
+        //     y++;        // also reference for y should be ignored
+        // }
+        // 
+        // x = x + 1;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var x = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // [|x|] = x + 1;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var x = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // x = [|x|] + 1;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -271,6 +469,72 @@
 // }
 // 
 // [|x|] = /*FIND ALL REFS*/[|x|] + 1;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var [|x|] = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // x = x + 1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+        // [|var x = 0;|]
+        // 
+        // with ({}) {
+        //     var y = x;  // Reference of x here should not be picked
+        //     y++;        // also reference for y should be ignored
+        // }
+        // 
+        // x = x + 1;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var [|x|] = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // x = x + 1;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+        // [|var x = 0;|]
+        // 
+        // with ({}) {
+        //     var y = x;  // Reference of x here should not be picked
+        //     y++;        // also reference for y should be ignored
+        // }
+        // 
+        // x = x + 1;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var x = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // [|x|] = x + 1;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideWithBlock.ts ===
+      // var x = 0;
+      // 
+      // with ({}) {
+      //     var y = x;  // Reference of x here should not be picked
+      //     y++;        // also reference for y should be ignored
+      // }
+      // 
+      // x = [|x|] + 1;
+  }
+]
 
 [
   {

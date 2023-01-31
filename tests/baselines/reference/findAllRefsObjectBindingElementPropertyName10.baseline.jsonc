@@ -9,6 +9,84 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+      // interface Recursive {
+      //     [|next|]?: Recursive;
+      //     value: any;
+      // }
+      // 
+      // function f ({ next: { next: x} }: Recursive) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+        // interface Recursive {
+        //     [|next?: Recursive;|]
+        //     value: any;
+        // }
+        // 
+        // function f ({ next: { next: x} }: Recursive) {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+      // interface Recursive {
+      //     [|next|]?: Recursive;
+      //     value: any;
+      // }
+      // 
+      // function f ({ next: { next: x} }: Recursive) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+        // interface Recursive {
+        //     [|next?: Recursive;|]
+        //     value: any;
+        // }
+        // 
+        // function f ({ next: { next: x} }: Recursive) {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+      // interface Recursive {
+      //     next?: Recursive;
+      //     value: any;
+      // }
+      // 
+      // function f ({ [|next|]: { next: x} }: Recursive) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+        // interface Recursive {
+        //     next?: Recursive;
+        //     value: any;
+        // }
+        // 
+        // function f ([|{ next: { next: x} }: Recursive|]) {
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+      // interface Recursive {
+      //     next?: Recursive;
+      //     value: any;
+      // }
+      // 
+      // function f ({ next: { [|next|]: x} }: Recursive) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+        // interface Recursive {
+        //     next?: Recursive;
+        //     value: any;
+        // }
+        // 
+        // function f ([|{ next: { next: x} }: Recursive|]) {
+        // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -114,6 +192,15 @@
   }
 ]
 
+// === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+// interface Recursive {
+//     next?: Recursive;
+//     value: any;
+// }
+// 
+// function f (/*FIND ALL REFS*/{ next: { next: x} }: Recursive) {
+// }
+
 undefined
 
 // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
@@ -124,6 +211,84 @@ undefined
 // 
 // function f ({ /*FIND ALL REFS*/[|next|]: { [|next|]: x} }: Recursive) {
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+      // interface Recursive {
+      //     [|next|]?: Recursive;
+      //     value: any;
+      // }
+      // 
+      // function f ({ next: { next: x} }: Recursive) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+        // interface Recursive {
+        //     [|next?: Recursive;|]
+        //     value: any;
+        // }
+        // 
+        // function f ({ next: { next: x} }: Recursive) {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+      // interface Recursive {
+      //     [|next|]?: Recursive;
+      //     value: any;
+      // }
+      // 
+      // function f ({ next: { next: x} }: Recursive) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+        // interface Recursive {
+        //     [|next?: Recursive;|]
+        //     value: any;
+        // }
+        // 
+        // function f ({ next: { next: x} }: Recursive) {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+      // interface Recursive {
+      //     next?: Recursive;
+      //     value: any;
+      // }
+      // 
+      // function f ({ [|next|]: { next: x} }: Recursive) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+        // interface Recursive {
+        //     next?: Recursive;
+        //     value: any;
+        // }
+        // 
+        // function f ([|{ next: { next: x} }: Recursive|]) {
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+      // interface Recursive {
+      //     next?: Recursive;
+      //     value: any;
+      // }
+      // 
+      // function f ({ next: { [|next|]: x} }: Recursive) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+        // interface Recursive {
+        //     next?: Recursive;
+        //     value: any;
+        // }
+        // 
+        // function f ([|{ next: { next: x} }: Recursive|]) {
+        // }
+  }
+]
 
 [
   {
@@ -237,6 +402,84 @@ undefined
 // 
 // function f ({ [|next|]: { /*FIND ALL REFS*/[|next|]: x} }: Recursive) {
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+      // interface Recursive {
+      //     [|next|]?: Recursive;
+      //     value: any;
+      // }
+      // 
+      // function f ({ next: { next: x} }: Recursive) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+        // interface Recursive {
+        //     [|next?: Recursive;|]
+        //     value: any;
+        // }
+        // 
+        // function f ({ next: { next: x} }: Recursive) {
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+      // interface Recursive {
+      //     [|next|]?: Recursive;
+      //     value: any;
+      // }
+      // 
+      // function f ({ next: { next: x} }: Recursive) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+        // interface Recursive {
+        //     [|next?: Recursive;|]
+        //     value: any;
+        // }
+        // 
+        // function f ({ next: { next: x} }: Recursive) {
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+      // interface Recursive {
+      //     next?: Recursive;
+      //     value: any;
+      // }
+      // 
+      // function f ({ [|next|]: { next: x} }: Recursive) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+        // interface Recursive {
+        //     next?: Recursive;
+        //     value: any;
+        // }
+        // 
+        // function f ([|{ next: { next: x} }: Recursive|]) {
+        // }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+      // interface Recursive {
+      //     next?: Recursive;
+      //     value: any;
+      // }
+      // 
+      // function f ({ next: { [|next|]: x} }: Recursive) {
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName10.ts ===
+        // interface Recursive {
+        //     next?: Recursive;
+        //     value: any;
+        // }
+        // 
+        // function f ([|{ next: { next: x} }: Recursive|]) {
+        // }
+  }
+]
 
 [
   {

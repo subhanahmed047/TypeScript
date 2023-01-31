@@ -8,6 +8,35 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // class [|globalClass|] {
+      //     public f() { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|class globalClass {
+        //     public f() { }
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // class [|globalClass|] {
+      //     public f() { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|class globalClass {
+        //     public f() { }
+        // }|]
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // var c = [|globalClass|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -74,6 +103,35 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // class [|globalClass|] {
+      //     public f() { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|class globalClass {
+        //     public f() { }
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // class [|globalClass|] {
+      //     public f() { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|class globalClass {
+        //     public f() { }
+        // }|]
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // var c = [|globalClass|]();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -137,6 +195,35 @@
 
 // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
 // var c = /*FIND ALL REFS*/[|globalClass|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // class [|globalClass|] {
+      //     public f() { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|class globalClass {
+        //     public f() { }
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // class [|globalClass|] {
+      //     public f() { }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|class globalClass {
+        //     public f() { }
+        // }|]
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // var c = [|globalClass|]();
+  }
+]
 
 [
   {

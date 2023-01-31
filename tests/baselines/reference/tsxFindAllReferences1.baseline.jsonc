@@ -13,6 +13,90 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //         [|div|]: {
+      //             name?: string;
+      //             isOpen?: boolean;
+      //         };
+      //         span: { n: string; };
+      //     }
+      // }
+      // var x = <div />;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // declare module JSX {
+        //     interface Element { }
+        //     interface IntrinsicElements {
+        //         [|div: {
+        //             name?: string;
+        //             isOpen?: boolean;
+        //         };|]
+        //         span: { n: string; };
+        //     }
+        // }
+        // var x = <div />;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //         [|div|]: {
+      //             name?: string;
+      //             isOpen?: boolean;
+      //         };
+      //         span: { n: string; };
+      //     }
+      // }
+      // var x = <div />;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // declare module JSX {
+        //     interface Element { }
+        //     interface IntrinsicElements {
+        //         [|div: {
+        //             name?: string;
+        //             isOpen?: boolean;
+        //         };|]
+        //         span: { n: string; };
+        //     }
+        // }
+        // var x = <div />;
+      === 1 ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //         div: {
+      //             name?: string;
+      //             isOpen?: boolean;
+      //         };
+      //         span: { n: string; };
+      //     }
+      // }
+      // var x = <[|div|] />;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // declare module JSX {
+        //     interface Element { }
+        //     interface IntrinsicElements {
+        //         div: {
+        //             name?: string;
+        //             isOpen?: boolean;
+        //         };
+        //         span: { n: string; };
+        //     }
+        // }
+        // var x = [|<div />|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -181,6 +265,19 @@
   }
 ]
 
+// === /tests/cases/fourslash/file.tsx ===
+// declare module JSX {
+//     interface Element { }
+//     interface IntrinsicElements {
+//         div: {
+//             name?: string;
+//             isOpen?: boolean;
+//         };
+//         span: { n: string; };
+//     }
+// }
+// var x = /*FIND ALL REFS*/<div />;
+
 undefined
 
 // === /tests/cases/fourslash/file.tsx ===
@@ -195,6 +292,90 @@ undefined
 //     }
 // }
 // var x = </*FIND ALL REFS*/[|div|] />;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //         [|div|]: {
+      //             name?: string;
+      //             isOpen?: boolean;
+      //         };
+      //         span: { n: string; };
+      //     }
+      // }
+      // var x = <div />;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // declare module JSX {
+        //     interface Element { }
+        //     interface IntrinsicElements {
+        //         [|div: {
+        //             name?: string;
+        //             isOpen?: boolean;
+        //         };|]
+        //         span: { n: string; };
+        //     }
+        // }
+        // var x = <div />;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //         [|div|]: {
+      //             name?: string;
+      //             isOpen?: boolean;
+      //         };
+      //         span: { n: string; };
+      //     }
+      // }
+      // var x = <div />;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // declare module JSX {
+        //     interface Element { }
+        //     interface IntrinsicElements {
+        //         [|div: {
+        //             name?: string;
+        //             isOpen?: boolean;
+        //         };|]
+        //         span: { n: string; };
+        //     }
+        // }
+        // var x = <div />;
+      === 1 ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //         div: {
+      //             name?: string;
+      //             isOpen?: boolean;
+      //         };
+      //         span: { n: string; };
+      //     }
+      // }
+      // var x = <[|div|] />;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // declare module JSX {
+        //     interface Element { }
+        //     interface IntrinsicElements {
+        //         div: {
+        //             name?: string;
+        //             isOpen?: boolean;
+        //         };
+        //         span: { n: string; };
+        //     }
+        // }
+        // var x = [|<div />|];
+  }
+]
 
 [
   {

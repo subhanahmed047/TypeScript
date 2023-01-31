@@ -18,6 +18,236 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/f.ts ===
+      // class [|A|] {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // export { A, B };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // [|class A {
+        //     constructor(s: string) {}
+        // }|]
+        // class B extends A { }
+        // export { A, B };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/f.ts ===
+      // class A {
+      //     [|constructor|](s: string) {}
+      // }
+      // class B extends A { }
+      // export { A, B };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // class A {
+        //     [|constructor(s: string) {}|]
+        // }
+        // class B extends A { }
+        // export { A, B };
+      === 1 ===
+      // === /tests/cases/fourslash/f.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // export { [|A|], B };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // class A {
+        //     constructor(s: string) {}
+        // }
+        // class B extends A { }
+        // [|export { A, B };|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/f.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class [|B|] extends A { }
+      // export { A, B };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // class A {
+        //     constructor(s: string) {}
+        // }
+        // [|class B extends A { }|]
+        // export { A, B };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/f.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // export { A, [|B|] };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // class A {
+        //     constructor(s: string) {}
+        // }
+        // class B extends A { }
+        // [|export { A, B };|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/f.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // export { A, [|B|] };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // class A {
+        //     constructor(s: string) {}
+        // }
+        // class B extends A { }
+        // [|export { A, B };|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import { A as A1 } from "./f";
+      // const a1 = new A1("a1");
+      // export default class extends A1 { }
+      // export { [|B|] as B1 } from "./f";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // import { A as A1 } from "./f";
+        // const a1 = new A1("a1");
+        // export default class extends A1 { }
+        // [|export { B as B1 } from "./f";|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import { A as A1 } from "./f";
+      // const a1 = new A1("a1");
+      // export default class extends A1 { }
+      // export { B as [|B1|] } from "./f";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // import { A as A1 } from "./f";
+        // const a1 = new A1("a1");
+        // export default class extends A1 { }
+        // [|export { B as B1 } from "./f";|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import { A as A1 } from "./f";
+      // const a1 = new A1("a1");
+      // export default class extends A1 { }
+      // export { B as [|B1|] } from "./f";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // import { A as A1 } from "./f";
+        // const a1 = new A1("a1");
+        // export default class extends A1 { }
+        // [|export { B as B1 } from "./f";|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import B, { [|B1|] } from "./a";
+      // const d = new B("b");
+      // const d1 = new B1("b1");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import B, { B1 } from "./a";|]
+        // const d = new B("b");
+        // const d1 = new B1("b1");
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import B, { B1 } from "./a";
+      // const d = new B("b");
+      // const d1 = new [|B1|]("b1");
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/f.ts ===
+      // class A {
+      //     constructor(s: string) {}
+      // }
+      // class B extends A { }
+      // export { [|A|], B };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/f.ts ===
+        // class A {
+        //     constructor(s: string) {}
+        // }
+        // class B extends A { }
+        // [|export { A, B };|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import { [|A|] as A1 } from "./f";
+      // const a1 = new A1("a1");
+      // export default class extends A1 { }
+      // export { B as B1 } from "./f";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|import { A as A1 } from "./f";|]
+        // const a1 = new A1("a1");
+        // export default class extends A1 { }
+        // export { B as B1 } from "./f";
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import { A as [|A1|] } from "./f";
+      // const a1 = new A1("a1");
+      // export default class extends A1 { }
+      // export { B as B1 } from "./f";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|import { A as A1 } from "./f";|]
+        // const a1 = new A1("a1");
+        // export default class extends A1 { }
+        // export { B as B1 } from "./f";
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import { A as A1 } from "./f";
+      // const a1 = new [|A1|]("a1");
+      // export default class extends A1 { }
+      // export { B as B1 } from "./f";
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import { A as A1 } from "./f";
+      // const a1 = new A1("a1");
+      // [|export default class extends A1 { }|]
+      // export { B as B1 } from "./f";
+    === References ===
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import [|B|], { B1 } from "./a";
+      // const d = new B("b");
+      // const d1 = new B1("b1");
+      === ContextSpan ===
+        // === /tests/cases/fourslash/b.ts ===
+        // [|import B, { B1 } from "./a";|]
+        // const d = new B("b");
+        // const d1 = new B1("b1");
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // import B, { B1 } from "./a";
+      // const d = new [|B|]("b");
+      // const d1 = new B1("b1");
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

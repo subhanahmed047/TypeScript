@@ -1,0 +1,37 @@
+/*====== /tests/cases/fourslash/renameReferenceFromLinkTag1.ts ======*/
+
+enum E {
+    /** {@link [|RENAME|]} */
+    RENAME
+}
+
+=== 0 ===
+// === /tests/cases/fourslash/renameReferenceFromLinkTag1.ts ===
+// enum E {
+//     /** {@link [|A|]} */
+//     A
+// }
+=== 1 ===
+// === /tests/cases/fourslash/renameReferenceFromLinkTag1.ts ===
+// enum E {
+//     /** {@link A} */
+//     [|A|]
+// }
+
+
+[
+  {
+    "textSpan": {
+      "start": 24,
+      "length": 1
+    },
+    "fileName": "/tests/cases/fourslash/renameReferenceFromLinkTag1.ts"
+  },
+  {
+    "textSpan": {
+      "start": 34,
+      "length": 1
+    },
+    "fileName": "/tests/cases/fourslash/renameReferenceFromLinkTag1.ts"
+  }
+]

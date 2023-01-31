@@ -28,6 +28,265 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.[|n|] = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.[|n|]) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.[|n|];
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.[|n|];
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.[|n|] = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 6 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.[|n|];
+      //     }
+      // }
+      === 7 ===
+      // === /tests/cases/fourslash/referencesOnStatic_2.ts ===
+      // var q = foo.[|n|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -193,6 +452,265 @@
 //         n = foo.[|n|];
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.[|n|] = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.[|n|]) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.[|n|];
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.[|n|];
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.[|n|] = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 6 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.[|n|];
+      //     }
+      // }
+      === 7 ===
+      // === /tests/cases/fourslash/referencesOnStatic_2.ts ===
+      // var q = foo.[|n|];
+  }
+]
 
 [
   {
@@ -364,6 +882,265 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.[|n|] = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.[|n|]) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.[|n|];
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.[|n|];
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.[|n|] = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 6 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.[|n|];
+      //     }
+      // }
+      === 7 ===
+      // === /tests/cases/fourslash/referencesOnStatic_2.ts ===
+      // var q = foo.[|n|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -521,6 +1298,265 @@
 //         n = foo.[|n|];
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.[|n|] = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.[|n|]) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.[|n|];
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.[|n|];
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.[|n|] = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 6 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.[|n|];
+      //     }
+      // }
+      === 7 ===
+      // === /tests/cases/fourslash/referencesOnStatic_2.ts ===
+      // var q = foo.[|n|];
+  }
+]
 
 [
   {
@@ -684,6 +1720,265 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.[|n|] = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.[|n|]) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.[|n|];
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.[|n|];
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.[|n|] = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 6 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.[|n|];
+      //     }
+      // }
+      === 7 ===
+      // === /tests/cases/fourslash/referencesOnStatic_2.ts ===
+      // var q = foo.[|n|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -841,6 +2136,265 @@
 //         n = foo.[|n|];
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.[|n|] = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.[|n|]) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.[|n|];
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.[|n|];
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.[|n|] = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 6 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.[|n|];
+      //     }
+      // }
+      === 7 ===
+      // === /tests/cases/fourslash/referencesOnStatic_2.ts ===
+      // var q = foo.[|n|];
+  }
+]
 
 [
   {
@@ -1004,6 +2558,265 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.[|n|] = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.[|n|]) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.[|n|];
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.[|n|];
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.[|n|] = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 6 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.[|n|];
+      //     }
+      // }
+      === 7 ===
+      // === /tests/cases/fourslash/referencesOnStatic_2.ts ===
+      // var q = foo.[|n|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1164,6 +2977,265 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.[|n|] = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.[|n|]) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.[|n|];
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.[|n|];
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.[|n|] = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 6 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.[|n|];
+      //     }
+      // }
+      === 7 ===
+      // === /tests/cases/fourslash/referencesOnStatic_2.ts ===
+      // var q = foo.[|n|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1321,6 +3393,265 @@
 //         n = foo.[|n|];
 //     }
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static [|n|] = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+        // var n = 43;
+        // 
+        // class foo {
+        //     [|static n = '';|]
+        // 
+        //     public bar() {
+        //         foo.n = "'";
+        //         if(foo.n) {
+        //             var x = foo.n;
+        //         }
+        //     }
+        // }
+        // 
+        // class foo2 {
+        //     private x = foo.n;
+        //     constructor() {
+        //         foo.n = x;
+        //     }
+        // 
+        //     function b(n) {
+        //         n = foo.n;
+        //     }
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.[|n|] = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.[|n|]) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.[|n|];
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.[|n|];
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.[|n|] = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.n;
+      //     }
+      // }
+      === 6 ===
+      // === /tests/cases/fourslash/referencesOnStatic_1.ts ===
+      // var n = 43;
+      // 
+      // class foo {
+      //     static n = '';
+      // 
+      //     public bar() {
+      //         foo.n = "'";
+      //         if(foo.n) {
+      //             var x = foo.n;
+      //         }
+      //     }
+      // }
+      // 
+      // class foo2 {
+      //     private x = foo.n;
+      //     constructor() {
+      //         foo.n = x;
+      //     }
+      // 
+      //     function b(n) {
+      //         n = foo.[|n|];
+      //     }
+      // }
+      === 7 ===
+      // === /tests/cases/fourslash/referencesOnStatic_2.ts ===
+      // var q = foo.[|n|];
+  }
+]
 
 [
   {

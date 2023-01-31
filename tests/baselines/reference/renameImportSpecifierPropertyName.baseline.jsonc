@@ -1,0 +1,46 @@
+/*====== /tests/cases/fourslash/canada.ts ======*/
+
+export interface [|RENAME|] {}
+
+/*====== /tests/cases/fourslash/dry.ts ======*/
+
+import { RENAME as Ale } from './canada';
+
+=== 0 ===
+// === /tests/cases/fourslash/canada.ts ===
+// export interface [|Ginger|] {}
+=== ContextSpan ===
+  // === /tests/cases/fourslash/canada.ts ===
+  // [|export interface Ginger {}|]
+=== 1 ===
+// === /tests/cases/fourslash/dry.ts ===
+// import { [|Ginger|] as Ale } from './canada';
+=== ContextSpan ===
+  // === /tests/cases/fourslash/dry.ts ===
+  // [|import { Ginger as Ale } from './canada';|]
+
+
+[
+  {
+    "textSpan": {
+      "start": 17,
+      "length": 6
+    },
+    "fileName": "/tests/cases/fourslash/canada.ts",
+    "contextSpan": {
+      "start": 0,
+      "length": 26
+    }
+  },
+  {
+    "textSpan": {
+      "start": 9,
+      "length": 6
+    },
+    "fileName": "/tests/cases/fourslash/dry.ts",
+    "contextSpan": {
+      "start": 0,
+      "length": 41
+    }
+  }
+]

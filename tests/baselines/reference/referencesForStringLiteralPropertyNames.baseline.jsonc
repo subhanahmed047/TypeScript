@@ -11,6 +11,122 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames.ts ===
+      // class Foo {
+      //     public "[|ss|]": any;
+      // }
+      // 
+      // var x: Foo;
+      // x.ss;
+      // x["ss"];
+      // x = { "ss": 0 };
+      // x = { ss: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames.ts ===
+        // class Foo {
+        //     [|public "ss": any;|]
+        // }
+        // 
+        // var x: Foo;
+        // x.ss;
+        // x["ss"];
+        // x = { "ss": 0 };
+        // x = { ss: 0 };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames.ts ===
+      // class Foo {
+      //     public "[|ss|]": any;
+      // }
+      // 
+      // var x: Foo;
+      // x.ss;
+      // x["ss"];
+      // x = { "ss": 0 };
+      // x = { ss: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames.ts ===
+        // class Foo {
+        //     [|public "ss": any;|]
+        // }
+        // 
+        // var x: Foo;
+        // x.ss;
+        // x["ss"];
+        // x = { "ss": 0 };
+        // x = { ss: 0 };
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames.ts ===
+      // class Foo {
+      //     public "ss": any;
+      // }
+      // 
+      // var x: Foo;
+      // x.[|ss|];
+      // x["ss"];
+      // x = { "ss": 0 };
+      // x = { ss: 0 };
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames.ts ===
+      // class Foo {
+      //     public "ss": any;
+      // }
+      // 
+      // var x: Foo;
+      // x.ss;
+      // x["[|ss|]"];
+      // x = { "ss": 0 };
+      // x = { ss: 0 };
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames.ts ===
+      // class Foo {
+      //     public "ss": any;
+      // }
+      // 
+      // var x: Foo;
+      // x.ss;
+      // x["ss"];
+      // x = { "[|ss|]": 0 };
+      // x = { ss: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames.ts ===
+        // class Foo {
+        //     public "ss": any;
+        // }
+        // 
+        // var x: Foo;
+        // x.ss;
+        // x["ss"];
+        // x = { [|"ss": 0|] };
+        // x = { ss: 0 };
+      === 4 ===
+      // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames.ts ===
+      // class Foo {
+      //     public "ss": any;
+      // }
+      // 
+      // var x: Foo;
+      // x.ss;
+      // x["ss"];
+      // x = { "ss": 0 };
+      // x = { [|ss|]: 0 };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForStringLiteralPropertyNames.ts ===
+        // class Foo {
+        //     public "ss": any;
+        // }
+        // 
+        // var x: Foo;
+        // x.ss;
+        // x["ss"];
+        // x = { "ss": 0 };
+        // x = { [|ss: 0|] };
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

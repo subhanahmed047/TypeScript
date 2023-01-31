@@ -11,6 +11,56 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/foo.js ===
+      // /**
+      //  * @param {object} o - very important!
+      //  * @param {string} o.x - a thing, its ok
+      //  * @param {number} o.y - another thing
+      //  * @param {Object} o.nested - very nested
+      //  * @param {boolean} o.nested.[|great|] - much greatness
+      //  * @param {number} o.nested.times - twice? probably!??
+      //  */
+      //  function f(o) { return o.nested.great; }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.js ===
+        // /**
+        //  * @param {object} o - very important!
+        //  * @param {string} o.x - a thing, its ok
+        //  * @param {number} o.y - another thing
+        //  * @param {Object} o.nested - very nested
+        //  * [|@param {boolean} o.nested.great - much greatness
+        //  * |]@param {number} o.nested.times - twice? probably!??
+        //  */
+        //  function f(o) { return o.nested.great; }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/foo.js ===
+      // /**
+      //  * @param {object} o - very important!
+      //  * @param {string} o.x - a thing, its ok
+      //  * @param {number} o.y - another thing
+      //  * @param {Object} o.nested - very nested
+      //  * @param {boolean} o.nested.[|great|] - much greatness
+      //  * @param {number} o.nested.times - twice? probably!??
+      //  */
+      //  function f(o) { return o.nested.great; }
+      === 1 ===
+      // === /tests/cases/fourslash/foo.js ===
+      // /**
+      //  * @param {object} o - very important!
+      //  * @param {string} o.x - a thing, its ok
+      //  * @param {number} o.y - another thing
+      //  * @param {Object} o.nested - very nested
+      //  * @param {boolean} o.nested.great - much greatness
+      //  * @param {number} o.nested.times - twice? probably!??
+      //  */
+      //  function f(o) { return o.nested.[|great|]; }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -93,6 +143,56 @@
 //  * @param {number} o.nested.times - twice? probably!??
 //  */
 //  function f(o) { return o.nested./*FIND ALL REFS*/[|great|]; }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/foo.js ===
+      // /**
+      //  * @param {object} o - very important!
+      //  * @param {string} o.x - a thing, its ok
+      //  * @param {number} o.y - another thing
+      //  * @param {Object} o.nested - very nested
+      //  * @param {boolean} o.nested.[|great|] - much greatness
+      //  * @param {number} o.nested.times - twice? probably!??
+      //  */
+      //  function f(o) { return o.nested.great; }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.js ===
+        // /**
+        //  * @param {object} o - very important!
+        //  * @param {string} o.x - a thing, its ok
+        //  * @param {number} o.y - another thing
+        //  * @param {Object} o.nested - very nested
+        //  * [|@param {boolean} o.nested.great - much greatness
+        //  * |]@param {number} o.nested.times - twice? probably!??
+        //  */
+        //  function f(o) { return o.nested.great; }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/foo.js ===
+      // /**
+      //  * @param {object} o - very important!
+      //  * @param {string} o.x - a thing, its ok
+      //  * @param {number} o.y - another thing
+      //  * @param {Object} o.nested - very nested
+      //  * @param {boolean} o.nested.[|great|] - much greatness
+      //  * @param {number} o.nested.times - twice? probably!??
+      //  */
+      //  function f(o) { return o.nested.great; }
+      === 1 ===
+      // === /tests/cases/fourslash/foo.js ===
+      // /**
+      //  * @param {object} o - very important!
+      //  * @param {string} o.x - a thing, its ok
+      //  * @param {number} o.y - another thing
+      //  * @param {Object} o.nested - very nested
+      //  * @param {boolean} o.nested.great - much greatness
+      //  * @param {number} o.nested.times - twice? probably!??
+      //  */
+      //  function f(o) { return o.nested.[|great|]; }
+  }
+]
 
 [
   {

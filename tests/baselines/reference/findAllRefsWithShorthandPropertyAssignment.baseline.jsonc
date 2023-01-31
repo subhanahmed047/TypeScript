@@ -7,6 +7,54 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var [|name|] = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { name: name };
+      // obj.name;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+        // [|var name = "Foo";|]
+        // 
+        // var obj = { name };
+        // var obj1 = { name: name };
+        // obj.name;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var [|name|] = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { name: name };
+      // obj.name;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+        // [|var name = "Foo";|]
+        // 
+        // var obj = { name };
+        // var obj1 = { name: name };
+        // obj.name;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { [|name|] };
+      // var obj1 = { name: name };
+      // obj.name;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { name: [|name|] };
+      // obj.name;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -93,6 +141,54 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var [|name|] = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { name: name };
+      // obj.name;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+        // [|var name = "Foo";|]
+        // 
+        // var obj = { name };
+        // var obj1 = { name: name };
+        // obj.name;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var [|name|] = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { name: name };
+      // obj.name;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+        // [|var name = "Foo";|]
+        // 
+        // var obj = { name };
+        // var obj1 = { name: name };
+        // obj.name;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { [|name|] };
+      // var obj1 = { name: name };
+      // obj.name;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { name: [|name|] };
+      // obj.name;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -173,6 +269,71 @@
 // var obj = { /*FIND ALL REFS*/[|name|] };
 // var obj1 = { name: [|name|] };
 // obj.[|name|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var [|name|] = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { name: name };
+      // obj.name;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+        // [|var name = "Foo";|]
+        // 
+        // var obj = { name };
+        // var obj1 = { name: name };
+        // obj.name;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var [|name|] = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { name: name };
+      // obj.name;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+        // [|var name = "Foo";|]
+        // 
+        // var obj = { name };
+        // var obj1 = { name: name };
+        // obj.name;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { [|name|] };
+      // var obj1 = { name: name };
+      // obj.name;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { name: [|name|] };
+      // obj.name;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { [|name|] };
+      // var obj1 = { name: name };
+      // obj.name;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { name: name };
+      // obj.[|name|];
+  }
+]
 
 [
   {
@@ -320,6 +481,40 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { [|name|]: name };
+      // obj.name;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+        // var name = "Foo";
+        // 
+        // var obj = { name };
+        // var obj1 = { [|name: name|] };
+        // obj.name;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { [|name|]: name };
+      // obj.name;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+        // var name = "Foo";
+        // 
+        // var obj = { name };
+        // var obj1 = { [|name: name|] };
+        // obj.name;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -393,6 +588,33 @@
 // var obj = { [|name|] };
 // var obj1 = { name: name };
 // obj./*FIND ALL REFS*/[|name|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { [|name|] };
+      // var obj1 = { name: name };
+      // obj.name;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { [|name|] };
+      // var obj1 = { name: name };
+      // obj.name;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithShorthandPropertyAssignment.ts ===
+      // var name = "Foo";
+      // 
+      // var obj = { name };
+      // var obj1 = { name: name };
+      // obj.[|name|];
+  }
+]
 
 [
   {

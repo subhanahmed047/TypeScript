@@ -11,6 +11,78 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+      // interface IFoo<T> {
+      //     [|doSomething|](v: T): T;
+      // }
+      // 
+      // var x: IFoo<string>;
+      // x.doSomething("ss");
+      // 
+      // var y: IFoo<number>;
+      // y.doSomething(12);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+        // interface IFoo<T> {
+        //     [|doSomething(v: T): T;|]
+        // }
+        // 
+        // var x: IFoo<string>;
+        // x.doSomething("ss");
+        // 
+        // var y: IFoo<number>;
+        // y.doSomething(12);
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+      // interface IFoo<T> {
+      //     [|doSomething|](v: T): T;
+      // }
+      // 
+      // var x: IFoo<string>;
+      // x.doSomething("ss");
+      // 
+      // var y: IFoo<number>;
+      // y.doSomething(12);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+        // interface IFoo<T> {
+        //     [|doSomething(v: T): T;|]
+        // }
+        // 
+        // var x: IFoo<string>;
+        // x.doSomething("ss");
+        // 
+        // var y: IFoo<number>;
+        // y.doSomething(12);
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+      // interface IFoo<T> {
+      //     doSomething(v: T): T;
+      // }
+      // 
+      // var x: IFoo<string>;
+      // x.[|doSomething|]("ss");
+      // 
+      // var y: IFoo<number>;
+      // y.doSomething(12);
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+      // interface IFoo<T> {
+      //     doSomething(v: T): T;
+      // }
+      // 
+      // var x: IFoo<string>;
+      // x.doSomething("ss");
+      // 
+      // var y: IFoo<number>;
+      // y.[|doSomething|](12);
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -153,6 +225,78 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+      // interface IFoo<T> {
+      //     [|doSomething|](v: T): T;
+      // }
+      // 
+      // var x: IFoo<string>;
+      // x.doSomething("ss");
+      // 
+      // var y: IFoo<number>;
+      // y.doSomething(12);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+        // interface IFoo<T> {
+        //     [|doSomething(v: T): T;|]
+        // }
+        // 
+        // var x: IFoo<string>;
+        // x.doSomething("ss");
+        // 
+        // var y: IFoo<number>;
+        // y.doSomething(12);
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+      // interface IFoo<T> {
+      //     [|doSomething|](v: T): T;
+      // }
+      // 
+      // var x: IFoo<string>;
+      // x.doSomething("ss");
+      // 
+      // var y: IFoo<number>;
+      // y.doSomething(12);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+        // interface IFoo<T> {
+        //     [|doSomething(v: T): T;|]
+        // }
+        // 
+        // var x: IFoo<string>;
+        // x.doSomething("ss");
+        // 
+        // var y: IFoo<number>;
+        // y.doSomething(12);
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+      // interface IFoo<T> {
+      //     doSomething(v: T): T;
+      // }
+      // 
+      // var x: IFoo<string>;
+      // x.[|doSomething|]("ss");
+      // 
+      // var y: IFoo<number>;
+      // y.doSomething(12);
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+      // interface IFoo<T> {
+      //     doSomething(v: T): T;
+      // }
+      // 
+      // var x: IFoo<string>;
+      // x.doSomething("ss");
+      // 
+      // var y: IFoo<number>;
+      // y.[|doSomething|](12);
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -289,6 +433,78 @@
 // 
 // var y: IFoo<number>;
 // y./*FIND ALL REFS*/[|doSomething|](12);
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+      // interface IFoo<T> {
+      //     [|doSomething|](v: T): T;
+      // }
+      // 
+      // var x: IFoo<string>;
+      // x.doSomething("ss");
+      // 
+      // var y: IFoo<number>;
+      // y.doSomething(12);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+        // interface IFoo<T> {
+        //     [|doSomething(v: T): T;|]
+        // }
+        // 
+        // var x: IFoo<string>;
+        // x.doSomething("ss");
+        // 
+        // var y: IFoo<number>;
+        // y.doSomething(12);
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+      // interface IFoo<T> {
+      //     [|doSomething|](v: T): T;
+      // }
+      // 
+      // var x: IFoo<string>;
+      // x.doSomething("ss");
+      // 
+      // var y: IFoo<number>;
+      // y.doSomething(12);
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+        // interface IFoo<T> {
+        //     [|doSomething(v: T): T;|]
+        // }
+        // 
+        // var x: IFoo<string>;
+        // x.doSomething("ss");
+        // 
+        // var y: IFoo<number>;
+        // y.doSomething(12);
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+      // interface IFoo<T> {
+      //     doSomething(v: T): T;
+      // }
+      // 
+      // var x: IFoo<string>;
+      // x.[|doSomething|]("ss");
+      // 
+      // var y: IFoo<number>;
+      // y.doSomething(12);
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForPropertiesOfGenericType.ts ===
+      // interface IFoo<T> {
+      //     doSomething(v: T): T;
+      // }
+      // 
+      // var x: IFoo<string>;
+      // x.doSomething("ss");
+      // 
+      // var y: IFoo<number>;
+      // y.[|doSomething|](12);
+  }
+]
 
 [
   {

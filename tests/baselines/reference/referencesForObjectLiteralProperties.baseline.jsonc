@@ -7,6 +7,61 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { [|add|]: 0, b: "string" };
+      // x["add"];
+      // x.add;
+      // var y = x;
+      // y.add;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+        // var x = { [|add: 0|], b: "string" };
+        // x["add"];
+        // x.add;
+        // var y = x;
+        // y.add;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { [|add|]: 0, b: "string" };
+      // x["add"];
+      // x.add;
+      // var y = x;
+      // y.add;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+        // var x = { [|add: 0|], b: "string" };
+        // x["add"];
+        // x.add;
+        // var y = x;
+        // y.add;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { add: 0, b: "string" };
+      // x["[|add|]"];
+      // x.add;
+      // var y = x;
+      // y.add;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { add: 0, b: "string" };
+      // x["add"];
+      // x.[|add|];
+      // var y = x;
+      // y.add;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { add: 0, b: "string" };
+      // x["add"];
+      // x.add;
+      // var y = x;
+      // y.[|add|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -110,6 +165,61 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { [|add|]: 0, b: "string" };
+      // x["add"];
+      // x.add;
+      // var y = x;
+      // y.add;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+        // var x = { [|add: 0|], b: "string" };
+        // x["add"];
+        // x.add;
+        // var y = x;
+        // y.add;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { [|add|]: 0, b: "string" };
+      // x["add"];
+      // x.add;
+      // var y = x;
+      // y.add;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+        // var x = { [|add: 0|], b: "string" };
+        // x["add"];
+        // x.add;
+        // var y = x;
+        // y.add;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { add: 0, b: "string" };
+      // x["[|add|]"];
+      // x.add;
+      // var y = x;
+      // y.add;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { add: 0, b: "string" };
+      // x["add"];
+      // x.[|add|];
+      // var y = x;
+      // y.add;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { add: 0, b: "string" };
+      // x["add"];
+      // x.add;
+      // var y = x;
+      // y.[|add|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -209,6 +319,61 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { [|add|]: 0, b: "string" };
+      // x["add"];
+      // x.add;
+      // var y = x;
+      // y.add;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+        // var x = { [|add: 0|], b: "string" };
+        // x["add"];
+        // x.add;
+        // var y = x;
+        // y.add;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { [|add|]: 0, b: "string" };
+      // x["add"];
+      // x.add;
+      // var y = x;
+      // y.add;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+        // var x = { [|add: 0|], b: "string" };
+        // x["add"];
+        // x.add;
+        // var y = x;
+        // y.add;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { add: 0, b: "string" };
+      // x["[|add|]"];
+      // x.add;
+      // var y = x;
+      // y.add;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { add: 0, b: "string" };
+      // x["add"];
+      // x.[|add|];
+      // var y = x;
+      // y.add;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { add: 0, b: "string" };
+      // x["add"];
+      // x.add;
+      // var y = x;
+      // y.[|add|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -305,6 +470,61 @@
 // x.[|add|];
 // var y = x;
 // y./*FIND ALL REFS*/[|add|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { [|add|]: 0, b: "string" };
+      // x["add"];
+      // x.add;
+      // var y = x;
+      // y.add;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+        // var x = { [|add: 0|], b: "string" };
+        // x["add"];
+        // x.add;
+        // var y = x;
+        // y.add;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { [|add|]: 0, b: "string" };
+      // x["add"];
+      // x.add;
+      // var y = x;
+      // y.add;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+        // var x = { [|add: 0|], b: "string" };
+        // x["add"];
+        // x.add;
+        // var y = x;
+        // y.add;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { add: 0, b: "string" };
+      // x["[|add|]"];
+      // x.add;
+      // var y = x;
+      // y.add;
+      === 2 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { add: 0, b: "string" };
+      // x["add"];
+      // x.[|add|];
+      // var y = x;
+      // y.add;
+      === 3 ===
+      // === /tests/cases/fourslash/referencesForObjectLiteralProperties.ts ===
+      // var x = { add: 0, b: "string" };
+      // x["add"];
+      // x.add;
+      // var y = x;
+      // y.[|add|];
+  }
+]
 
 [
   {

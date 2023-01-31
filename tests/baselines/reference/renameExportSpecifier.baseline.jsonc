@@ -1,0 +1,63 @@
+/*====== /tests/cases/fourslash/a.ts ======*/
+
+const name = {};
+export { name as [|RENAME|] };
+
+/*====== /tests/cases/fourslash/b.ts ======*/
+
+import { RENAME } from './a';
+const x = RENAME.toString();
+
+=== 0 ===
+// === /tests/cases/fourslash/a.ts ===
+// const name = {};
+// export { name as [|name|] };
+=== ContextSpan ===
+  // === /tests/cases/fourslash/a.ts ===
+  // const name = {};
+  // [|export { name as name };|]
+=== 1 ===
+// === /tests/cases/fourslash/b.ts ===
+// import { [|name|] } from './a';
+// const x = name.toString();
+=== ContextSpan ===
+  // === /tests/cases/fourslash/b.ts ===
+  // [|import { name } from './a';|]
+  // const x = name.toString();
+=== 2 ===
+// === /tests/cases/fourslash/b.ts ===
+// import { name } from './a';
+// const x = [|name|].toString();
+
+
+[
+  {
+    "textSpan": {
+      "start": 34,
+      "length": 4
+    },
+    "fileName": "/tests/cases/fourslash/a.ts",
+    "contextSpan": {
+      "start": 17,
+      "length": 24
+    }
+  },
+  {
+    "textSpan": {
+      "start": 9,
+      "length": 4
+    },
+    "fileName": "/tests/cases/fourslash/b.ts",
+    "contextSpan": {
+      "start": 0,
+      "length": 27
+    }
+  },
+  {
+    "textSpan": {
+      "start": 38,
+      "length": 4
+    },
+    "fileName": "/tests/cases/fourslash/b.ts"
+  }
+]

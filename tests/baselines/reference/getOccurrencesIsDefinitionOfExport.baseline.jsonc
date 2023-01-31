@@ -7,6 +7,47 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/m.ts ===
+      // export var [|x|] = 12;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/m.ts ===
+        // [|export var x = 12;|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/m.ts ===
+      // export var [|x|] = 12;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/m.ts ===
+        // [|export var x = 12;|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/main.ts ===
+      // import { [|x|] } from "./m";
+      // const y = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/main.ts ===
+        // [|import { x } from "./m";|]
+        // const y = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/main.ts ===
+      // import { [|x|] } from "./m";
+      // const y = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/main.ts ===
+        // [|import { x } from "./m";|]
+        // const y = x;
+      === 1 ===
+      // === /tests/cases/fourslash/main.ts ===
+      // import { x } from "./m";
+      // const y = [|x|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -171,6 +212,47 @@
 
 // === /tests/cases/fourslash/m.ts ===
 // export var [|x|] = 12;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/main.ts ===
+      // import { [|x|] } from "./m";
+      // const y = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/main.ts ===
+        // [|import { x } from "./m";|]
+        // const y = x;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/main.ts ===
+      // import { [|x|] } from "./m";
+      // const y = x;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/main.ts ===
+        // [|import { x } from "./m";|]
+        // const y = x;
+      === 1 ===
+      // === /tests/cases/fourslash/main.ts ===
+      // import { x } from "./m";
+      // const y = [|x|];
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/m.ts ===
+      // export var [|x|] = 12;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/m.ts ===
+        // [|export var x = 12;|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/m.ts ===
+      // export var [|x|] = 12;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/m.ts ===
+        // [|export var x = 12;|]
+  }
+]
 
 [
   {

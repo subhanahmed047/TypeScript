@@ -8,6 +8,36 @@
 // import { a } from "[|/project/a|]";
 // type T = typeof import("[|./a|]").a;
 
+=== 0 ===
+// === /project/b.ts ===
+// import "[|./a|]";
+=== ContextSpan ===
+  // === /project/b.ts ===
+  // [|import "./a";|]
+=== 1 ===
+// === /project/c.ts ===
+// import {} from "[|./a|]";
+=== ContextSpan ===
+  // === /project/c.ts ===
+  // [|import {} from "./a";|]
+=== 2 ===
+// === /project/d.ts ===
+// import { a } from "[|/project/a|]";
+// type T = typeof import("./a").a;
+=== ContextSpan ===
+  // === /project/d.ts ===
+  // [|import { a } from "/project/a";|]
+  // type T = typeof import("./a").a;
+=== 3 ===
+// === /project/d.ts ===
+// import { a } from "/project/a";
+// type T = typeof import("[|./a|]").a;
+=== ContextSpan ===
+  // === /project/d.ts ===
+  // import { a } from "/project/a";
+  // [|type T = typeof import("./a").a;|]
+
+
 [
   {
     "textSpan": {

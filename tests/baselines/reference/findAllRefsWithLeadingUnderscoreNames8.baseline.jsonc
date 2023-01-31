@@ -5,6 +5,37 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+      // (function [|__foo|]() {
+      //     __foo();
+      // })
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+        // ([|function __foo() {
+        //     __foo();
+        // }|])
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+      // (function [|__foo|]() {
+      //     __foo();
+      // })
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+        // ([|function __foo() {
+        //     __foo();
+        // }|])
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+      // (function __foo() {
+      //     [|__foo|]();
+      // })
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -91,6 +122,37 @@
 // (function /*FIND ALL REFS*/[|__foo|]() {
 //     [|__foo|]();
 // })
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+      // (function [|__foo|]() {
+      //     __foo();
+      // })
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+        // ([|function __foo() {
+        //     __foo();
+        // }|])
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+      // (function [|__foo|]() {
+      //     __foo();
+      // })
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+        // ([|function __foo() {
+        //     __foo();
+        // }|])
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+      // (function __foo() {
+      //     [|__foo|]();
+      // })
+  }
+]
 
 [
   {
@@ -182,6 +244,37 @@
 // (function [|__foo|]() {
 //     /*FIND ALL REFS*/[|__foo|]();
 // })
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+      // (function [|__foo|]() {
+      //     __foo();
+      // })
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+        // ([|function __foo() {
+        //     __foo();
+        // }|])
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+      // (function [|__foo|]() {
+      //     __foo();
+      // })
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+        // ([|function __foo() {
+        //     __foo();
+        // }|])
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsWithLeadingUnderscoreNames8.ts ===
+      // (function __foo() {
+      //     [|__foo|]();
+      // })
+  }
+]
 
 [
   {

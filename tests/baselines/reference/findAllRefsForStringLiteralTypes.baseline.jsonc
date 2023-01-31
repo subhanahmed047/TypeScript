@@ -4,6 +4,24 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForStringLiteralTypes.ts ===
+      // type Options = "[|option 1|]" | "option 2";
+      // let myOption: Options = "option 1";
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForStringLiteralTypes.ts ===
+      // type Options = "[|option 1|]" | "option 2";
+      // let myOption: Options = "option 1";
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForStringLiteralTypes.ts ===
+      // type Options = "option 1" | "option 2";
+      // let myOption: Options = "[|option 1|]";
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -47,6 +65,24 @@
 // === /tests/cases/fourslash/findAllRefsForStringLiteralTypes.ts ===
 // type Options = "[|option 1|]" | "option 2";
 // let myOption: Options = "/*FIND ALL REFS*/[|option 1|]";
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForStringLiteralTypes.ts ===
+      // type Options = "option 1" | "option 2";
+      // let myOption: Options = "[|option 1|]";
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForStringLiteralTypes.ts ===
+      // type Options = "[|option 1|]" | "option 2";
+      // let myOption: Options = "option 1";
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForStringLiteralTypes.ts ===
+      // type Options = "option 1" | "option 2";
+      // let myOption: Options = "[|option 1|]";
+  }
+]
 
 [
   {

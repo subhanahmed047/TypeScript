@@ -18,6 +18,135 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class [|foo|] {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referenceToClass_1.ts ===
+        // [|class foo {
+        //     public n: foo;
+        //     public foo: number;
+        // }|]
+        // 
+        // class bar {
+        //     public n: foo;
+        //     public k = new foo();
+        // }
+        // 
+        // module mod {
+        //     var k: foo = null;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class [|foo|] {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referenceToClass_1.ts ===
+        // [|class foo {
+        //     public n: foo;
+        //     public foo: number;
+        // }|]
+        // 
+        // class bar {
+        //     public n: foo;
+        //     public k = new foo();
+        // }
+        // 
+        // module mod {
+        //     var k: foo = null;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: [|foo|];
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: [|foo|];
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new [|foo|]();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: [|foo|] = null;
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referenceToClass_2.ts ===
+      // var k: [|foo|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -130,6 +259,135 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class [|foo|] {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referenceToClass_1.ts ===
+        // [|class foo {
+        //     public n: foo;
+        //     public foo: number;
+        // }|]
+        // 
+        // class bar {
+        //     public n: foo;
+        //     public k = new foo();
+        // }
+        // 
+        // module mod {
+        //     var k: foo = null;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class [|foo|] {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referenceToClass_1.ts ===
+        // [|class foo {
+        //     public n: foo;
+        //     public foo: number;
+        // }|]
+        // 
+        // class bar {
+        //     public n: foo;
+        //     public k = new foo();
+        // }
+        // 
+        // module mod {
+        //     var k: foo = null;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: [|foo|];
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: [|foo|];
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new [|foo|]();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: [|foo|] = null;
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referenceToClass_2.ts ===
+      // var k: [|foo|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -233,6 +491,135 @@
 
 // === /tests/cases/fourslash/referenceToClass_2.ts ===
 // var k: [|foo|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class [|foo|] {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referenceToClass_1.ts ===
+        // [|class foo {
+        //     public n: foo;
+        //     public foo: number;
+        // }|]
+        // 
+        // class bar {
+        //     public n: foo;
+        //     public k = new foo();
+        // }
+        // 
+        // module mod {
+        //     var k: foo = null;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class [|foo|] {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referenceToClass_1.ts ===
+        // [|class foo {
+        //     public n: foo;
+        //     public foo: number;
+        // }|]
+        // 
+        // class bar {
+        //     public n: foo;
+        //     public k = new foo();
+        // }
+        // 
+        // module mod {
+        //     var k: foo = null;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: [|foo|];
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: [|foo|];
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new [|foo|]();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: [|foo|] = null;
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referenceToClass_2.ts ===
+      // var k: [|foo|];
+  }
+]
 
 [
   {
@@ -342,6 +729,135 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class [|foo|] {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referenceToClass_1.ts ===
+        // [|class foo {
+        //     public n: foo;
+        //     public foo: number;
+        // }|]
+        // 
+        // class bar {
+        //     public n: foo;
+        //     public k = new foo();
+        // }
+        // 
+        // module mod {
+        //     var k: foo = null;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class [|foo|] {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referenceToClass_1.ts ===
+        // [|class foo {
+        //     public n: foo;
+        //     public foo: number;
+        // }|]
+        // 
+        // class bar {
+        //     public n: foo;
+        //     public k = new foo();
+        // }
+        // 
+        // module mod {
+        //     var k: foo = null;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: [|foo|];
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: [|foo|];
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new [|foo|]();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: [|foo|] = null;
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referenceToClass_2.ts ===
+      // var k: [|foo|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -448,6 +964,135 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class [|foo|] {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referenceToClass_1.ts ===
+        // [|class foo {
+        //     public n: foo;
+        //     public foo: number;
+        // }|]
+        // 
+        // class bar {
+        //     public n: foo;
+        //     public k = new foo();
+        // }
+        // 
+        // module mod {
+        //     var k: foo = null;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class [|foo|] {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referenceToClass_1.ts ===
+        // [|class foo {
+        //     public n: foo;
+        //     public foo: number;
+        // }|]
+        // 
+        // class bar {
+        //     public n: foo;
+        //     public k = new foo();
+        // }
+        // 
+        // module mod {
+        //     var k: foo = null;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: [|foo|];
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: [|foo|];
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new [|foo|]();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: [|foo|] = null;
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referenceToClass_2.ts ===
+      // var k: [|foo|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -551,6 +1196,135 @@
 
 // === /tests/cases/fourslash/referenceToClass_2.ts ===
 // var k: /*FIND ALL REFS*/[|foo|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class [|foo|] {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referenceToClass_1.ts ===
+        // [|class foo {
+        //     public n: foo;
+        //     public foo: number;
+        // }|]
+        // 
+        // class bar {
+        //     public n: foo;
+        //     public k = new foo();
+        // }
+        // 
+        // module mod {
+        //     var k: foo = null;
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class [|foo|] {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referenceToClass_1.ts ===
+        // [|class foo {
+        //     public n: foo;
+        //     public foo: number;
+        // }|]
+        // 
+        // class bar {
+        //     public n: foo;
+        //     public k = new foo();
+        // }
+        // 
+        // module mod {
+        //     var k: foo = null;
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: [|foo|];
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 2 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: [|foo|];
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new [|foo|]();
+      // }
+      // 
+      // module mod {
+      //     var k: foo = null;
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/referenceToClass_1.ts ===
+      // class foo {
+      //     public n: foo;
+      //     public foo: number;
+      // }
+      // 
+      // class bar {
+      //     public n: foo;
+      //     public k = new foo();
+      // }
+      // 
+      // module mod {
+      //     var k: [|foo|] = null;
+      // }
+      === 5 ===
+      // === /tests/cases/fourslash/referenceToClass_2.ts ===
+      // var k: [|foo|];
+  }
+]
 
 [
   {

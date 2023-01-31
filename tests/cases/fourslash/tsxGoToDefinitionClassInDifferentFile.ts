@@ -3,7 +3,7 @@
 // @jsx: preserve
 
 // @Filename: C.tsx
-////export default class /*def*/C {}
+////export default class C {}
 
 // @Filename: a.tsx
 ////import C from "./C";
@@ -11,5 +11,4 @@
 
 verify.noErrors();
 
-goTo.marker("use");
-verify.goToDefinitionIs("def");
+verify.baselineGetDefinitionAtPosition("use");

@@ -4,6 +4,32 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+      // const [|x|] = 1;
+      // const y: { x: number } = { x };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+        // [|const x = 1;|]
+        // const y: { x: number } = { x };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+      // const [|x|] = 1;
+      // const y: { x: number } = { x };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+        // [|const x = 1;|]
+        // const y: { x: number } = { x };
+      === 1 ===
+      // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+      // const x = 1;
+      // const y: { x: number } = { [|x|] };
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -75,6 +101,32 @@
 // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
 // const x = 1;
 // const y: { /*FIND ALL REFS*/[|x|]: number } = { [|x|] };
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+      // const x = 1;
+      // const y: { [|x|]: number } = { x };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+        // const x = 1;
+        // const y: { [|x: number|] } = { x };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+      // const x = 1;
+      // const y: { [|x|]: number } = { x };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+        // const x = 1;
+        // const y: { [|x: number|] } = { x };
+      === 1 ===
+      // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+      // const x = 1;
+      // const y: { x: number } = { [|x|] };
+  }
+]
 
 [
   {
@@ -157,6 +209,51 @@
 // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
 // const [|x|] = 1;
 // const y: { [|x|]: number } = { /*FIND ALL REFS*/[|x|] };
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+      // const [|x|] = 1;
+      // const y: { x: number } = { x };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+        // [|const x = 1;|]
+        // const y: { x: number } = { x };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+      // const [|x|] = 1;
+      // const y: { x: number } = { x };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+        // [|const x = 1;|]
+        // const y: { x: number } = { x };
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+      // const x = 1;
+      // const y: { [|x|]: number } = { x };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+        // const x = 1;
+        // const y: { [|x: number|] } = { x };
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+      // const x = 1;
+      // const y: { [|x|]: number } = { x };
+      === ContextSpan ===
+        // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+        // const x = 1;
+        // const y: { [|x: number|] } = { x };
+      === 1 ===
+      // === /tests/cases/fourslash/isDefinitionShorthandProperty.ts ===
+      // const x = 1;
+      // const y: { x: number } = { [|x|] };
+  }
+]
 
 [
   {

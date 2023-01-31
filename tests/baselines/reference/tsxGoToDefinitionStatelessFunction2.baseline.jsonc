@@ -1,0 +1,833 @@
+// === /tests/cases/fourslash/file.tsx ===
+// declare module JSX {
+//     interface Element { }
+//     interface IntrinsicElements {
+//     }
+//     interface ElementAttributesProperty { props; }
+// }
+// interface ClickableProps {
+//     children?: string;
+//     className?: string;
+// }
+// interface ButtonProps extends ClickableProps {
+//     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+// }
+// interface LinkProps extends ClickableProps {
+//     goTo: string;
+// }
+// declare function [|MainButton|](buttonProps: ButtonProps): JSX.Element;
+// declare function MainButton(linkProps: LinkProps): JSX.Element;
+// declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+// let opt = <Main/*GOTO DEF*/Button />;
+// let opt = <MainButton children="chidlren" />;
+// let opt = <MainButton onClick={()=>{}} />;
+// let opt = <MainButton onClick={()=>{}} ignore-prop />;
+// let opt = <MainButton goTo="goTo" />;
+// let opt = <MainButton wrong />;
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // interface ClickableProps {
+    //     children?: string;
+    //     className?: string;
+    // }
+    // interface ButtonProps extends ClickableProps {
+    //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+    // }
+    // interface LinkProps extends ClickableProps {
+    //     goTo: string;
+    // }
+    // declare function [|MainButton|](buttonProps: ButtonProps): JSX.Element;
+    // declare function MainButton(linkProps: LinkProps): JSX.Element;
+    // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+    // let opt = <MainButton />;
+    // let opt = <MainButton children="chidlren" />;
+    // let opt = <MainButton onClick={()=>{}} />;
+    // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+    // let opt = <MainButton goTo="goTo" />;
+    // let opt = <MainButton wrong />;
+    === ContextSpan ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //     }
+      //     interface ElementAttributesProperty { props; }
+      // }
+      // interface ClickableProps {
+      //     children?: string;
+      //     className?: string;
+      // }
+      // interface ButtonProps extends ClickableProps {
+      //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+      // }
+      // interface LinkProps extends ClickableProps {
+      //     goTo: string;
+      // }
+      // [|declare function MainButton(buttonProps: ButtonProps): JSX.Element;|]
+      // declare function MainButton(linkProps: LinkProps): JSX.Element;
+      // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+      // let opt = <MainButton />;
+      // let opt = <MainButton children="chidlren" />;
+      // let opt = <MainButton onClick={()=>{}} />;
+      // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+      // let opt = <MainButton goTo="goTo" />;
+      // let opt = <MainButton wrong />;
+  === TextSpan ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // interface ClickableProps {
+    //     children?: string;
+    //     className?: string;
+    // }
+    // interface ButtonProps extends ClickableProps {
+    //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+    // }
+    // interface LinkProps extends ClickableProps {
+    //     goTo: string;
+    // }
+    // declare function MainButton(buttonProps: ButtonProps): JSX.Element;
+    // declare function MainButton(linkProps: LinkProps): JSX.Element;
+    // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+    // let opt = <[|MainButton|] />;
+    // let opt = <MainButton children="chidlren" />;
+    // let opt = <MainButton onClick={()=>{}} />;
+    // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+    // let opt = <MainButton goTo="goTo" />;
+    // let opt = <MainButton wrong />;
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/file.tsx",
+      "textSpan": {
+        "start": 411,
+        "length": 10
+      },
+      "kind": "function",
+      "name": "MainButton",
+      "containerName": "",
+      "contextSpan": {
+        "start": 394,
+        "length": 67
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false,
+      "failedAliasResolution": false
+    }
+  ],
+  "textSpan": {
+    "start": 611,
+    "length": 10
+  }
+}
+
+// === /tests/cases/fourslash/file.tsx ===
+// declare module JSX {
+//     interface Element { }
+//     interface IntrinsicElements {
+//     }
+//     interface ElementAttributesProperty { props; }
+// }
+// interface ClickableProps {
+//     children?: string;
+//     className?: string;
+// }
+// interface ButtonProps extends ClickableProps {
+//     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+// }
+// interface LinkProps extends ClickableProps {
+//     goTo: string;
+// }
+// declare function [|MainButton|](buttonProps: ButtonProps): JSX.Element;
+// declare function MainButton(linkProps: LinkProps): JSX.Element;
+// declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+// let opt = <MainButton />;
+// let opt = <Main/*GOTO DEF*/Button children="chidlren" />;
+// let opt = <MainButton onClick={()=>{}} />;
+// let opt = <MainButton onClick={()=>{}} ignore-prop />;
+// let opt = <MainButton goTo="goTo" />;
+// let opt = <MainButton wrong />;
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // interface ClickableProps {
+    //     children?: string;
+    //     className?: string;
+    // }
+    // interface ButtonProps extends ClickableProps {
+    //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+    // }
+    // interface LinkProps extends ClickableProps {
+    //     goTo: string;
+    // }
+    // declare function [|MainButton|](buttonProps: ButtonProps): JSX.Element;
+    // declare function MainButton(linkProps: LinkProps): JSX.Element;
+    // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+    // let opt = <MainButton />;
+    // let opt = <MainButton children="chidlren" />;
+    // let opt = <MainButton onClick={()=>{}} />;
+    // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+    // let opt = <MainButton goTo="goTo" />;
+    // let opt = <MainButton wrong />;
+    === ContextSpan ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //     }
+      //     interface ElementAttributesProperty { props; }
+      // }
+      // interface ClickableProps {
+      //     children?: string;
+      //     className?: string;
+      // }
+      // interface ButtonProps extends ClickableProps {
+      //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+      // }
+      // interface LinkProps extends ClickableProps {
+      //     goTo: string;
+      // }
+      // [|declare function MainButton(buttonProps: ButtonProps): JSX.Element;|]
+      // declare function MainButton(linkProps: LinkProps): JSX.Element;
+      // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+      // let opt = <MainButton />;
+      // let opt = <MainButton children="chidlren" />;
+      // let opt = <MainButton onClick={()=>{}} />;
+      // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+      // let opt = <MainButton goTo="goTo" />;
+      // let opt = <MainButton wrong />;
+  === TextSpan ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // interface ClickableProps {
+    //     children?: string;
+    //     className?: string;
+    // }
+    // interface ButtonProps extends ClickableProps {
+    //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+    // }
+    // interface LinkProps extends ClickableProps {
+    //     goTo: string;
+    // }
+    // declare function MainButton(buttonProps: ButtonProps): JSX.Element;
+    // declare function MainButton(linkProps: LinkProps): JSX.Element;
+    // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+    // let opt = <MainButton />;
+    // let opt = <[|MainButton|] children="chidlren" />;
+    // let opt = <MainButton onClick={()=>{}} />;
+    // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+    // let opt = <MainButton goTo="goTo" />;
+    // let opt = <MainButton wrong />;
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/file.tsx",
+      "textSpan": {
+        "start": 411,
+        "length": 10
+      },
+      "kind": "function",
+      "name": "MainButton",
+      "containerName": "",
+      "contextSpan": {
+        "start": 394,
+        "length": 67
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false,
+      "failedAliasResolution": false
+    }
+  ],
+  "textSpan": {
+    "start": 637,
+    "length": 10
+  }
+}
+
+// === /tests/cases/fourslash/file.tsx ===
+// declare module JSX {
+//     interface Element { }
+//     interface IntrinsicElements {
+//     }
+//     interface ElementAttributesProperty { props; }
+// }
+// interface ClickableProps {
+//     children?: string;
+//     className?: string;
+// }
+// interface ButtonProps extends ClickableProps {
+//     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+// }
+// interface LinkProps extends ClickableProps {
+//     goTo: string;
+// }
+// declare function [|MainButton|](buttonProps: ButtonProps): JSX.Element;
+// declare function MainButton(linkProps: LinkProps): JSX.Element;
+// declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+// let opt = <MainButton />;
+// let opt = <MainButton children="chidlren" />;
+// let opt = <Main/*GOTO DEF*/Button onClick={()=>{}} />;
+// let opt = <MainButton onClick={()=>{}} ignore-prop />;
+// let opt = <MainButton goTo="goTo" />;
+// let opt = <MainButton wrong />;
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // interface ClickableProps {
+    //     children?: string;
+    //     className?: string;
+    // }
+    // interface ButtonProps extends ClickableProps {
+    //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+    // }
+    // interface LinkProps extends ClickableProps {
+    //     goTo: string;
+    // }
+    // declare function [|MainButton|](buttonProps: ButtonProps): JSX.Element;
+    // declare function MainButton(linkProps: LinkProps): JSX.Element;
+    // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+    // let opt = <MainButton />;
+    // let opt = <MainButton children="chidlren" />;
+    // let opt = <MainButton onClick={()=>{}} />;
+    // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+    // let opt = <MainButton goTo="goTo" />;
+    // let opt = <MainButton wrong />;
+    === ContextSpan ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //     }
+      //     interface ElementAttributesProperty { props; }
+      // }
+      // interface ClickableProps {
+      //     children?: string;
+      //     className?: string;
+      // }
+      // interface ButtonProps extends ClickableProps {
+      //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+      // }
+      // interface LinkProps extends ClickableProps {
+      //     goTo: string;
+      // }
+      // [|declare function MainButton(buttonProps: ButtonProps): JSX.Element;|]
+      // declare function MainButton(linkProps: LinkProps): JSX.Element;
+      // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+      // let opt = <MainButton />;
+      // let opt = <MainButton children="chidlren" />;
+      // let opt = <MainButton onClick={()=>{}} />;
+      // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+      // let opt = <MainButton goTo="goTo" />;
+      // let opt = <MainButton wrong />;
+  === TextSpan ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // interface ClickableProps {
+    //     children?: string;
+    //     className?: string;
+    // }
+    // interface ButtonProps extends ClickableProps {
+    //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+    // }
+    // interface LinkProps extends ClickableProps {
+    //     goTo: string;
+    // }
+    // declare function MainButton(buttonProps: ButtonProps): JSX.Element;
+    // declare function MainButton(linkProps: LinkProps): JSX.Element;
+    // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+    // let opt = <MainButton />;
+    // let opt = <MainButton children="chidlren" />;
+    // let opt = <[|MainButton|] onClick={()=>{}} />;
+    // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+    // let opt = <MainButton goTo="goTo" />;
+    // let opt = <MainButton wrong />;
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/file.tsx",
+      "textSpan": {
+        "start": 411,
+        "length": 10
+      },
+      "kind": "function",
+      "name": "MainButton",
+      "containerName": "",
+      "contextSpan": {
+        "start": 394,
+        "length": 67
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false,
+      "failedAliasResolution": false
+    }
+  ],
+  "textSpan": {
+    "start": 683,
+    "length": 10
+  }
+}
+
+// === /tests/cases/fourslash/file.tsx ===
+// declare module JSX {
+//     interface Element { }
+//     interface IntrinsicElements {
+//     }
+//     interface ElementAttributesProperty { props; }
+// }
+// interface ClickableProps {
+//     children?: string;
+//     className?: string;
+// }
+// interface ButtonProps extends ClickableProps {
+//     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+// }
+// interface LinkProps extends ClickableProps {
+//     goTo: string;
+// }
+// declare function [|MainButton|](buttonProps: ButtonProps): JSX.Element;
+// declare function MainButton(linkProps: LinkProps): JSX.Element;
+// declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+// let opt = <MainButton />;
+// let opt = <MainButton children="chidlren" />;
+// let opt = <MainButton onClick={()=>{}} />;
+// let opt = <Main/*GOTO DEF*/Button onClick={()=>{}} ignore-prop />;
+// let opt = <MainButton goTo="goTo" />;
+// let opt = <MainButton wrong />;
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // interface ClickableProps {
+    //     children?: string;
+    //     className?: string;
+    // }
+    // interface ButtonProps extends ClickableProps {
+    //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+    // }
+    // interface LinkProps extends ClickableProps {
+    //     goTo: string;
+    // }
+    // declare function [|MainButton|](buttonProps: ButtonProps): JSX.Element;
+    // declare function MainButton(linkProps: LinkProps): JSX.Element;
+    // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+    // let opt = <MainButton />;
+    // let opt = <MainButton children="chidlren" />;
+    // let opt = <MainButton onClick={()=>{}} />;
+    // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+    // let opt = <MainButton goTo="goTo" />;
+    // let opt = <MainButton wrong />;
+    === ContextSpan ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //     }
+      //     interface ElementAttributesProperty { props; }
+      // }
+      // interface ClickableProps {
+      //     children?: string;
+      //     className?: string;
+      // }
+      // interface ButtonProps extends ClickableProps {
+      //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+      // }
+      // interface LinkProps extends ClickableProps {
+      //     goTo: string;
+      // }
+      // [|declare function MainButton(buttonProps: ButtonProps): JSX.Element;|]
+      // declare function MainButton(linkProps: LinkProps): JSX.Element;
+      // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+      // let opt = <MainButton />;
+      // let opt = <MainButton children="chidlren" />;
+      // let opt = <MainButton onClick={()=>{}} />;
+      // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+      // let opt = <MainButton goTo="goTo" />;
+      // let opt = <MainButton wrong />;
+  === TextSpan ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // interface ClickableProps {
+    //     children?: string;
+    //     className?: string;
+    // }
+    // interface ButtonProps extends ClickableProps {
+    //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+    // }
+    // interface LinkProps extends ClickableProps {
+    //     goTo: string;
+    // }
+    // declare function MainButton(buttonProps: ButtonProps): JSX.Element;
+    // declare function MainButton(linkProps: LinkProps): JSX.Element;
+    // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+    // let opt = <MainButton />;
+    // let opt = <MainButton children="chidlren" />;
+    // let opt = <MainButton onClick={()=>{}} />;
+    // let opt = <[|MainButton|] onClick={()=>{}} ignore-prop />;
+    // let opt = <MainButton goTo="goTo" />;
+    // let opt = <MainButton wrong />;
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/file.tsx",
+      "textSpan": {
+        "start": 411,
+        "length": 10
+      },
+      "kind": "function",
+      "name": "MainButton",
+      "containerName": "",
+      "contextSpan": {
+        "start": 394,
+        "length": 67
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false,
+      "failedAliasResolution": false
+    }
+  ],
+  "textSpan": {
+    "start": 726,
+    "length": 10
+  }
+}
+
+// === /tests/cases/fourslash/file.tsx ===
+// declare module JSX {
+//     interface Element { }
+//     interface IntrinsicElements {
+//     }
+//     interface ElementAttributesProperty { props; }
+// }
+// interface ClickableProps {
+//     children?: string;
+//     className?: string;
+// }
+// interface ButtonProps extends ClickableProps {
+//     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+// }
+// interface LinkProps extends ClickableProps {
+//     goTo: string;
+// }
+// declare function MainButton(buttonProps: ButtonProps): JSX.Element;
+// declare function [|MainButton|](linkProps: LinkProps): JSX.Element;
+// declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+// let opt = <MainButton />;
+// let opt = <MainButton children="chidlren" />;
+// let opt = <MainButton onClick={()=>{}} />;
+// let opt = <MainButton onClick={()=>{}} ignore-prop />;
+// let opt = <Main/*GOTO DEF*/Button goTo="goTo" />;
+// let opt = <MainButton wrong />;
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // interface ClickableProps {
+    //     children?: string;
+    //     className?: string;
+    // }
+    // interface ButtonProps extends ClickableProps {
+    //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+    // }
+    // interface LinkProps extends ClickableProps {
+    //     goTo: string;
+    // }
+    // declare function MainButton(buttonProps: ButtonProps): JSX.Element;
+    // declare function [|MainButton|](linkProps: LinkProps): JSX.Element;
+    // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+    // let opt = <MainButton />;
+    // let opt = <MainButton children="chidlren" />;
+    // let opt = <MainButton onClick={()=>{}} />;
+    // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+    // let opt = <MainButton goTo="goTo" />;
+    // let opt = <MainButton wrong />;
+    === ContextSpan ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //     }
+      //     interface ElementAttributesProperty { props; }
+      // }
+      // interface ClickableProps {
+      //     children?: string;
+      //     className?: string;
+      // }
+      // interface ButtonProps extends ClickableProps {
+      //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+      // }
+      // interface LinkProps extends ClickableProps {
+      //     goTo: string;
+      // }
+      // declare function MainButton(buttonProps: ButtonProps): JSX.Element;
+      // [|declare function MainButton(linkProps: LinkProps): JSX.Element;|]
+      // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+      // let opt = <MainButton />;
+      // let opt = <MainButton children="chidlren" />;
+      // let opt = <MainButton onClick={()=>{}} />;
+      // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+      // let opt = <MainButton goTo="goTo" />;
+      // let opt = <MainButton wrong />;
+  === TextSpan ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // interface ClickableProps {
+    //     children?: string;
+    //     className?: string;
+    // }
+    // interface ButtonProps extends ClickableProps {
+    //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+    // }
+    // interface LinkProps extends ClickableProps {
+    //     goTo: string;
+    // }
+    // declare function MainButton(buttonProps: ButtonProps): JSX.Element;
+    // declare function MainButton(linkProps: LinkProps): JSX.Element;
+    // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+    // let opt = <MainButton />;
+    // let opt = <MainButton children="chidlren" />;
+    // let opt = <MainButton onClick={()=>{}} />;
+    // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+    // let opt = <[|MainButton|] goTo="goTo" />;
+    // let opt = <MainButton wrong />;
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/file.tsx",
+      "textSpan": {
+        "start": 479,
+        "length": 10
+      },
+      "kind": "function",
+      "name": "MainButton",
+      "containerName": "",
+      "contextSpan": {
+        "start": 462,
+        "length": 63
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false,
+      "failedAliasResolution": false
+    }
+  ],
+  "textSpan": {
+    "start": 781,
+    "length": 10
+  }
+}
+
+// === /tests/cases/fourslash/file.tsx ===
+// declare module JSX {
+//     interface Element { }
+//     interface IntrinsicElements {
+//     }
+//     interface ElementAttributesProperty { props; }
+// }
+// interface ClickableProps {
+//     children?: string;
+//     className?: string;
+// }
+// interface ButtonProps extends ClickableProps {
+//     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+// }
+// interface LinkProps extends ClickableProps {
+//     goTo: string;
+// }
+// declare function [|MainButton|](buttonProps: ButtonProps): JSX.Element;
+// declare function MainButton(linkProps: LinkProps): JSX.Element;
+// declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+// let opt = <MainButton />;
+// let opt = <MainButton children="chidlren" />;
+// let opt = <MainButton onClick={()=>{}} />;
+// let opt = <MainButton onClick={()=>{}} ignore-prop />;
+// let opt = <MainButton goTo="goTo" />;
+// let opt = <Main/*GOTO DEF*/Button wrong />;
+
+{
+  === Definitions ===
+    === 0 ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // interface ClickableProps {
+    //     children?: string;
+    //     className?: string;
+    // }
+    // interface ButtonProps extends ClickableProps {
+    //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+    // }
+    // interface LinkProps extends ClickableProps {
+    //     goTo: string;
+    // }
+    // declare function [|MainButton|](buttonProps: ButtonProps): JSX.Element;
+    // declare function MainButton(linkProps: LinkProps): JSX.Element;
+    // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+    // let opt = <MainButton />;
+    // let opt = <MainButton children="chidlren" />;
+    // let opt = <MainButton onClick={()=>{}} />;
+    // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+    // let opt = <MainButton goTo="goTo" />;
+    // let opt = <MainButton wrong />;
+    === ContextSpan ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // declare module JSX {
+      //     interface Element { }
+      //     interface IntrinsicElements {
+      //     }
+      //     interface ElementAttributesProperty { props; }
+      // }
+      // interface ClickableProps {
+      //     children?: string;
+      //     className?: string;
+      // }
+      // interface ButtonProps extends ClickableProps {
+      //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+      // }
+      // interface LinkProps extends ClickableProps {
+      //     goTo: string;
+      // }
+      // [|declare function MainButton(buttonProps: ButtonProps): JSX.Element;|]
+      // declare function MainButton(linkProps: LinkProps): JSX.Element;
+      // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+      // let opt = <MainButton />;
+      // let opt = <MainButton children="chidlren" />;
+      // let opt = <MainButton onClick={()=>{}} />;
+      // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+      // let opt = <MainButton goTo="goTo" />;
+      // let opt = <MainButton wrong />;
+  === TextSpan ===
+    // === /tests/cases/fourslash/file.tsx ===
+    // declare module JSX {
+    //     interface Element { }
+    //     interface IntrinsicElements {
+    //     }
+    //     interface ElementAttributesProperty { props; }
+    // }
+    // interface ClickableProps {
+    //     children?: string;
+    //     className?: string;
+    // }
+    // interface ButtonProps extends ClickableProps {
+    //     onClick(event?: React.MouseEvent<HTMLButtonElement>): void;
+    // }
+    // interface LinkProps extends ClickableProps {
+    //     goTo: string;
+    // }
+    // declare function MainButton(buttonProps: ButtonProps): JSX.Element;
+    // declare function MainButton(linkProps: LinkProps): JSX.Element;
+    // declare function MainButton(props: ButtonProps | LinkProps): JSX.Element;
+    // let opt = <MainButton />;
+    // let opt = <MainButton children="chidlren" />;
+    // let opt = <MainButton onClick={()=>{}} />;
+    // let opt = <MainButton onClick={()=>{}} ignore-prop />;
+    // let opt = <MainButton goTo="goTo" />;
+    // let opt = <[|MainButton|] wrong />;
+}
+
+{
+  "definitions": [
+    {
+      "fileName": "/tests/cases/fourslash/file.tsx",
+      "textSpan": {
+        "start": 411,
+        "length": 10
+      },
+      "kind": "function",
+      "name": "MainButton",
+      "containerName": "",
+      "contextSpan": {
+        "start": 394,
+        "length": 67
+      },
+      "isLocal": false,
+      "isAmbient": true,
+      "unverified": false,
+      "failedAliasResolution": false
+    }
+  ],
+  "textSpan": {
+    "start": 819,
+    "length": 10
+  }
+}

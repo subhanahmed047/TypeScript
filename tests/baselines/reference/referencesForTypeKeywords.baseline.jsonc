@@ -9,6 +9,57 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface [|I|] {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<T> = readonly T[];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+        // [|interface I {}|]
+        // function f<T extends I>() {}
+        // type A1<T, U> = T extends U ? 1 : 0;
+        // type A2<T> = T extends infer U ? 1 : 0;
+        // type A3<T> = { [P in keyof T]: 1 };
+        // type A4<T> = keyof T;
+        // type A5<T> = readonly T[];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface [|I|] {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<T> = readonly T[];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+        // [|interface I {}|]
+        // function f<T extends I>() {}
+        // type A1<T, U> = T extends U ? 1 : 0;
+        // type A2<T> = T extends infer U ? 1 : 0;
+        // type A3<T> = { [P in keyof T]: 1 };
+        // type A4<T> = keyof T;
+        // type A5<T> = readonly T[];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends [|I|]>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<T> = readonly T[];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -71,6 +122,39 @@
 // type A3<T> = { [P in keyof T]: 1 };
 // type A4<T> = keyof T;
 // type A5<T> = readonly T[];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, [|U|]> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<T> = readonly T[];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, [|U|]> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<T> = readonly T[];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends [|U|] ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<T> = readonly T[];
+  }
+]
 
 [
   {
@@ -187,6 +271,30 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer [|U|] ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<T> = readonly T[];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer [|U|] ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<T> = readonly T[];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -242,6 +350,48 @@
 // type A3<T> = { [[|P|] /*FIND ALL REFS*/in keyof T]: 1 };
 // type A4<T> = keyof T;
 // type A5<T> = readonly T[];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [[|P|] in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<T> = readonly T[];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+        // interface I {}
+        // function f<T extends I>() {}
+        // type A1<T, U> = T extends U ? 1 : 0;
+        // type A2<T> = T extends infer U ? 1 : 0;
+        // type A3<T> = { [[|P in keyof T|]]: 1 };
+        // type A4<T> = keyof T;
+        // type A5<T> = readonly T[];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [[|P|] in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<T> = readonly T[];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+        // interface I {}
+        // function f<T extends I>() {}
+        // type A1<T, U> = T extends U ? 1 : 0;
+        // type A2<T> = T extends infer U ? 1 : 0;
+        // type A3<T> = { [[|P in keyof T|]]: 1 };
+        // type A4<T> = keyof T;
+        // type A5<T> = readonly T[];
+  }
+]
 
 [
   {
@@ -308,6 +458,39 @@
 // type A3<T> = { [P in keyof T]: 1 };
 // type A4<[|T|]> = /*FIND ALL REFS*/keyof [|T|];
 // type A5<T> = readonly T[];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<[|T|]> = keyof T;
+      // type A5<T> = readonly T[];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<[|T|]> = keyof T;
+      // type A5<T> = readonly T[];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<T> = keyof [|T|];
+      // type A5<T> = readonly T[];
+  }
+]
 
 [
   {
@@ -409,6 +592,39 @@
 // type A3<T> = { [P in keyof T]: 1 };
 // type A4<T> = keyof T;
 // type A5<[|T|]> = /*FIND ALL REFS*/readonly [|T|][];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<[|T|]> = readonly T[];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<[|T|]> = readonly T[];
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForTypeKeywords.ts ===
+      // interface I {}
+      // function f<T extends I>() {}
+      // type A1<T, U> = T extends U ? 1 : 0;
+      // type A2<T> = T extends infer U ? 1 : 0;
+      // type A3<T> = { [P in keyof T]: 1 };
+      // type A4<T> = keyof T;
+      // type A5<T> = readonly [|T|][];
+  }
+]
 
 [
   {

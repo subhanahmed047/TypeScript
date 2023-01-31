@@ -1,3 +1,9 @@
+// === /tests/cases/fourslash/a.js ===
+// /** /*FIND ALL REFS*/@typedef {number} T */
+// const T = 1;
+// /** @type {T} */
+// const n = T;
+
 undefined
 
 // === /tests/cases/fourslash/a.js ===
@@ -5,6 +11,42 @@ undefined
 // const T = 1;
 // /** @type {[|T|]} */
 // const n = T;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const [|T|] = 1;
+      // /** @type {T} */
+      // const n = T;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // /** @typedef {number} T */
+        // [|const T = 1;|]
+        // /** @type {T} */
+        // const n = T;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} [|T|] */
+      // const T = 1;
+      // /** @type {T} */
+      // const n = T;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // /** [|@typedef {number} T|] */
+        // const T = 1;
+        // /** @type {T} */
+        // const n = T;
+      === 1 ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const T = 1;
+      // /** @type {[|T|]} */
+      // const n = T;
+  }
+]
 
 [
   {
@@ -88,6 +130,42 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const [|T|] = 1;
+      // /** @type {T} */
+      // const n = T;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // /** @typedef {number} T */
+        // [|const T = 1;|]
+        // /** @type {T} */
+        // const n = T;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const [|T|] = 1;
+      // /** @type {T} */
+      // const n = T;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // /** @typedef {number} T */
+        // [|const T = 1;|]
+        // /** @type {T} */
+        // const n = T;
+      === 1 ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const T = 1;
+      // /** @type {T} */
+      // const n = [|T|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -161,6 +239,42 @@ undefined
 // const /*FIND ALL REFS*/[|T|] = 1;
 // /** @type {T} */
 // const n = [|T|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const [|T|] = 1;
+      // /** @type {T} */
+      // const n = T;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // /** @typedef {number} T */
+        // [|const T = 1;|]
+        // /** @type {T} */
+        // const n = T;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const [|T|] = 1;
+      // /** @type {T} */
+      // const n = T;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // /** @typedef {number} T */
+        // [|const T = 1;|]
+        // /** @type {T} */
+        // const n = T;
+      === 1 ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const T = 1;
+      // /** @type {T} */
+      // const n = [|T|];
+  }
+]
 
 [
   {
@@ -240,6 +354,42 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const [|T|] = 1;
+      // /** @type {T} */
+      // const n = T;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // /** @typedef {number} T */
+        // [|const T = 1;|]
+        // /** @type {T} */
+        // const n = T;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} [|T|] */
+      // const T = 1;
+      // /** @type {T} */
+      // const n = T;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // /** [|@typedef {number} T|] */
+        // const T = 1;
+        // /** @type {T} */
+        // const n = T;
+      === 1 ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const T = 1;
+      // /** @type {[|T|]} */
+      // const n = T;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -315,6 +465,42 @@ undefined
 // const [|T|] = 1;
 // /** @type {T} */
 // const n = /*FIND ALL REFS*/[|T|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const [|T|] = 1;
+      // /** @type {T} */
+      // const n = T;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // /** @typedef {number} T */
+        // [|const T = 1;|]
+        // /** @type {T} */
+        // const n = T;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const [|T|] = 1;
+      // /** @type {T} */
+      // const n = T;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.js ===
+        // /** @typedef {number} T */
+        // [|const T = 1;|]
+        // /** @type {T} */
+        // const n = T;
+      === 1 ===
+      // === /tests/cases/fourslash/a.js ===
+      // /** @typedef {number} T */
+      // const T = 1;
+      // /** @type {T} */
+      // const n = [|T|];
+  }
+]
 
 [
   {

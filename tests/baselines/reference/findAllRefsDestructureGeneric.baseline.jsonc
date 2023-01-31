@@ -7,6 +7,54 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+      // interface I<T> {
+      //     [|x|]: boolean;
+      // }
+      // declare const i: I<number>;
+      // const { x } = i;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+        // interface I<T> {
+        //     [|x: boolean;|]
+        // }
+        // declare const i: I<number>;
+        // const { x } = i;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+      // interface I<T> {
+      //     [|x|]: boolean;
+      // }
+      // declare const i: I<number>;
+      // const { x } = i;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+        // interface I<T> {
+        //     [|x: boolean;|]
+        // }
+        // declare const i: I<number>;
+        // const { x } = i;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+      // interface I<T> {
+      //     x: boolean;
+      // }
+      // declare const i: I<number>;
+      // const { [|x|] } = i;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+        // interface I<T> {
+        //     x: boolean;
+        // }
+        // declare const i: I<number>;
+        // [|const { x } = i;|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -113,6 +161,71 @@
 // }
 // declare const i: I<number>;
 // const { /*FIND ALL REFS*/[|x|] } = i;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+      // interface I<T> {
+      //     [|x|]: boolean;
+      // }
+      // declare const i: I<number>;
+      // const { x } = i;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+        // interface I<T> {
+        //     [|x: boolean;|]
+        // }
+        // declare const i: I<number>;
+        // const { x } = i;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+      // interface I<T> {
+      //     [|x|]: boolean;
+      // }
+      // declare const i: I<number>;
+      // const { x } = i;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+        // interface I<T> {
+        //     [|x: boolean;|]
+        // }
+        // declare const i: I<number>;
+        // const { x } = i;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+      // interface I<T> {
+      //     x: boolean;
+      // }
+      // declare const i: I<number>;
+      // const { [|x|] } = i;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+        // interface I<T> {
+        //     x: boolean;
+        // }
+        // declare const i: I<number>;
+        // [|const { x } = i;|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+      // interface I<T> {
+      //     x: boolean;
+      // }
+      // declare const i: I<number>;
+      // const { [|x|] } = i;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsDestructureGeneric.ts ===
+        // interface I<T> {
+        //     x: boolean;
+        // }
+        // declare const i: I<number>;
+        // [|const { x } = i;|]
+  }
+]
 
 [
   {

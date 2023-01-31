@@ -1,3 +1,16 @@
+// === /a.js ===
+// /** /*FIND ALL REFS*/@typedef {number} T */
+// 
+// /**
+//  * @return {T}
+//  */
+// function f(obj) { return 0; }
+// 
+// /**
+//  * @return {T}
+//  */
+// function f2(obj) { return 0; }
+
 undefined
 
 // === /a.js ===
@@ -12,6 +25,90 @@ undefined
 //  * @return {[|T|]}
 //  */
 // function f2(obj) { return 0; }
+
+[
+  {
+    === Definition ===
+      // === /a.js ===
+      // /** @typedef {number} [|T|] */
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f(obj) { return 0; }
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f2(obj) { return 0; }
+      === ContextSpan ===
+        // === /a.js ===
+        // /** [|@typedef {number} T|] */
+        // 
+        // /**
+        //  * @return {T}
+        //  */
+        // function f(obj) { return 0; }
+        // 
+        // /**
+        //  * @return {T}
+        //  */
+        // function f2(obj) { return 0; }
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // /** @typedef {number} [|T|] */
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f(obj) { return 0; }
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f2(obj) { return 0; }
+      === ContextSpan ===
+        // === /a.js ===
+        // /** [|@typedef {number} T|] */
+        // 
+        // /**
+        //  * @return {T}
+        //  */
+        // function f(obj) { return 0; }
+        // 
+        // /**
+        //  * @return {T}
+        //  */
+        // function f2(obj) { return 0; }
+      === 1 ===
+      // === /a.js ===
+      // /** @typedef {number} T */
+      // 
+      // /**
+      //  * @return {[|T|]}
+      //  */
+      // function f(obj) { return 0; }
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f2(obj) { return 0; }
+      === 2 ===
+      // === /a.js ===
+      // /** @typedef {number} T */
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f(obj) { return 0; }
+      // 
+      // /**
+      //  * @return {[|T|]}
+      //  */
+      // function f2(obj) { return 0; }
+  }
+]
 
 [
   {
@@ -111,6 +208,90 @@ undefined
 
 [
   {
+    === Definition ===
+      // === /a.js ===
+      // /** @typedef {number} [|T|] */
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f(obj) { return 0; }
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f2(obj) { return 0; }
+      === ContextSpan ===
+        // === /a.js ===
+        // /** [|@typedef {number} T|] */
+        // 
+        // /**
+        //  * @return {T}
+        //  */
+        // function f(obj) { return 0; }
+        // 
+        // /**
+        //  * @return {T}
+        //  */
+        // function f2(obj) { return 0; }
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // /** @typedef {number} [|T|] */
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f(obj) { return 0; }
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f2(obj) { return 0; }
+      === ContextSpan ===
+        // === /a.js ===
+        // /** [|@typedef {number} T|] */
+        // 
+        // /**
+        //  * @return {T}
+        //  */
+        // function f(obj) { return 0; }
+        // 
+        // /**
+        //  * @return {T}
+        //  */
+        // function f2(obj) { return 0; }
+      === 1 ===
+      // === /a.js ===
+      // /** @typedef {number} T */
+      // 
+      // /**
+      //  * @return {[|T|]}
+      //  */
+      // function f(obj) { return 0; }
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f2(obj) { return 0; }
+      === 2 ===
+      // === /a.js ===
+      // /** @typedef {number} T */
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f(obj) { return 0; }
+      // 
+      // /**
+      //  * @return {[|T|]}
+      //  */
+      // function f2(obj) { return 0; }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -201,6 +382,90 @@ undefined
 //  * @return {/*FIND ALL REFS*/[|T|]}
 //  */
 // function f2(obj) { return 0; }
+
+[
+  {
+    === Definition ===
+      // === /a.js ===
+      // /** @typedef {number} [|T|] */
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f(obj) { return 0; }
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f2(obj) { return 0; }
+      === ContextSpan ===
+        // === /a.js ===
+        // /** [|@typedef {number} T|] */
+        // 
+        // /**
+        //  * @return {T}
+        //  */
+        // function f(obj) { return 0; }
+        // 
+        // /**
+        //  * @return {T}
+        //  */
+        // function f2(obj) { return 0; }
+    === References ===
+      === 0 ===
+      // === /a.js ===
+      // /** @typedef {number} [|T|] */
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f(obj) { return 0; }
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f2(obj) { return 0; }
+      === ContextSpan ===
+        // === /a.js ===
+        // /** [|@typedef {number} T|] */
+        // 
+        // /**
+        //  * @return {T}
+        //  */
+        // function f(obj) { return 0; }
+        // 
+        // /**
+        //  * @return {T}
+        //  */
+        // function f2(obj) { return 0; }
+      === 1 ===
+      // === /a.js ===
+      // /** @typedef {number} T */
+      // 
+      // /**
+      //  * @return {[|T|]}
+      //  */
+      // function f(obj) { return 0; }
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f2(obj) { return 0; }
+      === 2 ===
+      // === /a.js ===
+      // /** @typedef {number} T */
+      // 
+      // /**
+      //  * @return {T}
+      //  */
+      // function f(obj) { return 0; }
+      // 
+      // /**
+      //  * @return {[|T|]}
+      //  */
+      // function f2(obj) { return 0; }
+  }
+]
 
 [
   {

@@ -3,6 +3,24 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/user.ts ===
+      // import {[|x|]} from "jquery";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/user.ts ===
+        // [|import {x} from "jquery";|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/user.ts ===
+      // import {[|x|]} from "jquery";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/user.ts ===
+        // [|import {x} from "jquery";|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -84,6 +102,24 @@
 
 // === /tests/cases/fourslash/user2.ts ===
 // import {/*FIND ALL REFS*/[|x|]} from "jquery";
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/user2.ts ===
+      // import {[|x|]} from "jquery";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/user2.ts ===
+        // [|import {x} from "jquery";|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/user2.ts ===
+      // import {[|x|]} from "jquery";
+      === ContextSpan ===
+        // === /tests/cases/fourslash/user2.ts ===
+        // [|import {x} from "jquery";|]
+  }
+]
 
 [
   {

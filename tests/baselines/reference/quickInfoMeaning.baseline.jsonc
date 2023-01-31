@@ -1,0 +1,197 @@
+// === /tests/cases/fourslash/foo.d.ts ===
+// declare const [|foo|]: number;
+// declare module "foo_module" {
+//     interface I { x: number; y: number }
+//     export = I;
+// }
+
+// === /tests/cases/fourslash/foo_user.ts ===
+// ///<reference path="foo.d.ts" />
+// import foo = require("foo_module");
+// const x = foo/*GOTO DEF POS*/;
+// const i: foo = { x: 1, y: 2 };
+
+=== 0 ===
+// === /tests/cases/fourslash/foo.d.ts ===
+// declare const [|foo|]: number;
+// declare module "foo_module" {
+//     interface I { x: number; y: number }
+//     export = I;
+// }
+=== ContextSpan ===
+  // === /tests/cases/fourslash/foo.d.ts ===
+  // [|declare const foo: number;|]
+  // declare module "foo_module" {
+  //     interface I { x: number; y: number }
+  //     export = I;
+  // }
+
+
+[
+  {
+    "fileName": "/tests/cases/fourslash/foo.d.ts",
+    "textSpan": {
+      "start": 14,
+      "length": 3
+    },
+    "kind": "const",
+    "name": "foo",
+    "containerName": "",
+    "contextSpan": {
+      "start": 0,
+      "length": 26
+    },
+    "isLocal": false,
+    "isAmbient": true,
+    "unverified": false,
+    "failedAliasResolution": false
+  }
+]
+
+// === /tests/cases/fourslash/foo.d.ts ===
+// declare const foo: number;
+// declare module "foo_module" {
+//     interface [|I|] { x: number; y: number }
+//     export = I;
+// }
+
+// === /tests/cases/fourslash/foo_user.ts ===
+// ///<reference path="foo.d.ts" />
+// import foo = require("foo_module");
+// const x = foo;
+// const i: foo/*GOTO DEF POS*/ = { x: 1, y: 2 };
+
+=== 0 ===
+// === /tests/cases/fourslash/foo.d.ts ===
+// declare const foo: number;
+// declare module "foo_module" {
+//     interface [|I|] { x: number; y: number }
+//     export = I;
+// }
+=== ContextSpan ===
+  // === /tests/cases/fourslash/foo.d.ts ===
+  // declare const foo: number;
+  // declare module "foo_module" {
+  //     [|interface I { x: number; y: number }|]
+  //     export = I;
+  // }
+
+
+[
+  {
+    "fileName": "/tests/cases/fourslash/foo.d.ts",
+    "textSpan": {
+      "start": 71,
+      "length": 1
+    },
+    "kind": "interface",
+    "name": "I",
+    "containerName": "",
+    "contextSpan": {
+      "start": 61,
+      "length": 36
+    },
+    "isLocal": false,
+    "isAmbient": true,
+    "unverified": false
+  }
+]
+
+// === /tests/cases/fourslash/bar.d.ts ===
+// declare interface bar { x: number; y: number }
+// declare module "bar_module" {
+//     const [|x|]: number;
+//     export = x;
+// }
+
+// === /tests/cases/fourslash/bar_user.ts ===
+// ///<reference path="bar.d.ts" />
+// import bar = require("bar_module");
+// const x = bar/*GOTO DEF POS*/;
+// const i: bar = { x: 1, y: 2 };
+
+=== 0 ===
+// === /tests/cases/fourslash/bar.d.ts ===
+// declare interface bar { x: number; y: number }
+// declare module "bar_module" {
+//     const [|x|]: number;
+//     export = x;
+// }
+=== ContextSpan ===
+  // === /tests/cases/fourslash/bar.d.ts ===
+  // declare interface bar { x: number; y: number }
+  // declare module "bar_module" {
+  //     [|const x: number;|]
+  //     export = x;
+  // }
+
+
+[
+  {
+    "fileName": "/tests/cases/fourslash/bar.d.ts",
+    "textSpan": {
+      "start": 87,
+      "length": 1
+    },
+    "kind": "const",
+    "name": "x",
+    "containerName": "",
+    "contextSpan": {
+      "start": 81,
+      "length": 16
+    },
+    "isLocal": false,
+    "isAmbient": true,
+    "unverified": false
+  }
+]
+
+// === /tests/cases/fourslash/bar.d.ts ===
+// declare interface [|bar|] { x: number; y: number }
+// declare module "bar_module" {
+//     const x: number;
+//     export = x;
+// }
+
+// === /tests/cases/fourslash/bar_user.ts ===
+// ///<reference path="bar.d.ts" />
+// import bar = require("bar_module");
+// const x = bar;
+// const i: bar/*GOTO DEF POS*/ = { x: 1, y: 2 };
+
+=== 0 ===
+// === /tests/cases/fourslash/bar.d.ts ===
+// declare interface [|bar|] { x: number; y: number }
+// declare module "bar_module" {
+//     const x: number;
+//     export = x;
+// }
+=== ContextSpan ===
+  // === /tests/cases/fourslash/bar.d.ts ===
+  // [|declare interface bar { x: number; y: number }|]
+  // declare module "bar_module" {
+  //     const x: number;
+  //     export = x;
+  // }
+
+
+[
+  {
+    "fileName": "/tests/cases/fourslash/bar.d.ts",
+    "textSpan": {
+      "start": 18,
+      "length": 3
+    },
+    "kind": "interface",
+    "name": "bar",
+    "containerName": "",
+    "contextSpan": {
+      "start": 0,
+      "length": 46
+    },
+    "isLocal": false,
+    "isAmbient": true,
+    "unverified": false,
+    "failedAliasResolution": false
+  }
+]

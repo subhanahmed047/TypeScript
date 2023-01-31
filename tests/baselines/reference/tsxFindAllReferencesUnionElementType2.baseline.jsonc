@@ -15,6 +15,102 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // class RC1 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      // }
+      // class RC2 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      //     private method() { }
+      // }
+      // var [|RCComp|] = RC1 || RC2;
+      // <RCComp />
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // class RC1 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        // }
+        // class RC2 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        //     private method() { }
+        // }
+        // [|var RCComp = RC1 || RC2;|]
+        // <RCComp />
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // class RC1 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      // }
+      // class RC2 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      //     private method() { }
+      // }
+      // var [|RCComp|] = RC1 || RC2;
+      // <RCComp />
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // class RC1 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        // }
+        // class RC2 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        //     private method() { }
+        // }
+        // [|var RCComp = RC1 || RC2;|]
+        // <RCComp />
+      === 1 ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // class RC1 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      // }
+      // class RC2 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      //     private method() { }
+      // }
+      // var RCComp = RC1 || RC2;
+      // <[|RCComp|] />
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // class RC1 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        // }
+        // class RC2 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        //     private method() { }
+        // }
+        // var RCComp = RC1 || RC2;
+        // [|<RCComp />|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -112,6 +208,102 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // class RC1 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      // }
+      // class RC2 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      //     private method() { }
+      // }
+      // var [|RCComp|] = RC1 || RC2;
+      // <RCComp />
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // class RC1 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        // }
+        // class RC2 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        //     private method() { }
+        // }
+        // [|var RCComp = RC1 || RC2;|]
+        // <RCComp />
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // class RC1 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      // }
+      // class RC2 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      //     private method() { }
+      // }
+      // var [|RCComp|] = RC1 || RC2;
+      // <RCComp />
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // class RC1 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        // }
+        // class RC2 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        //     private method() { }
+        // }
+        // [|var RCComp = RC1 || RC2;|]
+        // <RCComp />
+      === 1 ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // class RC1 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      // }
+      // class RC2 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      //     private method() { }
+      // }
+      // var RCComp = RC1 || RC2;
+      // <[|RCComp|] />
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // class RC1 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        // }
+        // class RC2 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        //     private method() { }
+        // }
+        // var RCComp = RC1 || RC2;
+        // [|<RCComp />|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -192,6 +384,21 @@
   }
 ]
 
+// === /tests/cases/fourslash/file.tsx ===
+// class RC1 extends React.Component<{}, {}> {
+//     render() {
+//         return null;
+//     }
+// }
+// class RC2 extends React.Component<{}, {}> {
+//     render() {
+//         return null;
+//     }
+//     private method() { }
+// }
+// var RCComp = RC1 || RC2;
+// /*FIND ALL REFS*/<RCComp />
+
 undefined
 
 // === /tests/cases/fourslash/file.tsx ===
@@ -208,6 +415,102 @@ undefined
 // }
 // var [|RCComp|] = RC1 || RC2;
 // </*FIND ALL REFS*/[|RCComp|] />
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // class RC1 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      // }
+      // class RC2 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      //     private method() { }
+      // }
+      // var [|RCComp|] = RC1 || RC2;
+      // <RCComp />
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // class RC1 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        // }
+        // class RC2 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        //     private method() { }
+        // }
+        // [|var RCComp = RC1 || RC2;|]
+        // <RCComp />
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // class RC1 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      // }
+      // class RC2 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      //     private method() { }
+      // }
+      // var [|RCComp|] = RC1 || RC2;
+      // <RCComp />
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // class RC1 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        // }
+        // class RC2 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        //     private method() { }
+        // }
+        // [|var RCComp = RC1 || RC2;|]
+        // <RCComp />
+      === 1 ===
+      // === /tests/cases/fourslash/file.tsx ===
+      // class RC1 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      // }
+      // class RC2 extends React.Component<{}, {}> {
+      //     render() {
+      //         return null;
+      //     }
+      //     private method() { }
+      // }
+      // var RCComp = RC1 || RC2;
+      // <[|RCComp|] />
+      === ContextSpan ===
+        // === /tests/cases/fourslash/file.tsx ===
+        // class RC1 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        // }
+        // class RC2 extends React.Component<{}, {}> {
+        //     render() {
+        //         return null;
+        //     }
+        //     private method() { }
+        // }
+        // var RCComp = RC1 || RC2;
+        // [|<RCComp />|]
+  }
+]
 
 [
   {

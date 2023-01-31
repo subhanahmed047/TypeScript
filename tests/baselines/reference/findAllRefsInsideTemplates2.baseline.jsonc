@@ -4,6 +4,40 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function [|f|](...rest: any[]) { }
+      // f `${ f } ${ f }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+        // [|function f(...rest: any[]) { }|]
+        // f `${ f } ${ f }`
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function [|f|](...rest: any[]) { }
+      // f `${ f } ${ f }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+        // [|function f(...rest: any[]) { }|]
+        // f `${ f } ${ f }`
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // [|f|] `${ f } ${ f }`
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // f `${ [|f|] } ${ f }`
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // f `${ f } ${ [|f|] }`
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -129,6 +163,40 @@
 // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
 // function /*FIND ALL REFS*/[|f|](...rest: any[]) { }
 // [|f|] `${ [|f|] } ${ [|f|] }`
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function [|f|](...rest: any[]) { }
+      // f `${ f } ${ f }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+        // [|function f(...rest: any[]) { }|]
+        // f `${ f } ${ f }`
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function [|f|](...rest: any[]) { }
+      // f `${ f } ${ f }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+        // [|function f(...rest: any[]) { }|]
+        // f `${ f } ${ f }`
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // [|f|] `${ f } ${ f }`
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // f `${ [|f|] } ${ f }`
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // f `${ f } ${ [|f|] }`
+  }
+]
 
 [
   {
@@ -260,6 +328,40 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function [|f|](...rest: any[]) { }
+      // f `${ f } ${ f }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+        // [|function f(...rest: any[]) { }|]
+        // f `${ f } ${ f }`
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function [|f|](...rest: any[]) { }
+      // f `${ f } ${ f }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+        // [|function f(...rest: any[]) { }|]
+        // f `${ f } ${ f }`
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // [|f|] `${ f } ${ f }`
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // f `${ [|f|] } ${ f }`
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // f `${ f } ${ [|f|] }`
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -384,6 +486,40 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function [|f|](...rest: any[]) { }
+      // f `${ f } ${ f }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+        // [|function f(...rest: any[]) { }|]
+        // f `${ f } ${ f }`
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function [|f|](...rest: any[]) { }
+      // f `${ f } ${ f }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+        // [|function f(...rest: any[]) { }|]
+        // f `${ f } ${ f }`
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // [|f|] `${ f } ${ f }`
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // f `${ [|f|] } ${ f }`
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // f `${ f } ${ [|f|] }`
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -505,6 +641,40 @@
 // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
 // function [|f|](...rest: any[]) { }
 // [|f|] `${ [|f|] } ${ /*FIND ALL REFS*/[|f|] }`
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function [|f|](...rest: any[]) { }
+      // f `${ f } ${ f }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+        // [|function f(...rest: any[]) { }|]
+        // f `${ f } ${ f }`
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function [|f|](...rest: any[]) { }
+      // f `${ f } ${ f }`
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+        // [|function f(...rest: any[]) { }|]
+        // f `${ f } ${ f }`
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // [|f|] `${ f } ${ f }`
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // f `${ [|f|] } ${ f }`
+      === 3 ===
+      // === /tests/cases/fourslash/findAllRefsInsideTemplates2.ts ===
+      // function f(...rest: any[]) { }
+      // f `${ f } ${ [|f|] }`
+  }
+]
 
 [
   {

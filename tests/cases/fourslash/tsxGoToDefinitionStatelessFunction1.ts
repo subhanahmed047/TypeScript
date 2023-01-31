@@ -11,21 +11,14 @@
 ////     interface ElementAttributesProperty { props; }
 //// }
 //// interface OptionPropBag {
-////     /*pt1*/propx: number
+////     propx: number
 ////     propString: "hell"
-////     /*pt2*/optional?: boolean
+////     optional?: boolean
 //// }
-//// declare function /*opt*/Opt(attributes: OptionPropBag): JSX.Element;
+//// declare function Opt(attributes: OptionPropBag): JSX.Element;
 //// let opt = <[|O/*one*/pt|] />;
 //// let opt1 = <[|Op/*two*/t|] [|pr/*p1*/opx|]={100} />;
 //// let opt2 = <[|Op/*three*/t|] propx={100} [|opt/*p2*/ional|] />;
 //// let opt3 = <[|Op/*four*/t|] wr/*p3*/ong />;
 
-verify.goToDefinition({
-    one: "opt",
-    two: "opt",
-    three: "opt",
-    four: "opt",
-    p1: "pt1",
-    p2: "pt2"
-});
+verify.baselineGoToDefinition("one", "two", "three", "four", "p1", "p2");

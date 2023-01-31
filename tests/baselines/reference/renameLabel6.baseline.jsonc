@@ -1,0 +1,67 @@
+/*====== /tests/cases/fourslash/renameLabel6.ts ======*/
+
+loop1: for (let i = 0; i <= 10; i++) {
+    RENAME: for (let j = 0; j <= 10; j++) {
+        if (i === 5) continue loop1;
+        if (j === 5) break [|RENAME|];
+    }
+}
+
+=== 0 ===
+// === /tests/cases/fourslash/renameLabel6.ts ===
+// loop1: for (let i = 0; i <= 10; i++) {
+//     [|loop2|]: for (let j = 0; j <= 10; j++) {
+//         if (i === 5) continue loop1;
+//         if (j === 5) break loop2;
+//     }
+// }
+=== ContextSpan ===
+  // === /tests/cases/fourslash/renameLabel6.ts ===
+  // loop1: for (let i = 0; i <= 10; i++) {
+  //     [|loop2: for (let j = 0; j <= 10; j++) {
+  //         if (i === 5) continue loop1;
+  //         if (j === 5) break loop2;
+  //     }|]
+  // }
+=== 1 ===
+// === /tests/cases/fourslash/renameLabel6.ts ===
+// loop1: for (let i = 0; i <= 10; i++) {
+//     loop2: for (let j = 0; j <= 10; j++) {
+//         if (i === 5) continue loop1;
+//         if (j === 5) break [|loop2|];
+//     }
+// }
+=== ContextSpan ===
+  // === /tests/cases/fourslash/renameLabel6.ts ===
+  // loop1: for (let i = 0; i <= 10; i++) {
+  //     loop2: for (let j = 0; j <= 10; j++) {
+  //         if (i === 5) continue loop1;
+  //         if (j === 5) [|break loop2;|]
+  //     }
+  // }
+
+
+[
+  {
+    "textSpan": {
+      "start": 43,
+      "length": 5
+    },
+    "fileName": "/tests/cases/fourslash/renameLabel6.ts",
+    "contextSpan": {
+      "start": 43,
+      "length": 115
+    }
+  },
+  {
+    "textSpan": {
+      "start": 146,
+      "length": 5
+    },
+    "fileName": "/tests/cases/fourslash/renameLabel6.ts",
+    "contextSpan": {
+      "start": 140,
+      "length": 12
+    }
+  }
+]

@@ -6,6 +6,30 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllReferencesFromLinkTagReference5.ts ===
+      // enum E {
+      //     /** {@link E.A} */
+      //     [|A|]
+      // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllReferencesFromLinkTagReference5.ts ===
+      // enum E {
+      //     /** {@link E.[|A|]} */
+      //     A
+      // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllReferencesFromLinkTagReference5.ts ===
+      // enum E {
+      //     /** {@link E.A} */
+      //     [|A|]
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

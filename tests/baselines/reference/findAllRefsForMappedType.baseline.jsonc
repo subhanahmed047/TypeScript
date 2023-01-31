@@ -7,6 +7,68 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForMappedType.ts ===
+      // interface T { [|a|]: number };
+      // type U = { [K in keyof T]: string };
+      // type V = { [K in keyof U]: boolean };
+      // const u: U = { a: "" }
+      // const v: V = { a: true }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForMappedType.ts ===
+        // interface T { [|a: number|] };
+        // type U = { [K in keyof T]: string };
+        // type V = { [K in keyof U]: boolean };
+        // const u: U = { a: "" }
+        // const v: V = { a: true }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForMappedType.ts ===
+      // interface T { [|a|]: number };
+      // type U = { [K in keyof T]: string };
+      // type V = { [K in keyof U]: boolean };
+      // const u: U = { a: "" }
+      // const v: V = { a: true }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForMappedType.ts ===
+        // interface T { [|a: number|] };
+        // type U = { [K in keyof T]: string };
+        // type V = { [K in keyof U]: boolean };
+        // const u: U = { a: "" }
+        // const v: V = { a: true }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForMappedType.ts ===
+      // interface T { a: number };
+      // type U = { [K in keyof T]: string };
+      // type V = { [K in keyof U]: boolean };
+      // const u: U = { [|a|]: "" }
+      // const v: V = { a: true }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForMappedType.ts ===
+        // interface T { a: number };
+        // type U = { [K in keyof T]: string };
+        // type V = { [K in keyof U]: boolean };
+        // const u: U = { [|a: ""|] }
+        // const v: V = { a: true }
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForMappedType.ts ===
+      // interface T { a: number };
+      // type U = { [K in keyof T]: string };
+      // type V = { [K in keyof U]: boolean };
+      // const u: U = { a: "" }
+      // const v: V = { [|a|]: true }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForMappedType.ts ===
+        // interface T { a: number };
+        // type U = { [K in keyof T]: string };
+        // type V = { [K in keyof U]: boolean };
+        // const u: U = { a: "" }
+        // const v: V = { [|a: true|] }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

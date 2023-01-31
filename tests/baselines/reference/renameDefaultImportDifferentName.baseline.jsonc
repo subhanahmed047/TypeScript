@@ -11,6 +11,64 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/B.ts ===
+      // export default class [|C|] {
+      //     test() {
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/B.ts ===
+        // [|export default class C {
+        //     test() {
+        //     }
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/B.ts ===
+      // export default class [|C|] {
+      //     test() {
+      //     }
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/B.ts ===
+        // [|export default class C {
+        //     test() {
+        //     }
+        // }|]
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/A.ts ===
+      // import [|B|] from "./B";
+      // let b = new B();
+      // b.test();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/A.ts ===
+        // [|import B from "./B";|]
+        // let b = new B();
+        // b.test();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/A.ts ===
+      // import [|B|] from "./B";
+      // let b = new B();
+      // b.test();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/A.ts ===
+        // [|import B from "./B";|]
+        // let b = new B();
+        // b.test();
+      === 1 ===
+      // === /tests/cases/fourslash/A.ts ===
+      // import B from "./B";
+      // let b = new [|B|]();
+      // b.test();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -149,6 +207,37 @@
 // import /*FIND ALL REFS*/[|B|] from "./B";
 // let b = new [|B|]();
 // b.test();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/A.ts ===
+      // import [|B|] from "./B";
+      // let b = new B();
+      // b.test();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/A.ts ===
+        // [|import B from "./B";|]
+        // let b = new B();
+        // b.test();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/A.ts ===
+      // import [|B|] from "./B";
+      // let b = new B();
+      // b.test();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/A.ts ===
+        // [|import B from "./B";|]
+        // let b = new B();
+        // b.test();
+      === 1 ===
+      // === /tests/cases/fourslash/A.ts ===
+      // import B from "./B";
+      // let b = new [|B|]();
+      // b.test();
+  }
+]
 
 [
   {

@@ -11,6 +11,67 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+      // interface Foo { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function [|Bar|]() { }
+      // }
+      // 
+      // // module
+      // import a3 = Foo.Bar.Baz;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+        // interface Foo { }
+        // module Foo {
+        //     export interface Bar { }
+        //     export module Bar { export interface Baz { } }
+        //     [|export function Bar() { }|]
+        // }
+        // 
+        // // module
+        // import a3 = Foo.Bar.Baz;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+      // interface Foo { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module [|Bar|] { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a3 = Foo.Bar.Baz;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+        // interface Foo { }
+        // module Foo {
+        //     export interface Bar { }
+        //     [|export module Bar { export interface Baz { } }|]
+        //     export function Bar() { }
+        // }
+        // 
+        // // module
+        // import a3 = Foo.Bar.Baz;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+      // interface Foo { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a3 = Foo.[|Bar|].Baz;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -88,6 +149,67 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+      // interface Foo { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function [|Bar|]() { }
+      // }
+      // 
+      // // module
+      // import a3 = Foo.Bar.Baz;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+        // interface Foo { }
+        // module Foo {
+        //     export interface Bar { }
+        //     export module Bar { export interface Baz { } }
+        //     [|export function Bar() { }|]
+        // }
+        // 
+        // // module
+        // import a3 = Foo.Bar.Baz;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+      // interface Foo { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module [|Bar|] { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a3 = Foo.Bar.Baz;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+        // interface Foo { }
+        // module Foo {
+        //     export interface Bar { }
+        //     [|export module Bar { export interface Baz { } }|]
+        //     export function Bar() { }
+        // }
+        // 
+        // // module
+        // import a3 = Foo.Bar.Baz;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+      // interface Foo { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a3 = Foo.[|Bar|].Baz;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -162,6 +284,67 @@
 // 
 // // module
 // import a3 = Foo./*FIND ALL REFS*/[|Bar|].Baz;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+      // interface Foo { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function [|Bar|]() { }
+      // }
+      // 
+      // // module
+      // import a3 = Foo.Bar.Baz;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+        // interface Foo { }
+        // module Foo {
+        //     export interface Bar { }
+        //     export module Bar { export interface Baz { } }
+        //     [|export function Bar() { }|]
+        // }
+        // 
+        // // module
+        // import a3 = Foo.Bar.Baz;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+      // interface Foo { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module [|Bar|] { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a3 = Foo.Bar.Baz;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+        // interface Foo { }
+        // module Foo {
+        //     export interface Bar { }
+        //     [|export module Bar { export interface Baz { } }|]
+        //     export function Bar() { }
+        // }
+        // 
+        // // module
+        // import a3 = Foo.Bar.Baz;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForMergedDeclarations8.ts ===
+      // interface Foo { }
+      // module Foo {
+      //     export interface Bar { }
+      //     export module Bar { export interface Baz { } }
+      //     export function Bar() { }
+      // }
+      // 
+      // // module
+      // import a3 = Foo.[|Bar|].Baz;
+  }
+]
 
 [
   {

@@ -13,6 +13,63 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function [|decorator|](target) {
+      //     return target;
+      // }
+      // decorator();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|function decorator(target) {
+        //     return target;
+        // }|]
+        // decorator();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function [|decorator|](target) {
+      //     return target;
+      // }
+      // decorator();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|function decorator(target) {
+        //     return target;
+        // }|]
+        // decorator();
+      === 1 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function decorator(target) {
+      //     return target;
+      // }
+      // [|decorator|]();
+      === 2 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @[|decorator|] @decorator("again")
+      // class C {
+      //     @decorator
+      //     method() {}
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @decorator @[|decorator|]("again")
+      // class C {
+      //     @decorator
+      //     method() {}
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @decorator @decorator("again")
+      // class C {
+      //     @[|decorator|]
+      //     method() {}
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -144,6 +201,63 @@
 //     return target;
 // }
 // [|decorator|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function [|decorator|](target) {
+      //     return target;
+      // }
+      // decorator();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|function decorator(target) {
+        //     return target;
+        // }|]
+        // decorator();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function [|decorator|](target) {
+      //     return target;
+      // }
+      // decorator();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|function decorator(target) {
+        //     return target;
+        // }|]
+        // decorator();
+      === 1 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function decorator(target) {
+      //     return target;
+      // }
+      // [|decorator|]();
+      === 2 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @[|decorator|] @decorator("again")
+      // class C {
+      //     @decorator
+      //     method() {}
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @decorator @[|decorator|]("again")
+      // class C {
+      //     @decorator
+      //     method() {}
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @decorator @decorator("again")
+      // class C {
+      //     @[|decorator|]
+      //     method() {}
+      // }
+  }
+]
 
 [
   {
@@ -281,6 +395,63 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function [|decorator|](target) {
+      //     return target;
+      // }
+      // decorator();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|function decorator(target) {
+        //     return target;
+        // }|]
+        // decorator();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function [|decorator|](target) {
+      //     return target;
+      // }
+      // decorator();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|function decorator(target) {
+        //     return target;
+        // }|]
+        // decorator();
+      === 1 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function decorator(target) {
+      //     return target;
+      // }
+      // [|decorator|]();
+      === 2 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @[|decorator|] @decorator("again")
+      // class C {
+      //     @decorator
+      //     method() {}
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @decorator @[|decorator|]("again")
+      // class C {
+      //     @decorator
+      //     method() {}
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @decorator @decorator("again")
+      // class C {
+      //     @[|decorator|]
+      //     method() {}
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -407,6 +578,63 @@
 //     return target;
 // }
 // [|decorator|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function [|decorator|](target) {
+      //     return target;
+      // }
+      // decorator();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|function decorator(target) {
+        //     return target;
+        // }|]
+        // decorator();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function [|decorator|](target) {
+      //     return target;
+      // }
+      // decorator();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|function decorator(target) {
+        //     return target;
+        // }|]
+        // decorator();
+      === 1 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function decorator(target) {
+      //     return target;
+      // }
+      // [|decorator|]();
+      === 2 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @[|decorator|] @decorator("again")
+      // class C {
+      //     @decorator
+      //     method() {}
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @decorator @[|decorator|]("again")
+      // class C {
+      //     @decorator
+      //     method() {}
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @decorator @decorator("again")
+      // class C {
+      //     @[|decorator|]
+      //     method() {}
+      // }
+  }
+]
 
 [
   {
@@ -539,6 +767,63 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function [|decorator|](target) {
+      //     return target;
+      // }
+      // decorator();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|function decorator(target) {
+        //     return target;
+        // }|]
+        // decorator();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function [|decorator|](target) {
+      //     return target;
+      // }
+      // decorator();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|function decorator(target) {
+        //     return target;
+        // }|]
+        // decorator();
+      === 1 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function decorator(target) {
+      //     return target;
+      // }
+      // [|decorator|]();
+      === 2 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @[|decorator|] @decorator("again")
+      // class C {
+      //     @decorator
+      //     method() {}
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @decorator @[|decorator|]("again")
+      // class C {
+      //     @decorator
+      //     method() {}
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @decorator @decorator("again")
+      // class C {
+      //     @[|decorator|]
+      //     method() {}
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -665,6 +950,63 @@
 //     return target;
 // }
 // [|decorator|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function [|decorator|](target) {
+      //     return target;
+      // }
+      // decorator();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|function decorator(target) {
+        //     return target;
+        // }|]
+        // decorator();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function [|decorator|](target) {
+      //     return target;
+      // }
+      // decorator();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|function decorator(target) {
+        //     return target;
+        // }|]
+        // decorator();
+      === 1 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // function decorator(target) {
+      //     return target;
+      // }
+      // [|decorator|]();
+      === 2 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @[|decorator|] @decorator("again")
+      // class C {
+      //     @decorator
+      //     method() {}
+      // }
+      === 3 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @decorator @[|decorator|]("again")
+      // class C {
+      //     @decorator
+      //     method() {}
+      // }
+      === 4 ===
+      // === /tests/cases/fourslash/b.ts ===
+      // @decorator @decorator("again")
+      // class C {
+      //     @[|decorator|]
+      //     method() {}
+      // }
+  }
+]
 
 [
   {

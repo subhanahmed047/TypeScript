@@ -1,6 +1,96 @@
+=== getDefinitionAtPosition ===
+// === /tests/cases/fourslash/node_modules/foo/index.js ===
+// [||]{}
+
+// === /tests/cases/fourslash/a.ts ===
+// import foo from /*GOTO DEF POS*/"foo";
+// foo();
+
+=== 0 ===
+// === /tests/cases/fourslash/node_modules/foo/index.js ===
+// [||]{}
+
+
+[
+  {
+    "name": "foo",
+    "fileName": "/tests/cases/fourslash/node_modules/foo/index.js",
+    "kind": "script",
+    "textSpan": {
+      "start": 0,
+      "length": 0
+    },
+    "failedAliasResolution": false,
+    "isAmbient": false,
+    "unverified": false
+  }
+]
+
+// === /tests/cases/fourslash/a.ts ===
+// import /*GOTO DEF POS*/[|foo|] from "foo";
+// foo();
+
+=== 0 ===
+// === /tests/cases/fourslash/a.ts ===
+// import [|foo|] from "foo";
+// foo();
+=== ContextSpan ===
+  // === /tests/cases/fourslash/a.ts ===
+  // [|import foo from "foo";|]
+  // foo();
+
+
+[
+  {
+    "fileName": "/tests/cases/fourslash/a.ts",
+    "textSpan": {
+      "start": 7,
+      "length": 3
+    },
+    "kind": "alias",
+    "name": "foo",
+    "containerName": "",
+    "contextSpan": {
+      "start": 0,
+      "length": 22
+    },
+    "isLocal": true,
+    "isAmbient": false,
+    "unverified": false,
+    "failedAliasResolution": true
+  }
+]
+
+=== findAllReferences ===
 // === /tests/cases/fourslash/a.ts ===
 // import /*FIND ALL REFS*/[|foo|] from "foo";
 // [|foo|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import [|foo|] from "foo";
+      // foo();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|import foo from "foo";|]
+        // foo();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import [|foo|] from "foo";
+      // foo();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|import foo from "foo";|]
+        // foo();
+      === 1 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import foo from "foo";
+      // [|foo|]();
+  }
+]
 
 [
   {
@@ -66,6 +156,24 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import foo from "[|foo|]";
+      // foo();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import foo from "[|foo|]";
+      // foo();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|import foo from "foo";|]
+        // foo();
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -104,6 +212,32 @@
 // === /tests/cases/fourslash/a.ts ===
 // import [|foo|] from "foo";
 // /*FIND ALL REFS*/[|foo|]();
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import [|foo|] from "foo";
+      // foo();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|import foo from "foo";|]
+        // foo();
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import [|foo|] from "foo";
+      // foo();
+      === ContextSpan ===
+        // === /tests/cases/fourslash/a.ts ===
+        // [|import foo from "foo";|]
+        // foo();
+      === 1 ===
+      // === /tests/cases/fourslash/a.ts ===
+      // import foo from "foo";
+      // [|foo|]();
+  }
+]
 
 [
   {
@@ -160,3 +294,4 @@
     ]
   }
 ]
+

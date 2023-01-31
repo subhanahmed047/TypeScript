@@ -8,6 +8,35 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // interface [|globalInterface|] {
+      //      f();
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|interface globalInterface {
+        //      f();
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // interface [|globalInterface|] {
+      //      f();
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|interface globalInterface {
+        //      f();
+        // }|]
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // var i: [|globalInterface|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -74,6 +103,35 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // interface [|globalInterface|] {
+      //      f();
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|interface globalInterface {
+        //      f();
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // interface [|globalInterface|] {
+      //      f();
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|interface globalInterface {
+        //      f();
+        // }|]
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // var i: [|globalInterface|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -137,6 +195,35 @@
 // interface [|globalInterface|] {
 //      f();
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // interface [|globalInterface|] {
+      //      f();
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|interface globalInterface {
+        //      f();
+        // }|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // interface [|globalInterface|] {
+      //      f();
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // [|interface globalInterface {
+        //      f();
+        // }|]
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // var i: [|globalInterface|];
+  }
+]
 
 [
   {

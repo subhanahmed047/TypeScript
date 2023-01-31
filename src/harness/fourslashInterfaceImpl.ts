@@ -358,16 +358,36 @@ export class Verify extends VerifyNegatable {
         this.state.verifyTypeAtLocation(range, expected);
     }
 
-    public baselineFindAllReferences(...markerNames: string[]) {
-        this.state.verifyBaselineFindAllReferences(...markerNames);
+    public baselineCommands(...commands: BaselineCommand[]) {
+        this.state.verifyBaselineCommands(...commands);
     }
 
-    public baselineFindAllReferencesMulti(seq: number, ...markerNames: string[]) {
-        this.state.verifyBaselineFindAllReferencesMulti(seq, ...markerNames);
+    public baselineFindAllReferences(...markerNames: string[]) {
+        this.state.verifyBaselineFindAllReferences(markerNames);
     }
 
     public baselineGetFileReferences(fileName: string) {
         this.state.verifyBaselineGetFileReferences(fileName);
+    }
+
+    public baselineGoToDefinition(...markerNames: string[]) {
+        this.state.verifyBaselineGoToDefinition(markerNames);
+    }
+
+    public baselineGetDefinitionAtPosition(...markerNames: string[]) {
+        this.state.verifyBaselineGetDefinitionAtPosition(markerNames);
+    }
+
+    public baselineGoToSourceDefinition(...markerNames: string[]) {
+        this.state.verifyBaselineGoToSourceDefinition(markerNames);
+    }
+
+    public baselineGoToType(...markerNames: string[]) {
+        this.state.verifyBaselineGoToType(markerNames);
+    }
+
+    public baselineGoToImplementation(...markerNames: string[]) {
+        this.state.verifyBaselineGoToImplementation(markerNames);
     }
 
     public findReferencesDefinitionDisplayPartsAtCaretAre(expected: ts.SymbolDisplayPart[]) {
@@ -1927,3 +1947,17 @@ export interface RenameOptions {
     readonly findInComments?: boolean;
     readonly providePrefixAndSuffixTextForRename?: boolean;
 }
+export type BaselineCommand = {
+    type: "findAllReferences" | "goToDefinition" | "getDefinitionAtPosition" | "goToSourceDefinition" | "goToType" | "goToImplementation",
+    markerNames: string[];
+} | {
+    type: "getFileReferences",
+    fileName: string;
+} | {
+    type: "findRenameLocations",
+    marker: string;
+    options: RenameOptions;
+} | {
+    type: "customWork",
+    work: () => string | undefined;
+};

@@ -10,6 +10,43 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // module globalModule {
+      //     export var x;
+      // }
+      // 
+      // import [|globalAlias|] = globalModule;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // module globalModule {
+        //     export var x;
+        // }
+        // 
+        // [|import globalAlias = globalModule;|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // module globalModule {
+      //     export var x;
+      // }
+      // 
+      // import [|globalAlias|] = globalModule;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // module globalModule {
+        //     export var x;
+        // }
+        // 
+        // [|import globalAlias = globalModule;|]
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // var m = [|globalAlias|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -126,6 +163,43 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // module globalModule {
+      //     export var x;
+      // }
+      // 
+      // import [|globalAlias|] = globalModule;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // module globalModule {
+        //     export var x;
+        // }
+        // 
+        // [|import globalAlias = globalModule;|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // module globalModule {
+      //     export var x;
+      // }
+      // 
+      // import [|globalAlias|] = globalModule;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // module globalModule {
+        //     export var x;
+        // }
+        // 
+        // [|import globalAlias = globalModule;|]
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // var m = [|globalAlias|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -239,6 +313,43 @@
 // }
 // 
 // import [|globalAlias|] = globalModule;
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // module globalModule {
+      //     export var x;
+      // }
+      // 
+      // import [|globalAlias|] = globalModule;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // module globalModule {
+        //     export var x;
+        // }
+        // 
+        // [|import globalAlias = globalModule;|]
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+      // module globalModule {
+      //     export var x;
+      // }
+      // 
+      // import [|globalAlias|] = globalModule;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForGlobals_1.ts ===
+        // module globalModule {
+        //     export var x;
+        // }
+        // 
+        // [|import globalAlias = globalModule;|]
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForGlobals_2.ts ===
+      // var m = [|globalAlias|];
+  }
+]
 
 [
   {

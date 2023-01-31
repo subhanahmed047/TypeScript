@@ -8,6 +8,60 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class [|DefaultExportedClass|] {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new DefaultExportedClass;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+        // [|export default class DefaultExportedClass {
+        // }|]
+        // 
+        // var x: DefaultExportedClass;
+        // 
+        // var y = new DefaultExportedClass;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class [|DefaultExportedClass|] {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new DefaultExportedClass;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+        // [|export default class DefaultExportedClass {
+        // }|]
+        // 
+        // var x: DefaultExportedClass;
+        // 
+        // var y = new DefaultExportedClass;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class DefaultExportedClass {
+      // }
+      // 
+      // var x: [|DefaultExportedClass|];
+      // 
+      // var y = new DefaultExportedClass;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class DefaultExportedClass {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new [|DefaultExportedClass|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -80,6 +134,60 @@
 // var x: [|DefaultExportedClass|];
 // 
 // var y = new [|DefaultExportedClass|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class [|DefaultExportedClass|] {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new DefaultExportedClass;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+        // [|export default class DefaultExportedClass {
+        // }|]
+        // 
+        // var x: DefaultExportedClass;
+        // 
+        // var y = new DefaultExportedClass;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class [|DefaultExportedClass|] {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new DefaultExportedClass;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+        // [|export default class DefaultExportedClass {
+        // }|]
+        // 
+        // var x: DefaultExportedClass;
+        // 
+        // var y = new DefaultExportedClass;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class DefaultExportedClass {
+      // }
+      // 
+      // var x: [|DefaultExportedClass|];
+      // 
+      // var y = new DefaultExportedClass;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class DefaultExportedClass {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new [|DefaultExportedClass|];
+  }
+]
 
 [
   {
@@ -158,6 +266,60 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class [|DefaultExportedClass|] {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new DefaultExportedClass;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+        // [|export default class DefaultExportedClass {
+        // }|]
+        // 
+        // var x: DefaultExportedClass;
+        // 
+        // var y = new DefaultExportedClass;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class [|DefaultExportedClass|] {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new DefaultExportedClass;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+        // [|export default class DefaultExportedClass {
+        // }|]
+        // 
+        // var x: DefaultExportedClass;
+        // 
+        // var y = new DefaultExportedClass;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class DefaultExportedClass {
+      // }
+      // 
+      // var x: [|DefaultExportedClass|];
+      // 
+      // var y = new DefaultExportedClass;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class DefaultExportedClass {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new [|DefaultExportedClass|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -227,6 +389,60 @@
 // var x: [|DefaultExportedClass|];
 // 
 // var y = new /*FIND ALL REFS*/[|DefaultExportedClass|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class [|DefaultExportedClass|] {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new DefaultExportedClass;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+        // [|export default class DefaultExportedClass {
+        // }|]
+        // 
+        // var x: DefaultExportedClass;
+        // 
+        // var y = new DefaultExportedClass;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class [|DefaultExportedClass|] {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new DefaultExportedClass;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+        // [|export default class DefaultExportedClass {
+        // }|]
+        // 
+        // var x: DefaultExportedClass;
+        // 
+        // var y = new DefaultExportedClass;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class DefaultExportedClass {
+      // }
+      // 
+      // var x: [|DefaultExportedClass|];
+      // 
+      // var y = new DefaultExportedClass;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsForDefaultExport01.ts ===
+      // export default class DefaultExportedClass {
+      // }
+      // 
+      // var x: DefaultExportedClass;
+      // 
+      // var y = new [|DefaultExportedClass|];
+  }
+]
 
 [
   {

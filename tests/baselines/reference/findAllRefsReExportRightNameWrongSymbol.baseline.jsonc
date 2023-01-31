@@ -8,6 +8,52 @@
 
 [
   {
+    === Definition ===
+      // === /a.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export const x = 0;|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export const x = 0;|]
+  },
+  {
+    === Definition ===
+      // === /c.ts ===
+      // export { x } from "./b";
+      // import { [|x|] } from "./a";
+      // x;
+      === ContextSpan ===
+        // === /c.ts ===
+        // export { x } from "./b";
+        // [|import { x } from "./a";|]
+        // x;
+    === References ===
+      === 0 ===
+      // === /c.ts ===
+      // export { x } from "./b";
+      // import { [|x|] } from "./a";
+      // x;
+      === ContextSpan ===
+        // === /c.ts ===
+        // export { x } from "./b";
+        // [|import { x } from "./a";|]
+        // x;
+      === 1 ===
+      // === /c.ts ===
+      // export { x } from "./b";
+      // import { x } from "./a";
+      // [|x|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -176,6 +222,62 @@
 
 // === /b.ts ===
 // export const /*FIND ALL REFS*/[|x|] = 0;
+
+[
+  {
+    === Definition ===
+      // === /b.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|export const x = 0;|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|export const x = 0;|]
+  },
+  {
+    === Definition ===
+      // === /c.ts ===
+      // export { [|x|] } from "./b";
+      // import { x } from "./a";
+      // x;
+      === ContextSpan ===
+        // === /c.ts ===
+        // [|export { x } from "./b";|]
+        // import { x } from "./a";
+        // x;
+    === References ===
+      === 0 ===
+      // === /c.ts ===
+      // export { [|x|] } from "./b";
+      // import { x } from "./a";
+      // x;
+      === ContextSpan ===
+        // === /c.ts ===
+        // [|export { x } from "./b";|]
+        // import { x } from "./a";
+        // x;
+  },
+  {
+    === Definition ===
+      // === /d.ts ===
+      // import { [|x|] } from "./c";
+      === ContextSpan ===
+        // === /d.ts ===
+        // [|import { x } from "./c";|]
+    === References ===
+      === 0 ===
+      // === /d.ts ===
+      // import { [|x|] } from "./c";
+      === ContextSpan ===
+        // === /d.ts ===
+        // [|import { x } from "./c";|]
+  }
+]
 
 [
   {
@@ -431,6 +533,62 @@
 
 [
   {
+    === Definition ===
+      // === /c.ts ===
+      // export { [|x|] } from "./b";
+      // import { x } from "./a";
+      // x;
+      === ContextSpan ===
+        // === /c.ts ===
+        // [|export { x } from "./b";|]
+        // import { x } from "./a";
+        // x;
+    === References ===
+      === 0 ===
+      // === /c.ts ===
+      // export { [|x|] } from "./b";
+      // import { x } from "./a";
+      // x;
+      === ContextSpan ===
+        // === /c.ts ===
+        // [|export { x } from "./b";|]
+        // import { x } from "./a";
+        // x;
+  },
+  {
+    === Definition ===
+      // === /d.ts ===
+      // import { [|x|] } from "./c";
+      === ContextSpan ===
+        // === /d.ts ===
+        // [|import { x } from "./c";|]
+    === References ===
+      === 0 ===
+      // === /d.ts ===
+      // import { [|x|] } from "./c";
+      === ContextSpan ===
+        // === /d.ts ===
+        // [|import { x } from "./c";|]
+  },
+  {
+    === Definition ===
+      // === /b.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|export const x = 0;|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|export const x = 0;|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -680,6 +838,52 @@
 
 [
   {
+    === Definition ===
+      // === /c.ts ===
+      // export { x } from "./b";
+      // import { [|x|] } from "./a";
+      // x;
+      === ContextSpan ===
+        // === /c.ts ===
+        // export { x } from "./b";
+        // [|import { x } from "./a";|]
+        // x;
+    === References ===
+      === 0 ===
+      // === /c.ts ===
+      // export { x } from "./b";
+      // import { [|x|] } from "./a";
+      // x;
+      === ContextSpan ===
+        // === /c.ts ===
+        // export { x } from "./b";
+        // [|import { x } from "./a";|]
+        // x;
+      === 1 ===
+      // === /c.ts ===
+      // export { x } from "./b";
+      // import { x } from "./a";
+      // [|x|];
+  },
+  {
+    === Definition ===
+      // === /a.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export const x = 0;|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export const x = 0;|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -848,6 +1052,52 @@
 
 [
   {
+    === Definition ===
+      // === /c.ts ===
+      // export { x } from "./b";
+      // import { [|x|] } from "./a";
+      // x;
+      === ContextSpan ===
+        // === /c.ts ===
+        // export { x } from "./b";
+        // [|import { x } from "./a";|]
+        // x;
+    === References ===
+      === 0 ===
+      // === /c.ts ===
+      // export { x } from "./b";
+      // import { [|x|] } from "./a";
+      // x;
+      === ContextSpan ===
+        // === /c.ts ===
+        // export { x } from "./b";
+        // [|import { x } from "./a";|]
+        // x;
+      === 1 ===
+      // === /c.ts ===
+      // export { x } from "./b";
+      // import { x } from "./a";
+      // [|x|];
+  },
+  {
+    === Definition ===
+      // === /a.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export const x = 0;|]
+    === References ===
+      === 0 ===
+      // === /a.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /a.ts ===
+        // [|export const x = 0;|]
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -1013,6 +1263,62 @@
 
 // === /b.ts ===
 // export const [|x|] = 0;
+
+[
+  {
+    === Definition ===
+      // === /d.ts ===
+      // import { [|x|] } from "./c";
+      === ContextSpan ===
+        // === /d.ts ===
+        // [|import { x } from "./c";|]
+    === References ===
+      === 0 ===
+      // === /d.ts ===
+      // import { [|x|] } from "./c";
+      === ContextSpan ===
+        // === /d.ts ===
+        // [|import { x } from "./c";|]
+  },
+  {
+    === Definition ===
+      // === /c.ts ===
+      // export { [|x|] } from "./b";
+      // import { x } from "./a";
+      // x;
+      === ContextSpan ===
+        // === /c.ts ===
+        // [|export { x } from "./b";|]
+        // import { x } from "./a";
+        // x;
+    === References ===
+      === 0 ===
+      // === /c.ts ===
+      // export { [|x|] } from "./b";
+      // import { x } from "./a";
+      // x;
+      === ContextSpan ===
+        // === /c.ts ===
+        // [|export { x } from "./b";|]
+        // import { x } from "./a";
+        // x;
+  },
+  {
+    === Definition ===
+      // === /b.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|export const x = 0;|]
+    === References ===
+      === 0 ===
+      // === /b.ts ===
+      // export const [|x|] = 0;
+      === ContextSpan ===
+        // === /b.ts ===
+        // [|export const x = 0;|]
+  }
+]
 
 [
   {

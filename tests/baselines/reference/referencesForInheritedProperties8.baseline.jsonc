@@ -12,6 +12,123 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+      // interface C extends D {
+      //     [|propD|]: number;
+      // }
+      // interface D extends C {
+      //     propD: string;
+      //     propC: number;
+      // }
+      // var d: D;
+      // d.propD;
+      // d.propC;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+        // interface C extends D {
+        //     [|propD: number;|]
+        // }
+        // interface D extends C {
+        //     propD: string;
+        //     propC: number;
+        // }
+        // var d: D;
+        // d.propD;
+        // d.propC;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+      // interface C extends D {
+      //     [|propD|]: number;
+      // }
+      // interface D extends C {
+      //     propD: string;
+      //     propC: number;
+      // }
+      // var d: D;
+      // d.propD;
+      // d.propC;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+        // interface C extends D {
+        //     [|propD: number;|]
+        // }
+        // interface D extends C {
+        //     propD: string;
+        //     propC: number;
+        // }
+        // var d: D;
+        // d.propD;
+        // d.propC;
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+      // interface C extends D {
+      //     propD: number;
+      // }
+      // interface D extends C {
+      //     [|propD|]: string;
+      //     propC: number;
+      // }
+      // var d: D;
+      // d.propD;
+      // d.propC;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+        // interface C extends D {
+        //     propD: number;
+        // }
+        // interface D extends C {
+        //     [|propD: string;|]
+        //     propC: number;
+        // }
+        // var d: D;
+        // d.propD;
+        // d.propC;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+      // interface C extends D {
+      //     propD: number;
+      // }
+      // interface D extends C {
+      //     [|propD|]: string;
+      //     propC: number;
+      // }
+      // var d: D;
+      // d.propD;
+      // d.propC;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+        // interface C extends D {
+        //     propD: number;
+        // }
+        // interface D extends C {
+        //     [|propD: string;|]
+        //     propC: number;
+        // }
+        // var d: D;
+        // d.propD;
+        // d.propC;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+      // interface C extends D {
+      //     propD: number;
+      // }
+      // interface D extends C {
+      //     propD: string;
+      //     propC: number;
+      // }
+      // var d: D;
+      // d.[|propD|];
+      // d.propC;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -181,6 +298,72 @@
 // var d: D;
 // d.propD;
 // d.[|propC|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+      // interface C extends D {
+      //     propD: number;
+      // }
+      // interface D extends C {
+      //     propD: string;
+      //     [|propC|]: number;
+      // }
+      // var d: D;
+      // d.propD;
+      // d.propC;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+        // interface C extends D {
+        //     propD: number;
+        // }
+        // interface D extends C {
+        //     propD: string;
+        //     [|propC: number;|]
+        // }
+        // var d: D;
+        // d.propD;
+        // d.propC;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+      // interface C extends D {
+      //     propD: number;
+      // }
+      // interface D extends C {
+      //     propD: string;
+      //     [|propC|]: number;
+      // }
+      // var d: D;
+      // d.propD;
+      // d.propC;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+        // interface C extends D {
+        //     propD: number;
+        // }
+        // interface D extends C {
+        //     propD: string;
+        //     [|propC: number;|]
+        // }
+        // var d: D;
+        // d.propD;
+        // d.propC;
+      === 1 ===
+      // === /tests/cases/fourslash/referencesForInheritedProperties8.ts ===
+      // interface C extends D {
+      //     propD: number;
+      // }
+      // interface D extends C {
+      //     propD: string;
+      //     propC: number;
+      // }
+      // var d: D;
+      // d.propD;
+      // d.[|propC|];
+  }
+]
 
 [
   {

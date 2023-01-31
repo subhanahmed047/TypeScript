@@ -7,6 +7,47 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function [|bar|]() { return "bar"; }
+      // var x = import("./foo");
+      // x.then(foo => {
+      //     foo.bar();
+      // })
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.ts ===
+        // [|export function bar() { return "bar"; }|]
+        // var x = import("./foo");
+        // x.then(foo => {
+        //     foo.bar();
+        // })
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function [|bar|]() { return "bar"; }
+      // var x = import("./foo");
+      // x.then(foo => {
+      //     foo.bar();
+      // })
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.ts ===
+        // [|export function bar() { return "bar"; }|]
+        // var x = import("./foo");
+        // x.then(foo => {
+        //     foo.bar();
+        // })
+      === 1 ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function bar() { return "bar"; }
+      // var x = import("./foo");
+      // x.then(foo => {
+      //     foo.[|bar|]();
+      // })
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -89,6 +130,47 @@
 // x.then(foo => {
 //     foo./*FIND ALL REFS*/[|bar|]();
 // })
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function [|bar|]() { return "bar"; }
+      // var x = import("./foo");
+      // x.then(foo => {
+      //     foo.bar();
+      // })
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.ts ===
+        // [|export function bar() { return "bar"; }|]
+        // var x = import("./foo");
+        // x.then(foo => {
+        //     foo.bar();
+        // })
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function [|bar|]() { return "bar"; }
+      // var x = import("./foo");
+      // x.then(foo => {
+      //     foo.bar();
+      // })
+      === ContextSpan ===
+        // === /tests/cases/fourslash/foo.ts ===
+        // [|export function bar() { return "bar"; }|]
+        // var x = import("./foo");
+        // x.then(foo => {
+        //     foo.bar();
+        // })
+      === 1 ===
+      // === /tests/cases/fourslash/foo.ts ===
+      // export function bar() { return "bar"; }
+      // var x = import("./foo");
+      // x.then(foo => {
+      //     foo.[|bar|]();
+      // })
+  }
+]
 
 [
   {

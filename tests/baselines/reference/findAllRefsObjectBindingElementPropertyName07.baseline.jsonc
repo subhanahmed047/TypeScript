@@ -5,6 +5,42 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName07.ts ===
+      // let p, b;
+      // 
+      // p, [{ [|a|]: p, b }] = [{ a: 10, b: true }];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName07.ts ===
+        // let p, b;
+        // 
+        // p, [|[{ a: p, b }] = [{ a: 10, b: true }]|];
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName07.ts ===
+      // let p, b;
+      // 
+      // p, [{ [|a|]: p, b }] = [{ a: 10, b: true }];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName07.ts ===
+        // let p, b;
+        // 
+        // p, [|[{ a: p, b }] = [{ a: 10, b: true }]|];
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName07.ts ===
+      // let p, b;
+      // 
+      // p, [{ a: p, b }] = [{ [|a|]: 10, b: true }];
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsObjectBindingElementPropertyName07.ts ===
+        // let p, b;
+        // 
+        // p, [{ a: p, b }] = [{ [|a: 10|], b: true }];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

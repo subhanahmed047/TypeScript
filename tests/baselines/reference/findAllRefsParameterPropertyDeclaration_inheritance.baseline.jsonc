@@ -12,6 +12,162 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public [|x|]: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor([|public x: string|]) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor(public x: string) {
+        // 		super(x);
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public [|x|]: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor([|public x: string|]) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor(public x: string) {
+        // 		super(x);
+        // 	}
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public [|x|]: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor([|public x: string|]) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor(public x: string) {
+        // 		super(x);
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		[|x|];
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super(x);
+      // 	}
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public [|x|]: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor(public x: string) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor([|public x: string|]) {
+        // 		super(x);
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public [|x|]: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor(public x: string) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor([|public x: string|]) {
+        // 		super(x);
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super([|x|]);
+      // 	}
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -246,6 +402,99 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public [|x|]: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor([|public x: string|]) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor(public x: string) {
+        // 		super(x);
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public [|x|]: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor([|public x: string|]) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor(public x: string) {
+        // 		super(x);
+        // 	}
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public [|x|]: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor([|public x: string|]) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor(public x: string) {
+        // 		super(x);
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		[|x|];
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super(x);
+      // 	}
+      // }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -392,6 +641,162 @@
 // 		super([|x|]);
 // 	}
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public [|x|]: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor([|public x: string|]) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor(public x: string) {
+        // 		super(x);
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public [|x|]: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor([|public x: string|]) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor(public x: string) {
+        // 		super(x);
+        // 	}
+        // }
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		[|x|];
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super(x);
+      // 	}
+      // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public [|x|]: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor(public x: string) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor([|public x: string|]) {
+        // 		super(x);
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public [|x|]: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor(public x: string) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor([|public x: string|]) {
+        // 		super(x);
+        // 	}
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public [|x|]: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor(public x: string) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor([|public x: string|]) {
+        // 		super(x);
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super([|x|]);
+      // 	}
+      // }
+  }
+]
 
 [
   {
@@ -626,6 +1031,99 @@
 // 		super(/*FIND ALL REFS*/[|x|]);
 // 	}
 // }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public [|x|]: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor(public x: string) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor([|public x: string|]) {
+        // 		super(x);
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public [|x|]: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor(public x: string) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor([|public x: string|]) {
+        // 		super(x);
+        // 	}
+        // }
+  },
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public [|x|]: string) {
+      // 		super(x);
+      // 	}
+      // }
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+        // class C {
+        // 	constructor(public x: string) {
+        // 		x;
+        // 	}
+        // }
+        // class D extends C {
+        // 	constructor([|public x: string|]) {
+        // 		super(x);
+        // 	}
+        // }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsParameterPropertyDeclaration_inheritance.ts ===
+      // class C {
+      // 	constructor(public x: string) {
+      // 		x;
+      // 	}
+      // }
+      // class D extends C {
+      // 	constructor(public x: string) {
+      // 		super([|x|]);
+      // 	}
+      // }
+  }
+]
 
 [
   {

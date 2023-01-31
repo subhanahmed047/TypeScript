@@ -5,6 +5,22 @@
 
 [
   {
+    === Definition ===
+      // === /node_modules/react-hook-form/dist/index.d.ts ===
+      // /// <reference types="[|react|]" />
+      // export type Foo = React.Whatever;
+      // export function useForm(): any;
+    === References ===
+      === 0 ===
+      // === /node_modules/react-hook-form/dist/index.d.ts ===
+      // /// <reference types="[|react|]" />
+      // export type Foo = React.Whatever;
+      // export function useForm(): any;
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",

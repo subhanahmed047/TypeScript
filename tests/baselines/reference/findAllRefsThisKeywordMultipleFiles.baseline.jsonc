@@ -12,6 +12,51 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // [|this|]; this;
+      === 1 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // this; [|this|];
+      === 2 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // [|this|];
+      // this;
+      === 3 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // this;
+      // [|this|];
+      === 4 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 5 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => [|this|])(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 6 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)([|this|], this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 7 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)(this, [|this|]);
+      // // different 'this'
+      // function f(this) { return this; }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -132,6 +177,51 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // [|this|]; this;
+      === 1 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // this; [|this|];
+      === 2 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // [|this|];
+      // this;
+      === 3 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // this;
+      // [|this|];
+      === 4 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 5 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => [|this|])(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 6 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)([|this|], this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 7 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)(this, [|this|]);
+      // // different 'this'
+      // function f(this) { return this; }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -252,6 +342,51 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // [|this|]; this;
+      === 1 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // this; [|this|];
+      === 2 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // [|this|];
+      // this;
+      === 3 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // this;
+      // [|this|];
+      === 4 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 5 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => [|this|])(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 6 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)([|this|], this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 7 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)(this, [|this|]);
+      // // different 'this'
+      // function f(this) { return this; }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -369,6 +504,51 @@
 // ((x = [|this|], y) => [|this|])([|this|], [|this|]);
 // // different 'this'
 // function f(this) { return this; }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // [|this|]; this;
+      === 1 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // this; [|this|];
+      === 2 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // [|this|];
+      // this;
+      === 3 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // this;
+      // [|this|];
+      === 4 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 5 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => [|this|])(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 6 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)([|this|], this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 7 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)(this, [|this|]);
+      // // different 'this'
+      // function f(this) { return this; }
+  }
+]
 
 [
   {
@@ -492,6 +672,51 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // [|this|]; this;
+      === 1 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // this; [|this|];
+      === 2 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // [|this|];
+      // this;
+      === 3 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // this;
+      // [|this|];
+      === 4 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 5 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => [|this|])(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 6 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)([|this|], this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 7 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)(this, [|this|]);
+      // // different 'this'
+      // function f(this) { return this; }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -609,6 +834,51 @@
 // ((x = [|this|], y) => /*FIND ALL REFS*/[|this|])([|this|], [|this|]);
 // // different 'this'
 // function f(this) { return this; }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // [|this|]; this;
+      === 1 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // this; [|this|];
+      === 2 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // [|this|];
+      // this;
+      === 3 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // this;
+      // [|this|];
+      === 4 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 5 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => [|this|])(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 6 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)([|this|], this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 7 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)(this, [|this|]);
+      // // different 'this'
+      // function f(this) { return this; }
+  }
+]
 
 [
   {
@@ -732,6 +1002,51 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // [|this|]; this;
+      === 1 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // this; [|this|];
+      === 2 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // [|this|];
+      // this;
+      === 3 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // this;
+      // [|this|];
+      === 4 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 5 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => [|this|])(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 6 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)([|this|], this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 7 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)(this, [|this|]);
+      // // different 'this'
+      // function f(this) { return this; }
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -849,6 +1164,51 @@
 // ((x = [|this|], y) => [|this|])([|this|], /*FIND ALL REFS*/[|this|]);
 // // different 'this'
 // function f(this) { return this; }
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // [|this|]; this;
+      === 1 ===
+      // === /tests/cases/fourslash/file1.ts ===
+      // this; [|this|];
+      === 2 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // [|this|];
+      // this;
+      === 3 ===
+      // === /tests/cases/fourslash/file2.ts ===
+      // this;
+      // [|this|];
+      === 4 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = [|this|], y) => this)(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 5 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => [|this|])(this, this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 6 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)([|this|], this);
+      // // different 'this'
+      // function f(this) { return this; }
+      === 7 ===
+      // === /tests/cases/fourslash/file3.ts ===
+      // ((x = this, y) => this)(this, [|this|]);
+      // // different 'this'
+      // function f(this) { return this; }
+  }
+]
 
 [
   {

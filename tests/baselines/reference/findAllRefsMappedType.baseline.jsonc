@@ -8,6 +8,60 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+      // interface T { [|a|]: number; }
+      // type U = { readonly [K in keyof T]?: string };
+      // declare const t: T;
+      // t.a;
+      // declare const u: U;
+      // u.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+        // interface T { [|a: number;|] }
+        // type U = { readonly [K in keyof T]?: string };
+        // declare const t: T;
+        // t.a;
+        // declare const u: U;
+        // u.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+      // interface T { [|a|]: number; }
+      // type U = { readonly [K in keyof T]?: string };
+      // declare const t: T;
+      // t.a;
+      // declare const u: U;
+      // u.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+        // interface T { [|a: number;|] }
+        // type U = { readonly [K in keyof T]?: string };
+        // declare const t: T;
+        // t.a;
+        // declare const u: U;
+        // u.a;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+      // interface T { a: number; }
+      // type U = { readonly [K in keyof T]?: string };
+      // declare const t: T;
+      // t.[|a|];
+      // declare const u: U;
+      // u.a;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+      // interface T { a: number; }
+      // type U = { readonly [K in keyof T]?: string };
+      // declare const t: T;
+      // t.a;
+      // declare const u: U;
+      // u.[|a|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -111,6 +165,60 @@
 
 [
   {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+      // interface T { [|a|]: number; }
+      // type U = { readonly [K in keyof T]?: string };
+      // declare const t: T;
+      // t.a;
+      // declare const u: U;
+      // u.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+        // interface T { [|a: number;|] }
+        // type U = { readonly [K in keyof T]?: string };
+        // declare const t: T;
+        // t.a;
+        // declare const u: U;
+        // u.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+      // interface T { [|a|]: number; }
+      // type U = { readonly [K in keyof T]?: string };
+      // declare const t: T;
+      // t.a;
+      // declare const u: U;
+      // u.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+        // interface T { [|a: number;|] }
+        // type U = { readonly [K in keyof T]?: string };
+        // declare const t: T;
+        // t.a;
+        // declare const u: U;
+        // u.a;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+      // interface T { a: number; }
+      // type U = { readonly [K in keyof T]?: string };
+      // declare const t: T;
+      // t.[|a|];
+      // declare const u: U;
+      // u.a;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+      // interface T { a: number; }
+      // type U = { readonly [K in keyof T]?: string };
+      // declare const t: T;
+      // t.a;
+      // declare const u: U;
+      // u.[|a|];
+  }
+]
+
+[
+  {
     "definition": {
       "containerKind": "",
       "containerName": "",
@@ -208,6 +316,60 @@
 // t.[|a|];
 // declare const u: U;
 // u./*FIND ALL REFS*/[|a|];
+
+[
+  {
+    === Definition ===
+      // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+      // interface T { [|a|]: number; }
+      // type U = { readonly [K in keyof T]?: string };
+      // declare const t: T;
+      // t.a;
+      // declare const u: U;
+      // u.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+        // interface T { [|a: number;|] }
+        // type U = { readonly [K in keyof T]?: string };
+        // declare const t: T;
+        // t.a;
+        // declare const u: U;
+        // u.a;
+    === References ===
+      === 0 ===
+      // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+      // interface T { [|a|]: number; }
+      // type U = { readonly [K in keyof T]?: string };
+      // declare const t: T;
+      // t.a;
+      // declare const u: U;
+      // u.a;
+      === ContextSpan ===
+        // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+        // interface T { [|a: number;|] }
+        // type U = { readonly [K in keyof T]?: string };
+        // declare const t: T;
+        // t.a;
+        // declare const u: U;
+        // u.a;
+      === 1 ===
+      // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+      // interface T { a: number; }
+      // type U = { readonly [K in keyof T]?: string };
+      // declare const t: T;
+      // t.[|a|];
+      // declare const u: U;
+      // u.a;
+      === 2 ===
+      // === /tests/cases/fourslash/findAllRefsMappedType.ts ===
+      // interface T { a: number; }
+      // type U = { readonly [K in keyof T]?: string };
+      // declare const t: T;
+      // t.a;
+      // declare const u: U;
+      // u.[|a|];
+  }
+]
 
 [
   {
